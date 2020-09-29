@@ -1,0 +1,42 @@
+---
+title: "Data Science logs"
+author: "Leonardo Collado-Torres"
+site: bookdown::bookdown_site
+documentclass: book
+output:
+  bookdown::gitbook: default
+---
+
+# Overview {-}
+
+This website contains the public logs for the Data Science guidance sessiones carried out by the [**R/Bioconductor-powered Team Data Science**](https://lcolladotor.github.io/bioc_team_ds) at [LIBD](https://www.libd.org/).
+
+## DSgs-guide team members {-}
+
+* [Arta Seyedian](https://github.com/aseyedia)
+* [Joshua M. Stolz](https://github.com/joshstolz)
+* [Louise Huuki](https://github.com/lahuuki)
+* [Nicholas J. Eagles](https://github.com/Nick-Eagles)
+* [Madhavi Tippani](https://github.com/madhavitippani)
+
+This book was last updated on `r Sys.time()`.
+
+## R session information {-}
+
+Details on the R version used for making this book. The source code is available at [`lcolladotor/DSgs_logs`](https://github.com/lcolladotor/DSgs_logs).
+
+```{r session_info_chunk, eval = FALSE}
+## Load the package at the top of your script
+library("sessioninfo")
+
+## Reproducibility information
+print('Reproducibility information:')
+Sys.time()
+proc.time()
+options(width = 120)
+session_info()
+```
+
+```{r session_info, echo = FALSE}
+<<session_info_chunk>>
+```
