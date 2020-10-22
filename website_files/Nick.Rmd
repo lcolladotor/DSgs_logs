@@ -1,0 +1,16 @@
+# Nick
+
+## Person_1
+
+### 2020-10-21
+
+#### Help request
+
+Question: Cannot Install gmapR Bioconductor Package
+
+#### Public Notes
+
+* [BioC Support website answer](https://support.bioconductor.org/p/131285/#134921)
+
+
+

@@ -1,0 +1,16 @@
+# Arta
+
+## Person_2
+
+### 2020-10-21
+
+#### Help request
+
+copy number variation analysis (CNV)
+
+#### Public Notes
+
+* [BioC Support website answer](https://support.bioconductor.org/p/134876/#134917)
+
+
+

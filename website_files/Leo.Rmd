@@ -1,51 +1,16 @@
 # Leo
 
-## Person_1
-
-### 2020-09-27
-
-#### Help request
-
-Hi? Can you help me?
-Thanks!
-
-#### Public Notes
-
-* [Modern scientist](https://leanpub.com/modernscientist)
-
-## Person_2
-
-### 2020-09-28
-
-#### Help request
-
-GitHub issue
-
-#### Public Notes
-
-* [GitHub](https://github.com)
-### 2020-09-29
-
-#### Help request
-
-BioC website
-
-#### Public Notes
-
-* [BioC](https://support.bioconductor.org/)
-
 ## Person_3
 
-### 2020-09-28
+### 2020-10-21
 
 #### Help request
 
-Test
+Ballgown stattest
 
 #### Public Notes
 
-* [Modern scientist](https://leanpub.com/modernscientist)
-* [Data analytic style](https://leanpub.com/datastyle)
+* [BioC Support website answer](https://support.bioconductor.org/p/134914/#134915)
 
 
 

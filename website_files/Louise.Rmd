@@ -1,0 +1,30 @@
+# Louise
+
+## Person_4
+
+### 2020-10-20
+
+#### Help request
+
+Help with spatstat
+
+#### Public Notes
+
+spatstat package https://spatstat.org/releasenotes/spatstat-1.39-0.html,
+L function https://www.rdocumentation.org/packages/spatstat/versions/1.64-1/topics/Lest
+Kmark https://www.rdocumentation.org/packages/spatstat/versions/1.64-1/topics/Kmark
+
+## Person_5
+
+### 2020-10-21
+
+#### Help request
+
+Question: Subset center regions of a set of different length sequences
+
+#### Public Notes
+
+* [BioC Support website answer](https://support.bioconductor.org/p/134532/#134925)
+
+
+
