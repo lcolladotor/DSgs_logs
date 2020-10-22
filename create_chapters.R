@@ -31,11 +31,11 @@ xx <- lapply(seq_along(by_guide), function(i) {
                 "
 ### {date}
 
-#### Help request
+**Help request**
 
 {help_request}
 
-#### Public Notes
+**Notes**
 
 {public_notes}
 

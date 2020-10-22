@@ -4,11 +4,11 @@
 
 ### 2020-10-21
 
-#### Help request
+**Help request**
 
 Ballgown stattest
 
-#### Public Notes
+**Notes**
 
 * [BioC Support website answer](https://support.bioconductor.org/p/134914/#134915)
 

@@ -43,6 +43,15 @@ options(width = 120)
 session_info()
 ```
 
+```{r "load_libraries", echo = FALSE, message = FALSE, warning = FALSE}
+## Packages used in the book
+library("ggplot2")
+library("lubridate")
+library("dplyr")
+library("here")
+```
+
+
 ```{r session_info, echo = FALSE}
 <<session_info_chunk>>
 ```
