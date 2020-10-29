@@ -1,6 +1,18 @@
 # Leo
 
-## Person_3
+## Person_10
+
+### 2020-10-28
+
+**Help request**
+
+exceRpt pipeline counts
+
+**Notes**
+
+* [BioC Support website answer](https://support.bioconductor.org/p/p132450/#p132464)
+
+## Person_8
 
 ### 2020-10-21
 

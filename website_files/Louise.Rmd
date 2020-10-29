@@ -1,6 +1,6 @@
 # Louise
 
-## Person_4
+## Person_11
 
 ### 2020-10-20
 
@@ -14,7 +14,7 @@ spatstat package https://spatstat.org/releasenotes/spatstat-1.39-0.html,
 L function https://www.rdocumentation.org/packages/spatstat/versions/1.64-1/topics/Lest
 Kmark https://www.rdocumentation.org/packages/spatstat/versions/1.64-1/topics/Kmark
 
-## Person_5
+## Person_2
 
 ### 2020-10-21
 
@@ -25,6 +25,18 @@ Question: Subset center regions of a set of different length sequences
 **Notes**
 
 * [BioC Support website answer](https://support.bioconductor.org/p/134532/#134925)
+
+## Person_3
+
+### 2020-10-27
+
+**Help request**
+
+Plotly help if possible? I'm trying to export an html file that allows the user to look at each snp/gene on the plot, and I am almost successful. Leo recommended that I talk to you on this matter.
+
+**Notes**
+
+Needed to use highlight_key and highlight functions to select points between plots. Used rstats example as guide https://gist.github.com/lcolladotor/350ac8843e153d135f64880a1d029b14
 
 
 

@@ -2,6 +2,42 @@
 
 ## Person_1
 
+### 2020-10-28
+
+**Help request**
+
+issue running spaceranger
+
+**Notes**
+
+initial issue seemed to do with the spaceranger command arguments; we are continuining to investigate possible module issues or insufficient code in the [blog post](http://research.libd.org/rstatsclub/2020/10/20/using-space-ranger-at-jhpce/)
+
+## Person_12
+
+### 2020-10-26
+
+**Help request**
+
+Help running speakeasy on MARCC and JHPCE please
+
+**Notes**
+
+NA
+
+## Person_5
+
+### 2020-10-28
+
+**Help request**
+
+Changing Row Names of MultiAssayExperiment Assay
+
+**Notes**
+
+* [BioC Support website answer](https://support.bioconductor.org/p/p132406/#p132459)
+
+## Person_6
+
 ### 2020-10-21
 
 **Help request**
