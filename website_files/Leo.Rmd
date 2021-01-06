@@ -1,6 +1,42 @@
 # Leo
 
-## Person_10
+## Person_1
+
+### 2020-10-30
+
+**Help request**
+
+Issue with JHPCE file permissions
+
+**Notes**
+
+Explained the `chgrp` and `umask` commands plus `~/.bashrc` file configuration. I also mentioned why we don't use `chmod 777` at JHPCE. Details on [Slack](https://jhu-genomics.slack.com/archives/CR9NYA0BF/p1604086263148400?thread_ts=1603826219.094600&cid=CR9NYA0BF) (private channel).
+
+## Person_12
+
+### 2020-11-03
+
+**Help request**
+
+Fixed a bug on biocthis for release branches
+
+**Notes**
+
+* [GitHub issue at biocthis](https://github.com/lcolladotor/biocthis/issues/13)
+
+## Person_17
+
+### 2020-11-11
+
+**Help request**
+
+GitHub actions workflow issue with macOS on R-devel
+
+**Notes**
+
+* [GitHub issue at biocthis](https://github.com/lcolladotor/biocthis/issues/15)
+
+## Person_21
 
 ### 2020-10-28
 
@@ -11,8 +47,17 @@ exceRpt pipeline counts
 **Notes**
 
 * [BioC Support website answer](https://support.bioconductor.org/p/p132450/#p132464)
+### 2020-11-25
 
-## Person_8
+**Help request**
+
+Accesing CMC RNA-seq data
+
+**Notes**
+
+* Started PsychENCODE access request process
+
+## Person_22
 
 ### 2020-10-21
 
@@ -23,6 +68,54 @@ Ballgown stattest
 **Notes**
 
 * [BioC Support website answer](https://support.bioconductor.org/p/134914/#134915)
+
+## Person_26
+
+### 2020-11-03
+
+**Help request**
+
+Fixed two bugs on recount3 related to locate_url() for the BigWig files.
+
+**Notes**
+
+Resulted in recount3 versions 1.1.1 and 1.1.2 on bioc-devel (and 1.0.2 on bioc-release)
+
+## Person_30
+
+### 2020-11-11
+
+**Help request**
+
+Differences between recount2's "bp_length" and SPEAQeasy's "Length"
+
+**Notes**
+
+* [Check Slack helpdesk channel](https://jhu-genomics.slack.com/archives/CUYHWV7AA/p1605123296024100)
+
+## Person_4
+
+### 2020-11-03
+
+**Help request**
+
+Issue with knitcitations
+
+**Notes**
+
+* [GitHub issue at biocthis](https://github.com/lcolladotor/biocthis/issues/14)
+
+## Person_6
+
+### 2020-10-30
+
+**Help request**
+
+recount3 GTEx data access
+
+**Notes**
+
+* [BioC Support website answer](https://support.bioconductor.org/p/p132487/#p132521)
 
 
 

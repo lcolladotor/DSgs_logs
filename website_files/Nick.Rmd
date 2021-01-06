@@ -2,6 +2,18 @@
 
 ## Person_1
 
+### 2020-10-21
+
+**Help request**
+
+Question: Cannot Install gmapR Bioconductor Package
+
+**Notes**
+
+* [BioC Support website answer](https://support.bioconductor.org/p/131285/#134921)
+
+## Person_14
+
 ### 2020-10-28
 
 **Help request**
@@ -12,19 +24,28 @@ issue running spaceranger
 
 initial issue seemed to do with the spaceranger command arguments; we are continuining to investigate possible module issues or insufficient code in the [blog post](http://research.libd.org/rstatsclub/2020/10/20/using-space-ranger-at-jhpce/)
 
-## Person_12
+## Person_16
 
-### 2020-10-26
+### 2020-11-04
 
 **Help request**
 
-Help running speakeasy on MARCC and JHPCE please
+Extracting Sequences from Fasta Files with Rsamtools
 
 **Notes**
 
-NA
+* [BioC Support website answer](https://support.bioconductor.org/p/131600/#p132617)
+### 2020-12-02
 
-## Person_5
+**Help request**
+
+Matching Variants Between Two VCF Objects
+
+**Notes**
+
+*[BioC Support website answer](https://support.bioconductor.org/p/p133110/#p133319)
+
+## Person_3
 
 ### 2020-10-28
 
@@ -36,17 +57,74 @@ Changing Row Names of MultiAssayExperiment Assay
 
 * [BioC Support website answer](https://support.bioconductor.org/p/p132406/#p132459)
 
-## Person_6
+## Person_4
 
-### 2020-10-21
+### 2020-11-20
 
 **Help request**
 
-Question: Cannot Install gmapR Bioconductor Package
+ChipQC 'names' attribute [9] must be the same length as the vector [2]'
 
 **Notes**
 
-* [BioC Support website answer](https://support.bioconductor.org/p/131285/#134921)
+*[BioC Support website answer](https://support.bioconductor.org/p/134569/#p133028)
+
+## Person_5
+
+### 2020-11-11
+
+**Help request**
+
+How does one modify a single value of a field in a seqinfo object?
+
+**Notes**
+
+*[BioC Support website answer](https://support.bioconductor.org/p/134139/#p132829)
+### 2020-01-06
+
+**Help request**
+
+Correlation values from labeledHeatmap
+
+**Notes**
+
+*[BioC Support website answer](https://support.bioconductor.org/p/p133591/#p133927)
+
+## Person_7
+
+### 2020-12-09
+
+**Help request**
+
+Help with importing HDF5 file
+
+**Notes**
+
+Used 'h5ls' command from shell to verify contents of file; eventually found we were looking at the wrong file (error message was cryptic about issue). https://jhu-genomics.slack.com/archives/CUYHWV7AA/p1607034309074800
+
+## Person_8
+
+### 2020-10-26
+
+**Help request**
+
+Help running speakeasy on MARCC and JHPCE please
+
+**Notes**
+
+NA
+
+## Person_9
+
+### 2020-11-02
+
+**Help request**
+
+Help with SpaceRanger
+
+**Notes**
+
+NA
 
 
 
