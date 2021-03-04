@@ -1,42 +1,6 @@
 # Louise
 
-## Person_11
-
-### 2020-10-27
-
-**Help request**
-
-Plotly help if possible? I'm trying to export an html file that allows the user to look at each snp/gene on the plot, and I am almost successful. Leo recommended that I talk to you on this matter.
-
-**Notes**
-
-Needed to use highlight_key and highlight functions to select points between plots. Used rstats example as guide https://gist.github.com/lcolladotor/350ac8843e153d135f64880a1d029b14
-
-## Person_16
-
-### 2020-12-07
-
-**Help request**
-
-jhpce set up on mac
-
-**Notes**
-
-Went through the setting up passwordless login for jhpce using ssh keys, and coppied the configuration files from https://gist.github.com/lcolladotor/3b1063db30a206835ee7e086c8f037ee
-
-## Person_18
-
-### 2020-11-13
-
-**Help request**
-
-Using reshape package to transform table for plotting
-
-**Notes**
-
-I recomended using dcast to do a "long" to "wide" data transformation
-
-## Person_2
+## Person_12
 
 ### 2020-11-05
 
@@ -49,19 +13,19 @@ LC repo organization
 We discussed organizing by analysis (a directory for each one, then prehaps sub- directory for data & plots)
 Create a readMe for each sub-folder. Use gitignore to keep repo from getting too big.
 
-## Person_24
+## Person_16
 
-### 2020-10-21
+### 2021-02-09
 
 **Help request**
 
-Question: Subset center regions of a set of different length sequences
+Visualizing RPKM valus for genes in Humna and Primarte data
 
 **Notes**
 
-* [BioC Support website answer](https://support.bioconductor.org/p/134532/#134925)
+We spent time doing basic Rstudio setup and troubleshooting, and got the data downloaded
 
-## Person_25
+## Person_17
 
 ### 2020-11-12
 
@@ -73,7 +37,76 @@ Help adapting ggplot script for TWAS Z-score
 
 We talked about how the data should be structured before using ggplot (transforming some data and adding catagorical columns)
 
-## Person_27
+## Person_21
+
+### 2021-01-27
+
+**Help request**
+
+group_by bug for get_mean_ratio
+
+**Notes**
+
+We are going to try an iterative strategy to keep tables smaller
+
+## Person_24
+
+### 2020-11-18
+
+**Help request**
+
+Help clustering sce data
+
+**Notes**
+
+We debugged some code and ultimetly decided that it might be best for Abby to write new code and use the tsne function to cluster and plot the data
+
+## Person_28
+
+### 2020-11-13
+
+**Help request**
+
+Using reshape package to transform table for plotting
+
+**Notes**
+
+I recomended using dcast to do a "long" to "wide" data transformation
+### 2020-12-08
+
+**Help request**
+
+Resolving issues in phenotype data between genotype, expression, and LIBDpheno
+
+**Notes**
+
+Need to resolve swap bugs. Plan to create a table of phenotype data (Dx, age, sex, race) for each BrNum to mach genotype data
+
+## Person_31
+
+### 2020-10-27
+
+**Help request**
+
+Plotly help if possible? I'm trying to export an html file that allows the user to look at each snp/gene on the plot, and I am almost successful. Leo recommended that I talk to you on this matter.
+
+**Notes**
+
+Needed to use highlight_key and highlight functions to select points between plots. Used rstats example as guide https://gist.github.com/lcolladotor/350ac8843e153d135f64880a1d029b14
+
+## Person_33
+
+### 2021-02-04
+
+**Help request**
+
+Github ssh key set up
+
+**Notes**
+
+We got the ssh keys working for Brenda's github
+
+## Person_34
 
 ### 2020-10-20
 
@@ -87,29 +120,41 @@ spatstat package https://spatstat.org/releasenotes/spatstat-1.39-0.html,
 L function https://www.rdocumentation.org/packages/spatstat/versions/1.64-1/topics/Lest
 Kmark https://www.rdocumentation.org/packages/spatstat/versions/1.64-1/topics/Kmark
 
-## Person_28
+## Person_36
 
-### 2020-12-08
+### 2020-10-21
 
 **Help request**
 
-Resolving issues in phenotype data between genotype, expression, and LIBDpheno
+Question: Subset center regions of a set of different length sequences
 
 **Notes**
 
-Need to resolve swap bugs. Plan to create a table of phenotype data (Dx, age, sex, race) for each BrNum to mach genotype data
+* [BioC Support website answer](https://support.bioconductor.org/p/134532/#134925)
 
 ## Person_4
 
-### 2020-11-18
+### 2020-12-07
 
 **Help request**
 
-Help clustering sce data
+jhpce set up on mac
 
 **Notes**
 
-We debugged some code and ultimetly decided that it might be best for Abby to write new code and use the tsne function to cluster and plot the data
+Went through the setting up passwordless login for jhpce using ssh keys, and coppied the configuration files from https://gist.github.com/lcolladotor/3b1063db30a206835ee7e086c8f037ee
+
+## Person_7
+
+### 2021-02-04
+
+**Help request**
+
+Work on habenula deconvolution and debug the deconvolution package
+
+**Notes**
+
+We went over applying DeconvoBuddies functions to hebenula data
 
 
 

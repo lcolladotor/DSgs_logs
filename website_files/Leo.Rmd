@@ -1,18 +1,18 @@
 # Leo
 
-## Person_1
+## Person_11
 
-### 2020-10-30
+### 2021-01-11
 
 **Help request**
 
-Issue with JHPCE file permissions
+Questions related to accessing results from the DG paper by Andrew Jaffe
 
 **Notes**
 
-Explained the `chgrp` and `umask` commands plus `~/.bashrc` file configuration. I also mentioned why we don't use `chmod 777` at JHPCE. Details on [Slack](https://jhu-genomics.slack.com/archives/CR9NYA0BF/p1604086263148400?thread_ts=1603826219.094600&cid=CR9NYA0BF) (private channel).
+NA
 
-## Person_12
+## Person_13
 
 ### 2020-11-03
 
@@ -26,27 +26,15 @@ Fixed a bug on biocthis for release branches
 
 ## Person_17
 
-### 2020-11-11
+### 2020-11-03
 
 **Help request**
 
-GitHub actions workflow issue with macOS on R-devel
+Issue with knitcitations
 
 **Notes**
 
-* [GitHub issue at biocthis](https://github.com/lcolladotor/biocthis/issues/15)
-
-## Person_21
-
-### 2020-10-28
-
-**Help request**
-
-exceRpt pipeline counts
-
-**Notes**
-
-* [BioC Support website answer](https://support.bioconductor.org/p/p132450/#p132464)
+* [GitHub issue at biocthis](https://github.com/lcolladotor/biocthis/issues/14)
 ### 2020-11-25
 
 **Help request**
@@ -57,7 +45,43 @@ Accesing CMC RNA-seq data
 
 * Started PsychENCODE access request process
 
-## Person_22
+## Person_18
+
+### 2021-01-14
+
+**Help request**
+
+biocthis macOS GHA bug
+
+**Notes**
+
+* [BioC Support website answer](https://support.bioconductor.org/p/p134069/#p134141)
+
+## Person_27
+
+### 2020-10-30
+
+**Help request**
+
+Issue with JHPCE file permissions
+
+**Notes**
+
+Explained the `chgrp` and `umask` commands plus `~/.bashrc` file configuration. I also mentioned why we don't use `chmod 777` at JHPCE. Details on [Slack](https://jhu-genomics.slack.com/archives/CR9NYA0BF/p1604086263148400?thread_ts=1603826219.094600&cid=CR9NYA0BF) (private channel).
+
+## Person_28
+
+### 2020-10-30
+
+**Help request**
+
+recount3 GTEx data access
+
+**Notes**
+
+* [BioC Support website answer](https://support.bioconductor.org/p/p132487/#p132521)
+
+## Person_29
 
 ### 2020-10-21
 
@@ -69,19 +93,7 @@ Ballgown stattest
 
 * [BioC Support website answer](https://support.bioconductor.org/p/134914/#134915)
 
-## Person_26
-
-### 2020-11-03
-
-**Help request**
-
-Fixed two bugs on recount3 related to locate_url() for the BigWig files.
-
-**Notes**
-
-Resulted in recount3 versions 1.1.1 and 1.1.2 on bioc-devel (and 1.0.2 on bioc-release)
-
-## Person_30
+## Person_4
 
 ### 2020-11-11
 
@@ -93,29 +105,38 @@ Differences between recount2's "bp_length" and SPEAQeasy's "Length"
 
 * [Check Slack helpdesk channel](https://jhu-genomics.slack.com/archives/CUYHWV7AA/p1605123296024100)
 
-## Person_4
+## Person_5
 
 ### 2020-11-03
 
 **Help request**
 
-Issue with knitcitations
+Fixed two bugs on recount3 related to locate_url() for the BigWig files.
 
 **Notes**
 
-* [GitHub issue at biocthis](https://github.com/lcolladotor/biocthis/issues/14)
-
-## Person_6
-
-### 2020-10-30
+Resulted in recount3 versions 1.1.1 and 1.1.2 on bioc-devel (and 1.0.2 on bioc-release)
+### 2020-11-11
 
 **Help request**
 
-recount3 GTEx data access
+GitHub actions workflow issue with macOS on R-devel
 
 **Notes**
 
-* [BioC Support website answer](https://support.bioconductor.org/p/p132487/#p132521)
+* [GitHub issue at biocthis](https://github.com/lcolladotor/biocthis/issues/15)
+
+## Person_8
+
+### 2020-10-28
+
+**Help request**
+
+exceRpt pipeline counts
+
+**Notes**
+
+* [BioC Support website answer](https://support.bioconductor.org/p/p132450/#p132464)
 
 
 

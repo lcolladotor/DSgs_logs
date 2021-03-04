@@ -1,54 +1,6 @@
 # Maddy
 
-## Person_10
-
-### 2020-12-03
-
-**Help request**
-
-run dotdotdot pipeline local computer and cluster
-
-**Notes**
-
-got through the Github vignettes thoroughly
-
-## Person_13
-
-### 2020-12-03
-
-**Help request**
-
-how to open matlab (GUI and command line) on JHPCE
-
-**Notes**
-
-NA
-
-## Person_15
-
-### 2020-12-01
-
-**Help request**
-
-how to connect to LIBD servers on windows and mac
-
-**Notes**
-
-NA
-
-## Person_16
-
-### 2020-11-19
-
-**Help request**
-
-data transfer from LIBD server to JHPCE
-
-**Notes**
-
-to use rsync or scp, you need to have user account created on LIBD server (Bill can help create it)
-
-## Person_23
+## Person_12
 
 ### 2020-11-19
 
@@ -60,7 +12,43 @@ download matlab on local computer through JHU software portal
 
 NA
 
-## Person_4
+## Person_17
+
+### 2020-11-04
+
+**Help request**
+
+3D volume extraction in Matlab
+
+**Notes**
+
+https://www.mathworks.com/matlabcentral/answers/636365-how-can-i-measure-volume-from-a-3d-image?s_tid=srchtitle
+
+## Person_20
+
+### 2020-12-03
+
+**Help request**
+
+how to open matlab (GUI and command line) on JHPCE
+
+**Notes**
+
+NA
+
+## Person_22
+
+### 2020-12-03
+
+**Help request**
+
+run dotdotdot pipeline local computer and cluster
+
+**Notes**
+
+got through the Github vignettes thoroughly
+
+## Person_26
 
 ### 2020-10-28
 
@@ -72,17 +60,65 @@ customize dotdotdot to his data
 
 NA
 
-## Person_8
+## Person_30
 
-### 2020-11-04
+### 2020-11-19
 
 **Help request**
 
-3D volume extraction in Matlab
+data transfer from LIBD server to JHPCE
 
 **Notes**
 
-https://www.mathworks.com/matlabcentral/answers/636365-how-can-i-measure-volume-from-a-3d-image?s_tid=srchtitle
+to use rsync or scp, you need to have user account created on LIBD server (Bill can help create it)
+
+## Person_35
+
+### 2021-02-12
+
+**Help request**
+
+download repository from github to cluster and run dotdotdot on cluster
+
+**Notes**
+
+NA
+
+## Person_37
+
+### 2021-02-05
+
+**Help request**
+
+JHPCE ssh keypair set up
+
+**Notes**
+
+We got Heena's MAC registered for passwordless login to JHPCE
+
+## Person_4
+
+### 2021-02-05
+
+**Help request**
+
+dotdotdot parameter tuning for Ema's rat RNAscope data
+
+**Notes**
+
+NA
+
+## Person_5
+
+### 2020-12-01
+
+**Help request**
+
+how to connect to LIBD servers on windows and mac
+
+**Notes**
+
+NA
 
 
 

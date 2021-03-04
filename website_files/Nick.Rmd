@@ -11,20 +11,17 @@ Question: Cannot Install gmapR Bioconductor Package
 **Notes**
 
 * [BioC Support website answer](https://support.bioconductor.org/p/131285/#134921)
-
-## Person_14
-
-### 2020-10-28
+### 2020-11-11
 
 **Help request**
 
-issue running spaceranger
+How does one modify a single value of a field in a seqinfo object?
 
 **Notes**
 
-initial issue seemed to do with the spaceranger command arguments; we are continuining to investigate possible module issues or insufficient code in the [blog post](http://research.libd.org/rstatsclub/2020/10/20/using-space-ranger-at-jhpce/)
+*[BioC Support website answer](https://support.bioconductor.org/p/134139/#p132829)
 
-## Person_16
+## Person_10
 
 ### 2020-11-04
 
@@ -35,62 +32,8 @@ Extracting Sequences from Fasta Files with Rsamtools
 **Notes**
 
 * [BioC Support website answer](https://support.bioconductor.org/p/131600/#p132617)
-### 2020-12-02
 
-**Help request**
-
-Matching Variants Between Two VCF Objects
-
-**Notes**
-
-*[BioC Support website answer](https://support.bioconductor.org/p/p133110/#p133319)
-
-## Person_3
-
-### 2020-10-28
-
-**Help request**
-
-Changing Row Names of MultiAssayExperiment Assay
-
-**Notes**
-
-* [BioC Support website answer](https://support.bioconductor.org/p/p132406/#p132459)
-
-## Person_4
-
-### 2020-11-20
-
-**Help request**
-
-ChipQC 'names' attribute [9] must be the same length as the vector [2]'
-
-**Notes**
-
-*[BioC Support website answer](https://support.bioconductor.org/p/134569/#p133028)
-
-## Person_5
-
-### 2020-11-11
-
-**Help request**
-
-How does one modify a single value of a field in a seqinfo object?
-
-**Notes**
-
-*[BioC Support website answer](https://support.bioconductor.org/p/134139/#p132829)
-### 2020-01-06
-
-**Help request**
-
-Correlation values from labeledHeatmap
-
-**Notes**
-
-*[BioC Support website answer](https://support.bioconductor.org/p/p133591/#p133927)
-
-## Person_7
+## Person_14
 
 ### 2020-12-09
 
@@ -102,7 +45,19 @@ Help with importing HDF5 file
 
 Used 'h5ls' command from shell to verify contents of file; eventually found we were looking at the wrong file (error message was cryptic about issue). https://jhu-genomics.slack.com/archives/CUYHWV7AA/p1607034309074800
 
-## Person_8
+## Person_15
+
+### 2021-03-03
+
+**Help request**
+
+Advice for writing papers
+
+**Notes**
+
+We discussed how Sciwheel can be adapted for different journals, and provided general advice for getting started and formatting a paper for a particular journal.
+
+## Person_17
 
 ### 2020-10-26
 
@@ -113,8 +68,74 @@ Help running speakeasy on MARCC and JHPCE please
 **Notes**
 
 NA
+### 2020-11-20
 
-## Person_9
+**Help request**
+
+ChipQC 'names' attribute [9] must be the same length as the vector [2]'
+
+**Notes**
+
+*[BioC Support website answer](https://support.bioconductor.org/p/134569/#p133028)
+### 2021-02-23
+
+**Help request**
+
+I need help with setting up Mobaexterm. Unable to open new terminals and folder permission issues
+
+**Notes**
+
+I hadn't encountered the issue with new local terminals failing to open. I planned to follow up with better specific advice via email, and offer to explain this advice in a future DSGS.
+
+## Person_2
+
+### 2021-03-02
+
+**Help request**
+
+Our group's set-up and approach for writing papers with google docs, and managing citations
+
+**Notes**
+
+I went through the setup and example usage of Sciwheel and cross reference, and gave general advice (it's often easiest to start with the "Methods" section, etc)
+
+## Person_23
+
+### 2020-01-06
+
+**Help request**
+
+Correlation values from labeledHeatmap
+
+**Notes**
+
+*[BioC Support website answer](https://support.bioconductor.org/p/p133591/#p133927)
+
+## Person_3
+
+### 2020-10-28
+
+**Help request**
+
+issue running spaceranger
+
+**Notes**
+
+initial issue seemed to do with the spaceranger command arguments; we are continuining to investigate possible module issues or insufficient code in the [blog post](http://research.libd.org/rstatsclub/2020/10/20/using-space-ranger-at-jhpce/)
+
+## Person_38
+
+### 2021-02-25
+
+**Help request**
+
+I need help in: downloading data from SRA to JHPCE, running SPEAQeasy to create rse object (one session will likely not be enough).
+
+**Notes**
+
+I explained how to use SPEAQeasy at JHPCE, and we tried an experimental method for downloading SRA data. The method didn't work, and we plan to meet again after I verify a more typical method works.
+
+## Person_4
 
 ### 2020-11-02
 
@@ -125,6 +146,39 @@ Help with SpaceRanger
 **Notes**
 
 NA
+
+## Person_5
+
+### 2021-03-02
+
+**Help request**
+
+Clarification about how recent CMC data was processed with SPEAQeasy
+
+**Notes**
+
+I explained that SPEAQeasy was used for the recent hg38 processing, and an older version of a similar pipeline was used for the original hg19 processing. We discussed our new method for retrieving gene symbols ("org.*.eg.db" packages) and some general code advice.
+
+## Person_9
+
+### 2020-10-28
+
+**Help request**
+
+Changing Row Names of MultiAssayExperiment Assay
+
+**Notes**
+
+* [BioC Support website answer](https://support.bioconductor.org/p/p132406/#p132459)
+### 2020-12-02
+
+**Help request**
+
+Matching Variants Between Two VCF Objects
+
+**Notes**
+
+*[BioC Support website answer](https://support.bioconductor.org/p/p133110/#p133319)
 
 
 
