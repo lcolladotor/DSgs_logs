@@ -1,87 +1,6 @@
 # Leo
 
-## Person_11
-
-### 2021-01-11
-
-**Help request**
-
-Questions related to accessing results from the DG paper by Andrew Jaffe
-
-**Notes**
-
-NA
-
-## Person_13
-
-### 2020-11-03
-
-**Help request**
-
-Fixed a bug on biocthis for release branches
-
-**Notes**
-
-* [GitHub issue at biocthis](https://github.com/lcolladotor/biocthis/issues/13)
-
-## Person_17
-
-### 2020-11-03
-
-**Help request**
-
-Issue with knitcitations
-
-**Notes**
-
-* [GitHub issue at biocthis](https://github.com/lcolladotor/biocthis/issues/14)
-### 2020-11-25
-
-**Help request**
-
-Accesing CMC RNA-seq data
-
-**Notes**
-
-* Started PsychENCODE access request process
-
-## Person_18
-
-### 2021-01-14
-
-**Help request**
-
-biocthis macOS GHA bug
-
-**Notes**
-
-* [BioC Support website answer](https://support.bioconductor.org/p/p134069/#p134141)
-
-## Person_27
-
-### 2020-10-30
-
-**Help request**
-
-Issue with JHPCE file permissions
-
-**Notes**
-
-Explained the `chgrp` and `umask` commands plus `~/.bashrc` file configuration. I also mentioned why we don't use `chmod 777` at JHPCE. Details on [Slack](https://jhu-genomics.slack.com/archives/CR9NYA0BF/p1604086263148400?thread_ts=1603826219.094600&cid=CR9NYA0BF) (private channel).
-
-## Person_28
-
-### 2020-10-30
-
-**Help request**
-
-recount3 GTEx data access
-
-**Notes**
-
-* [BioC Support website answer](https://support.bioconductor.org/p/p132487/#p132521)
-
-## Person_29
+## Person_1
 
 ### 2020-10-21
 
@@ -93,7 +12,7 @@ Ballgown stattest
 
 * [BioC Support website answer](https://support.bioconductor.org/p/134914/#134915)
 
-## Person_4
+## Person_16
 
 ### 2020-11-11
 
@@ -105,28 +24,37 @@ Differences between recount2's "bp_length" and SPEAQeasy's "Length"
 
 * [Check Slack helpdesk channel](https://jhu-genomics.slack.com/archives/CUYHWV7AA/p1605123296024100)
 
-## Person_5
+## Person_20
 
+### 2020-10-30
+
+**Help request**
+
+recount3 GTEx data access
+
+**Notes**
+
+* [BioC Support website answer](https://support.bioconductor.org/p/p132487/#p132521)
 ### 2020-11-03
 
 **Help request**
 
-Fixed two bugs on recount3 related to locate_url() for the BigWig files.
+Fixed a bug on biocthis for release branches
 
 **Notes**
 
-Resulted in recount3 versions 1.1.1 and 1.1.2 on bioc-devel (and 1.0.2 on bioc-release)
-### 2020-11-11
+* [GitHub issue at biocthis](https://github.com/lcolladotor/biocthis/issues/13)
+### 2021-01-26
 
 **Help request**
 
-GitHub actions workflow issue with macOS on R-devel
+Guidance on how to download data from a study in GEO
 
 **Notes**
 
-* [GitHub issue at biocthis](https://github.com/lcolladotor/biocthis/issues/15)
+NA
 
-## Person_8
+## Person_21
 
 ### 2020-10-28
 
@@ -137,6 +65,111 @@ exceRpt pipeline counts
 **Notes**
 
 * [BioC Support website answer](https://support.bioconductor.org/p/p132450/#p132464)
+
+## Person_24
+
+### 2021-01-11
+
+**Help request**
+
+Questions related to accessing results from the DG paper by Andrew Jaffe
+
+**Notes**
+
+NA
+
+## Person_26
+
+### 2020-11-03
+
+**Help request**
+
+Fixed two bugs on recount3 related to locate_url() for the BigWig files.
+
+**Notes**
+
+Resulted in recount3 versions 1.1.1 and 1.1.2 on bioc-devel (and 1.0.2 on bioc-release)
+
+## Person_28
+
+### 2021-02-05
+
+**Help request**
+
+BSP2 LIBD eQTLs request
+
+**Notes**
+
+NA
+
+## Person_3
+
+### 2020-10-30
+
+**Help request**
+
+Issue with JHPCE file permissions
+
+**Notes**
+
+Explained the `chgrp` and `umask` commands plus `~/.bashrc` file configuration. I also mentioned why we don't use `chmod 777` at JHPCE. Details on [Slack](https://jhu-genomics.slack.com/archives/CR9NYA0BF/p1604086263148400?thread_ts=1603826219.094600&cid=CR9NYA0BF) (private channel).
+
+## Person_33
+
+### 2020-11-11
+
+**Help request**
+
+GitHub actions workflow issue with macOS on R-devel
+
+**Notes**
+
+* [GitHub issue at biocthis](https://github.com/lcolladotor/biocthis/issues/15)
+
+## Person_5
+
+### 2020-11-03
+
+**Help request**
+
+Issue with knitcitations
+
+**Notes**
+
+* [GitHub issue at biocthis](https://github.com/lcolladotor/biocthis/issues/14)
+### 2021-01-29
+
+**Help request**
+
+Help determining what data is available and what can be used for an analysis
+
+**Notes**
+
+Use of galaxybrain for identifying samples with DNAm, DNA genotype and RNA-seq data
+
+## Person_7
+
+### 2020-11-25
+
+**Help request**
+
+Accesing CMC RNA-seq data
+
+**Notes**
+
+* Started PsychENCODE access request process
+
+## Person_8
+
+### 2021-01-14
+
+**Help request**
+
+biocthis macOS GHA bug
+
+**Notes**
+
+* [BioC Support website answer](https://support.bioconductor.org/p/p134069/#p134141)
 
 
 

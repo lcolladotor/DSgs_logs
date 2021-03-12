@@ -12,7 +12,7 @@ copy number variation analysis (CNV)
 
 * [BioC Support website answer](https://support.bioconductor.org/p/134876/#134917)
 
-## Person_25
+## Person_15
 
 ### 2020-12-03
 
@@ -24,19 +24,7 @@ Inline formula throwing an error for interaction term
 
 *[RStudio Community self-answer](https://community.rstudio.com/t/recipes-package-cannot-create-interaction-term-in-step-interact/89860)
 
-## Person_32
-
-### 2020-11-12
-
-**Help request**
-
-RDavid Error
-
-**Notes**
-
-* [I recommended that they reach out to their forum board](https://support.bioconductor.org/p/p132558/#p132872)
-
-## Person_6
+## Person_31
 
 ### 2020-11-23
 
@@ -47,6 +35,18 @@ Ran Genome Studio, installed PLINK input plugin
 **Notes**
 
 * [There is a plugin for Genome Studio by Illumina that allows users to output their imputed allele results as PLINK inputs](https://support.illumina.com/downloads/genomestudio-2-0-plug-ins.html)
+
+## Person_37
+
+### 2020-11-12
+
+**Help request**
+
+RDavid Error
+
+**Notes**
+
+* [I recommended that they reach out to their forum board](https://support.bioconductor.org/p/p132558/#p132872)
 
 
 

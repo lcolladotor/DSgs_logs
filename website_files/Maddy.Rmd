@@ -1,42 +1,6 @@
 # Maddy
 
-## Person_12
-
-### 2020-11-19
-
-**Help request**
-
-download matlab on local computer through JHU software portal
-
-**Notes**
-
-NA
-
-## Person_17
-
-### 2020-11-04
-
-**Help request**
-
-3D volume extraction in Matlab
-
-**Notes**
-
-https://www.mathworks.com/matlabcentral/answers/636365-how-can-i-measure-volume-from-a-3d-image?s_tid=srchtitle
-
-## Person_20
-
-### 2020-12-03
-
-**Help request**
-
-how to open matlab (GUI and command line) on JHPCE
-
-**Notes**
-
-NA
-
-## Person_22
+## Person_10
 
 ### 2020-12-03
 
@@ -48,7 +12,7 @@ run dotdotdot pipeline local computer and cluster
 
 got through the Github vignettes thoroughly
 
-## Person_26
+## Person_11
 
 ### 2020-10-28
 
@@ -60,31 +24,7 @@ customize dotdotdot to his data
 
 NA
 
-## Person_30
-
-### 2020-11-19
-
-**Help request**
-
-data transfer from LIBD server to JHPCE
-
-**Notes**
-
-to use rsync or scp, you need to have user account created on LIBD server (Bill can help create it)
-
-## Person_35
-
-### 2021-02-12
-
-**Help request**
-
-download repository from github to cluster and run dotdotdot on cluster
-
-**Notes**
-
-NA
-
-## Person_37
+## Person_12
 
 ### 2021-02-05
 
@@ -96,7 +36,106 @@ JHPCE ssh keypair set up
 
 We got Heena's MAC registered for passwordless login to JHPCE
 
-## Person_4
+## Person_19
+
+### 2021-02-19
+
+**Help request**
+
+explaination of Owner/Group/Other permissions for files on JHPCe
+
+**Notes**
+
+running chmod
+
+## Person_20
+
+### 2020-12-01
+
+**Help request**
+
+how to connect to LIBD servers on windows and mac
+
+**Notes**
+
+NA
+### 2020-11-19
+
+**Help request**
+
+download matlab on local computer through JHU software portal
+
+**Notes**
+
+NA
+### 2021-03-06
+
+**Help request**
+
+resolve figure generation error in human rnascope script from dotdotdot
+
+**Notes**
+
+NA
+### 2021-03-05
+
+**Help request**
+
+image analysis on QuPath
+
+**Notes**
+
+explore loading/saving/exporting options on Qupath
+
+## Person_23
+
+### 2020-12-03
+
+**Help request**
+
+how to open matlab (GUI and command line) on JHPCE
+
+**Notes**
+
+NA
+
+## Person_27
+
+### 2021-02-26
+
+**Help request**
+
+Submitting/debugging bash job for dotdotdot on cluster
+
+**Notes**
+
+Debugging through the input/output file in logs
+
+## Person_31
+
+### 2020-11-04
+
+**Help request**
+
+3D volume extraction in Matlab
+
+**Notes**
+
+https://www.mathworks.com/matlabcentral/answers/636365-how-can-i-measure-volume-from-a-3d-image?s_tid=srchtitle
+
+## Person_35
+
+### 2021-02-26
+
+**Help request**
+
+data transfer from LIBD server to JHPCE
+
+**Notes**
+
+use rsync
+
+## Person_40
 
 ### 2021-02-05
 
@@ -108,17 +147,29 @@ dotdotdot parameter tuning for Ema's rat RNAscope data
 
 NA
 
-## Person_5
+## Person_42
 
-### 2020-12-01
+### 2021-02-12
 
 **Help request**
 
-how to connect to LIBD servers on windows and mac
+download repository from github to cluster and run dotdotdot on cluster
 
 **Notes**
 
-NA
+Used Amy's rstats blogpost on git
+
+## Person_8
+
+### 2020-11-19
+
+**Help request**
+
+data transfer from LIBD server to JHPCE
+
+**Notes**
+
+to use rsync or scp, you need to have user account created on LIBD server (Bill can help create it)
 
 
 
