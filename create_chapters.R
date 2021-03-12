@@ -23,37 +23,22 @@ by_guide <- split(logs_data, logs_data$guide_name)
 xx <- lapply(seq_along(by_guide), function(i) {
     guide <- names(by_guide)[i]
 
-    by_person <- split(by_guide[[i]], by_guide[[i]]$person)
-    entries <- do.call(rbind, lapply(by_person, function(x) {
+    by_date <- split(by_guide[[i]], by_guide[[i]]$date)
+    entries <- do.call(rbind, lapply(by_date, function(x) {
         data.frame(
             entry = paste(glue_data(
                 x,
-                "
-### {date}
-
-**Help request**
-
-{help_request}
-
-**Notes**
-
-{public_notes}
-
-"
+                "| {date} | {help_request} | {public_notes} |"
             ), collapse = "")
         )
     }))
-    entries$person <- rownames(entries)
 
-    content_rmd <- paste(glue_data(entries, "
-## {person}
-
-{entry}
-
-"), collapse = "")
+    content_rmd <- paste(glue_data(entries, "{entry}"), collapse = "\n")
     chapter_rmd <- glue("
 # {guide}
 
+| Date | Help request | Notes |
+| ---- | ------------ | ----- |
 {content_rmd}
 
 ")

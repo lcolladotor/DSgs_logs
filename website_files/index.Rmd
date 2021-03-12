@@ -19,13 +19,116 @@ This website contains the public logs for the Data Science guidance sessiones ca
 * [Nicholas J. Eagles](https://github.com/Nick-Eagles)
 * [Madhavi Tippani](https://github.com/madhavitippani)
 
-This book was last updated on `r Sys.time()`.
+
+## Graphs {-}
+
+```{r "load_libraries", echo = FALSE, message = FALSE, warning = FALSE}
+## Packages used in the book
+library("ggplot2")
+library("lubridate")
+library("dplyr")
+library("here")
+```
+
+
+Below we see the number of [DSgs](https://lcolladotor.github.io/bioc_team_ds/data-science-guidance-sessions.html) sessions across weeks for each of the guides for each type of help/guidance request over weeks of the year.
+
+```{r "graph_by_guide", echo = FALSE, warning = FALSE, message = FALSE}
+load(here::here("logs_data.Rdata"))
+
+## Clean up a bit
+logs_data$date <- as.Date(logs_data$date)
+logs_data$week <- isoweek(logs_data$date)
+logs_data$year <- year(logs_data$date)
+
+top_types <- sort(table(logs_data$type), decreasing = TRUE)
+logs_data$top_type <- logs_data$type
+logs_data$top_type[logs_data$type %in% names(top_types)[-(1:2)]] <- "other"
+
+## Summarise the data to get the number of sessions per week on a given year
+by_guide_summary <- summarise(group_by(logs_data, week, year, guide_name, top_type), "number"=n())
+
+## Plot by day of the year
+ggplot(by_guide_summary , aes(
+    x = paste0(year, '-', sprintf("%02d", week)),
+    y = number,
+    color = guide_name,
+    group = guide_name
+)) +
+    geom_point() +
+    geom_line() +
+    xlab("Week of the year") +
+    ylab("Number of sessions") +
+    scale_y_continuous(
+        breaks = seq(0, max(by_guide_summary$number) + 1, by = 1),
+        limits = c(0, max(by_guide_summary$number) + 1)) +
+    labs(color = "Guide") +
+    facet_grid(top_type ~ .) +
+    theme_dark(base_size = 20) +
+    theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1)) +
+    scale_color_brewer(palette = "Accent")
+```
+
+As a team, we can see the number of requests we've addressed over the weeks.
+
+```{r "graph_week_total", echo = FALSE, warning = FALSE, message = FALSE}
+## Plot by week of the year ignoring guide, for each type
+by_week <- summarise(group_by(by_guide_summary, week, year, top_type), number = sum(number))
+ggplot(by_week, aes(
+    x = paste0(year, '-', sprintf("%02d", week)),
+    y = number,
+    group = 1
+)) +
+    geom_point() +
+    geom_line() +
+    xlab("Week of the year") +
+    ylab("Number of sessions") +
+    scale_y_continuous(
+        limits = c(0, max(by_week$number) + 1)
+    ) +
+    facet_grid(top_type ~ .) +
+    theme_dark(base_size = 20) +
+    theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
+```
+
+Finally, we can check if the overall number of help requests we've attended as the weeks have gone by.
+
+```{r "graph_total", echo = FALSE, warning = FALSE, message = FALSE}
+## Plot by week of the year ignoring guide
+by_total <- summarise(group_by(logs_data, week, year), number = n())
+ggplot(by_total, aes(
+    x = paste0(year, '-', sprintf("%02d", week)),
+    y = number,
+    group = 1
+)) +
+    geom_point() +
+    geom_line() +
+    xlab("Week of the year") +
+    ylab("Number of sessions") +
+    scale_y_continuous(
+        limits = c(0, max(by_total$number) + 1)
+    ) +
+    theme_dark(base_size = 20) + 
+    theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
+
+
+## Could use this later once we have more data
+# https://vuorre.netlify.app/post/2016/03/24/github-style-waffle-plots-in-r/
+
+# logs_data$hours <- 0
+# logs_data$day <- weekdays(logs_data$date, TRUE)
+# 
+# gh_waffle(logs_data)
+```
+
+These graphs are partially based on [`lcolladotor/mphtasessions`](https://github.com/lcolladotor/mphtasessions/blob/gh-pages/index.Rmd).
+
 
 ## R session information {-}
 
 Details on the R version used for making this book. The source code is available at [`lcolladotor/DSgs_logs`](https://github.com/lcolladotor/DSgs_logs).
 
-```{r session_info_chunk, eval = FALSE}
+```{r session_info_chunk}
 ## Packages used in the book
 library("ggplot2")
 library("lubridate")
@@ -43,123 +146,4 @@ options(width = 120)
 session_info()
 ```
 
-```{r "load_libraries", echo = FALSE, message = FALSE, warning = FALSE}
-## Packages used in the book
-library("ggplot2")
-library("lubridate")
-library("dplyr")
-library("here")
-```
-
-
-```{r session_info, echo = FALSE}
-<<session_info_chunk>>
-```
-
-# Graphs
-
-Below we see the number of [DSgs](https://lcolladotor.github.io/bioc_team_ds/data-science-guidance-sessions.html) sessions across weeks for each of the guides for each type of help/guidance request over the last four weeks.
-
-```{r "graph_by_guide", echo = FALSE, warning = FALSE, message = FALSE}
-load(here::here("logs_data.Rdata"))
-
-## Clean up a bit
-logs_data$date <- as.Date(logs_data$date)
-logs_data$week <- isoweek(logs_data$date)
-logs_data$year <- year(logs_data$date)
-
-## Summarise the data to get the number of sessions per week on a given year
-by_guide_summary <- summarise(group_by(logs_data, week, year, guide_name, type), "number"=n())
-
-## Plot by day of the year
-# ggplot(by_guide_summary , aes(
-#     x = paste0(year, '-', week),
-#     y = number,
-#     color = guide_name,
-#     group = guide_name
-# )) +
-#     geom_point() +
-#     geom_line() +
-#     xlab("Week of the year") +
-#     ylab("Number of sessions") +
-#     scale_y_continuous(
-#         breaks = seq(0, max(by_guide_summary$number) + 1, by = 1),
-#         limits = c(0, max(by_guide_summary$number) + 1)) +
-#     labs(color = "Guide") +
-#     facet_grid(type ~ .) +
-#     theme_bw(base_size = 20)
-
-last_four <- subset(by_guide_summary, week > (isoweek(Sys.time()) - 4) & year == year(Sys.time()))
-ggplot(last_four, aes(
-    x = paste0(year, '-', week),
-    y = number,
-    color = guide_name,
-    group = guide_name
-)) +
-    geom_point() +
-    geom_line() +
-    xlab("Week of the year") +
-    ylab("Number of sessions") +
-    scale_y_continuous(
-        breaks = seq(0, max(last_four$number) + 1, by = 1),
-        limits = c(0, max(last_four$number) + 1)) +
-    labs(color = "Guide") +
-    facet_grid(type ~ .) +
-    theme_dark(base_size = 20)
-```
-
-As a team, we can see the number of requests we've addressed over the weeks.
-
-```{r "graph_week_total", echo = FALSE, warning = FALSE, message = FALSE}
-## Plot by week of the year ignoring guide, for each type
-by_week <- summarise(group_by(by_guide_summary, week, year, type), number = sum(number))
-ggplot(by_week, aes(
-    x = paste0(year, '-', week),
-    y = number,
-    group = 1
-)) +
-    geom_point() +
-    geom_line() +
-    xlab("Week of the year") +
-    ylab("Number of sessions") +
-    scale_y_continuous(
-        breaks = seq(0, max(by_week$number) + 1, by = 1),
-        limits = c(0, max(by_week$number) + 1)
-    ) +
-    facet_grid(type ~ .) +
-    theme_dark(base_size = 20) +
-    theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
-```
-
-Finally, we can check if the overall number of help requests we've attended as the weeks have gone by.
-
-```{r "graph_total", echo = FALSE, warning = FALSE, message = FALSE}
-## Plot by week of the year ignoring guide
-by_total <- summarise(by_guide_summary, number = sum(number))
-ggplot(by_total, aes(
-    x = paste0(year, '-', week),
-    y = number,
-    group = 1
-)) +
-    geom_point() +
-    geom_line() +
-    xlab("Week of the year") +
-    ylab("Number of sessions") +
-    scale_y_continuous(
-        breaks = seq(0, max(by_total$number) + 1, by = 1),
-        limits = c(0, max(by_total$number) + 1)
-    ) +
-    theme_dark(base_size = 20) + 
-    theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
-
-
-## Could use this later once we have more data
-# https://vuorre.netlify.app/post/2016/03/24/github-style-waffle-plots-in-r/
-
-# logs_data$hours <- 0
-# logs_data$day <- weekdays(logs_data$date, TRUE)
-# 
-# gh_waffle(logs_data)
-```
-
-These graphs are partially based on [`lcolladotor/mphtasessions`](https://github.com/lcolladotor/mphtasessions/blob/gh-pages/index.Rmd).
+This book was last updated on `r Sys.time()`.

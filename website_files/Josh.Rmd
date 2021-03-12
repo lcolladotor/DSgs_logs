@@ -1,16 +1,6 @@
 # Josh
 
-## Person_32
-
-### 2020-10-28
-
-**Help request**
-
-Learning Lexical Scoping Rules
-
-**Notes**
-
-NA
-
-
+| Date | Help request | Notes |
+| ---- | ------------ | ----- |
+| 2020-10-28 | Learning Lexical Scoping Rules | NA |
 

@@ -1,169 +1,18 @@
 # Louise
 
-## Person_1
-
-### 2020-11-18
-
-**Help request**
-
-Help clustering sce data
-
-**Notes**
-
-We debugged some code and ultimetly decided that it might be best for Abby to write new code and use the tsne function to cluster and plot the data
-
-## Person_13
-
-### 2020-11-05
-
-**Help request**
-
-LC repo organization
-
-**Notes**
-
-We discussed organizing by analysis (a directory for each one, then prehaps sub- directory for data & plots)
-Create a readMe for each sub-folder. Use gitignore to keep repo from getting too big.
-
-## Person_20
-
-### 2020-10-20
-
-**Help request**
-
-Help with spatstat
-
-**Notes**
-
-spatstat package https://spatstat.org/releasenotes/spatstat-1.39-0.html,
-L function https://www.rdocumentation.org/packages/spatstat/versions/1.64-1/topics/Lest
-Kmark https://www.rdocumentation.org/packages/spatstat/versions/1.64-1/topics/Kmark
-### 2021-03-05
-
-**Help request**
-
-Maker finding for cell types in single cell data
-
-**Notes**
-
-I showed them the tools I developed in DeconvoBuddies pacakge, and provided links to example code where I had applied these funcitons in previous work
-
-## Person_31
-
-### 2020-12-08
-
-**Help request**
-
-Resolving issues in phenotype data between genotype, expression, and LIBDpheno
-
-**Notes**
-
-Need to resolve swap bugs. Plan to create a table of phenotype data (Dx, age, sex, race) for each BrNum to mach genotype data
-
-## Person_34
-
-### 2020-10-27
-
-**Help request**
-
-Plotly help if possible? I'm trying to export an html file that allows the user to look at each snp/gene on the plot, and I am almost successful. Leo recommended that I talk to you on this matter.
-
-**Notes**
-
-Needed to use highlight_key and highlight functions to select points between plots. Used rstats example as guide https://gist.github.com/lcolladotor/350ac8843e153d135f64880a1d029b14
-
-## Person_39
-
-### 2020-11-12
-
-**Help request**
-
-Help adapting ggplot script for TWAS Z-score
-
-**Notes**
-
-We talked about how the data should be structured before using ggplot (transforming some data and adding catagorical columns)
-
-## Person_4
-
-### 2021-02-04
-
-**Help request**
-
-Work on habenula deconvolution and debug the deconvolution package
-
-**Notes**
-
-We went over applying DeconvoBuddies functions to hebenula data
-
-## Person_41
-
-### 2020-10-21
-
-**Help request**
-
-Question: Subset center regions of a set of different length sequences
-
-**Notes**
-
-* [BioC Support website answer](https://support.bioconductor.org/p/134532/#134925)
-
-## Person_43
-
-### 2021-02-09
-
-**Help request**
-
-Visualizing RPKM valus for genes in Humna and Primarte data
-
-**Notes**
-
-We spent time doing basic Rstudio setup and troubleshooting, and got the data downloaded
-
-## Person_5
-
-### 2021-01-27
-
-**Help request**
-
-group_by bug for get_mean_ratio
-
-**Notes**
-
-We are going to try an iterative strategy to keep tables smaller
-
-## Person_6
-
-### 2020-11-13
-
-**Help request**
-
-Using reshape package to transform table for plotting
-
-**Notes**
-
-I recomended using dcast to do a "long" to "wide" data transformation
-### 2020-12-07
-
-**Help request**
-
-jhpce set up on mac
-
-**Notes**
-
-Went through the setting up passwordless login for jhpce using ssh keys, and coppied the configuration files from https://gist.github.com/lcolladotor/3b1063db30a206835ee7e086c8f037ee
-
-## Person_9
-
-### 2021-02-04
-
-**Help request**
-
-Github ssh key set up
-
-**Notes**
-
-We got the ssh keys working for Brenda's github
-
-
+| Date | Help request | Notes |
+| ---- | ------------ | ----- |
+| 2020-10-20 | Help with spatstat | spatstat package https://spatstat.org/releasenotes/spatstat-1.39-0.html, L function https://www.rdocumentation.org/packages/spatstat/versions/1.64-1/topics/Lest, Kmark https://www.rdocumentation.org/packages/spatstat/versions/1.64-1/topics/Kmark |
+| 2020-10-21 | Question: Subset center regions of a set of different length sequences | [BioC Support website answer](https://support.bioconductor.org/p/134532/#134925) |
+| 2020-10-27 | Plotly help if possible? I'm trying to export an html file that allows the user to look at each snp/gene on the plot, and I am almost successful. Leo recommended that I talk to you on this matter. | Needed to use highlight_key and highlight functions to select points between plots. Used rstats example as guide https://gist.github.com/lcolladotor/350ac8843e153d135f64880a1d029b14 |
+| 2020-11-05 | LC repo organization | We discussed organizing by analysis (a directory for each one, then prehaps sub- directory for data & plots). Create a readMe for each sub-folder. Use gitignore to keep repo from getting too big. |
+| 2020-11-12 | Help adapting ggplot script for TWAS Z-score | We talked about how the data should be structured before using ggplot (transforming some data and adding catagorical columns) |
+| 2020-11-13 | Using reshape package to transform table for plotting | I recomended using dcast to do a "long" to "wide" data transformation |
+| 2020-11-18 | Help clustering sce data | We debugged some code and ultimetly decided that it might be best for Abby to write new code and use the tsne function to cluster and plot the data |
+| 2020-12-07 | jhpce set up on mac | Went through the setting up passwordless login for jhpce using ssh keys, and coppied the configuration files from https://gist.github.com/lcolladotor/3b1063db30a206835ee7e086c8f037ee |
+| 2020-12-08 | Resolving issues in phenotype data between genotype, expression, and LIBDpheno | Need to resolve swap bugs. Plan to create a table of phenotype data (Dx, age, sex, race) for each BrNum to mach genotype data |
+| 2021-01-27 | group_by bug for get_mean_ratio | We are going to try an iterative strategy to keep tables smaller |
+| 2021-02-04 | Work on habenula deconvolution and debug the deconvolution package | We went over applying DeconvoBuddies functions to hebenula data || 2021-02-04 | Github ssh key set up | We got the ssh keys working for Brenda's github |
+| 2021-02-09 | Visualizing RPKM valus for genes in Humna and Primarte data | We spent time doing basic Rstudio setup and troubleshooting, and got the data downloaded |
+| 2021-03-05 | Maker finding for cell types in single cell data | I showed them the tools I developed in DeconvoBuddies pacakge, and provided links to example code where I had applied these funcitons in previous work |
 
