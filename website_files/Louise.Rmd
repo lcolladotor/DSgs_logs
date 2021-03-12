@@ -12,7 +12,8 @@
 | 2020-12-07 | jhpce set up on mac | Went through the setting up passwordless login for jhpce using ssh keys, and coppied the configuration files from https://gist.github.com/lcolladotor/3b1063db30a206835ee7e086c8f037ee |
 | 2020-12-08 | Resolving issues in phenotype data between genotype, expression, and LIBDpheno | Need to resolve swap bugs. Plan to create a table of phenotype data (Dx, age, sex, race) for each BrNum to mach genotype data |
 | 2021-01-27 | group_by bug for get_mean_ratio | We are going to try an iterative strategy to keep tables smaller |
-| 2021-02-04 | Work on habenula deconvolution and debug the deconvolution package | We went over applying DeconvoBuddies functions to hebenula data || 2021-02-04 | Github ssh key set up | We got the ssh keys working for Brenda's github |
+| 2021-02-04 | Work on habenula deconvolution and debug the deconvolution package | We went over applying DeconvoBuddies functions to hebenula data |
+| 2021-02-04 | Github ssh key set up | We got the ssh keys working for Brenda's github |
 | 2021-02-09 | Visualizing RPKM valus for genes in Humna and Primarte data | We spent time doing basic Rstudio setup and troubleshooting, and got the data downloaded |
 | 2021-03-05 | Maker finding for cell types in single cell data | I showed them the tools I developed in DeconvoBuddies pacakge, and provided links to example code where I had applied these funcitons in previous work |
 

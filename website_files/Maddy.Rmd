@@ -4,13 +4,17 @@
 | ---- | ------------ | ----- |
 | 2020-10-28 | customize dotdotdot to his data | NA |
 | 2020-11-04 | 3D volume extraction in Matlab | https://www.mathworks.com/matlabcentral/answers/636365-how-can-i-measure-volume-from-a-3d-image?s_tid=srchtitle |
-| 2020-11-19 | data transfer from LIBD server to JHPCE | to use rsync or scp, you need to have user account created on LIBD server (Bill can help create it) || 2020-11-19 | download matlab on local computer through JHU software portal | NA |
+| 2020-11-19 | data transfer from LIBD server to JHPCE | to use rsync or scp, you need to have user account created on LIBD server (Bill can help create it) |
+| 2020-11-19 | download matlab on local computer through JHU software portal | NA |
 | 2020-12-01 | how to connect to LIBD servers on windows and mac | NA |
-| 2020-12-03 | run dotdotdot pipeline local computer and cluster | got through the Github vignettes thoroughly || 2020-12-03 | how to open matlab (GUI and command line) on JHPCE | NA |
-| 2021-02-05 | JHPCE ssh keypair set up | We got Heena's MAC registered for passwordless login to JHPCE || 2021-02-05 | dotdotdot parameter tuning for Ema's rat RNAscope data | NA |
+| 2020-12-03 | run dotdotdot pipeline local computer and cluster | got through the Github vignettes thoroughly |
+| 2020-12-03 | how to open matlab (GUI and command line) on JHPCE | NA |
+| 2021-02-05 | JHPCE ssh keypair set up | We got Heena's MAC registered for passwordless login to JHPCE |
+| 2021-02-05 | dotdotdot parameter tuning for Ema's rat RNAscope data | NA |
 | 2021-02-12 | download repository from github to cluster and run dotdotdot on cluster | Used Amy's rstats blogpost on git |
 | 2021-02-19 | explaination of Owner/Group/Other permissions for files on JHPCe | running chmod |
-| 2021-02-26 | data transfer from LIBD server to JHPCE | use rsync || 2021-02-26 | Submitting/debugging bash job for dotdotdot on cluster | Debugging through the input/output file in logs |
+| 2021-02-26 | data transfer from LIBD server to JHPCE | use rsync |
+| 2021-02-26 | Submitting/debugging bash job for dotdotdot on cluster | Debugging through the input/output file in logs |
 | 2021-03-05 | image analysis on QuPath | explore loading/saving/exporting options on Qupath |
 | 2021-03-06 | resolve figure generation error in human rnascope script from dotdotdot | NA |
 
