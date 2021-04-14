@@ -2,5 +2,7 @@
 
 | Date | Help request | Notes |
 | ---- | ------------ | ----- |
+| 2020-03-16 | get effect size for calcium imaging | reffered to package "effsize" should be efficient at easily doing this |
 | 2020-10-28 | Learning Lexical Scoping Rules | NA |
+| 2021-03-26 | help doing a power analysis for RNA-seq data | sent him the scripts from andrew, wondering if I should make it into a function |
 

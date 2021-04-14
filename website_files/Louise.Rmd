@@ -16,4 +16,6 @@
 | 2021-02-04 | Github ssh key set up | We got the ssh keys working for Brenda's github |
 | 2021-02-09 | Visualizing RPKM valus for genes in Humna and Primarte data | We spent time doing basic Rstudio setup and troubleshooting, and got the data downloaded |
 | 2021-03-05 | Maker finding for cell types in single cell data | I showed them the tools I developed in DeconvoBuddies pacakge, and provided links to example code where I had applied these funcitons in previous work |
+| 2021-03-19 | Change point size in vis_clust_grid | We walked througth the SpatialLIBD code to find where the argument has to be changed |
+| 2021-03-26 | Need help understanding the sce - single cell object | Went over basic functions of SummarizedExperiment and SingleCellExperiment, what a Sparse matrix is - how to convert to non-sparse. Steps to take to use getRPKM on SingeCellExperient. |
 

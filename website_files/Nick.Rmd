@@ -18,4 +18,7 @@
 | 2021-03-02 | Clarification about how recent CMC data was processed with SPEAQeasy | I explained that SPEAQeasy was used for the recent hg38 processing, and an older version of a similar pipeline was used for the original hg19 processing. We discussed our new method for retrieving gene symbols ("org.*.eg.db" packages) and some general code advice. |
 | 2021-03-02 | Our group's set-up and approach for writing papers with google docs, and managing citations | I went through the setup and example usage of Sciwheel and cross reference, and gave general advice (it's often easiest to start with the "Methods" section, etc) |
 | 2021-03-03 | Advice for writing papers | We discussed how Sciwheel can be adapted for different journals, and provided general advice for getting started and formatting a paper for a particular journal. |
+| 2021-03-10 | qSVA explanation and code review | Josh walked me through some code performing qSVA for a recent project, and I offered some tips involving code organization/ readibility. |
+| 2021-03-18 | Download SRA data and run SPEAQeasy | I fetched the SRA files, created a manifest and execution script for SPEAQeasy, but had an issue running "fastq-dump". I decided to hand off the request, partially complete. |
+| 2021-03-22 | Using an LIBD module | I described the need for the "module use" command and modifying the .bashrc to easily use LIBD modules |
 

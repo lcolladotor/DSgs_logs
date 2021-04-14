@@ -6,4 +6,5 @@
 | 2020-11-12 | RDavid Error | [I recommended that they reach out to their forum board](https://support.bioconductor.org/p/p132558/#p132872) |
 | 2020-11-23 | Ran Genome Studio, installed PLINK input plugin | [There is a plugin for Genome Studio by Illumina that allows users to output their imputed allele results as PLINK inputs](https://support.illumina.com/downloads/genomestudio-2-0-plug-ins.html) |
 | 2020-12-03 | Inline formula throwing an error for interaction term | [RStudio Community self-answer](https://community.rstudio.com/t/recipes-package-cannot-create-interaction-term-in-step-interact/89860) |
+| 2021-03-18 | Attempted SPEAQeasy installation on MacOS | Failed MacOS installation on Lieber MacBook, something about Java both being and also not being installed |
 

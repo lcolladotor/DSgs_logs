@@ -16,5 +16,15 @@
 | 2021-02-26 | data transfer from LIBD server to JHPCE | use rsync |
 | 2021-02-26 | Submitting/debugging bash job for dotdotdot on cluster | Debugging through the input/output file in logs |
 | 2021-03-05 | image analysis on QuPath | explore loading/saving/exporting options on Qupath |
-| 2021-03-06 | resolve figure generation error in human rnascope script from dotdotdot | NA |
+| 2021-03-06 | resolve figure generation error in human rnascope script from dotdotdot | fixed the github repo |
+| 2021-03-12 | split histology images into respective capture areas | ran her through an example, explained her the code on github repo (split.m is the main script) |
+| 2021-03-12 | x-quartz installation | edited the config file for setting up x-quartz |
+| 2021-03-17 | visium image segmentation | explaination of the functions VNS.m and refineVNS.m |
+| 2021-03-17 | troubleshooting memory usage for VNS function from VisiumLIBD | when running VNS.m for several files on same matlab session the data from previous sessions is saved in matlab cache memory automatically. This will cause memory issues with subsequent runs, its important to clear variables after every run. |
+| 2021-03-23 | extracting p-values from linear mixed effect model for Calcium imaging data | NA |
+| 2021-03-24 | running nucleiCount for spatial DLPFC samples | explaination of scale_factors.json, tissuepositions_list.csv from spaceranger and the spotspotcheck package |
+| 2021-03-30 | steps to troubleshoot issues with stitched multi tile RNAscope images | NA |
+| 2021-04-01 | creating logs for issues from running SUFI (spectral unmixing of fluorescent biological images) | explaination of nurolucida system, how number of cores and RAM matter for running SUFI |
+| 2021-04-09 | Resolving issues with running dotdotdot on 20X RNAscope images | NA |
+| 2021-04-09 | runnning Hiplex registration | NA |
 
