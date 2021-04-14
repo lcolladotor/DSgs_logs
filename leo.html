@@ -259,6 +259,41 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <td>BSP2 eQTLs with a subset of SNPs</td>
 <td>Adapted code and shared it at <a href="https://github.com/LieberInstitute/brainseq_phase2/tree/master/eQTL_full/subset_hancock" class="uri">https://github.com/LieberInstitute/brainseq_phase2/tree/master/eQTL_full/subset_hancock</a></td>
 </tr>
+<tr class="even">
+<td>2021-03-24</td>
+<td>Download SRA data and run SPEAQeasy</td>
+<td>I identified that <a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE154829" class="uri">https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE154829</a> contains both miRNA and RNA-seq data. Using data from the SRA Run selector at <a href="https://trace.ncbi.nlm.nih.gov/Traces/study/?acc=SRP273137&amp;o=acc_s%3Aa" class="uri">https://trace.ncbi.nlm.nih.gov/Traces/study/?acc=SRP273137&amp;o=acc_s%3Aa</a> I was able to filter the data to the RNA-seq samples and subset the input samples.manifest file for SPEAQeasy.</td>
+</tr>
+<tr class="odd">
+<td>2021-03-24</td>
+<td>Explain the feasibility of an on-demand end user interface for DEG and eQTLs</td>
+<td>To identify DEGs or eQTLs, the user has to choose what covariates to adjust for. Some studies might require more complicated models than others, as they might be from more than one brain region or present some batch effect. In addition, in newer projects we are considering adjusting for cell type fractions derived from deconvolution. Even if all the covariates were fixed across datasets, in DEGs we have typically adjusted for qSVs which are computed in a dataset-dependent fashion and in essence are PCs derived from degradation-associated genomic regions. Similarly, for eQTLs we adjust for expression PCs. In both we adjust for ancestry PCs. Computing PCs is input-dependent: you won’t get the same values or PCs if you change which samples you are using. So, computing DEGs and eQTLs is not as simple as say a map-reduce problem where you compute the same thing for every input sample, then aggregate the per-sample results. We have steps that depend on the whole sample set. Then there’s also steps for filtering expression features based on some minimum expression cutoffs. Plus, differences between say polyA and RiboZero data, which don’t make sense to process together. For these reasons, I don’t think that an on-demand computation pipeline is feasible based on a user selecting a set of input samples. Constructing RNA-seq objects (RangedSummarizedExperiment objects) as well as DNA genotyping VCF files based on a set of input samples is feasible and that’s what others are building. After that, I think that it’s best to adapt code we have (or even use newer tools) after carefully exploring the data.</td>
+</tr>
+<tr class="even">
+<td>2021-03-25</td>
+<td>Creating a documentation website using bookdown</td>
+<td>Help with understanding <a href="https://bookdown.org/yihui/bookdown/">bookdown</a> and ideas on how to organize a documentation website (chapters and information to consider).</td>
+</tr>
+<tr class="odd">
+<td>2021-03-25</td>
+<td>Clarification of LIBD support</td>
+<td>Discussed the research project proposal and how we can help.</td>
+</tr>
+<tr class="even">
+<td>2021-03-25</td>
+<td>General advice</td>
+<td>General advice. Received feedback regarding file backups.</td>
+</tr>
+<tr class="odd">
+<td>2021-03-29</td>
+<td>spatialLIBD support</td>
+<td>Discussion about features that spatialLIBD could support to make it easier to use for newer data.</td>
+</tr>
+<tr class="even">
+<td>2021-04-08</td>
+<td>General guidance on how to learn how to do differential expression analyses</td>
+<td>Created a learning plan involving several team members that is now documented at a channel in JHU Genomics Slack. That way everyone can keep track of what others are teaching the person who asked the question, and we can have a common communication channel among everyone involved. Sessions include learning how to interact with JHPCE through RStudio, how to run SPEAQeasy, key R/Bioconductor packages (limma, SummarizedExperiment), and explore possible visualizations of interest.</td>
+</tr>
 </tbody>
 </table>
 
