@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>6 Nick | Data Science guidance session logs</title>
   <meta name="description" content="6 Nick | Data Science guidance session logs" />
-  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
   <meta property="og:title" content="6 Nick | Data Science guidance session logs" />
   <meta property="og:type" content="book" />
@@ -32,7 +32,7 @@
   
 <link rel="prev" href="maddy.html"/>
 
-<script src="libs/header-attrs-2.7/header-attrs.js"></script>
+<script src="libs/header-attrs-2.9/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -50,6 +50,8 @@
 
 
 
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 
 
 <style type="text/css">
@@ -116,6 +118,7 @@ code span.va { color: #19177c; } /* Variable */
 code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
+
 
 </head>
 
@@ -269,6 +272,66 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <td>Using an LIBD module</td>
 <td>I described the need for the “module use” command and modifying the .bashrc to easily use LIBD modules</td>
 </tr>
+<tr class="even">
+<td>2021-04-07</td>
+<td>Nextflow overview for work with imputation pipeline</td>
+<td>I covered various nextflow concepts, as well as my typical approach in creating and running a nextflow project at JHPCE</td>
+</tr>
+<tr class="odd">
+<td>2021-04-12</td>
+<td>Running the old RNA-seq pipeline on some SRA data</td>
+<td>I showed my typical process for creating a “samples.manifest” file for a given dataset, and how to submit a pipeline run. We continued to debug some minor issues over slack</td>
+</tr>
+<tr class="even">
+<td>2021-04-19</td>
+<td>Running SPEAQeasy</td>
+<td>Although we encountered permissions issues, I showed how to create a “samples.manifest” file and configure SPEAQeasy for a particular set of samples.</td>
+</tr>
+<tr class="odd">
+<td>2021-04-22</td>
+<td>Running SPEAQeasy</td>
+<td>We went through cloning SPEAQeasy, creating a “samples.manifest” file with R, and other relevant details for running SPEAQeasy at JHPCE. I also helped Henry set up git at JHPCE</td>
+</tr>
+<tr class="even">
+<td>2021-04-22</td>
+<td>Running SPEAQeasy- follow up</td>
+<td>We troubleshooted strange errors from the main SPEAQeasy output, and saw that I was able to run the main script (“run_pipeline_jhpce.sh”) but Sreya encountered errors with an identical script. We suspected permissions issues in her working directory, which she emailed bitsupport about.</td>
+</tr>
+<tr class="odd">
+<td>2021-04-26</td>
+<td>Running SPEAQeasy- follow up</td>
+<td>We discussed how to handle strandness issues, and how different inferred strand patterns within a group of samples sequenced together can indicate problems with the input data. I described how to use the ‘–force_strand’ option with SPEAQeasy</td>
+</tr>
+<tr class="even">
+<td>2021-04-28</td>
+<td>Constructing an array job from an existing sequential shell script</td>
+<td>I showed how I typically produce an array job shell script for the situation where I have many samples of data to process the same way (SIMD). We talked about using a text file where each line contains one sample name, and referencing that in the array script.</td>
+</tr>
+<tr class="odd">
+<td>2021-05-03</td>
+<td>Running SPEAQeasy- follow up</td>
+<td>We observed an issue where log parsing in SPEAQeasy behaved differently for Sreya and I due to a difference in default python version loaded at JHPCE. I fixed the hisat2/2.2.1 module to ensure consistent python version use.</td>
+</tr>
+<tr class="even">
+<td>2021-05-13</td>
+<td>Setting up a SPEAQeasy run</td>
+<td>I described how I typically construct a “samples.manifest” file and configure SPEAQeasy for a particular experiment.</td>
+</tr>
+<tr class="odd">
+<td>2021-05-19</td>
+<td>Making a module</td>
+<td>We went through the creation of an LIBD JHPCE module, covering the documentation process, lua syntax, and how to test a module before pushing.</td>
+</tr>
+<tr class="even">
+<td>2021-05-19</td>
+<td>Configuring a parallel series of bash scripts</td>
+<td>We adapted a series of bash scripts requiring parallel functionality for use at JHPCE. This involved correctly setting some path variables and requesting multiple cores through SGE for some scripts.</td>
+</tr>
+<tr class="odd">
+<td>2021-06-16</td>
+<td>addressing SPEAQeasy error</td>
+<td>we talked about how to use the “–strand” option, the source of the error that was encountered</td>
+</tr>
 </tbody>
 </table>
 
@@ -302,6 +365,7 @@ gitbook.start({
 "weibo": false,
 "instapaper": false,
 "vk": false,
+"whatsapp": false,
 "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
