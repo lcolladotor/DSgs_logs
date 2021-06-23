@@ -27,4 +27,5 @@
 | 2021-04-01 | creating logs for issues from running SUFI (spectral unmixing of fluorescent biological images) | explaination of nurolucida system, how number of cores and RAM matter for running SUFI |
 | 2021-04-09 | Resolving issues with running dotdotdot on 20X RNAscope images | NA |
 | 2021-04-09 | runnning Hiplex registration | NA |
+| 2021-04-15 | running and trouble shooting VisiumIF image splitting code | NA |
 

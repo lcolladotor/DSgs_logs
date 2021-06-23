@@ -18,4 +18,10 @@
 | 2021-03-05 | Maker finding for cell types in single cell data | I showed them the tools I developed in DeconvoBuddies pacakge, and provided links to example code where I had applied these funcitons in previous work |
 | 2021-03-19 | Change point size in vis_clust_grid | We walked througth the SpatialLIBD code to find where the argument has to be changed |
 | 2021-03-26 | Need help understanding the sce - single cell object | Went over basic functions of SummarizedExperiment and SingleCellExperiment, what a Sparse matrix is - how to convert to non-sparse. Steps to take to use getRPKM on SingeCellExperient. |
+| 2021-04-15 | JHPCE set up on mac | Henry needed to reset his JHPCE password as he had forgotten it, but we went through RStudio set up and got cyberduck installed, we will set up a meeting next week for ssh keys and configuration |
+| 2021-04-19 | JHPCE set up on mac | We got ssh key login working, added config files to JHPCE, went though a "hello world" example of using files on JHPCE on RStudio |
+| 2021-05-12 | Making plots for DE studies | We went over some plots we have made for DE previously, (quality control & PC scatter plots, t-stat scatter between models, venn diagrams, and boxplots). Talked about some things to watch out for in her data (small samples size). We are planning to meet again when her data is ready. |
+| 2021-05-20 | Making plots for DE studies | We reviewed the model that Sreya was evaluating for DE. As we as troublshooting the plot functions from the SPEAQeasy bootcamp code. I also advised taht she could create a volcano plot for her results. |
+| 2021-06-03 | questions about expression_cut and pca plots | We walked tought script from getRPKM to expression cut to filter rse objects, I also pointed Brenda towards some reasources to get started with ggplot |
+| 2021-06-17 | Manhattan plot making and tstatistic | Pointed her to some oacjages for creating TWAS plots whe was interested in and we walked through some code I used to compare T-stats from different DE models |
 
