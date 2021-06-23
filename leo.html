@@ -365,7 +365,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <tr class="even">
 <td>2021-06-17</td>
 <td>How to transfer recount3 data</td>
-<td>We met to figure out how to transfer the data for this collaboration, which ended up being quite tricky and involved using an SSH tunnel for rsync. Basically, a command like this one: rsync -avzh -e ‘ssh -o <a href="mailto:ProxyJump=user@server_somewhere_for_the_tunnel" class="email">ProxyJump=user@server_somewhere_for_the_tunnel</a>’ *_files_of_interest <a href="mailto:user@final_server" class="email">user@final_server</a>:/final_path/</td>
+<td>We met to figure out how to transfer the data for this collaboration, which ended up being quite tricky and involved using an SSH tunnel for rsync. Basically, a command like this one: <code>rsync -avzh -e 'ssh -o ProxyJump=user@server_somewhere_for_the_tunnel' *_files_of_interest user@final_server:/final_path/</code></td>
 </tr>
 <tr class="odd">
 <td>2021-06-17</td>
