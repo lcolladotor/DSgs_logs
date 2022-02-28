@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>4 Louise | Data Science guidance session logs</title>
   <meta name="description" content="4 Louise | Data Science guidance session logs" />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
   <meta property="og:title" content="4 Louise | Data Science guidance session logs" />
   <meta property="og:type" content="book" />
@@ -32,8 +32,9 @@
   
 <link rel="prev" href="leo.html"/>
 <link rel="next" href="maddy.html"/>
-<script src="libs/header-attrs-2.9/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -41,7 +42,6 @@
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
-
 
 
 
@@ -292,6 +292,61 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <td>Manhattan plot making and tstatistic</td>
 <td>Pointed her to some oacjages for creating TWAS plots whe was interested in and we walked through some code I used to compare T-stats from different DE models</td>
 </tr>
+<tr class="even">
+<td>2021-06-30</td>
+<td>Debugging ggplot code</td>
+<td>We reviewed her code and I gave some pointer on what bugs to look out for with certain errors in ggplot</td>
+</tr>
+<tr class="odd">
+<td>2021-08-20</td>
+<td>Help with JHPCE login issues</td>
+<td>We were able to update the keys for the cluster, but the ssh key login was still broken</td>
+</tr>
+<tr class="even">
+<td>2021-08-23</td>
+<td>Using purrr and map to loop over datasets and apply qsva</td>
+<td>Went over basic, complex, and nested map() usage and how to apply it to Josh’s current work</td>
+</tr>
+<tr class="odd">
+<td>2021-08-26</td>
+<td>using map to cbind a list of six to its corresponding list of lists. The second is a list of 6, each a list of 3.</td>
+<td>Did some troubleshooting on nested map functions, when to use ~.x and when to use function() syntax</td>
+</tr>
+<tr class="even">
+<td>2021-10-29</td>
+<td>qc general scripts, rnaseq scripts general, ggplot histogram with breaks</td>
+<td>We found a R function that helped produce the plot she was looking for</td>
+</tr>
+<tr class="odd">
+<td>2021-11-03</td>
+<td>Debugging help with rse_tx object</td>
+<td>We discussed how to check for duplicate rownames, and stratedgies for variable naming + working with rse objects</td>
+</tr>
+<tr class="even">
+<td>2022-01-19</td>
+<td>Help using BisqueRNA, getting snRNA-seq into correct input format, chosing refrence vs. marker based deconvolution</td>
+<td>I shared some detials of our deconvolution approach, we walked through the SCE to Expression set converson, and discussed some issues that may come up</td>
+</tr>
+<tr class="odd">
+<td>2022-01-20</td>
+<td>Troubleshooting ExprssionSet conversion</td>
+<td>Fixed row names to both be ensembl IDs, discussed simplifing cell types in sce, converting sce arrarys to matrix</td>
+</tr>
+<tr class="even">
+<td>2022-02-15</td>
+<td>Access to the gene info in the rowData of the Summarized Experiment objects to annotate eqtl results</td>
+<td>We went over how to acess the rowData, and what the rowData inthe MDD project contains. Ended up adding columns to the eqtl risk snp subsets to help with analysis</td>
+</tr>
+<tr class="odd">
+<td>2022-02-24</td>
+<td>I would like to learn how you ran tensorQTL on the MDD data, maybe with using the GPU nodes for it.</td>
+<td>Geo was interested int eh workflow I developed for tensorQTL. I went over the requirements and input formats that tensorqtl requirers, and how I had previously made them from our dataset. Also discussed the differnces between the functions and their outputs.</td>
+</tr>
+<tr class="even">
+<td>2022-02-24</td>
+<td>Help building for loops to analyze WGCNA ouput data</td>
+<td>We discussed how to build and save data with a for loop and with purrr::map. Went over how to define a function in map to do nested loops</td>
+</tr>
 </tbody>
 </table>
 
@@ -306,7 +361,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -346,6 +400,10 @@ gitbook.start({
 "text": null
 },
 "download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "subsection"
 }

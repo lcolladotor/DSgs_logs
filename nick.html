@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>6 Nick | Data Science guidance session logs</title>
   <meta name="description" content="6 Nick | Data Science guidance session logs" />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
   <meta property="og:title" content="6 Nick | Data Science guidance session logs" />
   <meta property="og:type" content="book" />
@@ -32,8 +32,9 @@
   
 <link rel="prev" href="maddy.html"/>
 
-<script src="libs/header-attrs-2.9/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -41,7 +42,6 @@
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
-
 
 
 
@@ -245,7 +245,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <tr class="even">
 <td>2021-03-02</td>
 <td>Clarification about how recent CMC data was processed with SPEAQeasy</td>
-<td>I explained that SPEAQeasy was used for the recent hg38 processing, and an older version of a similar pipeline was used for the original hg19 processing. We discussed our new method for retrieving gene symbols ("org.*.eg.db" packages) and some general code advice.</td>
+<td>I explained that SPEAQeasy was used for the recent hg38 processing, and an older version of a similar pipeline was used for the original hg19 processing. We discussed our new method for retrieving gene symbols (“org.*.eg.db” packages) and some general code advice.</td>
 </tr>
 <tr class="odd">
 <td>2021-03-02</td>
@@ -332,6 +332,101 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <td>addressing SPEAQeasy error</td>
 <td>we talked about how to use the “–strand” option, the source of the error that was encountered</td>
 </tr>
+<tr class="even">
+<td>2021-06-30</td>
+<td>Specifying output logs on SGE</td>
+<td>I briefly mentioned the “#$ -o” and “#$ -e” arguments, and how several logs will generate in your home directory without those arguments and without “#$ -cwd”, when “qsub”ing a job at JHPCE.</td>
+</tr>
+<tr class="odd">
+<td>2021-07-02</td>
+<td>Help indexing a possibly corrupt VCF file</td>
+<td>We confirmed that an existing VCF was corrupt and found that tabix expected bgzip-compressed VCF input rather than compressed BCF input.</td>
+</tr>
+<tr class="even">
+<td>2021-07-13</td>
+<td>formatting a LaTeX document and bookdown website</td>
+<td>I attempted some formatting tricks to eliminate unwanted whitespace but was ultimately unsuccessful. We suspected the LaTeX template required the whitespace to exist. We also tried to fix a bug with the header of a bookdown RMD not rendering as expected. It seemed that re-writing the header (without making any visible changes) fixed the issue, though we weren’t sure of the source of the initial problem.</td>
+</tr>
+<tr class="odd">
+<td>2021-07-14</td>
+<td>getting SPEAQeasy running</td>
+<td>In a series of email exchanges we diagnosed subtle errors resulting from bad FASTQ files and unintended options in the main script. Her feedback helped me improve some existing documentation.</td>
+</tr>
+<tr class="even">
+<td>2021-07-14</td>
+<td>debugging SPEAQeasy errors</td>
+<td>I described correct use of the “–input” argument, and we also found that many of the input FASTQs were empty, leading to a somewhat vague error message.</td>
+</tr>
+<tr class="odd">
+<td>2021-08-06</td>
+<td>Forming a data frame from data in multiple files</td>
+<td>I showed a fairly standard method for concatenating tabular data from multiple files into a single matrix, and saving the resulting R object</td>
+</tr>
+<tr class="even">
+<td>2021-08-25</td>
+<td>downloading FASTQ files from SRA</td>
+<td>I referred her to a script I had written in the past that contains the required commands and configuration (with comments) for using the SRA toolkit</td>
+</tr>
+<tr class="odd">
+<td>2021-08-26</td>
+<td>resuming SPEAQeasy after an issue in the counts step</td>
+<td>I mentioned that she encountered a bug that was fixed in a more recent version of SPEAQeasy, but suggested she manually add a line of code temporarily so that she could resume the run before updating</td>
+</tr>
+<tr class="even">
+<td>2021-09-03</td>
+<td>identifying SPEAQeasy error</td>
+<td>SPEAQeasy would appear to run into “file not found” errors for just a handful of random samples in a large dataset. I eventually traced the error to a disk mounting issue on a particular compute node, which was resolved through bitsupport.</td>
+</tr>
+<tr class="odd">
+<td>2021-09-10</td>
+<td>merging FASTQ files automatically via SPEAQeasy</td>
+<td>We downloaded a metadata table from SRA and parsed it through R to programatically create a “samples.manifest” file for use in SPEAQeasy, that merged samples that were each split into multiple FASTQ files.</td>
+</tr>
+<tr class="even">
+<td>2021-09-22</td>
+<td>help with ‘umask’ and git</td>
+<td>I talked about how Linux does not allow creation of files w/ execution permissions set, regardless of ‘umask’ settings such as in the ‘.bashrc’. I also explained how I use branching with git and other tips for managing a repo that others also develop on.</td>
+</tr>
+<tr class="odd">
+<td>2021-10-04</td>
+<td>debugging SPEAQeasy errors</td>
+<td>We worked through an error message from the ‘VariantsMerge’ process, uncovering (arguably) a bug in SPEAQeasy, and I advised how to temporarily circumvent the problem. I also suggested a command for renaming a set of files that initially broke SPEAQeasy’s assumptions.</td>
+</tr>
+<tr class="even">
+<td>2021-10-06</td>
+<td>help with git</td>
+<td>I explained how I get out of the situation where files that are too big get accidentally committed (using ‘git log’, ‘git reset –soft’, and other details)</td>
+</tr>
+<tr class="odd">
+<td>2021-11-17</td>
+<td>using ‘list.files’ in R</td>
+<td>I described using regular expressions in R to match files in a directory. We encountered a weird case where ‘list.files’ seemed to return different numbers of matched files when run repeatedly. After ensuring we were in the right directory, the issue went away, but it was unclear what caused the original problem.</td>
+</tr>
+<tr class="even">
+<td>2021-12-15</td>
+<td>creating a ‘samples.manifest’ and choosing trimming settings</td>
+<td>I described how I normally deduce sample IDs from FASTQ filenames when creating a ‘samples.manifest’ file for SPEAQeasy, described the difference between ‘–trim_mode’ settings that SPEAQeasy supports, and showed how to check what samples were trimmed.</td>
+</tr>
+<tr class="odd">
+<td>2022-01-21</td>
+<td>accessing the ‘gpu’ node at JHPCE correctly</td>
+<td>I described how it’s accessed as a queue, but some manual work is left to the user (checking which GPUs are open and setting ‘CUDA_VISIBLE_DEVICES’)</td>
+</tr>
+<tr class="even">
+<td>2022-02-04</td>
+<td>Using tensorqtl with a GPU</td>
+<td>I described how to qrsh/sub jobs with the GPU node, including how to automatically set up ‘CUDA_VISIBLE_DEVICES’ to avoid contention for resources, and how to use the tensorqtl module to ensure GPUs were used when importing pytorch</td>
+</tr>
+<tr class="odd">
+<td>2022-02-04</td>
+<td>X11 and SSH issues</td>
+<td>After ensuring our apparent Rstudio set-ups on our windows machines matched, she still wasn’t able to forward X11 while using Rstudio. Regarding a different issue, we discovered that a particular machine required additional lines in the ‘~/.ssh/config’ to properly enable RSA keys.</td>
+</tr>
+<tr class="even">
+<td>2022-02-07</td>
+<td>Debugging seg fault with tensorqtl module</td>
+<td>We tried to discover the source of a seg fault that would occur when she imported tensorqtl in python with the tensorqtl module. Another user and I weren’t able to replicate the issue. We later discovered that there were lines in her .bashrc that might’ve interfered with the module to produce the issue.</td>
+</tr>
 </tbody>
 </table>
 
@@ -346,7 +441,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -386,6 +480,10 @@ gitbook.start({
 "text": null
 },
 "download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "subsection"
 }

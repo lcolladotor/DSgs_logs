@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>3 Leo | Data Science guidance session logs</title>
   <meta name="description" content="3 Leo | Data Science guidance session logs" />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
   <meta property="og:title" content="3 Leo | Data Science guidance session logs" />
   <meta property="og:type" content="book" />
@@ -32,8 +32,9 @@
   
 <link rel="prev" href="josh.html"/>
 <link rel="next" href="louise.html"/>
-<script src="libs/header-attrs-2.9/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -41,7 +42,6 @@
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
-
 
 
 
@@ -377,6 +377,91 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <td>Locating public data at JHPCE + bamtofastq workflow</td>
 <td>We talked about the public data from Synapse and worked on locating some of it at JHPCE. I explained also how we have used bamtofastq when others don’t share their FASTQ files. Basically, we use bamtofastq to reconstruct the original FASTQ files (you might have to append the unmapped FASTQs if they are provided by the original authors) and then run FASTQ-processing tools like our SPEAQeasy pipeline.</td>
 </tr>
+<tr class="odd">
+<td>2021-06-29</td>
+<td>How to choose and add a licence to a GitHub repo</td>
+<td>We talked about <a href="https://choosealicense.com/" class="uri">https://choosealicense.com/</a>, <a href="https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository" class="uri">https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository</a>, <a href="https://creativecommons.org/choose/" class="uri">https://creativecommons.org/choose/</a>.</td>
+</tr>
+<tr class="even">
+<td>2021-06-29</td>
+<td>Designing an MS-level class</td>
+<td>We discussed the posibility of proposing a class that has a mix of biology lectures and some practical coding sessions. The coding sessions could be based after the CDSB 2021 mini courses series.</td>
+</tr>
+<tr class="odd">
+<td>2021-06-29</td>
+<td>Planning session for getting up to speed with SpatialExperiment, spatialLIBD, here and ggplot2</td>
+<td>We talked about the set of videos and resources publicly available to get to learn about R, Bioconductor and these packages. It was a lot of information and I’m sure that we’ll have more sessions later on to clarify questions as they arise.</td>
+</tr>
+<tr class="even">
+<td>2021-07-01</td>
+<td>How to set up a GitHub actions-powered website</td>
+<td>This has changed over time. The most recent setup (as of 2021-08-06) is at <a href="https://github.com/lmweber/OSTA-book" class="uri">https://github.com/lmweber/OSTA-book</a></td>
+</tr>
+<tr class="odd">
+<td>2021-07-13</td>
+<td>Setting up a team at LIBD</td>
+<td>We talked about <a href="https://lcolladotor.github.io/bioc_team_ds/" class="uri">https://lcolladotor.github.io/bioc_team_ds/</a> among other topics.</td>
+</tr>
+<tr class="even">
+<td>2021-07-20</td>
+<td>Overview of the RNA-seq universe</td>
+<td>From SPEAQeasy, to qSVA, deconvolution, TWAS, etc. It might be best to give a talk about all these topics to whoever is interested at LIBD since we know about all these pieces but others might not.</td>
+</tr>
+<tr class="odd">
+<td>2021-07-28</td>
+<td>DNA genotyping overview</td>
+<td>We discussed the current DNA genotype pipeline and potential changes others might want.</td>
+</tr>
+<tr class="even">
+<td>2021-07-30</td>
+<td>Git branches</td>
+<td>We revised how to make a new branch in Git working with <a href="https://github.com/lmweber/OSTA-book" class="uri">https://github.com/lmweber/OSTA-book</a></td>
+</tr>
+<tr class="odd">
+<td>2021-08-03</td>
+<td>Refining an abstract submission</td>
+<td>We talked about all the details that go into writing an abstract for a conference. These details can take longer to complete than initially anticipated.</td>
+</tr>
+<tr class="even">
+<td>2021-08-06</td>
+<td>How to write a Twitter thread for a paper</td>
+<td>We revised key features of Brenda Pardo’s Twitter thread <a href="https://twitter.com/PardoBree/status/1388253938391175173?s=20" class="uri">https://twitter.com/PardoBree/status/1388253938391175173?s=20</a> and some features that you would want your Twitter thread to have.</td>
+</tr>
+<tr class="odd">
+<td>2021-09-27</td>
+<td>Presentation preparation feedback</td>
+<td>NA</td>
+</tr>
+<tr class="even">
+<td>2021-10-20</td>
+<td>Transfering files between JHPCE disks</td>
+<td>Explained some scripts such as /dcs04/lieber/lcolladotor/BrainSEQ_LIBD001/_jhpce_org</td>
+</tr>
+<tr class="odd">
+<td>2021-12-06</td>
+<td>JHPCE file permissions and ACLs</td>
+<td>Motivated /dcs04/lieber/lcolladotor/_jhpce_org_LIBD001/update_permissions_spatialteam.sh</td>
+</tr>
+<tr class="even">
+<td>2022-02-15</td>
+<td>snRNA-seq and deconvolution overview</td>
+<td>Brainstormed several ideas related to deconvolution of bulk data as well as uses of snRNA-seq. Refered to OSCA <a href="https://bioconductor.org/books/release/OSCA/" class="uri">https://bioconductor.org/books/release/OSCA/</a> at time.</td>
+</tr>
+<tr class="odd">
+<td>2022-02-16</td>
+<td>JHPCE array jobs and fasthplus</td>
+<td>Related to JHPCE <a href="https://github.com/ntdyjack/fasthplus" class="uri">https://github.com/ntdyjack/fasthplus</a> and <a href="http://research.libd.org/sgejobs/" class="uri">http://research.libd.org/sgejobs/</a></td>
+</tr>
+<tr class="even">
+<td>2022-02-18</td>
+<td>Ideas for possible future analyses</td>
+<td>NA</td>
+</tr>
+<tr class="odd">
+<td>2022-02-24</td>
+<td>WGBS data analysis overview</td>
+<td>Using BiocMAP <a href="http://research.libd.org/BiocMAP/" class="uri">http://research.libd.org/BiocMAP/</a> which Nick is finishing up, you could process the data and have R objects you could load and analyze. So, the data processing would be “easy” in a sense. Next, you might want to check the bsseq documentation <a href="https://bioconductor.org/packages/bsseq/" class="uri">https://bioconductor.org/packages/bsseq/</a> if you are interested in finding differentially methylated regions (DMRs) and in any case, because BiocMAP provides that type of R object as noted at <a href="http://research.libd.org/BiocMAP/outputs.html" class="uri">http://research.libd.org/BiocMAP/outputs.html</a>. <a href="https://jhubiostatistics.shinyapps.io/wgbsExprs/" class="uri">https://jhubiostatistics.shinyapps.io/wgbsExprs/</a> and the companion paper is the last WGBS data analysis project I did myself with code at <a href="https://github.com/LieberInstitute/brain-epigenomics" class="uri">https://github.com/LieberInstitute/brain-epigenomics</a>. Kira Perzel-Mandell, who worked with Shizhong, wrote <a href="https://github.com/LieberInstitute/wgbs_meqtl_analysis" class="uri">https://github.com/LieberInstitute/wgbs_meqtl_analysis</a> (link to paper there) and did other projects. If you are plotting methylation levels at some locations, then that’s very direct. If you are trying to find DMRs, it can take a bit of time to get used to the large objects and the related complications (once you filter the data, it’ll be more manageable). IF you are doing meQTLs, then that could take longer. Some plots like slide 3 panel A could be done fairly fast. If you go into CpH instead of CpG, then memory constraints become harder to deal with.</td>
+</tr>
 </tbody>
 </table>
 
@@ -391,7 +476,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -431,6 +515,10 @@ gitbook.start({
 "text": null
 },
 "download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "subsection"
 }

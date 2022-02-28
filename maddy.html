@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>5 Maddy | Data Science guidance session logs</title>
   <meta name="description" content="5 Maddy | Data Science guidance session logs" />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
   <meta property="og:title" content="5 Maddy | Data Science guidance session logs" />
   <meta property="og:type" content="book" />
@@ -32,8 +32,9 @@
   
 <link rel="prev" href="louise.html"/>
 <link rel="next" href="nick.html"/>
-<script src="libs/header-attrs-2.9/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -41,7 +42,6 @@
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
-
 
 
 
@@ -307,6 +307,221 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <td>running and trouble shooting VisiumIF image splitting code</td>
 <td>NA</td>
 </tr>
+<tr class="odd">
+<td>2021-06-01</td>
+<td>troubleshoot SUFI output and figured it was not compatible with dotdotdot</td>
+<td>NA</td>
+</tr>
+<tr class="even">
+<td>2021-06-24</td>
+<td>making a list of filenames in a specific folder and subfolder in R</td>
+<td>used Sys.glob and write.table to write the list to txt file</td>
+</tr>
+<tr class="odd">
+<td>2021-06-24</td>
+<td>Rectified issues for batch running emma’s RNAscope data</td>
+<td>NA</td>
+</tr>
+<tr class="even">
+<td>2021-06-24</td>
+<td>create shell script for batch running images on VisiumLIBD</td>
+<td>NA</td>
+</tr>
+<tr class="odd">
+<td>2021-07-09</td>
+<td>recreating spatstat plots with more features</td>
+<td>used ggplot</td>
+</tr>
+<tr class="even">
+<td>2021-07-09</td>
+<td>Helping understand errors from VisiumLIBD</td>
+<td>NA</td>
+</tr>
+<tr class="odd">
+<td>2021-07-09</td>
+<td>Helping understand errors from VisiumLIBD</td>
+<td>NA</td>
+</tr>
+<tr class="even">
+<td>2021-07-14</td>
+<td>Resolve errors produced by dotdotdot on SUFI output</td>
+<td>Referred to Vijay’s notes</td>
+</tr>
+<tr class="odd">
+<td>2021-07-14</td>
+<td>R Code to create list of files to be processed through VisiumLIBD</td>
+<td>NA</td>
+</tr>
+<tr class="even">
+<td>2021-07-14</td>
+<td>Setup aliases in bashrc</td>
+<td>NA</td>
+</tr>
+<tr class="odd">
+<td>2021-07-15</td>
+<td>Issues with SUFI</td>
+<td>Explain how some scripts in SUFI run and the bash scripts to use in place of python scripts for batch processing</td>
+</tr>
+<tr class="even">
+<td>2021-07-15</td>
+<td>Explain how awk works</td>
+<td>showed a example of how AWK extracts text lines from a text file</td>
+</tr>
+<tr class="odd">
+<td>2021-07-20</td>
+<td>Optimizing DAPI segmentation in dotdotdot</td>
+<td><a href="https://github.com/LieberInstitute/dotdotdot/issues/11" class="uri">https://github.com/LieberInstitute/dotdotdot/issues/11</a></td>
+</tr>
+<tr class="even">
+<td>2021-08-11</td>
+<td>steps to resolve image segmentation of LC heated samples round 2</td>
+<td>NA</td>
+</tr>
+<tr class="odd">
+<td>2021-08-18</td>
+<td>explanation of the methods and algorithm of a paper we are reviewing together</td>
+<td>NA</td>
+</tr>
+<tr class="even">
+<td>2021-08-21</td>
+<td>resolving issues with multiple keys in the authorized_keys file</td>
+<td>NA</td>
+</tr>
+<tr class="odd">
+<td>2021-08-23</td>
+<td>Explain how to merge 2 data tables in R</td>
+<td>NA</td>
+</tr>
+<tr class="even">
+<td>2021-08-23</td>
+<td>Explain public keys and the authorized_keys file on JHPCE, removed duplicate public keys for the local machine to resolve ssh key login</td>
+<td>NA</td>
+</tr>
+<tr class="odd">
+<td>2021-08-30</td>
+<td>dynamically name structures in matlab based on user inputs</td>
+<td>used the command ‘eval’</td>
+</tr>
+<tr class="even">
+<td>2021-08-30</td>
+<td>parameter tuning for dotdotdot to split the nuclei clusters</td>
+<td>NA</td>
+</tr>
+<tr class="odd">
+<td>2021-08-30</td>
+<td>improve lipofuscin masking in dotdotdot</td>
+<td>NA</td>
+</tr>
+<tr class="even">
+<td>2021-09-02</td>
+<td>Error running VistoSeg::spospotcheck (Error in spotspotcheck&gt;start (line 60))</td>
+<td>The H&amp;E image that he was segmenting and the H&amp;E image for which he gets the ‘json’ and ‘csv’ are not the same images or at least not the same resolution which is causing the error.</td>
+</tr>
+<tr class="odd">
+<td>2021-09-02</td>
+<td>Error while running rnascope_mouse - line 159</td>
+<td><a href="https://github.com/LieberInstitute/dotdotdot/issues/12" class="uri">https://github.com/LieberInstitute/dotdotdot/issues/12</a></td>
+</tr>
+<tr class="even">
+<td>2021-09-07</td>
+<td>Trouble with implementing RNAscope function for humans</td>
+<td><a href="https://github.com/LieberInstitute/dotdotdot/issues/13" class="uri">https://github.com/LieberInstitute/dotdotdot/issues/13</a></td>
+</tr>
+<tr class="odd">
+<td>2021-09-08</td>
+<td>CellProfiler H&amp;E segmentations</td>
+<td>We decided to run CellProfiler on a while capture area image of DLPFC sample to look at the segmentations as it was doing good job on the cropped regions of a DLPFC sample</td>
+</tr>
+<tr class="even">
+<td>2021-09-09</td>
+<td>Creating cyberduck bookmarks for JHPCE paths</td>
+<td>NA</td>
+</tr>
+<tr class="odd">
+<td>2021-09-09</td>
+<td>writing shell script for countNuclei function in VistoSeg</td>
+<td>NA</td>
+</tr>
+<tr class="even">
+<td>2021-09-09</td>
+<td>Explaining Github issues, history and version control</td>
+<td>NA</td>
+</tr>
+<tr class="odd">
+<td>2021-09-09</td>
+<td>Explaining SPE (Spatial Experiment) SCE (Single Cell Experiment) objects</td>
+<td><a href="https://files.slack.com/files-pri/T029RHR07-F024D7ELKC2/image_from_ios.jpg" class="uri">https://files.slack.com/files-pri/T029RHR07-F024D7ELKC2/image_from_ios.jpg</a></td>
+</tr>
+<tr class="even">
+<td>2021-09-09</td>
+<td>syntax error in shell script</td>
+<td>used back quote (<code>) instead of single quote (') when assigning string to variables | | 2021-09-14 | Fiducial frame enhancement for Visium IF images using preview on MAC | NA | | 2021-09-14 | running Loupe browser for mannual alignment | NA | | 2021-09-20 | issues with regioprops function in dotdotdot | https://github.com/LieberInstitute/dotdotdot/issues/14 | | 2021-10-07 | doubts on VistoSeg | Explaination of why an index label M=3 was chosen for refineVNS in section 2.2. | | 2021-10-14 | running spotspotcheck for SFN | NA | | 2021-11-04 | using awk | to pick filename from textfile for a array job | | 2021-11-15 | error in transferring Visuim HPC data to JHPCE | The user directories were cleared during the software updates for LIBD server, emailed bill to create one for me and Heena to use rsync on Neural_Plasiticity. The filenames Heena used for 'source' in rync did not exist at the source directory which was throwing errors. | | 2021-11-16 | batch processing - dotdotdot, on local machine | made custom Matlab script to batch process her 30 RNAscope images on her local machine | | 2021-11-18 | running loupe browser for HPC images | Showed the steps on one sample HPC image and what outputs to save. | | 2021-11-18 | countSpots from VistoSeg throwing errors for one DLPFC sample from round4 | While debugging, its seen that VistoSeg when splitting the raw image missed a part of fiducial frame for capture area D1 of that sample. This happens when the center of the visium slide does not align with the center of the image, which has ti be adjusted while imaging. This image when run through spaceranger provided negative coordinates for the missing fiducial frame part of the image, but MATLAB will not accept negative indices for a image, which was throwing errors when recontructing spot grind in countSpots function. | | 2021-11-18 | Resolve issues with comments | Showed how to close issues on git with detailed comments of the final results | | 2021-12-08 | applying kmeans to CA3 mouse RNAscope data to obtain gene expression levels | Showed code how to scale data based on https://uc-r.github.io/kmeans_clustering and optimise kmeans for the present dataset | | 2021-12-09 | Removing smaller objects from VistoSeg segmentations | refining segmentations in matlab by applying size thresholds | | 2022-01-20 | glitch in CAPTure tutorial about input data types to a function | https://github.com/LieberInstitute/CaPTure/issues/2 | | 2022-01-21 | Transfer data from JHPCE to Neural_Plasticity | command to use</code>rsync -avzh –progress <a href="mailto:userid@jhpce-transfer01" class="email">userid@jhpce-transfer01</a>:/source directory/ /destination directory/</td>
+</tr>
+<tr class="odd">
+<td>2022-01-21</td>
+<td>Transfer data Neural_Plasticity to JHPCE</td>
+<td>use rsync, prepend spaces in the paths with <code>\</code> to avoid issues</td>
+</tr>
+<tr class="even">
+<td>2022-01-21</td>
+<td>JHPCE directory organization, repo linking, making commits</td>
+<td><a href="https://github.com/LieberInstitute/spatialDLPFC_SCZ/commit/43106c664883fd5df301e44cca35f2e8f2f289ad" class="uri">https://github.com/LieberInstitute/spatialDLPFC_SCZ/commit/43106c664883fd5df301e44cca35f2e8f2f289ad</a></td>
+</tr>
+<tr class="odd">
+<td>2022-01-21</td>
+<td>opening python, R, MATLAB console interactive session on JHPCE</td>
+<td>explain how to use IDE’s on local machine to edits scripts on JHPCE through cyberduck</td>
+</tr>
+<tr class="even">
+<td>2022-01-25</td>
+<td>VistoSegIF pipeline</td>
+<td>explained the functions of this pipline as these are not yet documented</td>
+</tr>
+<tr class="odd">
+<td>2022-02-10</td>
+<td>Need for rotation of visium array images and its spatial coordinnnate in spe object</td>
+<td>NA</td>
+</tr>
+<tr class="even">
+<td>2022-02-11</td>
+<td>tiling and metadata changes in PNN project</td>
+<td>NA</td>
+</tr>
+<tr class="odd">
+<td>2022-02-11</td>
+<td>explaination on Image metadata, bit depth</td>
+<td>NA</td>
+</tr>
+<tr class="even">
+<td>2022-02-14</td>
+<td>Explain the concept of Squidpy paper</td>
+<td><a href="https://www.nature.com/articles/s41592-021-01358-2" class="uri">https://www.nature.com/articles/s41592-021-01358-2</a></td>
+</tr>
+<tr class="odd">
+<td>2022-02-15</td>
+<td>Explain Tangram, scRNAseq count matrix, spe object</td>
+<td>NA</td>
+</tr>
+<tr class="even">
+<td>2022-02-16</td>
+<td>Provide comparison table for different metrics obtained from image meta data in MATLAB, for Visium IF workflow</td>
+<td>NA</td>
+</tr>
+<tr class="odd">
+<td>2022-02-17</td>
+<td>rename files on JHPCE through command line</td>
+<td>NA</td>
+</tr>
+<tr class="even">
+<td>2022-02-23</td>
+<td>contrast adjustment, intensity normalization, channel/gene description in PNN images</td>
+<td>used HALO to show how contrast can be adjusted when changing min max values in the image</td>
+</tr>
+<tr class="odd">
+<td>2022-02-25</td>
+<td>Data type change of image data when loading into Python</td>
+<td>Used KJ’s code from his rstats club presentation and described how the images shoukd be read using numpy array as uint32 but not floating <a href="https://colab.research.google.com/drive/1A4cavWcbgZF1PFQT87s5s_ATyZrN3IxL?usp=sharing" class="uri">https://colab.research.google.com/drive/1A4cavWcbgZF1PFQT87s5s_ATyZrN3IxL?usp=sharing</a></td>
+</tr>
 </tbody>
 </table>
 
@@ -321,7 +536,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -361,6 +575,10 @@ gitbook.start({
 "text": null
 },
 "download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "subsection"
 }
