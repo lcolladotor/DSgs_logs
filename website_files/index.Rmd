@@ -134,6 +134,7 @@ Details on the R version used for making this book. The source code is available
 library("ggplot2")
 library("lubridate")
 library("dplyr")
+library("plotly")
 library("here")
 
 ## Load the package at the top of your script
