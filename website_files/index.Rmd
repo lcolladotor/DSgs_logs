@@ -36,7 +36,7 @@ library("here")
 
 Below we see the number of [DSgs](https://lcolladotor.github.io/bioc_team_ds/data-science-guidance-sessions.html) sessions across weeks for each of the guides for each type of help/guidance request over weeks of the year.
 
-```{r "graph_by_guide", echo = FALSE, warning = FALSE, message = FALSE, fig.height=10}
+```{r "graph_by_guide", echo = FALSE, warning = FALSE, message = FALSE, fig.height = 8, fig.width = 8}
 load(here::here("logs_data.Rdata"))
 
 ## Clean up a bit
