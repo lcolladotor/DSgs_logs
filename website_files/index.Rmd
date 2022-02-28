@@ -29,6 +29,7 @@ _Former members:_
 library("ggplot2")
 library("lubridate")
 library("dplyr")
+library("plotly")
 library("here")
 ```
 
@@ -44,15 +45,13 @@ logs_data$week <- isoweek(logs_data$date)
 logs_data$year <- year(logs_data$date)
 
 top_types <- sort(table(logs_data$type), decreasing = TRUE)
-logs_data$top_type <- logs_data$type
-logs_data$top_type[logs_data$type %in% names(top_types)[-(1:2)]] <- "other"
 
 ## Summarise the data to get the number of sessions per week on a given year
-by_guide_summary <- summarise(group_by(logs_data, week, year, guide_name, top_type), "number"=n())
+by_guide_summary <- summarise(group_by(logs_data, week, year, guide_name), "number"=n())
 
 ## Plot by day of the year
-ggplot(by_guide_summary , aes(
-    x = paste0(year, '-', sprintf("%02d", week)),
+p <- ggplot(by_guide_summary , aes(
+    x = week,
     y = number,
     color = guide_name,
     group = guide_name
@@ -65,65 +64,65 @@ ggplot(by_guide_summary , aes(
         breaks = seq(0, max(by_guide_summary$number) + 1, by = 1),
         limits = c(0, max(by_guide_summary$number) + 1)) +
     labs(color = "Guide") +
-    facet_grid(top_type ~ .) +
+    facet_grid(year ~ .) +
     theme_dark(base_size = 20) +
     theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1)) +
     scale_color_brewer(palette = "Accent")
+ggplotly(p)
 ```
 
-As a team, we can see the number of requests we've addressed over the weeks.
-
-```{r "graph_week_total", echo = FALSE, warning = FALSE, message = FALSE}
-## Plot by week of the year ignoring guide, for each type
-by_week <- summarise(group_by(by_guide_summary, week, year, top_type), number = sum(number))
-ggplot(by_week, aes(
-    x = paste0(year, '-', sprintf("%02d", week)),
-    y = number,
-    group = 1
-)) +
-    geom_point() +
-    geom_line() +
-    xlab("Week of the year") +
-    ylab("Number of sessions") +
-    scale_y_continuous(
-        limits = c(0, max(by_week$number) + 1)
-    ) +
-    facet_grid(top_type ~ .) +
-    theme_dark(base_size = 20) +
-    theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
-```
-
-Finally, we can check if the overall number of help requests we've attended as the weeks have gone by.
+As a team, we can check if the overall number of help requests we've attended as the weeks have gone by.
 
 ```{r "graph_total", echo = FALSE, warning = FALSE, message = FALSE}
 ## Plot by week of the year ignoring guide
-by_total <- summarise(group_by(logs_data, week, year), number = n())
-ggplot(by_total, aes(
-    x = paste0(year, '-', sprintf("%02d", week)),
-    y = number,
-    group = 1
-)) +
-    geom_point() +
-    geom_line() +
-    xlab("Week of the year") +
-    ylab("Number of sessions") +
-    scale_y_continuous(
-        limits = c(0, max(by_total$number) + 1)
+by_total <-
+    summarise(group_by(logs_data, week, year, day = factor(
+        weekdays(logs_data$date, TRUE), levels = rev(c(
+            "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"
+        ))
+    )), hours = n())
+
+## From https://vuorre.netlify.app/post/2016/03/24/github-style-waffle-plots-in-r/
+## edited "Hours" to "Sessions for the legend name
+gh_waffle <- function(data, pal = "D", dir = -1) {
+  p <- ggplot(data, aes(x = week, y = day, fill = hours)) +
+    scale_fill_viridis_c(
+      name = "Sessions",
+      option = pal, # Variable color palette
+      direction = dir, # Variable color direction
+      na.value = "grey90",
+      limits = c(0, max(data$hours))
     ) +
-    theme_dark(base_size = 20) + 
-    theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
+    geom_tile(color = "white", size = 0.7) +
+    facet_wrap("year", ncol = 1) +
+    scale_x_continuous(
+      expand = c(0, 0),
+      breaks = seq(1, 52, length = 12),
+      labels = c(
+        "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+        "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+      )
+    ) +
+    theme_linedraw(base_family = "Helvetica") +
+    theme(
+      axis.title = element_blank(),
+      axis.ticks = element_blank(), 
+      axis.text.y = element_text(size = 7),
+      panel.grid = element_blank(),
+      legend.position = "bottom",
+      aspect.ratio = 1/7,
+      legend.key.width = unit(1, "cm"),
+      strip.text = element_text(hjust = 0.00, face = "bold", size = 12)
+    )
 
+  print(p)
+}
 
-## Could use this later once we have more data
-# https://vuorre.netlify.app/post/2016/03/24/github-style-waffle-plots-in-r/
+gh_waffle(by_total)
 
-# logs_data$hours <- 0
-# logs_data$day <- weekdays(logs_data$date, TRUE)
-# 
-# gh_waffle(logs_data)
 ```
 
-These graphs are partially based on [`lcolladotor/mphtasessions`](https://github.com/lcolladotor/mphtasessions/blob/gh-pages/index.Rmd).
+These graphs are partially based on [`lcolladotor/mphtasessions`](https://github.com/lcolladotor/mphtasessions/blob/gh-pages/index.Rmd) and [_GitHub-style waffle plots in R_](https://vuorre.netlify.app/post/2016/03/24/github-style-waffle-plots-in-r/).
 
 
 ## R session information {-}
