@@ -34,7 +34,7 @@ library("here")
 ```
 
 
-Below we see the number of [DSgs](https://lcolladotor.github.io/bioc_team_ds/data-science-guidance-sessions.html) sessions across weeks for each of the guides for each type of help/guidance request over weeks of the year.
+Below we see the number of [DSgs](https://lcolladotor.github.io/bioc_team_ds/data-science-guidance-sessions.html) sessions for each of the guides across time. You can mouse-over each point to see the data, or click on each guide's name to hide/show their information.
 
 ```{r "graph_by_guide", echo = FALSE, warning = FALSE, message = FALSE, fig.height = 8, fig.width = 8}
 load(here::here("logs_data.Rdata"))
@@ -71,7 +71,7 @@ p <- ggplot(by_guide_summary , aes(
 ggplotly(p)
 ```
 
-As a team, we can check if the overall number of help requests we've attended as the weeks have gone by.
+As a team, this is the overall number of help requests we have completed over time grouped by day and year.
 
 ```{r "graph_total", echo = FALSE, warning = FALSE, message = FALSE}
 ## Plot by week of the year ignoring guide
