@@ -12,7 +12,7 @@
 | 2022-02-11 | explaination on Image metadata, bit depth | NA |
 | 2022-02-10 | Need for rotation of visium array images and its spatial coordinnnate in spe object | NA |
 | 2022-01-25 | VistoSegIF pipeline | explained the functions of this pipline as these are not yet documented |
-| 2022-01-21 | Transfer data from JHPCE to Neural_Plasticity | command to use `rsync -avzh --progress userid@jhpce-transfer01:/source directory/ /destination directory/ |
+| 2022-01-21 | Transfer data from JHPCE to Neural_Plasticity | command to use `rsync -avzh --progress userid@jhpce-transfer01:/source directory/ /destination directory/` |
 | 2022-01-21 | Transfer data Neural_Plasticity to JHPCE | use rsync, prepend spaces in the paths with `\` to avoid issues |
 | 2022-01-21 | JHPCE directory organization, repo linking, making commits | https://github.com/LieberInstitute/spatialDLPFC_SCZ/commit/43106c664883fd5df301e44cca35f2e8f2f289ad |
 | 2022-01-21 | opening python, R, MATLAB console interactive session on JHPCE | explain how to use IDE's on local machine to edits scripts on JHPCE through cyberduck |
