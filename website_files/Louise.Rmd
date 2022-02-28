@@ -2,38 +2,38 @@
 
 | Date | Help request | Notes |
 | ---- | ------------ | ----- |
-| 2020-10-20 | Help with spatstat | spatstat package https://spatstat.org/releasenotes/spatstat-1.39-0.html, L function https://www.rdocumentation.org/packages/spatstat/versions/1.64-1/topics/Lest, Kmark https://www.rdocumentation.org/packages/spatstat/versions/1.64-1/topics/Kmark |
-| 2020-10-21 | Question: Subset center regions of a set of different length sequences | [BioC Support website answer](https://support.bioconductor.org/p/134532/#134925) |
-| 2020-10-27 | Plotly help if possible? I'm trying to export an html file that allows the user to look at each snp/gene on the plot, and I am almost successful. Leo recommended that I talk to you on this matter. | Needed to use highlight_key and highlight functions to select points between plots. Used rstats example as guide https://gist.github.com/lcolladotor/350ac8843e153d135f64880a1d029b14 |
-| 2020-11-05 | LC repo organization | We discussed organizing by analysis (a directory for each one, then prehaps sub- directory for data & plots). Create a readMe for each sub-folder. Use gitignore to keep repo from getting too big. |
-| 2020-11-12 | Help adapting ggplot script for TWAS Z-score | We talked about how the data should be structured before using ggplot (transforming some data and adding catagorical columns) |
-| 2020-11-13 | Using reshape package to transform table for plotting | I recomended using dcast to do a "long" to "wide" data transformation |
-| 2020-11-18 | Help clustering sce data | We debugged some code and ultimetly decided that it might be best for Abby to write new code and use the tsne function to cluster and plot the data |
-| 2020-12-07 | jhpce set up on mac | Went through the setting up passwordless login for jhpce using ssh keys, and coppied the configuration files from https://gist.github.com/lcolladotor/3b1063db30a206835ee7e086c8f037ee |
-| 2020-12-08 | Resolving issues in phenotype data between genotype, expression, and LIBDpheno | Need to resolve swap bugs. Plan to create a table of phenotype data (Dx, age, sex, race) for each BrNum to mach genotype data |
-| 2021-01-27 | group_by bug for get_mean_ratio | We are going to try an iterative strategy to keep tables smaller |
-| 2021-02-04 | Work on habenula deconvolution and debug the deconvolution package | We went over applying DeconvoBuddies functions to hebenula data |
-| 2021-02-04 | Github ssh key set up | We got the ssh keys working for Brenda's github |
-| 2021-02-09 | Visualizing RPKM valus for genes in Humna and Primarte data | We spent time doing basic Rstudio setup and troubleshooting, and got the data downloaded |
-| 2021-03-05 | Maker finding for cell types in single cell data | I showed them the tools I developed in DeconvoBuddies pacakge, and provided links to example code where I had applied these funcitons in previous work |
-| 2021-03-19 | Change point size in vis_clust_grid | We walked througth the SpatialLIBD code to find where the argument has to be changed |
-| 2021-03-26 | Need help understanding the sce - single cell object | Went over basic functions of SummarizedExperiment and SingleCellExperiment, what a Sparse matrix is - how to convert to non-sparse. Steps to take to use getRPKM on SingeCellExperient. |
-| 2021-04-15 | JHPCE set up on mac | Henry needed to reset his JHPCE password as he had forgotten it, but we went through RStudio set up and got cyberduck installed, we will set up a meeting next week for ssh keys and configuration |
-| 2021-04-19 | JHPCE set up on mac | We got ssh key login working, added config files to JHPCE, went though a "hello world" example of using files on JHPCE on RStudio |
-| 2021-05-12 | Making plots for DE studies | We went over some plots we have made for DE previously, (quality control & PC scatter plots, t-stat scatter between models, venn diagrams, and boxplots). Talked about some things to watch out for in her data (small samples size). We are planning to meet again when her data is ready. |
-| 2021-05-20 | Making plots for DE studies | We reviewed the model that Sreya was evaluating for DE. As we as troublshooting the plot functions from the SPEAQeasy bootcamp code. I also advised taht she could create a volcano plot for her results. |
-| 2021-05-28 | Differential Expression help (continuation of 5/20) | NA |
-| 2021-06-03 | questions about expression_cut and pca plots | We walked tought script from getRPKM to expression cut to filter rse objects, I also pointed Brenda towards some reasources to get started with ggplot |
-| 2021-06-17 | Manhattan plot making and tstatistic | Pointed her to some oacjages for creating TWAS plots whe was interested in and we walked through some code I used to compare T-stats from different DE models |
-| 2021-06-30 | Debugging ggplot code | We reviewed her code and I gave some pointer on what bugs to look out for with certain errors in ggplot |
-| 2021-08-20 | Help with JHPCE login issues | We were able to update the keys for the cluster, but the ssh key login was still broken |
-| 2021-08-23 | Using purrr and map to loop over datasets and apply qsva | Went over basic, complex, and nested map() usage and how to apply it to Josh's current work |
-| 2021-08-26 | using map to cbind a list of six to its corresponding list of lists. The second is a list of 6, each a list of 3. | Did some troubleshooting on nested map functions, when to use ~.x and when to use function() syntax |
-| 2021-10-29 | qc general scripts, rnaseq scripts general, ggplot histogram with breaks | We found a R function that helped produce the plot she was looking for |
-| 2021-11-03 | Debugging help with rse_tx object | We discussed how to check for duplicate rownames, and stratedgies for variable naming + working with rse objects |
-| 2022-01-19 | Help using BisqueRNA, getting snRNA-seq into correct input format, chosing refrence vs. marker based deconvolution | I shared some detials of our deconvolution approach, we walked through the SCE to Expression set converson, and discussed some issues that may come up |
-| 2022-01-20 | Troubleshooting ExprssionSet conversion | Fixed row names to both be ensembl IDs, discussed simplifing cell types in sce, converting sce arrarys to matrix |
-| 2022-02-15 | Access to the gene info in the rowData of the Summarized Experiment objects to annotate eqtl results | We went over how to acess the rowData, and what the rowData inthe MDD project contains. Ended up adding columns to the eqtl risk snp subsets to help with analysis |
 | 2022-02-24 | I would like to learn how you ran tensorQTL on the MDD data, maybe with using the GPU nodes for it. | Geo was interested int eh workflow I developed for tensorQTL. I went over the requirements and input formats that tensorqtl requirers, and how I had previously made them from our dataset. Also discussed the differnces between the functions and their outputs. |
 | 2022-02-24 | Help building for loops to analyze WGCNA ouput data | We discussed how to build and save data with a for loop and with purrr::map. Went over how to define a function in map to do nested loops |
+| 2022-02-15 | Access to the gene info in the rowData of the Summarized Experiment objects to annotate eqtl results | We went over how to acess the rowData, and what the rowData inthe MDD project contains. Ended up adding columns to the eqtl risk snp subsets to help with analysis |
+| 2022-01-20 | Troubleshooting ExprssionSet conversion | Fixed row names to both be ensembl IDs, discussed simplifing cell types in sce, converting sce arrarys to matrix |
+| 2022-01-19 | Help using BisqueRNA, getting snRNA-seq into correct input format, chosing refrence vs. marker based deconvolution | I shared some detials of our deconvolution approach, we walked through the SCE to Expression set converson, and discussed some issues that may come up |
+| 2021-11-03 | Debugging help with rse_tx object | We discussed how to check for duplicate rownames, and stratedgies for variable naming + working with rse objects |
+| 2021-10-29 | qc general scripts, rnaseq scripts general, ggplot histogram with breaks | We found a R function that helped produce the plot she was looking for |
+| 2021-08-26 | using map to cbind a list of six to its corresponding list of lists. The second is a list of 6, each a list of 3. | Did some troubleshooting on nested map functions, when to use ~.x and when to use function() syntax |
+| 2021-08-23 | Using purrr and map to loop over datasets and apply qsva | Went over basic, complex, and nested map() usage and how to apply it to Josh's current work |
+| 2021-08-20 | Help with JHPCE login issues | We were able to update the keys for the cluster, but the ssh key login was still broken |
+| 2021-06-30 | Debugging ggplot code | We reviewed her code and I gave some pointer on what bugs to look out for with certain errors in ggplot |
+| 2021-06-17 | Manhattan plot making and tstatistic | Pointed her to some oacjages for creating TWAS plots whe was interested in and we walked through some code I used to compare T-stats from different DE models |
+| 2021-06-03 | questions about expression_cut and pca plots | We walked tought script from getRPKM to expression cut to filter rse objects, I also pointed Brenda towards some reasources to get started with ggplot |
+| 2021-05-28 | Differential Expression help (continuation of 5/20) | NA |
+| 2021-05-20 | Making plots for DE studies | We reviewed the model that Sreya was evaluating for DE. As we as troublshooting the plot functions from the SPEAQeasy bootcamp code. I also advised taht she could create a volcano plot for her results. |
+| 2021-05-12 | Making plots for DE studies | We went over some plots we have made for DE previously, (quality control & PC scatter plots, t-stat scatter between models, venn diagrams, and boxplots). Talked about some things to watch out for in her data (small samples size). We are planning to meet again when her data is ready. |
+| 2021-04-19 | JHPCE set up on mac | We got ssh key login working, added config files to JHPCE, went though a "hello world" example of using files on JHPCE on RStudio |
+| 2021-04-15 | JHPCE set up on mac | Henry needed to reset his JHPCE password as he had forgotten it, but we went through RStudio set up and got cyberduck installed, we will set up a meeting next week for ssh keys and configuration |
+| 2021-03-26 | Need help understanding the sce - single cell object | Went over basic functions of SummarizedExperiment and SingleCellExperiment, what a Sparse matrix is - how to convert to non-sparse. Steps to take to use getRPKM on SingeCellExperient. |
+| 2021-03-19 | Change point size in vis_clust_grid | We walked througth the SpatialLIBD code to find where the argument has to be changed |
+| 2021-03-05 | Maker finding for cell types in single cell data | I showed them the tools I developed in DeconvoBuddies pacakge, and provided links to example code where I had applied these funcitons in previous work |
+| 2021-02-09 | Visualizing RPKM valus for genes in Humna and Primarte data | We spent time doing basic Rstudio setup and troubleshooting, and got the data downloaded |
+| 2021-02-04 | Work on habenula deconvolution and debug the deconvolution package | We went over applying DeconvoBuddies functions to hebenula data |
+| 2021-02-04 | Github ssh key set up | We got the ssh keys working for Brenda's github |
+| 2021-01-27 | group_by bug for get_mean_ratio | We are going to try an iterative strategy to keep tables smaller |
+| 2020-12-08 | Resolving issues in phenotype data between genotype, expression, and LIBDpheno | Need to resolve swap bugs. Plan to create a table of phenotype data (Dx, age, sex, race) for each BrNum to mach genotype data |
+| 2020-12-07 | jhpce set up on mac | Went through the setting up passwordless login for jhpce using ssh keys, and coppied the configuration files from https://gist.github.com/lcolladotor/3b1063db30a206835ee7e086c8f037ee |
+| 2020-11-18 | Help clustering sce data | We debugged some code and ultimetly decided that it might be best for Abby to write new code and use the tsne function to cluster and plot the data |
+| 2020-11-13 | Using reshape package to transform table for plotting | I recomended using dcast to do a "long" to "wide" data transformation |
+| 2020-11-12 | Help adapting ggplot script for TWAS Z-score | We talked about how the data should be structured before using ggplot (transforming some data and adding catagorical columns) |
+| 2020-11-05 | LC repo organization | We discussed organizing by analysis (a directory for each one, then prehaps sub- directory for data & plots). Create a readMe for each sub-folder. Use gitignore to keep repo from getting too big. |
+| 2020-10-27 | Plotly help if possible? I'm trying to export an html file that allows the user to look at each snp/gene on the plot, and I am almost successful. Leo recommended that I talk to you on this matter. | Needed to use highlight_key and highlight functions to select points between plots. Used rstats example as guide https://gist.github.com/lcolladotor/350ac8843e153d135f64880a1d029b14 |
+| 2020-10-21 | Question: Subset center regions of a set of different length sequences | [BioC Support website answer](https://support.bioconductor.org/p/134532/#134925) |
+| 2020-10-20 | Help with spatstat | spatstat package https://spatstat.org/releasenotes/spatstat-1.39-0.html, L function https://www.rdocumentation.org/packages/spatstat/versions/1.64-1/topics/Lest, Kmark https://www.rdocumentation.org/packages/spatstat/versions/1.64-1/topics/Kmark |
 

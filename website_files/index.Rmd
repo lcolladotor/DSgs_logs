@@ -13,12 +13,14 @@ This website contains the public logs for the Data Science guidance sessiones ca
 
 ## DSgs-guide team members {-}
 
-* [Arta Seyedian](https://github.com/aseyedia)
 * [Joshua M. Stolz](https://github.com/joshstolz)
 * [Louise Huuki](https://github.com/lahuuki)
 * [Nicholas J. Eagles](https://github.com/Nick-Eagles)
 * [Madhavi Tippani](https://github.com/madhavitippani)
 
+_Former members:_
+
+* [Arta Seyedian](https://github.com/aseyedia)
 
 ## Graphs {-}
 

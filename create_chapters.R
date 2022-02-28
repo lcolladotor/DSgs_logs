@@ -10,7 +10,7 @@ logs_data <-
     )
 
 ## Sort by date
-logs_data <- logs_data[order(logs_data$date), ]
+logs_data <- logs_data[order(logs_data$date, decreasing = TRUE), ]
 
 ## Make the names anonymous
 set.seed(20200928)
