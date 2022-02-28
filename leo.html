@@ -178,204 +178,74 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </thead>
 <tbody>
 <tr class="odd">
-<td>2020-10-21</td>
-<td>Ballgown stattest</td>
-<td><a href="https://support.bioconductor.org/p/134914/#134915">BioC Support website answer</a></td>
+<td>2022-02-24</td>
+<td>WGBS data analysis overview</td>
+<td>Using BiocMAP <a href="http://research.libd.org/BiocMAP/" class="uri">http://research.libd.org/BiocMAP/</a> which Nick is finishing up, you could process the data and have R objects you could load and analyze. So, the data processing would be “easy” in a sense. Next, you might want to check the bsseq documentation <a href="https://bioconductor.org/packages/bsseq/" class="uri">https://bioconductor.org/packages/bsseq/</a> if you are interested in finding differentially methylated regions (DMRs) and in any case, because BiocMAP provides that type of R object as noted at <a href="http://research.libd.org/BiocMAP/outputs.html" class="uri">http://research.libd.org/BiocMAP/outputs.html</a>. <a href="https://jhubiostatistics.shinyapps.io/wgbsExprs/" class="uri">https://jhubiostatistics.shinyapps.io/wgbsExprs/</a> and the companion paper is the last WGBS data analysis project I did myself with code at <a href="https://github.com/LieberInstitute/brain-epigenomics" class="uri">https://github.com/LieberInstitute/brain-epigenomics</a>. Kira Perzel-Mandell, who worked with Shizhong, wrote <a href="https://github.com/LieberInstitute/wgbs_meqtl_analysis" class="uri">https://github.com/LieberInstitute/wgbs_meqtl_analysis</a> (link to paper there) and did other projects. If you are plotting methylation levels at some locations, then that’s very direct. If you are trying to find DMRs, it can take a bit of time to get used to the large objects and the related complications (once you filter the data, it’ll be more manageable). IF you are doing meQTLs, then that could take longer. Some plots like slide 3 panel A could be done fairly fast. If you go into CpH instead of CpG, then memory constraints become harder to deal with.</td>
 </tr>
 <tr class="even">
-<td>2020-10-28</td>
-<td>exceRpt pipeline counts</td>
-<td><a href="https://support.bioconductor.org/p/p132450/#p132464">BioC Support website answer</a></td>
+<td>2022-02-18</td>
+<td>Ideas for possible future analyses</td>
+<td>NA</td>
 </tr>
 <tr class="odd">
-<td>2020-10-30</td>
-<td>recount3 GTEx data access</td>
-<td><a href="https://support.bioconductor.org/p/p132487/#p132521">BioC Support website answer</a></td>
+<td>2022-02-16</td>
+<td>JHPCE array jobs and fasthplus</td>
+<td>Related to JHPCE <a href="https://github.com/ntdyjack/fasthplus" class="uri">https://github.com/ntdyjack/fasthplus</a> and <a href="http://research.libd.org/sgejobs/" class="uri">http://research.libd.org/sgejobs/</a></td>
 </tr>
 <tr class="even">
-<td>2020-10-30</td>
-<td>Issue with JHPCE file permissions</td>
-<td>Explained the <code>chgrp</code> and <code>umask</code> commands plus <code>~/.bashrc</code> file configuration. I also mentioned why we don’t use <code>chmod 777</code> at JHPCE. Details on <a href="https://jhu-genomics.slack.com/archives/CR9NYA0BF/p1604086263148400?thread_ts=1603826219.094600&amp;cid=CR9NYA0BF">Slack</a> (private channel).</td>
+<td>2022-02-15</td>
+<td>snRNA-seq and deconvolution overview</td>
+<td>Brainstormed several ideas related to deconvolution of bulk data as well as uses of snRNA-seq. Refered to OSCA <a href="https://bioconductor.org/books/release/OSCA/" class="uri">https://bioconductor.org/books/release/OSCA/</a> at time.</td>
 </tr>
 <tr class="odd">
-<td>2020-11-03</td>
-<td>Issue with knitcitations</td>
-<td><a href="https://github.com/lcolladotor/biocthis/issues/14">GitHub issue at biocthis</a></td>
+<td>2021-12-06</td>
+<td>JHPCE file permissions and ACLs</td>
+<td>Motivated /dcs04/lieber/lcolladotor/_jhpce_org_LIBD001/update_permissions_spatialteam.sh</td>
 </tr>
 <tr class="even">
-<td>2020-11-03</td>
-<td>Fixed a bug on biocthis for release branches</td>
-<td><a href="https://github.com/lcolladotor/biocthis/issues/13">GitHub issue at biocthis</a></td>
+<td>2021-10-20</td>
+<td>Transfering files between JHPCE disks</td>
+<td>Explained some scripts such as /dcs04/lieber/lcolladotor/BrainSEQ_LIBD001/_jhpce_org</td>
 </tr>
 <tr class="odd">
-<td>2020-11-03</td>
-<td>Fixed two bugs on recount3 related to locate_url() for the BigWig files.</td>
-<td>Resulted in recount3 versions 1.1.1 and 1.1.2 on bioc-devel (and 1.0.2 on bioc-release)</td>
-</tr>
-<tr class="even">
-<td>2020-11-11</td>
-<td>GitHub actions workflow issue with macOS on R-devel</td>
-<td><a href="https://github.com/lcolladotor/biocthis/issues/15">GitHub issue at biocthis</a></td>
-</tr>
-<tr class="odd">
-<td>2020-11-11</td>
-<td>Differences between recount2’s “bp_length” and SPEAQeasy’s “Length”</td>
-<td><a href="https://jhu-genomics.slack.com/archives/CUYHWV7AA/p1605123296024100">Check Slack helpdesk channel</a></td>
-</tr>
-<tr class="even">
-<td>2020-11-25</td>
-<td>Accesing CMC RNA-seq data</td>
-<td>Started PsychENCODE access request process</td>
-</tr>
-<tr class="odd">
-<td>2021-01-11</td>
-<td>Questions related to accessing results from the DG paper by Andrew Jaffe</td>
+<td>2021-09-27</td>
+<td>Presentation preparation feedback</td>
 <td>NA</td>
 </tr>
 <tr class="even">
-<td>2021-01-14</td>
-<td>biocthis macOS GHA bug</td>
-<td><a href="https://support.bioconductor.org/p/p134069/#p134141">BioC Support website answer</a></td>
+<td>2021-08-06</td>
+<td>How to write a Twitter thread for a paper</td>
+<td>We revised key features of Brenda Pardo’s Twitter thread <a href="https://twitter.com/PardoBree/status/1388253938391175173?s=20" class="uri">https://twitter.com/PardoBree/status/1388253938391175173?s=20</a> and some features that you would want your Twitter thread to have.</td>
 </tr>
 <tr class="odd">
-<td>2021-01-26</td>
-<td>Guidance on how to download data from a study in GEO</td>
-<td>NA</td>
+<td>2021-08-03</td>
+<td>Refining an abstract submission</td>
+<td>We talked about all the details that go into writing an abstract for a conference. These details can take longer to complete than initially anticipated.</td>
 </tr>
 <tr class="even">
-<td>2021-01-29</td>
-<td>Help determining what data is available and what can be used for an analysis</td>
-<td>Use of galaxybrain for identifying samples with DNAm, DNA genotype and RNA-seq data</td>
+<td>2021-07-30</td>
+<td>Git branches</td>
+<td>We revised how to make a new branch in Git working with <a href="https://github.com/lmweber/OSTA-book" class="uri">https://github.com/lmweber/OSTA-book</a></td>
 </tr>
 <tr class="odd">
-<td>2021-02-05</td>
-<td>BSP2 LIBD eQTLs request</td>
-<td>NA</td>
+<td>2021-07-28</td>
+<td>DNA genotyping overview</td>
+<td>We discussed the current DNA genotype pipeline and potential changes others might want.</td>
 </tr>
 <tr class="even">
-<td>2021-03-10</td>
-<td>How to write a small methods paper</td>
-<td>Created GitHub issues at <a href="https://github.com/LieberInstitute/VisiumImgProcessing/issues" class="uri">https://github.com/LieberInstitute/VisiumImgProcessing/issues</a></td>
+<td>2021-07-20</td>
+<td>Overview of the RNA-seq universe</td>
+<td>From SPEAQeasy, to qSVA, deconvolution, TWAS, etc. It might be best to give a talk about all these topics to whoever is interested at LIBD since we know about all these pieces but others might not.</td>
 </tr>
 <tr class="odd">
-<td>2021-03-11</td>
-<td>BSP2 eQTLs with a subset of SNPs</td>
-<td>Adapted code and shared it at <a href="https://github.com/LieberInstitute/brainseq_phase2/tree/master/eQTL_full/subset_hancock" class="uri">https://github.com/LieberInstitute/brainseq_phase2/tree/master/eQTL_full/subset_hancock</a></td>
+<td>2021-07-13</td>
+<td>Setting up a team at LIBD</td>
+<td>We talked about <a href="https://lcolladotor.github.io/bioc_team_ds/" class="uri">https://lcolladotor.github.io/bioc_team_ds/</a> among other topics.</td>
 </tr>
 <tr class="even">
-<td>2021-03-24</td>
-<td>Download SRA data and run SPEAQeasy</td>
-<td>I identified that <a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE154829" class="uri">https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE154829</a> contains both miRNA and RNA-seq data. Using data from the SRA Run selector at <a href="https://trace.ncbi.nlm.nih.gov/Traces/study/?acc=SRP273137&amp;o=acc_s%3Aa" class="uri">https://trace.ncbi.nlm.nih.gov/Traces/study/?acc=SRP273137&amp;o=acc_s%3Aa</a> I was able to filter the data to the RNA-seq samples and subset the input samples.manifest file for SPEAQeasy.</td>
-</tr>
-<tr class="odd">
-<td>2021-03-24</td>
-<td>Explain the feasibility of an on-demand end user interface for DEG and eQTLs</td>
-<td>To identify DEGs or eQTLs, the user has to choose what covariates to adjust for. Some studies might require more complicated models than others, as they might be from more than one brain region or present some batch effect. In addition, in newer projects we are considering adjusting for cell type fractions derived from deconvolution. Even if all the covariates were fixed across datasets, in DEGs we have typically adjusted for qSVs which are computed in a dataset-dependent fashion and in essence are PCs derived from degradation-associated genomic regions. Similarly, for eQTLs we adjust for expression PCs. In both we adjust for ancestry PCs. Computing PCs is input-dependent: you won’t get the same values or PCs if you change which samples you are using. So, computing DEGs and eQTLs is not as simple as say a map-reduce problem where you compute the same thing for every input sample, then aggregate the per-sample results. We have steps that depend on the whole sample set. Then there’s also steps for filtering expression features based on some minimum expression cutoffs. Plus, differences between say polyA and RiboZero data, which don’t make sense to process together. For these reasons, I don’t think that an on-demand computation pipeline is feasible based on a user selecting a set of input samples. Constructing RNA-seq objects (RangedSummarizedExperiment objects) as well as DNA genotyping VCF files based on a set of input samples is feasible and that’s what others are building. After that, I think that it’s best to adapt code we have (or even use newer tools) after carefully exploring the data.</td>
-</tr>
-<tr class="even">
-<td>2021-03-25</td>
-<td>Creating a documentation website using bookdown</td>
-<td>Help with understanding <a href="https://bookdown.org/yihui/bookdown/">bookdown</a> and ideas on how to organize a documentation website (chapters and information to consider).</td>
-</tr>
-<tr class="odd">
-<td>2021-03-25</td>
-<td>Clarification of LIBD support</td>
-<td>Discussed the research project proposal and how we can help.</td>
-</tr>
-<tr class="even">
-<td>2021-03-25</td>
-<td>General advice</td>
-<td>General advice. Received feedback regarding file backups.</td>
-</tr>
-<tr class="odd">
-<td>2021-03-29</td>
-<td>spatialLIBD support</td>
-<td>Discussion about features that spatialLIBD could support to make it easier to use for newer data.</td>
-</tr>
-<tr class="even">
-<td>2021-04-08</td>
-<td>General guidance on how to learn how to do differential expression analyses</td>
-<td>Created a learning plan involving several team members that is now documented at a channel in JHU Genomics Slack. That way everyone can keep track of what others are teaching the person who asked the question, and we can have a common communication channel among everyone involved. Sessions include learning how to interact with JHPCE through RStudio, how to run SPEAQeasy, key R/Bioconductor packages (limma, SummarizedExperiment), and explore possible visualizations of interest.</td>
-</tr>
-<tr class="odd">
-<td>2021-05-03</td>
-<td>TWAS prep</td>
-<td>Overview of the TWAS pipeline</td>
-</tr>
-<tr class="even">
-<td>2021-05-06</td>
-<td>How to prepare for a LIBD seminar</td>
-<td>Initial planning session for the LIBD seminar. We talked about the different slides we planned to show and the flow of the presentation. We also scheduled 3 practice talks with different groups of people.</td>
-</tr>
-<tr class="odd">
-<td>2021-05-06</td>
-<td>PredictDB weights</td>
-<td>General advice on how to ask for help from open source projects</td>
-</tr>
-<tr class="even">
-<td>2021-05-07</td>
-<td>How to get started with computational biology</td>
-<td>I gave an overview of the resources and materials we have created as well as the LIBD bootcamps that we have publicly available to help others get started with computational biology. This is likely the first of several meetings.</td>
-</tr>
-<tr class="odd">
-<td>2021-05-07</td>
-<td>How to insert a figure using the Oxford Bioinfomratics Overleaf LaTeX template</td>
-<td>We spent a significant amount troubleshooting the problem here (nearly two hours?). In the end, using the insert image “here” LaTeX syntax resolved the problem.</td>
-</tr>
-<tr class="even">
-<td>2021-05-10</td>
-<td>Setting up covr using GitHub actions in an R package</td>
-<td>We went over the details of the GitHub actions workflow created by biocthis, the parts that you need to run from biocthis::use_bioc_pkg_templates(), and resolving issues prompted by R CMD check + BiocCheck</td>
-</tr>
-<tr class="odd">
-<td>2021-05-20</td>
-<td>How to prepare for a LIBD seminar part 2</td>
-<td>Now that a first major draft of the presentation was complete, we revised it and proposed some changes to it. Some of them involved remaking the figures using base_size = 20 or even 30 with ggplot2. For future work, it might be best to save the images with that font size from the beginning instead of having to update them later.</td>
-</tr>
-<tr class="even">
-<td>2021-05-20</td>
-<td>Help preparing a figure for a grant application</td>
-<td>Discussed with Josh what figures we needed to prepare and how to generate them. This also involved base_size = 30 with ggplot2. Otherwise the font was too small to read it on the grant.</td>
-</tr>
-<tr class="odd">
-<td>2021-05-21</td>
-<td>PredictDB weights</td>
-<td>Further updates on asking for help with this complicated project. Suggested reaching out to other LIBD members who have tried running the software before.</td>
-</tr>
-<tr class="even">
-<td>2021-05-24</td>
-<td>Grant application review</td>
-<td>Helped review the grant application and revise the text.</td>
-</tr>
-<tr class="odd">
-<td>2021-05-26</td>
-<td>How to prepare for a LIBD seminar part 3</td>
-<td>Similar to part 2. The presentation was looking very polished by this meeting!</td>
-</tr>
-<tr class="even">
-<td>2021-06-02</td>
-<td>How to prepare for a LIBD seminar part 4</td>
-<td>We discussed the changes that we should make and the ones we shouldn’t based on the feedback received from the practice talk with Keri’s group. The feedback was excellent and very useful, however, we discussed which suggestions were maybe complicating the presentation too much and how to best incorporate them.</td>
-</tr>
-<tr class="odd">
-<td>2021-06-17</td>
-<td>Brainstorming session on collaboration</td>
-<td>I showed the initial version of the BrainSeq Phase II developmental expression explorer developed by Bill Ulrich and Aaron Goldman. We discussed other possibilities for the collaboration including helping set up SPEAQeasy in their servers.</td>
-</tr>
-<tr class="even">
-<td>2021-06-17</td>
-<td>How to transfer recount3 data</td>
-<td>We met to figure out how to transfer the data for this collaboration, which ended up being quite tricky and involved using an SSH tunnel for rsync. Basically, a command like this one: <code>rsync -avzh -e 'ssh -o ProxyJump=user@server_somewhere_for_the_tunnel' *_files_of_interest user@final_server:/final_path/</code></td>
-</tr>
-<tr class="odd">
-<td>2021-06-17</td>
-<td>How to get started with R</td>
-<td>We discussed the different possible goals and ways to get to them and determined a path forward that relies on the rest of the DSgs system as well as existing LIBD rstats club videos to get started. It’ll be supported by a meeting with Leo and others involved in the spatial transcriptomics projects from the R side.</td>
-</tr>
-<tr class="even">
-<td>2021-06-21</td>
-<td>Locating public data at JHPCE + bamtofastq workflow</td>
-<td>We talked about the public data from Synapse and worked on locating some of it at JHPCE. I explained also how we have used bamtofastq when others don’t share their FASTQ files. Basically, we use bamtofastq to reconstruct the original FASTQ files (you might have to append the unmapped FASTQs if they are provided by the original authors) and then run FASTQ-processing tools like our SPEAQeasy pipeline.</td>
+<td>2021-07-01</td>
+<td>How to set up a GitHub actions-powered website</td>
+<td>This has changed over time. The most recent setup (as of 2021-08-06) is at <a href="https://github.com/lmweber/OSTA-book" class="uri">https://github.com/lmweber/OSTA-book</a></td>
 </tr>
 <tr class="odd">
 <td>2021-06-29</td>
@@ -393,74 +263,204 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <td>We talked about the set of videos and resources publicly available to get to learn about R, Bioconductor and these packages. It was a lot of information and I’m sure that we’ll have more sessions later on to clarify questions as they arise.</td>
 </tr>
 <tr class="even">
-<td>2021-07-01</td>
-<td>How to set up a GitHub actions-powered website</td>
-<td>This has changed over time. The most recent setup (as of 2021-08-06) is at <a href="https://github.com/lmweber/OSTA-book" class="uri">https://github.com/lmweber/OSTA-book</a></td>
+<td>2021-06-21</td>
+<td>Locating public data at JHPCE + bamtofastq workflow</td>
+<td>We talked about the public data from Synapse and worked on locating some of it at JHPCE. I explained also how we have used bamtofastq when others don’t share their FASTQ files. Basically, we use bamtofastq to reconstruct the original FASTQ files (you might have to append the unmapped FASTQs if they are provided by the original authors) and then run FASTQ-processing tools like our SPEAQeasy pipeline.</td>
 </tr>
 <tr class="odd">
-<td>2021-07-13</td>
-<td>Setting up a team at LIBD</td>
-<td>We talked about <a href="https://lcolladotor.github.io/bioc_team_ds/" class="uri">https://lcolladotor.github.io/bioc_team_ds/</a> among other topics.</td>
+<td>2021-06-17</td>
+<td>Brainstorming session on collaboration</td>
+<td>I showed the initial version of the BrainSeq Phase II developmental expression explorer developed by Bill Ulrich and Aaron Goldman. We discussed other possibilities for the collaboration including helping set up SPEAQeasy in their servers.</td>
 </tr>
 <tr class="even">
-<td>2021-07-20</td>
-<td>Overview of the RNA-seq universe</td>
-<td>From SPEAQeasy, to qSVA, deconvolution, TWAS, etc. It might be best to give a talk about all these topics to whoever is interested at LIBD since we know about all these pieces but others might not.</td>
+<td>2021-06-17</td>
+<td>How to transfer recount3 data</td>
+<td>We met to figure out how to transfer the data for this collaboration, which ended up being quite tricky and involved using an SSH tunnel for rsync. Basically, a command like this one: <code>rsync -avzh -e 'ssh -o ProxyJump=user@server_somewhere_for_the_tunnel' *_files_of_interest user@final_server:/final_path/</code></td>
 </tr>
 <tr class="odd">
-<td>2021-07-28</td>
-<td>DNA genotyping overview</td>
-<td>We discussed the current DNA genotype pipeline and potential changes others might want.</td>
+<td>2021-06-17</td>
+<td>How to get started with R</td>
+<td>We discussed the different possible goals and ways to get to them and determined a path forward that relies on the rest of the DSgs system as well as existing LIBD rstats club videos to get started. It’ll be supported by a meeting with Leo and others involved in the spatial transcriptomics projects from the R side.</td>
 </tr>
 <tr class="even">
-<td>2021-07-30</td>
-<td>Git branches</td>
-<td>We revised how to make a new branch in Git working with <a href="https://github.com/lmweber/OSTA-book" class="uri">https://github.com/lmweber/OSTA-book</a></td>
+<td>2021-06-02</td>
+<td>How to prepare for a LIBD seminar part 4</td>
+<td>We discussed the changes that we should make and the ones we shouldn’t based on the feedback received from the practice talk with Keri’s group. The feedback was excellent and very useful, however, we discussed which suggestions were maybe complicating the presentation too much and how to best incorporate them.</td>
 </tr>
 <tr class="odd">
-<td>2021-08-03</td>
-<td>Refining an abstract submission</td>
-<td>We talked about all the details that go into writing an abstract for a conference. These details can take longer to complete than initially anticipated.</td>
+<td>2021-05-26</td>
+<td>How to prepare for a LIBD seminar part 3</td>
+<td>Similar to part 2. The presentation was looking very polished by this meeting!</td>
 </tr>
 <tr class="even">
-<td>2021-08-06</td>
-<td>How to write a Twitter thread for a paper</td>
-<td>We revised key features of Brenda Pardo’s Twitter thread <a href="https://twitter.com/PardoBree/status/1388253938391175173?s=20" class="uri">https://twitter.com/PardoBree/status/1388253938391175173?s=20</a> and some features that you would want your Twitter thread to have.</td>
+<td>2021-05-24</td>
+<td>Grant application review</td>
+<td>Helped review the grant application and revise the text.</td>
 </tr>
 <tr class="odd">
-<td>2021-09-27</td>
-<td>Presentation preparation feedback</td>
+<td>2021-05-21</td>
+<td>PredictDB weights</td>
+<td>Further updates on asking for help with this complicated project. Suggested reaching out to other LIBD members who have tried running the software before.</td>
+</tr>
+<tr class="even">
+<td>2021-05-20</td>
+<td>How to prepare for a LIBD seminar part 2</td>
+<td>Now that a first major draft of the presentation was complete, we revised it and proposed some changes to it. Some of them involved remaking the figures using base_size = 20 or even 30 with ggplot2. For future work, it might be best to save the images with that font size from the beginning instead of having to update them later.</td>
+</tr>
+<tr class="odd">
+<td>2021-05-20</td>
+<td>Help preparing a figure for a grant application</td>
+<td>Discussed with Josh what figures we needed to prepare and how to generate them. This also involved base_size = 30 with ggplot2. Otherwise the font was too small to read it on the grant.</td>
+</tr>
+<tr class="even">
+<td>2021-05-10</td>
+<td>Setting up covr using GitHub actions in an R package</td>
+<td>We went over the details of the GitHub actions workflow created by biocthis, the parts that you need to run from biocthis::use_bioc_pkg_templates(), and resolving issues prompted by R CMD check + BiocCheck</td>
+</tr>
+<tr class="odd">
+<td>2021-05-07</td>
+<td>How to get started with computational biology</td>
+<td>I gave an overview of the resources and materials we have created as well as the LIBD bootcamps that we have publicly available to help others get started with computational biology. This is likely the first of several meetings.</td>
+</tr>
+<tr class="even">
+<td>2021-05-07</td>
+<td>How to insert a figure using the Oxford Bioinfomratics Overleaf LaTeX template</td>
+<td>We spent a significant amount troubleshooting the problem here (nearly two hours?). In the end, using the insert image “here” LaTeX syntax resolved the problem.</td>
+</tr>
+<tr class="odd">
+<td>2021-05-06</td>
+<td>How to prepare for a LIBD seminar</td>
+<td>Initial planning session for the LIBD seminar. We talked about the different slides we planned to show and the flow of the presentation. We also scheduled 3 practice talks with different groups of people.</td>
+</tr>
+<tr class="even">
+<td>2021-05-06</td>
+<td>PredictDB weights</td>
+<td>General advice on how to ask for help from open source projects</td>
+</tr>
+<tr class="odd">
+<td>2021-05-03</td>
+<td>TWAS prep</td>
+<td>Overview of the TWAS pipeline</td>
+</tr>
+<tr class="even">
+<td>2021-04-08</td>
+<td>General guidance on how to learn how to do differential expression analyses</td>
+<td>Created a learning plan involving several team members that is now documented at a channel in JHU Genomics Slack. That way everyone can keep track of what others are teaching the person who asked the question, and we can have a common communication channel among everyone involved. Sessions include learning how to interact with JHPCE through RStudio, how to run SPEAQeasy, key R/Bioconductor packages (limma, SummarizedExperiment), and explore possible visualizations of interest.</td>
+</tr>
+<tr class="odd">
+<td>2021-03-29</td>
+<td>spatialLIBD support</td>
+<td>Discussion about features that spatialLIBD could support to make it easier to use for newer data.</td>
+</tr>
+<tr class="even">
+<td>2021-03-25</td>
+<td>Creating a documentation website using bookdown</td>
+<td>Help with understanding <a href="https://bookdown.org/yihui/bookdown/">bookdown</a> and ideas on how to organize a documentation website (chapters and information to consider).</td>
+</tr>
+<tr class="odd">
+<td>2021-03-25</td>
+<td>Clarification of LIBD support</td>
+<td>Discussed the research project proposal and how we can help.</td>
+</tr>
+<tr class="even">
+<td>2021-03-25</td>
+<td>General advice</td>
+<td>General advice. Received feedback regarding file backups.</td>
+</tr>
+<tr class="odd">
+<td>2021-03-24</td>
+<td>Download SRA data and run SPEAQeasy</td>
+<td>I identified that <a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE154829" class="uri">https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE154829</a> contains both miRNA and RNA-seq data. Using data from the SRA Run selector at <a href="https://trace.ncbi.nlm.nih.gov/Traces/study/?acc=SRP273137&amp;o=acc_s%3Aa" class="uri">https://trace.ncbi.nlm.nih.gov/Traces/study/?acc=SRP273137&amp;o=acc_s%3Aa</a> I was able to filter the data to the RNA-seq samples and subset the input samples.manifest file for SPEAQeasy.</td>
+</tr>
+<tr class="even">
+<td>2021-03-24</td>
+<td>Explain the feasibility of an on-demand end user interface for DEG and eQTLs</td>
+<td>To identify DEGs or eQTLs, the user has to choose what covariates to adjust for. Some studies might require more complicated models than others, as they might be from more than one brain region or present some batch effect. In addition, in newer projects we are considering adjusting for cell type fractions derived from deconvolution. Even if all the covariates were fixed across datasets, in DEGs we have typically adjusted for qSVs which are computed in a dataset-dependent fashion and in essence are PCs derived from degradation-associated genomic regions. Similarly, for eQTLs we adjust for expression PCs. In both we adjust for ancestry PCs. Computing PCs is input-dependent: you won’t get the same values or PCs if you change which samples you are using. So, computing DEGs and eQTLs is not as simple as say a map-reduce problem where you compute the same thing for every input sample, then aggregate the per-sample results. We have steps that depend on the whole sample set. Then there’s also steps for filtering expression features based on some minimum expression cutoffs. Plus, differences between say polyA and RiboZero data, which don’t make sense to process together. For these reasons, I don’t think that an on-demand computation pipeline is feasible based on a user selecting a set of input samples. Constructing RNA-seq objects (RangedSummarizedExperiment objects) as well as DNA genotyping VCF files based on a set of input samples is feasible and that’s what others are building. After that, I think that it’s best to adapt code we have (or even use newer tools) after carefully exploring the data.</td>
+</tr>
+<tr class="odd">
+<td>2021-03-11</td>
+<td>BSP2 eQTLs with a subset of SNPs</td>
+<td>Adapted code and shared it at <a href="https://github.com/LieberInstitute/brainseq_phase2/tree/master/eQTL_full/subset_hancock" class="uri">https://github.com/LieberInstitute/brainseq_phase2/tree/master/eQTL_full/subset_hancock</a></td>
+</tr>
+<tr class="even">
+<td>2021-03-10</td>
+<td>How to write a small methods paper</td>
+<td>Created GitHub issues at <a href="https://github.com/LieberInstitute/VisiumImgProcessing/issues" class="uri">https://github.com/LieberInstitute/VisiumImgProcessing/issues</a></td>
+</tr>
+<tr class="odd">
+<td>2021-02-05</td>
+<td>BSP2 LIBD eQTLs request</td>
 <td>NA</td>
 </tr>
 <tr class="even">
-<td>2021-10-20</td>
-<td>Transfering files between JHPCE disks</td>
-<td>Explained some scripts such as /dcs04/lieber/lcolladotor/BrainSEQ_LIBD001/_jhpce_org</td>
+<td>2021-01-29</td>
+<td>Help determining what data is available and what can be used for an analysis</td>
+<td>Use of galaxybrain for identifying samples with DNAm, DNA genotype and RNA-seq data</td>
 </tr>
 <tr class="odd">
-<td>2021-12-06</td>
-<td>JHPCE file permissions and ACLs</td>
-<td>Motivated /dcs04/lieber/lcolladotor/_jhpce_org_LIBD001/update_permissions_spatialteam.sh</td>
-</tr>
-<tr class="even">
-<td>2022-02-15</td>
-<td>snRNA-seq and deconvolution overview</td>
-<td>Brainstormed several ideas related to deconvolution of bulk data as well as uses of snRNA-seq. Refered to OSCA <a href="https://bioconductor.org/books/release/OSCA/" class="uri">https://bioconductor.org/books/release/OSCA/</a> at time.</td>
-</tr>
-<tr class="odd">
-<td>2022-02-16</td>
-<td>JHPCE array jobs and fasthplus</td>
-<td>Related to JHPCE <a href="https://github.com/ntdyjack/fasthplus" class="uri">https://github.com/ntdyjack/fasthplus</a> and <a href="http://research.libd.org/sgejobs/" class="uri">http://research.libd.org/sgejobs/</a></td>
-</tr>
-<tr class="even">
-<td>2022-02-18</td>
-<td>Ideas for possible future analyses</td>
+<td>2021-01-26</td>
+<td>Guidance on how to download data from a study in GEO</td>
 <td>NA</td>
 </tr>
+<tr class="even">
+<td>2021-01-14</td>
+<td>biocthis macOS GHA bug</td>
+<td><a href="https://support.bioconductor.org/p/p134069/#p134141">BioC Support website answer</a></td>
+</tr>
 <tr class="odd">
-<td>2022-02-24</td>
-<td>WGBS data analysis overview</td>
-<td>Using BiocMAP <a href="http://research.libd.org/BiocMAP/" class="uri">http://research.libd.org/BiocMAP/</a> which Nick is finishing up, you could process the data and have R objects you could load and analyze. So, the data processing would be “easy” in a sense. Next, you might want to check the bsseq documentation <a href="https://bioconductor.org/packages/bsseq/" class="uri">https://bioconductor.org/packages/bsseq/</a> if you are interested in finding differentially methylated regions (DMRs) and in any case, because BiocMAP provides that type of R object as noted at <a href="http://research.libd.org/BiocMAP/outputs.html" class="uri">http://research.libd.org/BiocMAP/outputs.html</a>. <a href="https://jhubiostatistics.shinyapps.io/wgbsExprs/" class="uri">https://jhubiostatistics.shinyapps.io/wgbsExprs/</a> and the companion paper is the last WGBS data analysis project I did myself with code at <a href="https://github.com/LieberInstitute/brain-epigenomics" class="uri">https://github.com/LieberInstitute/brain-epigenomics</a>. Kira Perzel-Mandell, who worked with Shizhong, wrote <a href="https://github.com/LieberInstitute/wgbs_meqtl_analysis" class="uri">https://github.com/LieberInstitute/wgbs_meqtl_analysis</a> (link to paper there) and did other projects. If you are plotting methylation levels at some locations, then that’s very direct. If you are trying to find DMRs, it can take a bit of time to get used to the large objects and the related complications (once you filter the data, it’ll be more manageable). IF you are doing meQTLs, then that could take longer. Some plots like slide 3 panel A could be done fairly fast. If you go into CpH instead of CpG, then memory constraints become harder to deal with.</td>
+<td>2021-01-11</td>
+<td>Questions related to accessing results from the DG paper by Andrew Jaffe</td>
+<td>NA</td>
+</tr>
+<tr class="even">
+<td>2020-11-25</td>
+<td>Accesing CMC RNA-seq data</td>
+<td>Started PsychENCODE access request process</td>
+</tr>
+<tr class="odd">
+<td>2020-11-11</td>
+<td>GitHub actions workflow issue with macOS on R-devel</td>
+<td><a href="https://github.com/lcolladotor/biocthis/issues/15">GitHub issue at biocthis</a></td>
+</tr>
+<tr class="even">
+<td>2020-11-11</td>
+<td>Differences between recount2’s “bp_length” and SPEAQeasy’s “Length”</td>
+<td><a href="https://jhu-genomics.slack.com/archives/CUYHWV7AA/p1605123296024100">Check Slack helpdesk channel</a></td>
+</tr>
+<tr class="odd">
+<td>2020-11-03</td>
+<td>Issue with knitcitations</td>
+<td><a href="https://github.com/lcolladotor/biocthis/issues/14">GitHub issue at biocthis</a></td>
+</tr>
+<tr class="even">
+<td>2020-11-03</td>
+<td>Fixed a bug on biocthis for release branches</td>
+<td><a href="https://github.com/lcolladotor/biocthis/issues/13">GitHub issue at biocthis</a></td>
+</tr>
+<tr class="odd">
+<td>2020-11-03</td>
+<td>Fixed two bugs on recount3 related to locate_url() for the BigWig files.</td>
+<td>Resulted in recount3 versions 1.1.1 and 1.1.2 on bioc-devel (and 1.0.2 on bioc-release)</td>
+</tr>
+<tr class="even">
+<td>2020-10-30</td>
+<td>recount3 GTEx data access</td>
+<td><a href="https://support.bioconductor.org/p/p132487/#p132521">BioC Support website answer</a></td>
+</tr>
+<tr class="odd">
+<td>2020-10-30</td>
+<td>Issue with JHPCE file permissions</td>
+<td>Explained the <code>chgrp</code> and <code>umask</code> commands plus <code>~/.bashrc</code> file configuration. I also mentioned why we don’t use <code>chmod 777</code> at JHPCE. Details on <a href="https://jhu-genomics.slack.com/archives/CR9NYA0BF/p1604086263148400?thread_ts=1603826219.094600&amp;cid=CR9NYA0BF">Slack</a> (private channel).</td>
+</tr>
+<tr class="even">
+<td>2020-10-28</td>
+<td>exceRpt pipeline counts</td>
+<td><a href="https://support.bioconductor.org/p/p132450/#p132464">BioC Support website answer</a></td>
+</tr>
+<tr class="odd">
+<td>2020-10-21</td>
+<td>Ballgown stattest</td>
+<td><a href="https://support.bioconductor.org/p/134914/#134915">BioC Support website answer</a></td>
 </tr>
 </tbody>
 </table>
