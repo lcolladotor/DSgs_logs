@@ -13,4 +13,6 @@
 | 2021-06-04 | Havent got my mds yet so making the meeting for Friday | N/A |
 | 2021-06-15 | FUSION / TWAS Walkthrough | https://github.com/LieberInstitute/zandiHyde_bipolar_rnaseq/tree/master/dev_twas#bd-twas-workflow |
 | 2021-06-21 | TWAS questions | cleared up some confusion about filter_snps.R |
+| 2021-07-01 | Running Genome Studio on n = 200, generating PLINK outputs | NA |
+| 2021-09-03 | Discussion about rerunning FUSION/TWAS with new GWAS with extra attention paid to the number of samples for each brain region | NA |
 

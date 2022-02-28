@@ -28,4 +28,62 @@
 | 2021-04-09 | Resolving issues with running dotdotdot on 20X RNAscope images | NA |
 | 2021-04-09 | runnning Hiplex registration | NA |
 | 2021-04-15 | running and trouble shooting VisiumIF image splitting code | NA |
+| 2021-06-01 | troubleshoot SUFI output and figured it was not compatible with dotdotdot | NA |
+| 2021-06-24 | making a list of filenames in a specific folder and subfolder in R | used Sys.glob and write.table to write the list to txt file |
+| 2021-06-24 | Rectified issues for batch running emma's RNAscope data | NA |
+| 2021-06-24 | create shell script for batch running images on VisiumLIBD | NA |
+| 2021-07-09 | recreating spatstat plots with more features | used ggplot |
+| 2021-07-09 | Helping understand errors from VisiumLIBD | NA |
+| 2021-07-09 | Helping understand errors from VisiumLIBD | NA |
+| 2021-07-14 | Resolve errors produced by dotdotdot on SUFI output | Referred to Vijay's notes |
+| 2021-07-14 | R Code to create list of files to be processed through VisiumLIBD | NA |
+| 2021-07-14 | Setup aliases in bashrc | NA |
+| 2021-07-15 | Issues with SUFI | Explain how some scripts in SUFI run and the bash scripts to use in place of python scripts for batch processing |
+| 2021-07-15 | Explain how awk works | showed a example of how AWK extracts text lines from a text file |
+| 2021-07-20 | Optimizing DAPI segmentation in dotdotdot | https://github.com/LieberInstitute/dotdotdot/issues/11 |
+| 2021-08-11 | steps to resolve image segmentation of LC heated samples round 2 | NA |
+| 2021-08-18 | explanation of the methods and algorithm of a paper we are reviewing together | NA |
+| 2021-08-21 | resolving issues with multiple keys in the authorized_keys file | NA |
+| 2021-08-23 | Explain how to merge 2 data tables in R | NA |
+| 2021-08-23 | Explain public keys and the authorized_keys file on JHPCE, removed duplicate public keys for the local machine to resolve ssh key login | NA |
+| 2021-08-30 | dynamically name structures in matlab based on user inputs | used the command 'eval' |
+| 2021-08-30 | parameter tuning for dotdotdot to split the nuclei clusters | NA |
+| 2021-08-30 | improve lipofuscin masking in dotdotdot | NA |
+| 2021-09-02 | Error running VistoSeg::spospotcheck (Error in spotspotcheck>start (line 60)) | The H&E image that he was segmenting and the H&E image for which he gets the 'json' and 'csv' are not the same images or at least not the same resolution which is causing the error. |
+| 2021-09-02 | Error while running rnascope_mouse - line 159 | https://github.com/LieberInstitute/dotdotdot/issues/12 |
+| 2021-09-07 | Trouble with implementing RNAscope function for humans | https://github.com/LieberInstitute/dotdotdot/issues/13 |
+| 2021-09-08 | CellProfiler H&E segmentations | We decided to run CellProfiler on a while capture area image of DLPFC sample to look at the segmentations as it was doing good job on the cropped regions of a DLPFC sample |
+| 2021-09-09 | Creating cyberduck bookmarks for JHPCE paths | NA |
+| 2021-09-09 | writing shell script for countNuclei function in VistoSeg | NA |
+| 2021-09-09 | Explaining Github issues, history and version control | NA |
+| 2021-09-09 | Explaining SPE (Spatial Experiment) SCE (Single Cell Experiment) objects | https://files.slack.com/files-pri/T029RHR07-F024D7ELKC2/image_from_ios.jpg |
+| 2021-09-09 | syntax error in shell script | used back quote (`) instead of single quote (') when assigning string to variables |
+| 2021-09-14 | Fiducial frame enhancement for Visium IF images using preview on MAC | NA |
+| 2021-09-14 | running Loupe browser for mannual alignment | NA |
+| 2021-09-20 | issues with regioprops function in dotdotdot | https://github.com/LieberInstitute/dotdotdot/issues/14 |
+| 2021-10-07 | doubts on VistoSeg | Explaination of why an index label M=3 was chosen for refineVNS in section 2.2. |
+| 2021-10-14 | running spotspotcheck for SFN | NA |
+| 2021-11-04 | using awk | to pick filename from textfile for a array job |
+| 2021-11-15 | error in transferring Visuim HPC data to JHPCE | The user directories were cleared during the software updates for LIBD server, emailed bill to create one for me and Heena to use rsync on Neural_Plasiticity. The filenames Heena used for 'source' in rync did not exist at the source directory which was throwing errors. |
+| 2021-11-16 | batch processing - dotdotdot, on local machine | made custom Matlab script to batch process her 30 RNAscope images on her local machine |
+| 2021-11-18 | running loupe browser for HPC images | Showed the steps on one sample HPC image and what outputs to save. |
+| 2021-11-18 | countSpots from VistoSeg throwing errors for one DLPFC sample from round4 | While debugging, its seen that VistoSeg when splitting the raw image missed a part of fiducial frame for capture area D1 of that sample. This happens when the center of the visium slide does not align with the center of the image, which has ti be adjusted while imaging. This image when run through spaceranger provided negative coordinates for the missing fiducial frame part of the image, but MATLAB will not accept negative indices for a image, which was throwing errors when recontructing spot grind in countSpots function. |
+| 2021-11-18 | Resolve issues with comments | Showed how to close issues on git with detailed comments of the final results |
+| 2021-12-08 | applying kmeans to CA3 mouse RNAscope data to obtain gene expression levels | Showed code how to scale data based on https://uc-r.github.io/kmeans_clustering and optimise kmeans for the present dataset |
+| 2021-12-09 | Removing smaller objects from VistoSeg segmentations | refining segmentations in matlab by applying size thresholds |
+| 2022-01-20 | glitch in CAPTure tutorial about input data types to a function | https://github.com/LieberInstitute/CaPTure/issues/2 |
+| 2022-01-21 | Transfer data from JHPCE to Neural_Plasticity | command to use `rsync -avzh --progress userid@jhpce-transfer01:/source directory/ /destination directory/ |
+| 2022-01-21 | Transfer data Neural_Plasticity to JHPCE | use rsync, prepend spaces in the paths with `\` to avoid issues |
+| 2022-01-21 | JHPCE directory organization, repo linking, making commits | https://github.com/LieberInstitute/spatialDLPFC_SCZ/commit/43106c664883fd5df301e44cca35f2e8f2f289ad |
+| 2022-01-21 | opening python, R, MATLAB console interactive session on JHPCE | explain how to use IDE's on local machine to edits scripts on JHPCE through cyberduck |
+| 2022-01-25 | VistoSegIF pipeline | explained the functions of this pipline as these are not yet documented |
+| 2022-02-10 | Need for rotation of visium array images and its spatial coordinnnate in spe object | NA |
+| 2022-02-11 | tiling and metadata changes in PNN project | NA |
+| 2022-02-11 | explaination on Image metadata, bit depth | NA |
+| 2022-02-14 | Explain the concept of Squidpy paper | https://www.nature.com/articles/s41592-021-01358-2 |
+| 2022-02-15 | Explain Tangram, scRNAseq count matrix, spe object | NA |
+| 2022-02-16 | Provide comparison table for different metrics obtained from image meta data in MATLAB, for Visium IF workflow | NA |
+| 2022-02-17 | rename files on JHPCE through command line | NA |
+| 2022-02-23 | contrast adjustment, intensity normalization, channel/gene description in PNN images | used HALO to show how contrast can be adjusted when changing min max values in the image |
+| 2022-02-25 | Data type change of image data when loading into Python | Used KJ's code from his rstats club presentation and described how the images shoukd be read using numpy array as uint32 but not floating https://colab.research.google.com/drive/1A4cavWcbgZF1PFQT87s5s_ATyZrN3IxL?usp=sharing |
 

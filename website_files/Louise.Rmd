@@ -25,4 +25,15 @@
 | 2021-05-28 | Differential Expression help (continuation of 5/20) | NA |
 | 2021-06-03 | questions about expression_cut and pca plots | We walked tought script from getRPKM to expression cut to filter rse objects, I also pointed Brenda towards some reasources to get started with ggplot |
 | 2021-06-17 | Manhattan plot making and tstatistic | Pointed her to some oacjages for creating TWAS plots whe was interested in and we walked through some code I used to compare T-stats from different DE models |
+| 2021-06-30 | Debugging ggplot code | We reviewed her code and I gave some pointer on what bugs to look out for with certain errors in ggplot |
+| 2021-08-20 | Help with JHPCE login issues | We were able to update the keys for the cluster, but the ssh key login was still broken |
+| 2021-08-23 | Using purrr and map to loop over datasets and apply qsva | Went over basic, complex, and nested map() usage and how to apply it to Josh's current work |
+| 2021-08-26 | using map to cbind a list of six to its corresponding list of lists. The second is a list of 6, each a list of 3. | Did some troubleshooting on nested map functions, when to use ~.x and when to use function() syntax |
+| 2021-10-29 | qc general scripts, rnaseq scripts general, ggplot histogram with breaks | We found a R function that helped produce the plot she was looking for |
+| 2021-11-03 | Debugging help with rse_tx object | We discussed how to check for duplicate rownames, and stratedgies for variable naming + working with rse objects |
+| 2022-01-19 | Help using BisqueRNA, getting snRNA-seq into correct input format, chosing refrence vs. marker based deconvolution | I shared some detials of our deconvolution approach, we walked through the SCE to Expression set converson, and discussed some issues that may come up |
+| 2022-01-20 | Troubleshooting ExprssionSet conversion | Fixed row names to both be ensembl IDs, discussed simplifing cell types in sce, converting sce arrarys to matrix |
+| 2022-02-15 | Access to the gene info in the rowData of the Summarized Experiment objects to annotate eqtl results | We went over how to acess the rowData, and what the rowData inthe MDD project contains. Ended up adding columns to the eqtl risk snp subsets to help with analysis |
+| 2022-02-24 | I would like to learn how you ran tensorQTL on the MDD data, maybe with using the GPU nodes for it. | Geo was interested int eh workflow I developed for tensorQTL. I went over the requirements and input formats that tensorqtl requirers, and how I had previously made them from our dataset. Also discussed the differnces between the functions and their outputs. |
+| 2022-02-24 | Help building for loops to analyze WGCNA ouput data | We discussed how to build and save data with a for loop and with purrr::map. Went over how to define a function in map to do nested loops |
 
