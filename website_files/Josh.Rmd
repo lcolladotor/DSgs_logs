@@ -2,6 +2,7 @@
 
 | Date | Help request | Notes |
 | ---- | ------------ | ----- |
+| 2022-03-02 | Work through qsvaR vignette together | Heena was encountering a simple error installing the package. We also spent time going through the vignette to give a conceptual overview of qsva. Her feedback will be helpful in making the vignette more accessible |
 | 2021-07-28 | DNA genotyping overview | ibidem |
 | 2021-06-16 | got mds score for the vcf she presented using plink | we discussed what a bfile is in plink and that made the process much easier. |
 | 2021-06-10 | mds for vcfs | still working on this will touch base again, we are trying to obtain the mds plot for ancestry in the placental data. |

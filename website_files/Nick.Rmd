@@ -2,6 +2,10 @@
 
 | Date | Help request | Notes |
 | ---- | ------------ | ----- |
+| 2022-03-09 | Setting up passwordless login | I described two-factor authentication vs. passwordless login via SSH keys, and gave tips to set up the latter. |
+| 2022-03-09 | Using custom annotation with SPEAQeasy | I described how to add additional transcripts to the relevant FASTA file then use SPEAQeasy's custom annotation option to use the new FASTA with the other default annotation files. |
+| 2022-03-04 | Using the caracol queue | I described how requesting 'caracol' is similar to requesting 'bluejay', but elaborated on additional complications, like contention for the same GPU and using CUDA_VISIBLE_DEVICES properly, including with array jobs |
+| 2022-03-02 | Generating bigWigs with SPEAQeasy | I referred her to the '--coverage' option with SPEAQeasy, which unfortunately cannot be run alone, which might be useful for an already-processed dataset |
 | 2022-02-07 | Debugging seg fault with tensorqtl module | We tried to discover the source of a seg fault that would occur when she imported tensorqtl in python with the tensorqtl module. Another user and I weren't able to replicate the issue. We later discovered that there were lines in her .bashrc that might've interfered with the module to produce the issue. |
 | 2022-02-04 | Using tensorqtl with a GPU | I described how to qrsh/sub jobs with the GPU node, including how to automatically set up 'CUDA_VISIBLE_DEVICES' to avoid contention for resources, and how to use the tensorqtl module to ensure GPUs were used when importing pytorch |
 | 2022-02-04 | X11 and SSH issues | After ensuring our apparent Rstudio set-ups on our windows machines matched, she still wasn't able to forward X11 while using Rstudio. Regarding a different issue, we discovered that a particular machine required additional lines in the '~/.ssh/config' to properly enable RSA keys. |
