@@ -2,6 +2,9 @@
 
 | Date | Help request | Notes |
 | ---- | ------------ | ----- |
+| 2022-03-09 | VisiumIF loupe alignment | The contrast adjusted images on MAC::preview should be saved and uploaded back to JHPCE to run spaceranger. Spaceranger needs the exact same image that was used in the loupe alignment (even if it is changed from raw image on preview) |
+| 2022-03-09 | Masking of blood vessels from PNN channel in PNN project | Explained how the image data can be manipulated when claudin5 channel and WFA channel are merged and then the blood vessels are segmented and masked. The correct way is to segment blood vessels from claudin channel and mask the segmented objects in WFA channel. |
+| 2022-03-09 | How are InForm tiles arranged | The indices listed in the tiles's filename is the x,y coordinates of the starting topleft pixel of the given tile. These indices never start with [0,0] as these tiles are picked from the ROI in the phenochart and not the entire imaged area. Once stored in a directory these tiles are not arranged in chronological order. |
 | 2022-02-25 | Data type change of image data when loading into Python | Used KJ's code from his rstats club presentation and described how the images shoukd be read using numpy array as uint32 but not floating https://colab.research.google.com/drive/1A4cavWcbgZF1PFQT87s5s_ATyZrN3IxL?usp=sharing |
 | 2022-02-23 | contrast adjustment, intensity normalization, channel/gene description in PNN images | used HALO to show how contrast can be adjusted when changing min max values in the image |
 | 2022-02-17 | rename files on JHPCE through command line | NA |
