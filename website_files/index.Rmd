@@ -14,9 +14,10 @@ This website contains the public logs for the Data Science guidance sessiones ca
 ## DSgs-guide team members {-}
 
 * [Joshua M. Stolz](https://github.com/joshstolz)
-* [Louise Huuki](https://github.com/lahuuki)
+* [Louise A. Huuki-Myers](https://github.com/lahuuki)
 * [Nicholas J. Eagles](https://github.com/Nick-Eagles)
 * [Madhavi Tippani](https://github.com/madhavitippani)
+* [Abby Spangler](https://github.com/abspangler13)
 
 _Former members:_
 
