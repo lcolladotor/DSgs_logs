@@ -2,6 +2,7 @@
 
 | Date | Help request | Notes |
 | ---- | ------------ | ----- |
+| 2022-03-15 | TODO | TODO |
 | 2022-03-04 | Understand the covariates used in scRNA-seq cell type analysis for a project we are doing with striatal organoids | We went over the files (data and script) for the deconvolution analysis done for the habenula in BSPIII. We also discussed the theroy/methodology for deconvolution. |
 | 2022-02-24 | I would like to learn how you ran tensorQTL on the MDD data, maybe with using the GPU nodes for it. | Geo was interested int eh workflow I developed for tensorQTL. I went over the requirements and input formats that tensorqtl requirers, and how I had previously made them from our dataset. Also discussed the differnces between the functions and their outputs. |
 | 2022-02-24 | Help building for loops to analyze WGCNA ouput data | We discussed how to build and save data with a for loop and with purrr::map. Went over how to define a function in map to do nested loops |

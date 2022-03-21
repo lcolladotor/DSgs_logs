@@ -2,6 +2,9 @@
 
 | Date | Help request | Notes |
 | ---- | ------------ | ----- |
+| 2022-03-17 | Follow-up on custom annotation with SPEAQeasy | An error occurred in a SPEAQeasy run, which I identified to be due to not providing all the required inputs (specifically the sites at which to perform variant calling) |
+| 2022-03-16 | Adding lines to a GTF for use in SPEAQeasy with custom annotation | We both verified additional transcript annotation added to a GENCODE GTF looked good for use as input to SPEAQeasy |
+| 2022-03-14 | Error message running SPEAQeasy | An error occurred in the counts step, which I discovered was a bug in some filename-matching code |
 | 2022-03-09 | Setting up passwordless login | I described two-factor authentication vs. passwordless login via SSH keys, and gave tips to set up the latter. |
 | 2022-03-09 | Using custom annotation with SPEAQeasy | I described how to add additional transcripts to the relevant FASTA file then use SPEAQeasy's custom annotation option to use the new FASTA with the other default annotation files. |
 | 2022-03-04 | Using the caracol queue | I described how requesting 'caracol' is similar to requesting 'bluejay', but elaborated on additional complications, like contention for the same GPU and using CUDA_VISIBLE_DEVICES properly, including with array jobs |
