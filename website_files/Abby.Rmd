@@ -2,5 +2,6 @@
 
 | Date | Help request | Notes |
 | ---- | ------------ | ----- |
+| 2022-03-18 | set up git repo for long read project | We set up a git repo and added code to be adapted to build an spe object from Alice's long read data. |
 | 2022-03-17 | Assistance with analyzing spatial data | This was a preliminary meeting with Alice to decide where to begin with analyzing her spatial data. We decided to start by generating an spe object with her long read data. |
 
