@@ -2,6 +2,9 @@
 
 | Date | Help request | Notes |
 | ---- | ------------ | ----- |
+| 2022-04-07 | writing papers in google docs and setting up links for figures | We installed and configured Cross Refrence, then went over how to use the lable vs. refrence links + pro tips on how to avoid errors |
+| 2022-04-06 | I'd like to consult with Louise about how to make a spatial plot in R using a data set from the HALO FISH-IF module. | We want over some plotting basics with ggplot2, and how to use geom_rect to recreate some spatial plots that a halo module produces in R. |
+| 2022-03-24 | Advice on how to increase code coverate with testthat | We applied some test I used for the TREG package to help test more parts of the functions, like checking for errors w/ bad input, warning messages, and qualities of outputs. We discussed possible ways to use testthat on a ggplot, but that might need more thought. |
 | 2022-03-15 | TODO | TODO |
 | 2022-03-04 | Understand the covariates used in scRNA-seq cell type analysis for a project we are doing with striatal organoids | We went over the files (data and script) for the deconvolution analysis done for the habenula in BSPIII. We also discussed the theroy/methodology for deconvolution. |
 | 2022-02-24 | I would like to learn how you ran tensorQTL on the MDD data, maybe with using the GPU nodes for it. | Geo was interested int eh workflow I developed for tensorQTL. I went over the requirements and input formats that tensorqtl requirers, and how I had previously made them from our dataset. Also discussed the differnces between the functions and their outputs. |

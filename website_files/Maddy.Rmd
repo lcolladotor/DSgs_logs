@@ -2,6 +2,9 @@
 
 | Date | Help request | Notes |
 | ---- | ------------ | ----- |
+| 2022-04-06 | applying size threshold to vistoseg outputs to get rid of smaller regions that are not nuclei | NA |
+| 2022-04-05 | directed the person to the VistoSeg website for steps to run VistoSeg | https://github.com/LieberInstitute/VistoSeg/issues/11 |
+| 2022-03-22 | Help run trial shiny app deployment | Showed her app.R, deploy.R scripts and places where to edit, showed her how to navigate through the shinyapp portal to looks for logs when deploying the app. EXplained her few erros she ran through when deploying for the 1st time. |
 | 2022-03-09 | VisiumIF loupe alignment | The contrast adjusted images on MAC::preview should be saved and uploaded back to JHPCE to run spaceranger. Spaceranger needs the exact same image that was used in the loupe alignment (even if it is changed from raw image on preview) |
 | 2022-03-09 | Masking of blood vessels from PNN channel in PNN project | Explained how the image data can be manipulated when claudin5 channel and WFA channel are merged and then the blood vessels are segmented and masked. The correct way is to segment blood vessels from claudin channel and mask the segmented objects in WFA channel. |
 | 2022-03-09 | How are InForm tiles arranged | The indices listed in the tiles's filename is the x,y coordinates of the starting topleft pixel of the given tile. These indices never start with [0,0] as these tiles are picked from the ROI in the phenochart and not the entire imaged area. Once stored in a directory these tiles are not arranged in chronological order. |
