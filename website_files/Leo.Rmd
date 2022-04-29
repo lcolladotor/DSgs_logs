@@ -2,6 +2,9 @@
 
 | Date | Help request | Notes |
 | ---- | ------------ | ----- |
+| 2022-04-28 | In promptu meeting | NA |
+| 2022-04-15 | Brainomics meeting with collaborators | Clarified a few questions about LIBD's SPEAQeasy RSE objects and a problem with some colData() that was missing, that we'll provide early next week. Send links to our deconvolution work with Louise A Huuki-Myers. |
+| 2022-04-15 | Debugged code from https://github.com/LieberInstitute/spatialLIBD/issues/33 | See https://github.com/LieberInstitute/spatialLIBD/issues/33#issuecomment-1100169012. |
 | 2022-04-08 | macOS and JHPCE laptop set | JHPCE ssh keys (to avoid typing passwords when using qrsh), .Rprofile (both), .bashrc, .zshrc (laptop), iTerm2 (laptop), Textmate (laptop), remote port fowading for rmate, xquartz (laptop) installation and configuration. There are several LIBD rstats club videos on these topics already, but we just did all the setup fast. In particular, the .bashrc configuration was important to resolve a umask setting problem that was interfering with the permissions on the Visium IF AD project. |
 | 2022-04-08 | How to delete large files from GitHub history | If the situation had been simple, that is, that the latest commit was the one that commited the large files, we could have used the solution described at http://lcolladotor.github.io/2020/03/18/you-just-committed-a-large-file-and-can-t-push-to-github/. Instead, we had to use https://rtyley.github.io/bfg-repo-cleaner/. |
 | 2022-04-06 | Debugging JHPCE configuration files | See [this Slack thread](https://neuralplasticity.slack.com/archives/C010NFSQS48/p1649249130880349). Ultimately, this situation involved teaching Tony to share his code. |

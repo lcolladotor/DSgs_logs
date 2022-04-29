@@ -2,6 +2,8 @@
 
 | Date | Help request | Notes |
 | ---- | ------------ | ----- |
+| 2022-04-07 | https://github.com/LieberInstitute/VistoSeg/issues/12 | Customized VistoSeg code to their histology images |
+| 2022-04-07 | Hey Maddy, I need something called "spot size"  on the 12 published DLPFC samples | spot size and scaling factor from json file. explained how each metric is associated to different version of the histology images. |
 | 2022-04-06 | applying size threshold to vistoseg outputs to get rid of smaller regions that are not nuclei | NA |
 | 2022-04-05 | directed the person to the VistoSeg website for steps to run VistoSeg | https://github.com/LieberInstitute/VistoSeg/issues/11 |
 | 2022-03-22 | Help run trial shiny app deployment | Showed her app.R, deploy.R scripts and places where to edit, showed her how to navigate through the shinyapp portal to looks for logs when deploying the app. EXplained her few erros she ran through when deploying for the 1st time. |

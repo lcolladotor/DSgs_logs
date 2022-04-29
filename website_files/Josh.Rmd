@@ -11,6 +11,6 @@
 | 2021-06-01 | gene ontology for genesets | run clusterprofiler on a set of DE hits |
 | 2021-05-14 | questions about processing genotype data | explained the process of using topmed imputation and later we will get the mds |
 | 2021-03-26 | help doing a power analysis for RNA-seq data | sent him the scripts from andrew, wondering if I should make it into a function |
+| 2021-03-16 | get effect size for calcium imaging | reffered to package "effsize" should be efficient at easily doing this |
 | 2020-10-28 | Learning Lexical Scoping Rules | NA |
-| 2020-03-16 | get effect size for calcium imaging | reffered to package "effsize" should be efficient at easily doing this |
 

@@ -2,6 +2,7 @@
 
 | Date | Help request | Notes |
 | ---- | ------------ | ----- |
+| 2022-04-27 | help with html output of spaceranger | Helped explain the different parts of the html output of spaceranger and which fields are important to check for QC |
 | 2022-04-08 | help with read10xVisiumWrapper() | I helped Heena address an error she was getting when trying to run read10XVisiumWrapper(). We noted an issue with the function and submitted an github issue to spatialLIBD. We got the function to work but only if you provide the path to the gtf file. Met for 1hr. |
 | 2022-04-04 | help with clustering portion of th build_spe | modified code to work witth her dataset. did graph based clustering and plottiing. Explained benefits of clustering across samples. Advised her to do isoform calling on pseudobulked data for multiple samples. Met for 1hr. |
 | 2022-03-27 | help with build_spe | Finished installing packages. Set up sample_info table. Walked her through the rest of the code. |

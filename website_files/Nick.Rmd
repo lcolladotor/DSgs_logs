@@ -2,6 +2,7 @@
 
 | Date | Help request | Notes |
 | ---- | ------------ | ----- |
+| 2022-04-29 | creating a nextflow pipeline and supporting docker | I clarified the usage of nextflow channels, described when docker integration is likely to be worthwhile, and answered other general questions about processing data with a nextflow-based workflow |
 | 2022-04-01 | Using the "redstone" software | After identifying that 'redstone' was a precompiled binary for Linux, I described how to use 'wget' to download software like this, set execute permissions if necessary, and run at JHPCE. |
 | 2022-03-25 | Input files for custom annotation with SPEAQeasy | I recommended some adjustments to a custom GTF and transcripts FASTA to solve an error seen in SPEAQeasy where transcripts and annotation were found to be incompatible. |
 | 2022-03-17 | Follow-up on custom annotation with SPEAQeasy | An error occurred in a SPEAQeasy run, which I identified to be due to not providing all the required inputs (specifically the sites at which to perform variant calling) |
