@@ -2,7 +2,20 @@
 
 | Date | Help request | Notes |
 | ---- | ------------ | ----- |
+| 2022-05-27 | Debug `spatialLIBD::sig_genes_extract_all()`. | This had already been fixed, but Abby had an older version of spatialLIBD installed. We also went over some other steps needed to deploy an `spatialLIBD` app with pseudo-bulked data and modeling results. |
+| 2022-05-27 | How to debug an R package code | Resulted in a fix for [this issue](https://github.com/LieberInstitute/spatialLIBD/issues/33#issuecomment-1137544893). |
+| 2022-05-27 | Data science organization. | Brainstorming and planning session. |
+| 2022-05-25 | MatLab questions. | Resolved via email. |
+| 2022-05-20 | Brainomics meeting with collaborators | Review of statistical models as well as access to data |
+| 2022-05-18 | Discussion on how to recruit members | Twitter, LinkedIn, jobRxiv |
+| 2022-05-17 | BrainSeq Phase II development browser | Clarified what the data is showing and explained a bit the goals of the LIBD data portal that Geo Pertea is building. |
+| 2022-05-06 | Career development | PhD programs and other options. |
+| 2022-05-03 | How to make a tweetorial for a pre-print | See [this Twitter thread](https://twitter.com/lahuuki/status/1521581339903873024) for the result. |
+| 2022-04-29 | File organization for a paper submission | Provided guidance on how to share images and how to organize supplementary files. Resulting in this [Figshare](https://doi.org/10.6084/m9.figshare.19729567.v1) zip file. |
 | 2022-04-28 | In promptu meeting | NA |
+| 2022-04-27 | Grant proposal feedback | NA |
+| 2022-04-21 | CV feedback | NA |
+| 2022-04-20 | Cover letter feedback | NA |
 | 2022-04-15 | Brainomics meeting with collaborators | Clarified a few questions about LIBD's SPEAQeasy RSE objects and a problem with some colData() that was missing, that we'll provide early next week. Send links to our deconvolution work with Louise A Huuki-Myers. |
 | 2022-04-15 | Debugged code from https://github.com/LieberInstitute/spatialLIBD/issues/33 | See https://github.com/LieberInstitute/spatialLIBD/issues/33#issuecomment-1100169012. |
 | 2022-04-08 | macOS and JHPCE laptop set | JHPCE ssh keys (to avoid typing passwords when using qrsh), .Rprofile (both), .bashrc, .zshrc (laptop), iTerm2 (laptop), Textmate (laptop), remote port fowading for rmate, xquartz (laptop) installation and configuration. There are several LIBD rstats club videos on these topics already, but we just did all the setup fast. In particular, the .bashrc configuration was important to resolve a umask setting problem that was interfering with the permissions on the Visium IF AD project. |

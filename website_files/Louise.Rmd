@@ -2,6 +2,10 @@
 
 | Date | Help request | Notes |
 | ---- | ------------ | ----- |
+| 2022-05-18 | Color bar for heatmap | We both leaned how to use the image function to create a annotation bar for heatmaps based on a custom color pallet |
+| 2022-05-09 | Cross Reference help | We went over how to create a new type of refrence (Supp Table/Supp Figure). Also walked though the full process of creating a label and then refrencing it in from the text + considreations for formatting |
+| 2022-05-05 | Need some help to make a plot | We went thourgh some plotting code Sreya had adapted to make a manhattan plot, and went over which aestetics to change to get the desired plot |
+| 2022-04-27 | Help with purrr loops for WGCNA funtions | I helped come up with a stratagedy to loop over 100+ files for an analysis and exreact a portion of the results in to one R object |
 | 2022-04-07 | writing papers in google docs and setting up links for figures | We installed and configured Cross Refrence, then went over how to use the lable vs. refrence links + pro tips on how to avoid errors |
 | 2022-04-06 | I'd like to consult with Louise about how to make a spatial plot in R using a data set from the HALO FISH-IF module. | We want over some plotting basics with ggplot2, and how to use geom_rect to recreate some spatial plots that a halo module produces in R. |
 | 2022-03-24 | Advice on how to increase code coverate with testthat | We applied some test I used for the TREG package to help test more parts of the functions, like checking for errors w/ bad input, warning messages, and qualities of outputs. We discussed possible ways to use testthat on a ggplot, but that might need more thought. |

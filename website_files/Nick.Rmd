@@ -2,6 +2,7 @@
 
 | Date | Help request | Notes |
 | ---- | ------------ | ----- |
+| 2022-05-05 | Guide to creating a module at JHPCE | I described the two JHPCE-based repositories we push to (https://github.com/LieberInstitute/jhpce_mod_source and https://github.com/LieberInstitute/jhpce_module_config), my usual installation approach for python-based GPU-utilizing software, and the contents of the lua-based config enabling a module to load. |
 | 2022-04-29 | creating a nextflow pipeline and supporting docker | I clarified the usage of nextflow channels, described when docker integration is likely to be worthwhile, and answered other general questions about processing data with a nextflow-based workflow |
 | 2022-04-01 | Using the "redstone" software | After identifying that 'redstone' was a precompiled binary for Linux, I described how to use 'wget' to download software like this, set execute permissions if necessary, and run at JHPCE. |
 | 2022-03-25 | Input files for custom annotation with SPEAQeasy | I recommended some adjustments to a custom GTF and transcripts FASTA to solve an error seen in SPEAQeasy where transcripts and annotation were found to be incompatible. |
