@@ -2,6 +2,8 @@
 
 | Date | Help request | Notes |
 | ---- | ------------ | ----- |
+| 2022-06-23 | pulling in external changes to a git repository | I described when 'git pull' can be "safely" used, and when 'git reset' might have to be used beforehand |
+| 2022-06-21 | help installing 'jaffelab' | I described the use of 'remotes::install_github' for GitHub-based packages. We encountered a GitHub authentication error that was solved by running the R code 'Sys.unsetenv("GITHUB_PAT")' prior to the normal installation command. |
 | 2022-05-05 | Guide to creating a module at JHPCE | I described the two JHPCE-based repositories we push to (https://github.com/LieberInstitute/jhpce_mod_source and https://github.com/LieberInstitute/jhpce_module_config), my usual installation approach for python-based GPU-utilizing software, and the contents of the lua-based config enabling a module to load. |
 | 2022-04-29 | creating a nextflow pipeline and supporting docker | I clarified the usage of nextflow channels, described when docker integration is likely to be worthwhile, and answered other general questions about processing data with a nextflow-based workflow |
 | 2022-04-01 | Using the "redstone" software | After identifying that 'redstone' was a precompiled binary for Linux, I described how to use 'wget' to download software like this, set execute permissions if necessary, and run at JHPCE. |
