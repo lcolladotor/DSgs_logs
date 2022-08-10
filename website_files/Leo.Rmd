@@ -2,6 +2,10 @@
 
 | Date | Help request | Notes |
 | ---- | ------------ | ----- |
+| 2022-07-19 | Help with spatialLIBD colors setup | Note that `spe$var_colors` works for `spe$var` where the `var` part has to be the same in both variable names. Also `spe$var_colors` should be a named vector such that `unique(names(spe$var_colors))` matches `unique(spe$var)`. |
+| 2022-07-15 | R, RStudio, git, SSH key setup | NA |
+| 2022-07-12 | LIBD Data Science | NA |
+| 2022-07-06 | Data science coordination | NA |
 | 2022-06-03 | Tools and resources related to recount2 and recount3 | Talked about recount2, recount3, snaptron, snapcount, recount.bwtool, recount-brain, recount predictions, megadepth, the recount3 study explorer. I also sent them all the links to them, though you can find many of them at https://jhubiostatistics.shinyapps.io/recount/, https://jhubiostatistics.shinyapps.io/recount-brain/, and http://rna.recount.bio/. |
 | 2022-05-27 | Debug `spatialLIBD::sig_genes_extract_all()`. | This had already been fixed, but Abby had an older version of spatialLIBD installed. We also went over some other steps needed to deploy an `spatialLIBD` app with pseudo-bulked data and modeling results. |
 | 2022-05-27 | How to debug an R package code | Resulted in a fix for [this issue](https://github.com/LieberInstitute/spatialLIBD/issues/33#issuecomment-1137544893). |

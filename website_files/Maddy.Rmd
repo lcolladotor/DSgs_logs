@@ -2,6 +2,15 @@
 
 | Date | Help request | Notes |
 | ---- | ------------ | ----- |
+| 2022-08-09 | VNS error | wrong input was given to the function |
+| 2022-08-09 | Strategies to pick threshold for cell size in segmentations | NA |
+| 2022-08-09 | open multichannel image in imagej | should select virtual stack option in bioformats reader when opening and multichannel image in imagej |
+| 2022-08-08 | code to ectract x and y coordinates of randomnly slected inform tiles for PNN project | NA |
+| 2022-07-28 | Pick randomn tiles for the PNN project | Explain how to pick randomn images to train PNN segmentation algorithm |
+| 2022-07-19 | Extracting final output into table | code loops over the different file in the dataset and Marah was clearing it at the end of the loop every time which didnt let her save any data |
+| 2022-06-23 | Adjusting thresholds for event detection using CaPTure | NA |
+| 2022-06-10 | explain spaceranger output files | NA |
+| 2022-05-17 | make modified tissue_positions_list from DLPFC IF samples for running spotsopcheck on mock PNN visium sample | NA |
 | 2022-04-07 | https://github.com/LieberInstitute/VistoSeg/issues/12 | Customized VistoSeg code to their histology images |
 | 2022-04-07 | Hey Maddy, I need something called "spot size"  on the 12 published DLPFC samples | spot size and scaling factor from json file. explained how each metric is associated to different version of the histology images. |
 | 2022-04-06 | applying size threshold to vistoseg outputs to get rid of smaller regions that are not nuclei | NA |

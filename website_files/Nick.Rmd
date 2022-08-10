@@ -2,6 +2,11 @@
 
 | Date | Help request | Notes |
 | ---- | ------------ | ----- |
+| 2022-07-18 | CUDA issues with cellpose module | We worked through a few issues in the cellpose module, which each had a different cause. In one case, the version of torch/CUDA was outdated for the hardware. In another case, user-specific libraries were being referenced instead of the central module's libraries. |
+| 2022-07-13 | Addressing SPEAQeasy error messages | The error messages involved a mismatch between sample ID and file name for the 'QualityTrimmed' process, as well as a supposed missing ID in the manifest (which was actually present). Simply resuming the pipeline got rid of both errors. |
+| 2022-07-06 | Setting up SPEAQeasy | I described how to configure SPEAQeasy for a particular dataset, and how to manage two separate runs of SPEAQeasy as part of a different git repository (requiring the use of submodules) |
+| 2022-07-01 | Question about how 'mitoRate' is calculated in SPEAQeasy | I showed the documentation's description of 'mitoRate' and linked to the code where it's computed: https://github.com/LieberInstitute/SPEAQeasy/blob/bfe4e664281b52c5e239e372393a8aea36084e0d/scripts/create_count_objects.R#L521-L533 |
+| 2022-06-29 | zellkonverter error and guidance using SpaGCN | I described the need to manually convert some spatialExperiment slots prior to conversion with zellkonverter, and that some data types are not supported. I pointed to my SpaGCN code and the lines specifically responsible for clustering + writing outputs |
 | 2022-06-23 | pulling in external changes to a git repository | I described when 'git pull' can be "safely" used, and when 'git reset' might have to be used beforehand |
 | 2022-06-21 | help installing 'jaffelab' | I described the use of 'remotes::install_github' for GitHub-based packages. We encountered a GitHub authentication error that was solved by running the R code 'Sys.unsetenv("GITHUB_PAT")' prior to the normal installation command. |
 | 2022-05-05 | Guide to creating a module at JHPCE | I described the two JHPCE-based repositories we push to (https://github.com/LieberInstitute/jhpce_mod_source and https://github.com/LieberInstitute/jhpce_module_config), my usual installation approach for python-based GPU-utilizing software, and the contents of the lua-based config enabling a module to load. |

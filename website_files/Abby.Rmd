@@ -2,6 +2,10 @@
 
 | Date | Help request | Notes |
 | ---- | ------------ | ----- |
+| 2022-07-20 | go over pseudobulk code | We walked through the code to make a pseudobulked object and plotting the explanatory variables. |
+| 2022-06-29 | Help troubleshooting error messge when running BayesSpace | She was getting a memory error when running BayesSpace and I ended up advising her to reduce the nrep argument. Also advised her on running fasthplus because it was taking too long. She needed to reduce the proportion of the data being used. |
+| 2022-06-21 | help with vis_grid_clus() | she needed to have the plots as single ggplots instead of a list so I advised her to used vis_clus() instead. Shared code with her that I had used to make some of supplemental figures. She also asked if she need to discard spots before doing batch correction and I told her yes. |
+| 2022-06-15 | getting total UMI's for each sample | Maddy asked me how to get the total UMI's for each sample out of her spe object. I wrote a small for loop for her in order to do it. |
 | 2022-06-15 | Help troubleshooting shiny app that crashes on gene interactive tab | checked size of the spe object. checked that only has low res image files. check dim of colData. All sizes checkedout. Believe this to be a package problem. |
 | 2022-05-27 | Help with BayesSpace clustering | Assessed results of BayesSpace joint clustering and suggested that Alice discard the spots with low library sizes to improve clustering. Offered to create small SPE object for her with just the for samples she will be doing long read sequencing on. |
 | 2022-05-20 | Subsetting spe object for shiny app | created new script to subset spe object by removing some of the images.  updated app.R to load smaller spe object (half the size) and re-ran shiny app locally. Explained how to version control from local computer and fixed problem with version controlling large data file.  Still having same problem of not being able to view shiny app online |
