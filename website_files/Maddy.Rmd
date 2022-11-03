@@ -2,6 +2,7 @@
 
 | Date | Help request | Notes |
 | ---- | ------------ | ----- |
+| 2022-09-09 | Code to threshold small sized nuclei from the NaCC visium images | NA |
 | 2022-08-09 | VNS error | wrong input was given to the function |
 | 2022-08-09 | Strategies to pick threshold for cell size in segmentations | NA |
 | 2022-08-09 | open multichannel image in imagej | should select virtual stack option in bioformats reader when opening and multichannel image in imagej |
