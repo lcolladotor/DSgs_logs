@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>1 Abby | Data Science guidance session logs</title>
   <meta name="description" content="1 Abby | Data Science guidance session logs" />
-  <meta name="generator" content="bookdown 0.25 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
 
   <meta property="og:title" content="1 Abby | Data Science guidance session logs" />
   <meta property="og:type" content="book" />
@@ -98,7 +98,7 @@ code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
 code span.at { color: #7d9029; } /* Attribute */
 code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
+code span.bu { color: #008000; } /* BuiltIn */
 code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
 code span.ch { color: #4070a0; } /* Char */
 code span.cn { color: #880000; } /* Constant */
@@ -111,7 +111,7 @@ code span.er { color: #ff0000; font-weight: bold; } /* Error */
 code span.ex { } /* Extension */
 code span.fl { color: #40a070; } /* Float */
 code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
+code span.im { color: #008000; font-weight: bold; } /* Import */
 code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 code span.kw { color: #007020; font-weight: bold; } /* Keyword */
 code span.op { color: #666666; } /* Operator */
@@ -138,19 +138,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="index.html#overview">Overview<span></span></a>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Overview</a>
 <ul>
-<li><a href="index.html#dsgs-guide-team-members">DSgs-guide team members<span></span></a></li>
-<li><a href="index.html#graphs">Graphs<span></span></a></li>
-<li><a href="index.html#r-session-information">R session information<span></span></a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#dsgs-guide-team-members"><i class="fa fa-check"></i>DSgs-guide team members</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#graphs"><i class="fa fa-check"></i>Graphs</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#r-session-information"><i class="fa fa-check"></i>R session information</a></li>
 </ul></li>
-<li class="chapter" data-level="1" data-path="abby.html"><a href="abby.html"><i class="fa fa-check"></i><b>1</b> Abby<span></span></a></li>
-<li class="chapter" data-level="2" data-path="arta.html"><a href="arta.html"><i class="fa fa-check"></i><b>2</b> Arta<span></span></a></li>
-<li class="chapter" data-level="3" data-path="josh.html"><a href="josh.html"><i class="fa fa-check"></i><b>3</b> Josh<span></span></a></li>
-<li class="chapter" data-level="4" data-path="leo.html"><a href="leo.html"><i class="fa fa-check"></i><b>4</b> Leo<span></span></a></li>
-<li class="chapter" data-level="5" data-path="louise.html"><a href="louise.html"><i class="fa fa-check"></i><b>5</b> Louise<span></span></a></li>
-<li class="chapter" data-level="6" data-path="maddy.html"><a href="maddy.html"><i class="fa fa-check"></i><b>6</b> Maddy<span></span></a></li>
-<li class="chapter" data-level="7" data-path="nick.html"><a href="nick.html"><i class="fa fa-check"></i><b>7</b> Nick<span></span></a></li>
+<li class="chapter" data-level="1" data-path="abby.html"><a href="abby.html"><i class="fa fa-check"></i><b>1</b> Abby</a></li>
+<li class="chapter" data-level="2" data-path="arta.html"><a href="arta.html"><i class="fa fa-check"></i><b>2</b> Arta</a></li>
+<li class="chapter" data-level="3" data-path="josh.html"><a href="josh.html"><i class="fa fa-check"></i><b>3</b> Josh</a></li>
+<li class="chapter" data-level="4" data-path="leo.html"><a href="leo.html"><i class="fa fa-check"></i><b>4</b> Leo</a></li>
+<li class="chapter" data-level="5" data-path="louise.html"><a href="louise.html"><i class="fa fa-check"></i><b>5</b> Louise</a></li>
+<li class="chapter" data-level="6" data-path="maddy.html"><a href="maddy.html"><i class="fa fa-check"></i><b>6</b> Maddy</a></li>
+<li class="chapter" data-level="7" data-path="nick.html"><a href="nick.html"><i class="fa fa-check"></i><b>7</b> Nick</a></li>
 </ul>
 
       </nav>
@@ -185,26 +185,81 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </thead>
 <tbody>
 <tr class="odd">
+<td>2022-07-20</td>
+<td>go over pseudobulk code</td>
+<td>We walked through the code to make a pseudobulked object and plotting the explanatory variables.</td>
+</tr>
+<tr class="even">
+<td>2022-06-29</td>
+<td>Help troubleshooting error messge when running BayesSpace</td>
+<td>She was getting a memory error when running BayesSpace and I ended up advising her to reduce the nrep argument. Also advised her on running fasthplus because it was taking too long. She needed to reduce the proportion of the data being used.</td>
+</tr>
+<tr class="odd">
+<td>2022-06-21</td>
+<td>help with vis_grid_clus()</td>
+<td>she needed to have the plots as single ggplots instead of a list so I advised her to used vis_clus() instead. Shared code with her that I had used to make some of supplemental figures. She also asked if she need to discard spots before doing batch correction and I told her yes.</td>
+</tr>
+<tr class="even">
+<td>2022-06-15</td>
+<td>getting total UMI’s for each sample</td>
+<td>Maddy asked me how to get the total UMI’s for each sample out of her spe object. I wrote a small for loop for her in order to do it.</td>
+</tr>
+<tr class="odd">
+<td>2022-06-15</td>
+<td>Help troubleshooting shiny app that crashes on gene interactive tab</td>
+<td>checked size of the spe object. checked that only has low res image files. check dim of colData. All sizes checkedout. Believe this to be a package problem.</td>
+</tr>
+<tr class="even">
+<td>2022-05-27</td>
+<td>Help with BayesSpace clustering</td>
+<td>Assessed results of BayesSpace joint clustering and suggested that Alice discard the spots with low library sizes to improve clustering. Offered to create small SPE object for her with just the for samples she will be doing long read sequencing on.</td>
+</tr>
+<tr class="odd">
+<td>2022-05-20</td>
+<td>Subsetting spe object for shiny app</td>
+<td>created new script to subset spe object by removing some of the images. updated app.R to load smaller spe object (half the size) and re-ran shiny app locally. Explained how to version control from local computer and fixed problem with version controlling large data file. Still having same problem of not being able to view shiny app online</td>
+</tr>
+<tr class="even">
+<td>2022-05-17</td>
+<td>VisiumIF DLPFC building spe</td>
+<td>Tried to troubleshoot adding visium IF images to spe object</td>
+</tr>
+<tr class="odd">
+<td>2022-05-17</td>
+<td>OneDrive</td>
+<td>Helped setup OneDrive folder for LC manuscript. Explained how to organize figure folders.</td>
+</tr>
+<tr class="even">
+<td>2022-05-10</td>
+<td>Help Deploying Shiny App for DLPFC_IF</td>
+<td>Helped fix error of shiny app not being able to find spe object. Helped sucessfully deploy app.</td>
+</tr>
+<tr class="odd">
+<td>2022-04-27</td>
+<td>help with html output of spaceranger</td>
+<td>Helped explain the different parts of the html output of spaceranger and which fields are important to check for QC</td>
+</tr>
+<tr class="even">
 <td>2022-04-08</td>
 <td>help with read10xVisiumWrapper()</td>
 <td>I helped Heena address an error she was getting when trying to run read10XVisiumWrapper(). We noted an issue with the function and submitted an github issue to spatialLIBD. We got the function to work but only if you provide the path to the gtf file. Met for 1hr.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>2022-04-04</td>
 <td>help with clustering portion of th build_spe</td>
 <td>modified code to work witth her dataset. did graph based clustering and plottiing. Explained benefits of clustering across samples. Advised her to do isoform calling on pseudobulked data for multiple samples. Met for 1hr.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>2022-03-27</td>
 <td>help with build_spe</td>
 <td>Finished installing packages. Set up sample_info table. Walked her through the rest of the code.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>2022-03-18</td>
 <td>set up git repo for long read project</td>
 <td>We set up a git repo and added code to be adapted to build an spe object from Alice’s long read data.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>2022-03-17</td>
 <td>Assistance with analyzing spatial data</td>
 <td>This was a preliminary meeting with Alice to decide where to begin with analyzing her spatial data. We decided to start by generating an spe object with her long read data.</td>

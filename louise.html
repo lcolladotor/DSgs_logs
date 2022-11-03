@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>5 Louise | Data Science guidance session logs</title>
   <meta name="description" content="5 Louise | Data Science guidance session logs" />
-  <meta name="generator" content="bookdown 0.25 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
 
   <meta property="og:title" content="5 Louise | Data Science guidance session logs" />
   <meta property="og:type" content="book" />
@@ -98,7 +98,7 @@ code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
 code span.at { color: #7d9029; } /* Attribute */
 code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
+code span.bu { color: #008000; } /* BuiltIn */
 code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
 code span.ch { color: #4070a0; } /* Char */
 code span.cn { color: #880000; } /* Constant */
@@ -111,7 +111,7 @@ code span.er { color: #ff0000; font-weight: bold; } /* Error */
 code span.ex { } /* Extension */
 code span.fl { color: #40a070; } /* Float */
 code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
+code span.im { color: #008000; font-weight: bold; } /* Import */
 code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 code span.kw { color: #007020; font-weight: bold; } /* Keyword */
 code span.op { color: #666666; } /* Operator */
@@ -138,19 +138,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="index.html#overview">Overview<span></span></a>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Overview</a>
 <ul>
-<li><a href="index.html#dsgs-guide-team-members">DSgs-guide team members<span></span></a></li>
-<li><a href="index.html#graphs">Graphs<span></span></a></li>
-<li><a href="index.html#r-session-information">R session information<span></span></a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#dsgs-guide-team-members"><i class="fa fa-check"></i>DSgs-guide team members</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#graphs"><i class="fa fa-check"></i>Graphs</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#r-session-information"><i class="fa fa-check"></i>R session information</a></li>
 </ul></li>
-<li class="chapter" data-level="1" data-path="abby.html"><a href="abby.html"><i class="fa fa-check"></i><b>1</b> Abby<span></span></a></li>
-<li class="chapter" data-level="2" data-path="arta.html"><a href="arta.html"><i class="fa fa-check"></i><b>2</b> Arta<span></span></a></li>
-<li class="chapter" data-level="3" data-path="josh.html"><a href="josh.html"><i class="fa fa-check"></i><b>3</b> Josh<span></span></a></li>
-<li class="chapter" data-level="4" data-path="leo.html"><a href="leo.html"><i class="fa fa-check"></i><b>4</b> Leo<span></span></a></li>
-<li class="chapter" data-level="5" data-path="louise.html"><a href="louise.html"><i class="fa fa-check"></i><b>5</b> Louise<span></span></a></li>
-<li class="chapter" data-level="6" data-path="maddy.html"><a href="maddy.html"><i class="fa fa-check"></i><b>6</b> Maddy<span></span></a></li>
-<li class="chapter" data-level="7" data-path="nick.html"><a href="nick.html"><i class="fa fa-check"></i><b>7</b> Nick<span></span></a></li>
+<li class="chapter" data-level="1" data-path="abby.html"><a href="abby.html"><i class="fa fa-check"></i><b>1</b> Abby</a></li>
+<li class="chapter" data-level="2" data-path="arta.html"><a href="arta.html"><i class="fa fa-check"></i><b>2</b> Arta</a></li>
+<li class="chapter" data-level="3" data-path="josh.html"><a href="josh.html"><i class="fa fa-check"></i><b>3</b> Josh</a></li>
+<li class="chapter" data-level="4" data-path="leo.html"><a href="leo.html"><i class="fa fa-check"></i><b>4</b> Leo</a></li>
+<li class="chapter" data-level="5" data-path="louise.html"><a href="louise.html"><i class="fa fa-check"></i><b>5</b> Louise</a></li>
+<li class="chapter" data-level="6" data-path="maddy.html"><a href="maddy.html"><i class="fa fa-check"></i><b>6</b> Maddy</a></li>
+<li class="chapter" data-level="7" data-path="nick.html"><a href="nick.html"><i class="fa fa-check"></i><b>7</b> Nick</a></li>
 </ul>
 
       </nav>
@@ -184,6 +184,156 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tr>
 </thead>
 <tbody>
+<tr class="odd">
+<td>2022-10-27</td>
+<td>I have this single nucleus RNA sequencing experiment with the mouse LS that Matt analyzed and we have a final single cell experiment, but I don’t know how to do anything with this data set and want to learn how to plot heatmaps and possibly other things for this data set. Can we maybe schedule an hour to start this learning process and then I can schedule future time as needed?</td>
+<td>Lionel walked me through some plots they need for the LS paper: marker genes heatmap and expression violin plots. I pointed him to some code from DLPFC sn that should be helpful (he needs access to this repo). He also needs to get setup with JHPCE on his new laptop, I pointed him to the team laptop setup docs. He also is new to ggplot, so I pointed him to the visulization chapeter of R for data scientist. This will probaly require some follow up meetings</td>
+</tr>
+<tr class="even">
+<td>2022-10-26</td>
+<td>Check the DEG heatmaps</td>
+<td>Daianna has added a new color scheme to the heatmaps that makes the differnces between positive and negative more clear, how ever I think the darkest red being close to 0 is misleading, so shes going to fix that. I also recomended she simplify the annotaions on the combined heatmap so its easier to find and interpret patterns.</td>
+</tr>
+<tr class="odd">
+<td>2022-10-17</td>
+<td>Review TMM paper</td>
+<td>We reviewed the reasons or correcting counts and why thats important for DE analysis. We went over the math behind TMM, and then how thoes ideas are used in edgeR. I pointed Bukola to a stats quest video with a more detatiled explination of how the edgeR correction works.</td>
+</tr>
+<tr class="even">
+<td>2022-10-14</td>
+<td>csvs that I want to merge together</td>
+<td>Sang Ho showed me the csv files that he exported from different moduled on HALO. They seem to have the same rows, so copying the needed column in to a differnt csv is easy in excel (where Sang Ho is working) but I showed him how to check that things are really aligned with some excel functions. We also looked at the data in prism, which I had to quickly learned about. I advised that he should show the data in boxplots not as a barplot to better display that data, and went over the checks for running an anova.</td>
+</tr>
+<tr class="odd">
+<td>2022-10-11</td>
+<td>GO and KEGG boxplots with the modifications you suggested</td>
+<td>Daianna showed me her dot plots with the correct 0.05 q val filter, they looked good, ready for discussion. One tweak , is hshe had a combined up + down expresion col for some plots which was redundant and should be removed. She had also made some heatmaps that didn;t show very much difference between case control, htey probaly need to be normalized by the genes overall expression, but I need to check prevous work to remeber how to best do that</td>
+</tr>
+<tr class="even">
+<td>2022-10-10</td>
+<td>QC approach for hebenula</td>
+<td>We went throught boxplots Bukola had made for the data, I suggested she add geom_jitter and how to make that work with geom_repel to help show more details about the data. We also discussed direct vs. standard evaluation of variable and how that makes writing funcitons with tidyverse tricky, but how she can use aes_() to do stadard eval with ggplot</td>
+</tr>
+<tr class="odd">
+<td>2022-10-05</td>
+<td>How to check technical effects for RNAseq data</td>
+<td>I walked Bukola through our process for buld data QC, which involves making many exploratory plots of QC metrics and know groups (like batch, or case/control) to understand patterns and identify problematics samples. Then later implementing cutoff values either based on stats (like a 3 MAD cut off) or knowlege of ressonable values. Bukola will spend some time plotting QC values, adapting code from smoking mouse, then we will meet again to interpret these plots.</td>
+</tr>
+<tr class="even">
+<td>2022-10-05</td>
+<td>Reviewing GO results and dotplots</td>
+<td>Daianna and I went over the dot plots she made for GO analysis from the multiple DE test she ran. Her plots look good, but we identified that she needed to use the default q cutoff to get useful results. She will rerun the GO analysis and replot the results.</td>
+</tr>
+<tr class="odd">
+<td>2022-09-30</td>
+<td>Question on the feasibility of some approach with HALO (for the AD project)</td>
+<td>Sang Ho walked me through an analysis they want to do for the AD project, it involves annotating HALO data. We talked thought a strategy, this may be a bit computationally tricky to implement but it seems doable.</td>
+</tr>
+<tr class="even">
+<td>2022-09-30</td>
+<td>Working on making a violin plot for just one gene. So by brain region rather than gene type</td>
+<td>We adapted my_plotExpression() (a function I wrote) to work for Bukola’s data. This required some debugging as subsetting to just the one gene in question altered how some internal dataframes looked. I also gave Bukola some pointers about saving plots using ggplot.</td>
+</tr>
+<tr class="odd">
+<td>2022-08-22</td>
+<td>DE analysis introduction</td>
+<td>I went over the DE pipeline we use, noting that the model development is the most demanding and non-static part. We talked specifics for their dataset which has some experimental design to consider as its organids and is diffrent from patient case control. I posinted Geo to scripts where we do QC, expression cutoff, and my run_DE script</td>
+</tr>
+<tr class="even">
+<td>2022-08-18</td>
+<td>Git push help</td>
+<td>Heena saw old commits pop up on slacks git notifications when she pushed commits she had locally on her laptop, but they didn’t reappear in the git history. I think she did everything right and there might be something strange with the behavior of the slack message (as thats the only place things seemd wrong). We did some detective work between the files and the commits, everything seems good. Heena was able to then pull to the cluster with out conflicts</td>
+</tr>
+<tr class="odd">
+<td>2022-08-17</td>
+<td>check the models and the results I have obtained so far from the DEA</td>
+<td>Had to work over slack again as Daianna was having trouble with zoom. Working with the feedback from the previous meetings, the experimetn has been narrowed down to 5 DE runs, and then comparing some pairs of the outputs. We were unsure if we should include mitoRate as a variable in the adult model as it correlates highly with totalAssignedGene, but decided to include it for now to match the model used in the pup DEA. I also sent her some code I have used to make scatter plots of t-stats to help compare DE results.</td>
+</tr>
+<tr class="even">
+<td>2022-08-10</td>
+<td>Check the model design of the smoking mouse project</td>
+<td>We intended to meet on zoom, but Daianna’s connection was bad so we used Slack to chat. Daianna has made many plots and visuals about the many DE analysis for smoking mouse. I gave her some feedback about orgaizing her slides so the figures can practically be used inform DE models, right now everything is a bit scattered as shes planning on running 7 analysis so there is a lot to consider. We will need to meet again to finish this.</td>
+</tr>
+<tr class="odd">
+<td>2022-08-03</td>
+<td>Review results of Varaince Parition for smoking mouse</td>
+<td>Daianna showed me her varianceParition plots, and we talked bout how to design the DE anlaysis based on what she’s oberved in the mouse data. I advised to keep things simpler (ie not create too many groups) but rather use models to control for vaiables adding variance. We will meet next to talk model design for this work.</td>
+</tr>
+<tr class="even">
+<td>2022-07-15</td>
+<td>QC update for smoking mouse</td>
+<td>Daianna shared her updated QC plots, adn the one sample she planned to drop based on fastCellQC. I advised that she dig deeper in to how that QC finstion works, and what the cutoff values are, as well as exmaming mito vs. ribo precentages, and a two samples that don’t seem to group with others of the same phenotype /</td>
+</tr>
+<tr class="odd">
+<td>2022-07-07</td>
+<td>Subsetting eQTL results with in risk loci</td>
+<td>We discussed a strategy to subset the 102 loci in question, and adapted code to subset the FDR signif pairs to work with the location info.</td>
+</tr>
+<tr class="even">
+<td>2022-07-07</td>
+<td>help row annotation colors of a pheatmap</td>
+<td>I explained how to get pheatmap to use the same color scheme for column and row annotations by making the annotaion tables have the same colname, and suppying a color pallet</td>
+</tr>
+<tr class="odd">
+<td>2022-07-05</td>
+<td>QC update for smoking mouse</td>
+<td>Daianna shared the updates she made to the QC plots based on our previous discussion, specifically separating brain and blood samples.</td>
+</tr>
+<tr class="even">
+<td>2022-06-28</td>
+<td>Review progress on smoking mouse DE project</td>
+<td>Daianna walked me through her progress in the DE analysis. We went over QC plots and discussed experimental design. She will check in with Kristen about how to organize the brain vs. blood samples. Currently she dropped the blood sampeles as they looked very different in several QC metrics. But I advised that they just be handled seperatly as it makes senese they look different as they are different tissue, and the signal is probaly biological rather than technical</td>
+</tr>
+<tr class="odd">
+<td>2022-06-17</td>
+<td>JHPCE Github setup</td>
+<td>We fixed Sanjana’s ssh set up and got the qrsh command working. We got git configurated for her locally and on JHPCE, as well as set up tokens. Created a test repo, and made commits from her laptop and JHPCE as an example</td>
+</tr>
+<tr class="even">
+<td>2022-06-15</td>
+<td>Revisited the sc analysis and could use some help</td>
+<td>We checked Sreya’s code against the OSCA DE example run. She was worried that there weren’t may significant genes, but her results seemed to be in the same range (10s of genes) as the example. We discussed how maybe there were QC or demographic variables that could have been added to the model, but the data she has doesn’t have much to work with. We will revisit when I have maybe done more work with sn DE analysis.</td>
+</tr>
+<tr class="odd">
+<td>2022-06-15</td>
+<td>Github setup</td>
+<td>We went over github basics and motivation behind version control. Quickly discovered that Sanjana’s qrsh command is not working, requiring a password. Ended up using the session to troubleshoot that, with no success :( planning on circling back/re-setting up ssh for her. Will meet later about git setup</td>
+</tr>
+<tr class="even">
+<td>2022-06-03</td>
+<td>I might need a review of how to go about selecting marker genes for the spatialDLPFC data. Also, I’m curious what code you have for making heatmaps showing marker gene expression across cell types.</td>
+<td>I pointed Nick to a few scripts used in marker finding for the Tran Maynard dataset, using a few functions from DeconvoBuddies. For marker heat maps we went over how I hace built annotation tables, and a few tricks for optimizing pheatmaps for maker plots.</td>
+</tr>
+<tr class="odd">
+<td>2022-06-02</td>
+<td>Single cell rna seq analysis</td>
+<td>We converted a downloaded dataset from tsv files to a sce object. Went over a strategy for performing DE on single cell data, using OSCA as a reference</td>
+</tr>
+<tr class="even">
+<td>2022-06-01</td>
+<td>I have a mouse single-cell RNAseq data that I am aiming to identify cell types in different clusters.</td>
+<td>We spent the session getting Sanjana set up better to work on JHPCE, setting up ssh keys, cyberduck, RStudio, and config files. Plan to meet again to set up git + start single cell work</td>
+</tr>
+<tr class="odd">
+<td>2022-05-18</td>
+<td>Color bar for heatmap</td>
+<td>We both leaned how to use the image function to create a annotation bar for heatmaps based on a custom color pallet</td>
+</tr>
+<tr class="even">
+<td>2022-05-09</td>
+<td>Cross Reference help</td>
+<td>We went over how to create a new type of refrence (Supp Table/Supp Figure). Also walked though the full process of creating a label and then refrencing it in from the text + considreations for formatting</td>
+</tr>
+<tr class="odd">
+<td>2022-05-05</td>
+<td>Need some help to make a plot</td>
+<td>We went thourgh some plotting code Sreya had adapted to make a manhattan plot, and went over which aestetics to change to get the desired plot</td>
+</tr>
+<tr class="even">
+<td>2022-04-27</td>
+<td>Help with purrr loops for WGCNA funtions</td>
+<td>I helped come up with a stratagedy to loop over 100+ files for an analysis and exreact a portion of the results in to one R object</td>
+</tr>
 <tr class="odd">
 <td>2022-04-07</td>
 <td>writing papers in google docs and setting up links for figures</td>

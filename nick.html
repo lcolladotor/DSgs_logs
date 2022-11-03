@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>7 Nick | Data Science guidance session logs</title>
   <meta name="description" content="7 Nick | Data Science guidance session logs" />
-  <meta name="generator" content="bookdown 0.25 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
 
   <meta property="og:title" content="7 Nick | Data Science guidance session logs" />
   <meta property="og:type" content="book" />
@@ -98,7 +98,7 @@ code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
 code span.at { color: #7d9029; } /* Attribute */
 code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
+code span.bu { color: #008000; } /* BuiltIn */
 code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
 code span.ch { color: #4070a0; } /* Char */
 code span.cn { color: #880000; } /* Constant */
@@ -111,7 +111,7 @@ code span.er { color: #ff0000; font-weight: bold; } /* Error */
 code span.ex { } /* Extension */
 code span.fl { color: #40a070; } /* Float */
 code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
+code span.im { color: #008000; font-weight: bold; } /* Import */
 code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 code span.kw { color: #007020; font-weight: bold; } /* Keyword */
 code span.op { color: #666666; } /* Operator */
@@ -138,19 +138,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="index.html#overview">Overview<span></span></a>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Overview</a>
 <ul>
-<li><a href="index.html#dsgs-guide-team-members">DSgs-guide team members<span></span></a></li>
-<li><a href="index.html#graphs">Graphs<span></span></a></li>
-<li><a href="index.html#r-session-information">R session information<span></span></a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#dsgs-guide-team-members"><i class="fa fa-check"></i>DSgs-guide team members</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#graphs"><i class="fa fa-check"></i>Graphs</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#r-session-information"><i class="fa fa-check"></i>R session information</a></li>
 </ul></li>
-<li class="chapter" data-level="1" data-path="abby.html"><a href="abby.html"><i class="fa fa-check"></i><b>1</b> Abby<span></span></a></li>
-<li class="chapter" data-level="2" data-path="arta.html"><a href="arta.html"><i class="fa fa-check"></i><b>2</b> Arta<span></span></a></li>
-<li class="chapter" data-level="3" data-path="josh.html"><a href="josh.html"><i class="fa fa-check"></i><b>3</b> Josh<span></span></a></li>
-<li class="chapter" data-level="4" data-path="leo.html"><a href="leo.html"><i class="fa fa-check"></i><b>4</b> Leo<span></span></a></li>
-<li class="chapter" data-level="5" data-path="louise.html"><a href="louise.html"><i class="fa fa-check"></i><b>5</b> Louise<span></span></a></li>
-<li class="chapter" data-level="6" data-path="maddy.html"><a href="maddy.html"><i class="fa fa-check"></i><b>6</b> Maddy<span></span></a></li>
-<li class="chapter" data-level="7" data-path="nick.html"><a href="nick.html"><i class="fa fa-check"></i><b>7</b> Nick<span></span></a></li>
+<li class="chapter" data-level="1" data-path="abby.html"><a href="abby.html"><i class="fa fa-check"></i><b>1</b> Abby</a></li>
+<li class="chapter" data-level="2" data-path="arta.html"><a href="arta.html"><i class="fa fa-check"></i><b>2</b> Arta</a></li>
+<li class="chapter" data-level="3" data-path="josh.html"><a href="josh.html"><i class="fa fa-check"></i><b>3</b> Josh</a></li>
+<li class="chapter" data-level="4" data-path="leo.html"><a href="leo.html"><i class="fa fa-check"></i><b>4</b> Leo</a></li>
+<li class="chapter" data-level="5" data-path="louise.html"><a href="louise.html"><i class="fa fa-check"></i><b>5</b> Louise</a></li>
+<li class="chapter" data-level="6" data-path="maddy.html"><a href="maddy.html"><i class="fa fa-check"></i><b>6</b> Maddy</a></li>
+<li class="chapter" data-level="7" data-path="nick.html"><a href="nick.html"><i class="fa fa-check"></i><b>7</b> Nick</a></li>
 </ul>
 
       </nav>
@@ -184,6 +184,96 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tr>
 </thead>
 <tbody>
+<tr class="odd">
+<td>2022-10-28</td>
+<td>formatting genotype data into a matrix for each gene</td>
+<td>I described how to transpose matrices, change their type, drop columns, and related tricks to solve a data-formatting problem asked by a collaborator</td>
+</tr>
+<tr class="even">
+<td>2022-10-13</td>
+<td>Lifting results between hg19 and hg38</td>
+<td>I mentioned rtracklayer::liftOver and showed a code example of lifting over genomic coordinates for a SummarizedExperiment</td>
+</tr>
+<tr class="odd">
+<td>2022-09-26</td>
+<td>Setting up SSH keys between login and compute nodes</td>
+<td>I described the need for SSH keys between the login and compute nodes at JHPCE, and how an incorrect set-up will manifest as a prompt for your password when using ‘qrsh’. I referenced <a href="https://jhpce.jhu.edu/knowledge-base/authentication/ssh-key-setup/" class="uri">https://jhpce.jhu.edu/knowledge-base/authentication/ssh-key-setup/</a></td>
+</tr>
+<tr class="even">
+<td>2022-09-23</td>
+<td>Setting up SSH keys for JHPCE</td>
+<td>We debugged her SSH set-up with JHCPE, finding a syntax mistake, confirming the contents of the ‘.ssh/config’ file, and other details to ultimately get the traditional RStudio + JHPCE set-up working smoothly. We touched a bit on the process for using git from JHPCE but didn’t finish fully setting things up</td>
+</tr>
+<tr class="odd">
+<td>2022-09-16</td>
+<td>Interaction between .bashrc and ‘module load’ in ’qsub’d scripts</td>
+<td>I described how ‘module load conda_R’ lines in a submitted shell script override the default version of R that can be loaded by default using the ‘.bashrc’. In this case this undesired interaction caused a corrupted R package to load and return an error</td>
+</tr>
+<tr class="even">
+<td>2022-09-16</td>
+<td>Modifying a shell script to segment a VCF by genomic region</td>
+<td>We adapted someone else’s code, slightly changing some awk commands to use cut (which I’m more familiar with) and using a for loop rather than piping a file to a while loop. This allowed the code to work as intended on the data</td>
+</tr>
+<tr class="odd">
+<td>2022-09-12</td>
+<td>Setting up SPEAQeasy at JHPCE</td>
+<td>I pointed to installation guidelines for the cluster to resolve issues about R packages not being installed and a problematic nextflow version.</td>
+</tr>
+<tr class="even">
+<td>2022-08-24</td>
+<td>Use of git from multiple local locations</td>
+<td>I described how to smoothly ‘git pull’ when updates have been made to both the local and remote repo (adding + committing local changes, running ‘git pull’, and handling a smooth merge)</td>
+</tr>
+<tr class="odd">
+<td>2022-08-22</td>
+<td>Moving and correctly accessing HDF5-backed SummarizedExperiments</td>
+<td>I described proper saving and loading of SummarizedExperiment derivatives whose assays are HDF5-backed using the HDF5Array package, and how to convert between HDF5-backed objects and “ordinary” in-memory objects</td>
+</tr>
+<tr class="even">
+<td>2022-07-18</td>
+<td>CUDA issues with cellpose module</td>
+<td>We worked through a few issues in the cellpose module, which each had a different cause. In one case, the version of torch/CUDA was outdated for the hardware. In another case, user-specific libraries were being referenced instead of the central module’s libraries.</td>
+</tr>
+<tr class="odd">
+<td>2022-07-13</td>
+<td>Addressing SPEAQeasy error messages</td>
+<td>The error messages involved a mismatch between sample ID and file name for the ‘QualityTrimmed’ process, as well as a supposed missing ID in the manifest (which was actually present). Simply resuming the pipeline got rid of both errors.</td>
+</tr>
+<tr class="even">
+<td>2022-07-06</td>
+<td>Setting up SPEAQeasy</td>
+<td>I described how to configure SPEAQeasy for a particular dataset, and how to manage two separate runs of SPEAQeasy as part of a different git repository (requiring the use of submodules)</td>
+</tr>
+<tr class="odd">
+<td>2022-07-01</td>
+<td>Question about how ‘mitoRate’ is calculated in SPEAQeasy</td>
+<td>I showed the documentation’s description of ‘mitoRate’ and linked to the code where it’s computed: <a href="https://github.com/LieberInstitute/SPEAQeasy/blob/bfe4e664281b52c5e239e372393a8aea36084e0d/scripts/create_count_objects.R#L521-L533" class="uri">https://github.com/LieberInstitute/SPEAQeasy/blob/bfe4e664281b52c5e239e372393a8aea36084e0d/scripts/create_count_objects.R#L521-L533</a></td>
+</tr>
+<tr class="even">
+<td>2022-06-29</td>
+<td>zellkonverter error and guidance using SpaGCN</td>
+<td>I described the need to manually convert some spatialExperiment slots prior to conversion with zellkonverter, and that some data types are not supported. I pointed to my SpaGCN code and the lines specifically responsible for clustering + writing outputs</td>
+</tr>
+<tr class="odd">
+<td>2022-06-23</td>
+<td>pulling in external changes to a git repository</td>
+<td>I described when ‘git pull’ can be “safely” used, and when ‘git reset’ might have to be used beforehand</td>
+</tr>
+<tr class="even">
+<td>2022-06-21</td>
+<td>help installing ‘jaffelab’</td>
+<td>I described the use of ‘remotes::install_github’ for GitHub-based packages. We encountered a GitHub authentication error that was solved by running the R code ‘Sys.unsetenv(“GITHUB_PAT”)’ prior to the normal installation command.</td>
+</tr>
+<tr class="odd">
+<td>2022-05-05</td>
+<td>Guide to creating a module at JHPCE</td>
+<td>I described the two JHPCE-based repositories we push to (<a href="https://github.com/LieberInstitute/jhpce_mod_source" class="uri">https://github.com/LieberInstitute/jhpce_mod_source</a> and <a href="https://github.com/LieberInstitute/jhpce_module_config" class="uri">https://github.com/LieberInstitute/jhpce_module_config</a>), my usual installation approach for python-based GPU-utilizing software, and the contents of the lua-based config enabling a module to load.</td>
+</tr>
+<tr class="even">
+<td>2022-04-29</td>
+<td>creating a nextflow pipeline and supporting docker</td>
+<td>I clarified the usage of nextflow channels, described when docker integration is likely to be worthwhile, and answered other general questions about processing data with a nextflow-based workflow</td>
+</tr>
 <tr class="odd">
 <td>2022-04-01</td>
 <td>Using the “redstone” software</td>
