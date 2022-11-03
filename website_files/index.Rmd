@@ -119,7 +119,7 @@ gh_waffle <- function(data, pal = "D", dir = -1) {
   print(p)
 }
 
-gh_waffle(by_total)
+gh_waffle(by_total, pal = "A")
 
 ```
 
