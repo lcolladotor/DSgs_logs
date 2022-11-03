@@ -185,386 +185,341 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </thead>
 <tbody>
 <tr class="odd">
-<td>2022-10-28</td>
-<td>formatting genotype data into a matrix for each gene</td>
-<td>I described how to transpose matrices, change their type, drop columns, and related tricks to solve a data-formatting problem asked by a collaborator</td>
-</tr>
-<tr class="even">
-<td>2022-10-13</td>
-<td>Lifting results between hg19 and hg38</td>
-<td>I mentioned rtracklayer::liftOver and showed a code example of lifting over genomic coordinates for a SummarizedExperiment</td>
-</tr>
-<tr class="odd">
-<td>2022-09-26</td>
-<td>Setting up SSH keys between login and compute nodes</td>
-<td>I described the need for SSH keys between the login and compute nodes at JHPCE, and how an incorrect set-up will manifest as a prompt for your password when using ‘qrsh’. I referenced <a href="https://jhpce.jhu.edu/knowledge-base/authentication/ssh-key-setup/" class="uri">https://jhpce.jhu.edu/knowledge-base/authentication/ssh-key-setup/</a></td>
-</tr>
-<tr class="even">
-<td>2022-09-23</td>
-<td>Setting up SSH keys for JHPCE</td>
-<td>We debugged her SSH set-up with JHCPE, finding a syntax mistake, confirming the contents of the ‘.ssh/config’ file, and other details to ultimately get the traditional RStudio + JHPCE set-up working smoothly. We touched a bit on the process for using git from JHPCE but didn’t finish fully setting things up</td>
-</tr>
-<tr class="odd">
-<td>2022-09-16</td>
-<td>Interaction between .bashrc and ‘module load’ in ’qsub’d scripts</td>
-<td>I described how ‘module load conda_R’ lines in a submitted shell script override the default version of R that can be loaded by default using the ‘.bashrc’. In this case this undesired interaction caused a corrupted R package to load and return an error</td>
-</tr>
-<tr class="even">
-<td>2022-09-16</td>
-<td>Modifying a shell script to segment a VCF by genomic region</td>
-<td>We adapted someone else’s code, slightly changing some awk commands to use cut (which I’m more familiar with) and using a for loop rather than piping a file to a while loop. This allowed the code to work as intended on the data</td>
-</tr>
-<tr class="odd">
-<td>2022-09-12</td>
-<td>Setting up SPEAQeasy at JHPCE</td>
-<td>I pointed to installation guidelines for the cluster to resolve issues about R packages not being installed and a problematic nextflow version.</td>
-</tr>
-<tr class="even">
-<td>2022-08-24</td>
-<td>Use of git from multiple local locations</td>
-<td>I described how to smoothly ‘git pull’ when updates have been made to both the local and remote repo (adding + committing local changes, running ‘git pull’, and handling a smooth merge)</td>
-</tr>
-<tr class="odd">
-<td>2022-08-22</td>
-<td>Moving and correctly accessing HDF5-backed SummarizedExperiments</td>
-<td>I described proper saving and loading of SummarizedExperiment derivatives whose assays are HDF5-backed using the HDF5Array package, and how to convert between HDF5-backed objects and “ordinary” in-memory objects</td>
-</tr>
-<tr class="even">
 <td>2022-07-18</td>
 <td>CUDA issues with cellpose module</td>
 <td>We worked through a few issues in the cellpose module, which each had a different cause. In one case, the version of torch/CUDA was outdated for the hardware. In another case, user-specific libraries were being referenced instead of the central module’s libraries.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>2022-07-13</td>
 <td>Addressing SPEAQeasy error messages</td>
 <td>The error messages involved a mismatch between sample ID and file name for the ‘QualityTrimmed’ process, as well as a supposed missing ID in the manifest (which was actually present). Simply resuming the pipeline got rid of both errors.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>2022-07-06</td>
 <td>Setting up SPEAQeasy</td>
 <td>I described how to configure SPEAQeasy for a particular dataset, and how to manage two separate runs of SPEAQeasy as part of a different git repository (requiring the use of submodules)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>2022-07-01</td>
 <td>Question about how ‘mitoRate’ is calculated in SPEAQeasy</td>
 <td>I showed the documentation’s description of ‘mitoRate’ and linked to the code where it’s computed: <a href="https://github.com/LieberInstitute/SPEAQeasy/blob/bfe4e664281b52c5e239e372393a8aea36084e0d/scripts/create_count_objects.R#L521-L533" class="uri">https://github.com/LieberInstitute/SPEAQeasy/blob/bfe4e664281b52c5e239e372393a8aea36084e0d/scripts/create_count_objects.R#L521-L533</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>2022-06-29</td>
 <td>zellkonverter error and guidance using SpaGCN</td>
 <td>I described the need to manually convert some spatialExperiment slots prior to conversion with zellkonverter, and that some data types are not supported. I pointed to my SpaGCN code and the lines specifically responsible for clustering + writing outputs</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>2022-06-23</td>
 <td>pulling in external changes to a git repository</td>
 <td>I described when ‘git pull’ can be “safely” used, and when ‘git reset’ might have to be used beforehand</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>2022-06-21</td>
 <td>help installing ‘jaffelab’</td>
 <td>I described the use of ‘remotes::install_github’ for GitHub-based packages. We encountered a GitHub authentication error that was solved by running the R code ‘Sys.unsetenv(“GITHUB_PAT”)’ prior to the normal installation command.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>2022-05-05</td>
 <td>Guide to creating a module at JHPCE</td>
 <td>I described the two JHPCE-based repositories we push to (<a href="https://github.com/LieberInstitute/jhpce_mod_source" class="uri">https://github.com/LieberInstitute/jhpce_mod_source</a> and <a href="https://github.com/LieberInstitute/jhpce_module_config" class="uri">https://github.com/LieberInstitute/jhpce_module_config</a>), my usual installation approach for python-based GPU-utilizing software, and the contents of the lua-based config enabling a module to load.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>2022-04-29</td>
 <td>creating a nextflow pipeline and supporting docker</td>
 <td>I clarified the usage of nextflow channels, described when docker integration is likely to be worthwhile, and answered other general questions about processing data with a nextflow-based workflow</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>2022-04-01</td>
 <td>Using the “redstone” software</td>
 <td>After identifying that ‘redstone’ was a precompiled binary for Linux, I described how to use ‘wget’ to download software like this, set execute permissions if necessary, and run at JHPCE.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>2022-03-25</td>
 <td>Input files for custom annotation with SPEAQeasy</td>
 <td>I recommended some adjustments to a custom GTF and transcripts FASTA to solve an error seen in SPEAQeasy where transcripts and annotation were found to be incompatible.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>2022-03-17</td>
 <td>Follow-up on custom annotation with SPEAQeasy</td>
 <td>An error occurred in a SPEAQeasy run, which I identified to be due to not providing all the required inputs (specifically the sites at which to perform variant calling)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>2022-03-16</td>
 <td>Adding lines to a GTF for use in SPEAQeasy with custom annotation</td>
 <td>We both verified additional transcript annotation added to a GENCODE GTF looked good for use as input to SPEAQeasy</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>2022-03-14</td>
 <td>Error message running SPEAQeasy</td>
 <td>An error occurred in the counts step, which I discovered was a bug in some filename-matching code</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>2022-03-09</td>
 <td>Setting up passwordless login</td>
 <td>I described two-factor authentication vs. passwordless login via SSH keys, and gave tips to set up the latter.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>2022-03-09</td>
 <td>Using custom annotation with SPEAQeasy</td>
 <td>I described how to add additional transcripts to the relevant FASTA file then use SPEAQeasy’s custom annotation option to use the new FASTA with the other default annotation files.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>2022-03-04</td>
 <td>Using the caracol queue</td>
 <td>I described how requesting ‘caracol’ is similar to requesting ‘bluejay’, but elaborated on additional complications, like contention for the same GPU and using CUDA_VISIBLE_DEVICES properly, including with array jobs</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>2022-03-02</td>
 <td>Generating bigWigs with SPEAQeasy</td>
 <td>I referred her to the ‘–coverage’ option with SPEAQeasy, which unfortunately cannot be run alone, which might be useful for an already-processed dataset</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>2022-02-07</td>
 <td>Debugging seg fault with tensorqtl module</td>
 <td>We tried to discover the source of a seg fault that would occur when she imported tensorqtl in python with the tensorqtl module. Another user and I weren’t able to replicate the issue. We later discovered that there were lines in her .bashrc that might’ve interfered with the module to produce the issue.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>2022-02-04</td>
 <td>Using tensorqtl with a GPU</td>
 <td>I described how to qrsh/sub jobs with the GPU node, including how to automatically set up ‘CUDA_VISIBLE_DEVICES’ to avoid contention for resources, and how to use the tensorqtl module to ensure GPUs were used when importing pytorch</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>2022-02-04</td>
 <td>X11 and SSH issues</td>
 <td>After ensuring our apparent Rstudio set-ups on our windows machines matched, she still wasn’t able to forward X11 while using Rstudio. Regarding a different issue, we discovered that a particular machine required additional lines in the ‘~/.ssh/config’ to properly enable RSA keys.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>2022-01-21</td>
 <td>accessing the ‘gpu’ node at JHPCE correctly</td>
 <td>I described how it’s accessed as a queue, but some manual work is left to the user (checking which GPUs are open and setting ‘CUDA_VISIBLE_DEVICES’)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>2021-12-15</td>
 <td>creating a ‘samples.manifest’ and choosing trimming settings</td>
 <td>I described how I normally deduce sample IDs from FASTQ filenames when creating a ‘samples.manifest’ file for SPEAQeasy, described the difference between ‘–trim_mode’ settings that SPEAQeasy supports, and showed how to check what samples were trimmed.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>2021-11-17</td>
 <td>using ‘list.files’ in R</td>
 <td>I described using regular expressions in R to match files in a directory. We encountered a weird case where ‘list.files’ seemed to return different numbers of matched files when run repeatedly. After ensuring we were in the right directory, the issue went away, but it was unclear what caused the original problem.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>2021-10-06</td>
 <td>help with git</td>
 <td>I explained how I get out of the situation where files that are too big get accidentally committed (using ‘git log’, ‘git reset –soft’, and other details)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>2021-10-04</td>
 <td>debugging SPEAQeasy errors</td>
 <td>We worked through an error message from the ‘VariantsMerge’ process, uncovering (arguably) a bug in SPEAQeasy, and I advised how to temporarily circumvent the problem. I also suggested a command for renaming a set of files that initially broke SPEAQeasy’s assumptions.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>2021-09-22</td>
 <td>help with ‘umask’ and git</td>
 <td>I talked about how Linux does not allow creation of files w/ execution permissions set, regardless of ‘umask’ settings such as in the ‘.bashrc’. I also explained how I use branching with git and other tips for managing a repo that others also develop on.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>2021-09-10</td>
 <td>merging FASTQ files automatically via SPEAQeasy</td>
 <td>We downloaded a metadata table from SRA and parsed it through R to programatically create a “samples.manifest” file for use in SPEAQeasy, that merged samples that were each split into multiple FASTQ files.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>2021-09-03</td>
 <td>identifying SPEAQeasy error</td>
 <td>SPEAQeasy would appear to run into “file not found” errors for just a handful of random samples in a large dataset. I eventually traced the error to a disk mounting issue on a particular compute node, which was resolved through bitsupport.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>2021-08-26</td>
 <td>resuming SPEAQeasy after an issue in the counts step</td>
 <td>I mentioned that she encountered a bug that was fixed in a more recent version of SPEAQeasy, but suggested she manually add a line of code temporarily so that she could resume the run before updating</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>2021-08-25</td>
 <td>downloading FASTQ files from SRA</td>
 <td>I referred her to a script I had written in the past that contains the required commands and configuration (with comments) for using the SRA toolkit</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>2021-08-06</td>
 <td>Forming a data frame from data in multiple files</td>
 <td>I showed a fairly standard method for concatenating tabular data from multiple files into a single matrix, and saving the resulting R object</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>2021-07-14</td>
 <td>getting SPEAQeasy running</td>
 <td>In a series of email exchanges we diagnosed subtle errors resulting from bad FASTQ files and unintended options in the main script. Her feedback helped me improve some existing documentation.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>2021-07-14</td>
 <td>debugging SPEAQeasy errors</td>
 <td>I described correct use of the “–input” argument, and we also found that many of the input FASTQs were empty, leading to a somewhat vague error message.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>2021-07-13</td>
 <td>formatting a LaTeX document and bookdown website</td>
 <td>I attempted some formatting tricks to eliminate unwanted whitespace but was ultimately unsuccessful. We suspected the LaTeX template required the whitespace to exist. We also tried to fix a bug with the header of a bookdown RMD not rendering as expected. It seemed that re-writing the header (without making any visible changes) fixed the issue, though we weren’t sure of the source of the initial problem.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>2021-07-02</td>
 <td>Help indexing a possibly corrupt VCF file</td>
 <td>We confirmed that an existing VCF was corrupt and found that tabix expected bgzip-compressed VCF input rather than compressed BCF input.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>2021-06-30</td>
 <td>Specifying output logs on SGE</td>
 <td>I briefly mentioned the “#$ -o” and “#$ -e” arguments, and how several logs will generate in your home directory without those arguments and without “#$ -cwd”, when “qsub”ing a job at JHPCE.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>2021-06-16</td>
 <td>addressing SPEAQeasy error</td>
 <td>we talked about how to use the “–strand” option, the source of the error that was encountered</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>2021-05-19</td>
 <td>Making a module</td>
 <td>We went through the creation of an LIBD JHPCE module, covering the documentation process, lua syntax, and how to test a module before pushing.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>2021-05-19</td>
 <td>Configuring a parallel series of bash scripts</td>
 <td>We adapted a series of bash scripts requiring parallel functionality for use at JHPCE. This involved correctly setting some path variables and requesting multiple cores through SGE for some scripts.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>2021-05-13</td>
 <td>Setting up a SPEAQeasy run</td>
 <td>I described how I typically construct a “samples.manifest” file and configure SPEAQeasy for a particular experiment.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>2021-05-03</td>
 <td>Running SPEAQeasy- follow up</td>
 <td>We observed an issue where log parsing in SPEAQeasy behaved differently for Sreya and I due to a difference in default python version loaded at JHPCE. I fixed the hisat2/2.2.1 module to ensure consistent python version use.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>2021-04-28</td>
 <td>Constructing an array job from an existing sequential shell script</td>
 <td>I showed how I typically produce an array job shell script for the situation where I have many samples of data to process the same way (SIMD). We talked about using a text file where each line contains one sample name, and referencing that in the array script.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>2021-04-26</td>
 <td>Running SPEAQeasy- follow up</td>
 <td>We discussed how to handle strandness issues, and how different inferred strand patterns within a group of samples sequenced together can indicate problems with the input data. I described how to use the ‘–force_strand’ option with SPEAQeasy</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>2021-04-22</td>
 <td>Running SPEAQeasy</td>
 <td>We went through cloning SPEAQeasy, creating a “samples.manifest” file with R, and other relevant details for running SPEAQeasy at JHPCE. I also helped Henry set up git at JHPCE</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>2021-04-22</td>
 <td>Running SPEAQeasy- follow up</td>
 <td>We troubleshooted strange errors from the main SPEAQeasy output, and saw that I was able to run the main script (“run_pipeline_jhpce.sh”) but Sreya encountered errors with an identical script. We suspected permissions issues in her working directory, which she emailed bitsupport about.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>2021-04-19</td>
 <td>Running SPEAQeasy</td>
 <td>Although we encountered permissions issues, I showed how to create a “samples.manifest” file and configure SPEAQeasy for a particular set of samples.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>2021-04-12</td>
 <td>Running the old RNA-seq pipeline on some SRA data</td>
 <td>I showed my typical process for creating a “samples.manifest” file for a given dataset, and how to submit a pipeline run. We continued to debug some minor issues over slack</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>2021-04-07</td>
 <td>Nextflow overview for work with imputation pipeline</td>
 <td>I covered various nextflow concepts, as well as my typical approach in creating and running a nextflow project at JHPCE</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>2021-03-22</td>
 <td>Using an LIBD module</td>
 <td>I described the need for the “module use” command and modifying the .bashrc to easily use LIBD modules</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>2021-03-18</td>
 <td>Download SRA data and run SPEAQeasy</td>
 <td>I fetched the SRA files, created a manifest and execution script for SPEAQeasy, but had an issue running “fastq-dump”. I decided to hand off the request, partially complete.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>2021-03-10</td>
 <td>qSVA explanation and code review</td>
 <td>Josh walked me through some code performing qSVA for a recent project, and I offered some tips involving code organization/ readibility.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>2021-03-03</td>
 <td>Advice for writing papers</td>
 <td>We discussed how Sciwheel can be adapted for different journals, and provided general advice for getting started and formatting a paper for a particular journal.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>2021-03-02</td>
 <td>Clarification about how recent CMC data was processed with SPEAQeasy</td>
 <td>I explained that SPEAQeasy was used for the recent hg38 processing, and an older version of a similar pipeline was used for the original hg19 processing. We discussed our new method for retrieving gene symbols (“org.*.eg.db” packages) and some general code advice.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>2021-03-02</td>
 <td>Our group’s set-up and approach for writing papers with google docs, and managing citations</td>
 <td>I went through the setup and example usage of Sciwheel and cross reference, and gave general advice (it’s often easiest to start with the “Methods” section, etc)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>2021-02-25</td>
 <td>I need help in: downloading data from SRA to JHPCE, running SPEAQeasy to create rse object (one session will likely not be enough).</td>
 <td>I explained how to use SPEAQeasy at JHPCE, and we tried an experimental method for downloading SRA data. The method didn’t work, and we plan to meet again after I verify a more typical method works.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>2021-02-23</td>
 <td>I need help with setting up Mobaexterm. Unable to open new terminals and folder permission issues</td>
 <td>I hadn’t encountered the issue with new local terminals failing to open. I planned to follow up with better specific advice via email, and offer to explain this advice in a future DSGS.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>2021-01-06</td>
 <td>Correlation values from labeledHeatmap</td>
 <td><a href="https://support.bioconductor.org/p/p133591/#p133927">BioC Support website answer</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>2020-12-09</td>
 <td>Help with importing HDF5 file</td>
 <td>Used ‘h5ls’ command from shell to verify contents of file; eventually found we were looking at the wrong file (error message was cryptic about issue). <a href="https://jhu-genomics.slack.com/archives/CUYHWV7AA/p1607034309074800" class="uri">https://jhu-genomics.slack.com/archives/CUYHWV7AA/p1607034309074800</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>2020-12-02</td>
 <td>Matching Variants Between Two VCF Objects</td>
 <td><a href="https://support.bioconductor.org/p/p133110/#p133319">BioC Support website answer</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>2020-11-20</td>
 <td>ChipQC ‘names’ attribute [9] must be the same length as the vector [2]’</td>
 <td><a href="https://support.bioconductor.org/p/134569/#p133028">BioC Support website answer</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>2020-11-11</td>
 <td>How does one modify a single value of a field in a seqinfo object?</td>
 <td><a href="https://support.bioconductor.org/p/134139/#p132829">BioC Support website answer</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>2020-11-04</td>
 <td>Extracting Sequences from Fasta Files with Rsamtools</td>
 <td><a href="https://support.bioconductor.org/p/131600/#p132617">BioC Support website answer</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>2020-11-02</td>
 <td>Help with SpaceRanger</td>
 <td>NA</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>2020-10-28</td>
 <td>Changing Row Names of MultiAssayExperiment Assay</td>
 <td><a href="https://support.bioconductor.org/p/p132406/#p132459">BioC Support website answer</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>2020-10-28</td>
 <td>issue running spaceranger</td>
 <td>initial issue seemed to do with the spaceranger command arguments; we are continuining to investigate possible module issues or insufficient code in the <a href="http://research.libd.org/rstatsclub/2020/10/20/using-space-ranger-at-jhpce/">blog post</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>2020-10-26</td>
 <td>Help running speakeasy on MARCC and JHPCE please</td>
 <td>NA</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>2020-10-21</td>
 <td>Question: Cannot Install gmapR Bioconductor Package</td>
 <td><a href="https://support.bioconductor.org/p/131285/#134921">BioC Support website answer</a></td>
