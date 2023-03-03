@@ -1,0 +1,8 @@
+# Hedia
+
+| Date | Help request | Notes |
+| ---- | ------------ | ----- |
+| 2023-03-02 | Understanding the template project repository | With Cynthia we saw the differents folders that are part of the template project repository and how to organize your project repository. |
+| 2023-01-25 | Nextflow with Conda and Github actions | We discussed how to implement github actions with Nextflow workflow and the use of Conda and/or Docker containers. |
+| 2023-01-18 | Making custom R script work with Netxflow | We (Me + Nick) discussed with Sean the basics of Nextflow and Nextflow DSL2 and how to make processes and channels and workflows. We gave him resources to read  and gave him small examplesto follow. We helped him also with his errors on slack. |
+

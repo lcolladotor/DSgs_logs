@@ -2,6 +2,24 @@
 
 | Date | Help request | Notes |
 | ---- | ------------ | ----- |
+| 2023-03-01 | Miscellaneous R questions | I recommended code for matching two data frames up by common genes, and explained that matrices don't support multiple data types (instead a 'data.frame' might be used) |
+| 2023-03-01 | Version controlling renamed directories | I described the need to 'git add' both the old filenames and new filenames, and the use of 'git add --all' to reference deleted files. |
+| 2023-02-15 | Using a gitignore to not version control specific files | I showed how glob expressions can be used to conveniently match many files across potentially several files, and described gitignore-specific rules, such as certain wildcard expression matching files no matter what directory they are in |
+| 2023-02-06 | Adding figures to OneDrive and google docs with CrossReference | I went over details like naming the OneDrive folder and correctly using CrossReference to refer to that name in figures and references to those figures |
+| 2023-02-03 | Organizing figure components for Illustrator | I helped port several plots into Illustrator as a figure, describing our normal process of using PDFs and linked files to maintain resolution. |
+| 2023-02-01 | Lining up gene expression and genotyping data | I showed how to filter for individuals with a certain condition, and subset two data frames with the same criteria. |
+| 2023-01-25 | Managing software dependencies with Nextflow | We focused mostly on the options Nextflow provides for managing software dependencies: Lmod modules, conda environments, and docker + singularity containers and the benefits of each potential approach |
+| 2023-01-25 | Setting up GitHub SSH keys | She was unable to clone private repositories due to a problem with her SSH key with GitHub. We solved the problem by setting up a new key pair using the recommended Ed25519 algorithm instead of the deprecated RSA algorithm. |
+| 2023-01-20 | SPEAQeasy error | We identifed that SPEAQeasy cannot handle runs with only one sample, but that the intention was to use multiple samples (the manifest did not use unique sample names) |
+| 2023-01-18 | Integrating R scripts with Nextflow | We went over several concepts in Nextflow (e.g. processes and channels) and discussed how to invoke R scripts inside processes. |
+| 2023-01-10 | Help identify the source of unexpected NA values | We uncovered the source of some unwanted NA values in some genotyping data and eliminated it by removing some code |
+| 2022-12-06 | resolving a merge conflict | I described the manual process for resolving a merge conflict with git when git cannot automatically merge two branches |
+| 2022-12-05 | Identifying the source of an error | We pinpointed an error message as being due to trying to find the 'colData' of a list containing Summarized Experiments rather than calling 'colData' on the SummarizedExperiment itself |
+| 2022-12-01 | coloring plots by a continuous variable | I described how to color ggplot2 plots by a continuous variable, adjust the palette, and other ggplot-related syntax/tricks |
+| 2022-11-30 | wrangling and reformatting expression data | I recommended some data-preprocessing steps for later downstream manipulation of the data |
+| 2022-11-23 | preprocessing and reformatting genotype and expression data | I gave general advice for how to preprocess some data, including changing data types, transposing matrices, and dropping columns to format things for a collaborator |
+| 2022-11-16 | organizing plots and output files | I described 'facet_wrap' and showed that for some situations, 'plot_grid' with a single output PDF (with width and height scaled appropriately) does well |
+| 2022-11-15 | understanding linear mixed-effects models | We generally discussed linear mixed effects models and some common terms used as fixed effects in genomic data |
 | 2022-10-28 | formatting genotype data into a matrix for each gene | I described how to transpose matrices, change their type, drop columns, and related tricks to solve a data-formatting problem asked by a collaborator |
 | 2022-10-13 | Lifting results between hg19 and hg38 | I mentioned rtracklayer::liftOver and showed a code example of lifting over genomic coordinates for a SummarizedExperiment |
 | 2022-09-26 | Setting up SSH keys between login and compute nodes | I described the need for SSH keys between the login and compute nodes at JHPCE, and how an incorrect set-up will manifest as a prompt for your password when using 'qrsh'. I referenced https://jhpce.jhu.edu/knowledge-base/authentication/ssh-key-setup/ |
