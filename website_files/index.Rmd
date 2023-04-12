@@ -35,7 +35,7 @@ library("here")
 ```
 
 
-Below we see the number of [DSgs](https://lcolladotor.github.io/bioc_team_ds/data-science-guidance-sessions.html) sessions for each of the guides across time. You can mouse-over each point to see the data, or click on each guide's name to hide/show their information.
+Below we see the number of [DSgs](https://lcolladotor.github.io/bioc_team_ds/data-science-guidance-sessions.html) sessions for each of the guides across time. You can mouse-over each point to see the data, or click on each guide's name to hide/show their information. The data is filtered to show only active DSgs guides.
 
 ```{r "graph_by_guide", echo = FALSE, warning = FALSE, message = FALSE, fig.height = 8, fig.width = 8}
 load(here::here("logs_data.Rdata"))
@@ -51,7 +51,7 @@ top_types <- sort(table(logs_data$type), decreasing = TRUE)
 by_guide_summary <- summarise(group_by(logs_data, week, year, guide_name), "number"=n())
 
 ## Plot by day of the year
-p <- ggplot(by_guide_summary , aes(
+p <- ggplot(filter(by_guide_summary, !guide_name %in% c("Abby", "Josh", "Arta")) , aes(
     x = week,
     y = number,
     color = guide_name,
