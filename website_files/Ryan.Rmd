@@ -1,0 +1,8 @@
+# Ryan
+
+| Date | Help request | Notes |
+| ---- | ------------ | ----- |
+| 2023-04-11 | user had problem using import() function in R | Looks like user was trying to create a plot and import data from a .csv file but was getting an error importing the csv
+https://community.rstudio.com/t/error-creating-a-windrose/164132 |
+| 2023-03-21 | user had question about generating rarefaction curves in R | user had question about generating rarefaction curves in R. Issue found here https://support.bioconductor.org/p/9150366/#9150386 |
+

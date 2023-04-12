@@ -2,6 +2,13 @@
 
 | Date | Help request | Notes |
 | ---- | ------------ | ----- |
+| 2023-04-06 | Git-LFS error messages | I explained the purpose of Git-LFS, that it's configured for certain repositories, and that we can load a module to use it |
+| 2023-04-04 | Configuring X11 for plotting at JHPCE | I described my use of XQuartz, the 'xhost +local:' command, and the proper ordering of these tools in combination with SSHing to allow plotting to work |
+| 2023-03-28 | Creating modules at JHPCE | I described what we use modules for, the general approach to making them for common software types (binaries, python packages), and walked through the process by making a new FastQC module |
+| 2023-03-22 | Using git and RStudio to work with R Markdown files | I helped him set up git on his laptop (username + email, SSH key), showed how to edit R Markdown files using RStudio, and basic version control (git add, commit, and push). |
+| 2023-03-22 | SPEAQeasy error | The error message was cryptic, but made more clear in the latest SPEAQeasy: the transcripts FASTA mismatched with the GTF (custom annotation was used) due to a typo in the gene ID in the GTF. |
+| 2023-03-15 | Quantifying a single gene not in SPEAQeasy's default reference | I initially mistakenly suggested kallisto, but later clarified that using featureCounts with a custom single-gene GTF from the BAM files (produced by SPEAQeasy) would be the proper way to quickly quantify a single gene |
+| 2023-03-08 | Finalizing genotyping + expression script | We discussed how to merge two datasets in R, making sure they shared the exact set of genes |
 | 2023-03-01 | Miscellaneous R questions | I recommended code for matching two data frames up by common genes, and explained that matrices don't support multiple data types (instead a 'data.frame' might be used) |
 | 2023-03-01 | Version controlling renamed directories | I described the need to 'git add' both the old filenames and new filenames, and the use of 'git add --all' to reference deleted files. |
 | 2023-02-15 | Using a gitignore to not version control specific files | I showed how glob expressions can be used to conveniently match many files across potentially several files, and described gitignore-specific rules, such as certain wildcard expression matching files no matter what directory they are in |

@@ -1,0 +1,8 @@
+# Cynthia
+
+| Date | Help request | Notes |
+| ---- | ------------ | ----- |
+| 2023-04-06 | Alternatives for RNA-seq analysis without replicates | Website tools to look for public rna-seq samples & packages to make synthetic replicates: 
+https://support.bioconductor.org/p/9150681/#9150698 |
+| 2023-03-22 | Introduction to CellRanger RNAseq ATAC analysis | We reviewed the overflow to analyse RNA-Seq and ATAC data with the Seurat and Signac tools. I provided learning resources, such as data file organization, funtions and methos available in the tools. I also provided a complete explanation about QC for preprocessing data integrated. |
+
