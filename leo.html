@@ -189,13 +189,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <tbody>
 <tr class="odd">
 <td>2023-03-13</td>
-<td>Verify GitHub ssh key setup and team overview</td>
-<td>We used <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/testing-your-ssh-connection" class="uri">https://docs.github.com/en/authentication/connecting-to-github-with-ssh/testing-your-ssh-connection</a> and also went over the JHPCE and R config files from the team website. We also talked about the DSgs and how it would be beneficial for Kinnary to meet 1 on 1 with all DSgs guides to build familiarity and make it easier to ask for help in the future.</td>
+<td>Updating spatialLIBD::read10xVisiumAnalysis</td>
+<td>See <a href="https://jhu-genomics.slack.com/archives/C02TV4F1MCM/p1678716129409099" class="uri">https://jhu-genomics.slack.com/archives/C02TV4F1MCM/p1678716129409099</a> for more. Led to <a href="https://github.com/LieberInstitute/spatialLIBD/commit/97b852686515a271f4db3e185a9a9180a09a5db6" class="uri">https://github.com/LieberInstitute/spatialLIBD/commit/97b852686515a271f4db3e185a9a9180a09a5db6</a> and related commits. spatialLIBD version 1.11.10 now supports spaceranger version 2023.0208.0 output files.</td>
 </tr>
 <tr class="even">
 <td>2023-03-13</td>
-<td>Updating spatialLIBD::read10xVisiumAnalysis</td>
-<td>See <a href="https://jhu-genomics.slack.com/archives/C02TV4F1MCM/p1678716129409099" class="uri">https://jhu-genomics.slack.com/archives/C02TV4F1MCM/p1678716129409099</a> for more. Led to <a href="https://github.com/LieberInstitute/spatialLIBD/commit/97b852686515a271f4db3e185a9a9180a09a5db6" class="uri">https://github.com/LieberInstitute/spatialLIBD/commit/97b852686515a271f4db3e185a9a9180a09a5db6</a> and related commits. spatialLIBD version 1.11.10 now supports spaceranger version 2023.0208.0 output files.</td>
+<td>Verify GitHub ssh key setup and team overview</td>
+<td>We used <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/testing-your-ssh-connection" class="uri">https://docs.github.com/en/authentication/connecting-to-github-with-ssh/testing-your-ssh-connection</a> and also went over the JHPCE and R config files from the team website. We also talked about the DSgs and how it would be beneficial for Kinnary to meet 1 on 1 with all DSgs guides to build familiarity and make it easier to ask for help in the future.</td>
 </tr>
 <tr class="odd">
 <td>2023-03-10</td>
@@ -209,23 +209,23 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tr>
 <tr class="odd">
 <td>2023-03-02</td>
-<td>read10xVisium() in version 1.7.1 (and now 1.8.0) creates a dangerous silent error by mismatching tissue positions across multiple samples</td>
-<td>See <a href="https://github.com/drighelli/SpatialExperiment/issues/135" class="uri">https://github.com/drighelli/SpatialExperiment/issues/135</a> and the pull request at <a href="https://github.com/drighelli/SpatialExperiment/pull/136" class="uri">https://github.com/drighelli/SpatialExperiment/pull/136</a> that resolves this issue.</td>
-</tr>
-<tr class="even">
-<td>2023-03-02</td>
 <td>Help resolve JHPCE permission issues on the lifespan_hpc_spatial project</td>
 <td>The solution involved asking BitSupport to login as a specific user and run <a href="https://lcolladotor.github.io/bioc_team_ds/organizing-your-work.html#spatialteam-example" class="uri">https://lcolladotor.github.io/bioc_team_ds/organizing-your-work.html#spatialteam-example</a>. Knowing the exact file paths that triggered the permission issues are important to help check with <code>ls -lh</code> and <code>nfs4_getfacl</code> under a <code>qrsh</code> session.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>2023-03-02</td>
 <td>Debug spaceranger 2023.0208.0 (likely an alpha for 2.0.1) with SpatialExperiment 1.8.0</td>
 <td>See the <a href="https://community-bioc.slack.com/archives/CR1BLV821/p1677783580326559">Bioconductor Slack message</a> I wrote for more details.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>2023-03-02</td>
 <td>How to write a tweetorial</td>
 <td>End result: <a href="https://twitter.com/HeenaDivecha/status/1631360771342098433" class="uri">https://twitter.com/HeenaDivecha/status/1631360771342098433</a></td>
+</tr>
+<tr class="even">
+<td>2023-03-02</td>
+<td>read10xVisium() in version 1.7.1 (and now 1.8.0) creates a dangerous silent error by mismatching tissue positions across multiple samples</td>
+<td>See <a href="https://github.com/drighelli/SpatialExperiment/issues/135" class="uri">https://github.com/drighelli/SpatialExperiment/issues/135</a> and the pull request at <a href="https://github.com/drighelli/SpatialExperiment/pull/136" class="uri">https://github.com/drighelli/SpatialExperiment/pull/136</a> that resolves this issue.</td>
 </tr>
 <tr class="odd">
 <td>2023-02-28</td>
@@ -364,23 +364,23 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tr>
 <tr class="even">
 <td>2022-04-15</td>
-<td>Brainomics meeting with collaborators</td>
-<td>Clarified a few questions about LIBD’s SPEAQeasy RSE objects and a problem with some colData() that was missing, that we’ll provide early next week. Send links to our deconvolution work with Louise A Huuki-Myers.</td>
-</tr>
-<tr class="odd">
-<td>2022-04-15</td>
 <td>Debugged code from <a href="https://github.com/LieberInstitute/spatialLIBD/issues/33" class="uri">https://github.com/LieberInstitute/spatialLIBD/issues/33</a></td>
 <td>See <a href="https://github.com/LieberInstitute/spatialLIBD/issues/33#issuecomment-1100169012" class="uri">https://github.com/LieberInstitute/spatialLIBD/issues/33#issuecomment-1100169012</a>.</td>
 </tr>
-<tr class="even">
-<td>2022-04-08</td>
-<td>macOS and JHPCE laptop set</td>
-<td>JHPCE ssh keys (to avoid typing passwords when using qrsh), .Rprofile (both), .bashrc, .zshrc (laptop), iTerm2 (laptop), Textmate (laptop), remote port fowading for rmate, xquartz (laptop) installation and configuration. There are several LIBD rstats club videos on these topics already, but we just did all the setup fast. In particular, the .bashrc configuration was important to resolve a umask setting problem that was interfering with the permissions on the Visium IF AD project.</td>
-</tr>
 <tr class="odd">
+<td>2022-04-15</td>
+<td>Brainomics meeting with collaborators</td>
+<td>Clarified a few questions about LIBD’s SPEAQeasy RSE objects and a problem with some colData() that was missing, that we’ll provide early next week. Send links to our deconvolution work with Louise A Huuki-Myers.</td>
+</tr>
+<tr class="even">
 <td>2022-04-08</td>
 <td>How to delete large files from GitHub history</td>
 <td>If the situation had been simple, that is, that the latest commit was the one that commited the large files, we could have used the solution described at <a href="http://lcolladotor.github.io/2020/03/18/you-just-committed-a-large-file-and-can-t-push-to-github/" class="uri">http://lcolladotor.github.io/2020/03/18/you-just-committed-a-large-file-and-can-t-push-to-github/</a>. Instead, we had to use <a href="https://rtyley.github.io/bfg-repo-cleaner/" class="uri">https://rtyley.github.io/bfg-repo-cleaner/</a>.</td>
+</tr>
+<tr class="odd">
+<td>2022-04-08</td>
+<td>macOS and JHPCE laptop set</td>
+<td>JHPCE ssh keys (to avoid typing passwords when using qrsh), .Rprofile (both), .bashrc, .zshrc (laptop), iTerm2 (laptop), Textmate (laptop), remote port fowading for rmate, xquartz (laptop) installation and configuration. There are several LIBD rstats club videos on these topics already, but we just did all the setup fast. In particular, the .bashrc configuration was important to resolve a umask setting problem that was interfering with the permissions on the Visium IF AD project.</td>
 </tr>
 <tr class="even">
 <td>2022-04-06</td>
@@ -419,13 +419,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tr>
 <tr class="odd">
 <td>2022-03-03</td>
-<td>Debradation matrix for LIBD riboZ</td>
-<td>Linked to <a href="https://github.com/LieberInstitute/qsvaR" class="uri">https://github.com/LieberInstitute/qsvaR</a>, <a href="http://research.libd.org/rstatsclub/2018/12/11/quality-surrogate-variable-analysis/#.YiFawRDMKX0" class="uri">http://research.libd.org/rstatsclub/2018/12/11/quality-surrogate-variable-analysis/#.YiFawRDMKX0</a>, <a href="https://github.com/LieberInstitute/qsva_brain/blob/master/brainseq_phase2_qsv/quantify_top1000.R" class="uri">https://github.com/LieberInstitute/qsva_brain/blob/master/brainseq_phase2_qsv/quantify_top1000.R</a>, <a href="https://github.com/LieberInstitute/qsva_brain/blob/master/brainseq_phase2_qsv/make_qSVs.R" class="uri">https://github.com/LieberInstitute/qsva_brain/blob/master/brainseq_phase2_qsv/make_qSVs.R</a>, <a href="https://github.com/LieberInstitute/qsva_brain/blob/master/brainseq_phase2_qsv/make_qSVs.R#L28" class="uri">https://github.com/LieberInstitute/qsva_brain/blob/master/brainseq_phase2_qsv/make_qSVs.R#L28</a>. Made public the file <code>/dcl01/ajaffe/data/lab/qsva_brain/brainseq_phase2_qsv/rdas/degradation_rse_phase2_usingJoint_justFirst.rda</code> and other ones. See <a href="https://github.com/LieberInstitute/qsva_brain/commit/cba8fa5e886be9242dcbaae7854d1eed0f69cef5" class="uri">https://github.com/LieberInstitute/qsva_brain/commit/cba8fa5e886be9242dcbaae7854d1eed0f69cef5</a> for details.</td>
+<td>How to build a cov_rse object using qSVA v1</td>
+<td>Linked to <a href="https://github.com/LieberInstitute/qsva_brain/blob/master/brainseq_phase2_qsv/quantify_top1000.R#L13" class="uri">https://github.com/LieberInstitute/qsva_brain/blob/master/brainseq_phase2_qsv/quantify_top1000.R#L13</a>, <code>/dcs04/lieber/lcolladotor/qSVA_LIBD3080/degradation_experiments/*/bed</code>, <a href="https://github.com/LieberInstitute/SPEAQeasy/blob/master/main.nf#L1774-L1855" class="uri">https://github.com/LieberInstitute/SPEAQeasy/blob/master/main.nf#L1774-L1855</a>, <a href="https://github.com/LieberInstitute/RNAseq-pipeline/blob/master/sh/step5-coverage.sh" class="uri">https://github.com/LieberInstitute/RNAseq-pipeline/blob/master/sh/step5-coverage.sh</a>, <a href="https://github.com/LieberInstitute/qsva_brain/blob/master/brainseq_phase2_qsv/quantify_top1000.R#L3-L50" class="uri">https://github.com/LieberInstitute/qsva_brain/blob/master/brainseq_phase2_qsv/quantify_top1000.R#L3-L50</a>, <a href="https://github.com/LieberInstitute/qsva_brain/blob/master/brainseq_phase2_qsv/quantify_top1000.R#L5" class="uri">https://github.com/LieberInstitute/qsva_brain/blob/master/brainseq_phase2_qsv/quantify_top1000.R#L5</a>, <a href="https://github.com/LieberInstitute/recount.bwtool/blob/master/R/coverage_bwtool.R" class="uri">https://github.com/LieberInstitute/recount.bwtool/blob/master/R/coverage_bwtool.R</a>, <a href="https://github.com/LieberInstitute/megadepth/blob/master/R/read_coverage.R" class="uri">https://github.com/LieberInstitute/megadepth/blob/master/R/read_coverage.R</a>, <a href="https://github.com/LieberInstitute/recount.bwtool/blob/master/R/coverage_matrix_bwtool.R#L227-L253" class="uri">https://github.com/LieberInstitute/recount.bwtool/blob/master/R/coverage_matrix_bwtool.R#L227-L253</a>, <a href="https://github.com/CRG-Barcelona/bwtool/wiki#installation" class="uri">https://github.com/CRG-Barcelona/bwtool/wiki#installation</a>, <a href="http://lcolladotor.github.io/derfinder/reference/getRegionCoverage.html" class="uri">http://lcolladotor.github.io/derfinder/reference/getRegionCoverage.html</a>, and <a href="http://research.libd.org/qsvaR/" class="uri">http://research.libd.org/qsvaR/</a>. Andrew Jaffe linked <code>/users/ajaffe/Lieber/Projects/RNAseq/SzControl_DE_paper/rdas/degradation_mat_CMC_ribozero.rda</code>, <code>/users/ajaffe/Lieber/Projects/RNAseq/SzControl_DE_paper/run_de_analysis_CMC.R</code>, <code>/users/ajaffe/Lieber/Projects/RNAseq/SzControl_DE_paper/rdas/geneLevel_CMC_qSVsAndMod.rda</code> and <code>/users/ajaffe/Lieber/Projects/RNAseq/CMC/</code>.</td>
 </tr>
 <tr class="even">
 <td>2022-03-03</td>
-<td>How to build a cov_rse object using qSVA v1</td>
-<td>Linked to <a href="https://github.com/LieberInstitute/qsva_brain/blob/master/brainseq_phase2_qsv/quantify_top1000.R#L13" class="uri">https://github.com/LieberInstitute/qsva_brain/blob/master/brainseq_phase2_qsv/quantify_top1000.R#L13</a>, <code>/dcs04/lieber/lcolladotor/qSVA_LIBD3080/degradation_experiments/*/bed</code>, <a href="https://github.com/LieberInstitute/SPEAQeasy/blob/master/main.nf#L1774-L1855" class="uri">https://github.com/LieberInstitute/SPEAQeasy/blob/master/main.nf#L1774-L1855</a>, <a href="https://github.com/LieberInstitute/RNAseq-pipeline/blob/master/sh/step5-coverage.sh" class="uri">https://github.com/LieberInstitute/RNAseq-pipeline/blob/master/sh/step5-coverage.sh</a>, <a href="https://github.com/LieberInstitute/qsva_brain/blob/master/brainseq_phase2_qsv/quantify_top1000.R#L3-L50" class="uri">https://github.com/LieberInstitute/qsva_brain/blob/master/brainseq_phase2_qsv/quantify_top1000.R#L3-L50</a>, <a href="https://github.com/LieberInstitute/qsva_brain/blob/master/brainseq_phase2_qsv/quantify_top1000.R#L5" class="uri">https://github.com/LieberInstitute/qsva_brain/blob/master/brainseq_phase2_qsv/quantify_top1000.R#L5</a>, <a href="https://github.com/LieberInstitute/recount.bwtool/blob/master/R/coverage_bwtool.R" class="uri">https://github.com/LieberInstitute/recount.bwtool/blob/master/R/coverage_bwtool.R</a>, <a href="https://github.com/LieberInstitute/megadepth/blob/master/R/read_coverage.R" class="uri">https://github.com/LieberInstitute/megadepth/blob/master/R/read_coverage.R</a>, <a href="https://github.com/LieberInstitute/recount.bwtool/blob/master/R/coverage_matrix_bwtool.R#L227-L253" class="uri">https://github.com/LieberInstitute/recount.bwtool/blob/master/R/coverage_matrix_bwtool.R#L227-L253</a>, <a href="https://github.com/CRG-Barcelona/bwtool/wiki#installation" class="uri">https://github.com/CRG-Barcelona/bwtool/wiki#installation</a>, <a href="http://lcolladotor.github.io/derfinder/reference/getRegionCoverage.html" class="uri">http://lcolladotor.github.io/derfinder/reference/getRegionCoverage.html</a>, and <a href="http://research.libd.org/qsvaR/" class="uri">http://research.libd.org/qsvaR/</a>. Andrew Jaffe linked <code>/users/ajaffe/Lieber/Projects/RNAseq/SzControl_DE_paper/rdas/degradation_mat_CMC_ribozero.rda</code>, <code>/users/ajaffe/Lieber/Projects/RNAseq/SzControl_DE_paper/run_de_analysis_CMC.R</code>, <code>/users/ajaffe/Lieber/Projects/RNAseq/SzControl_DE_paper/rdas/geneLevel_CMC_qSVsAndMod.rda</code> and <code>/users/ajaffe/Lieber/Projects/RNAseq/CMC/</code>.</td>
+<td>Debradation matrix for LIBD riboZ</td>
+<td>Linked to <a href="https://github.com/LieberInstitute/qsvaR" class="uri">https://github.com/LieberInstitute/qsvaR</a>, <a href="http://research.libd.org/rstatsclub/2018/12/11/quality-surrogate-variable-analysis/#.YiFawRDMKX0" class="uri">http://research.libd.org/rstatsclub/2018/12/11/quality-surrogate-variable-analysis/#.YiFawRDMKX0</a>, <a href="https://github.com/LieberInstitute/qsva_brain/blob/master/brainseq_phase2_qsv/quantify_top1000.R" class="uri">https://github.com/LieberInstitute/qsva_brain/blob/master/brainseq_phase2_qsv/quantify_top1000.R</a>, <a href="https://github.com/LieberInstitute/qsva_brain/blob/master/brainseq_phase2_qsv/make_qSVs.R" class="uri">https://github.com/LieberInstitute/qsva_brain/blob/master/brainseq_phase2_qsv/make_qSVs.R</a>, <a href="https://github.com/LieberInstitute/qsva_brain/blob/master/brainseq_phase2_qsv/make_qSVs.R#L28" class="uri">https://github.com/LieberInstitute/qsva_brain/blob/master/brainseq_phase2_qsv/make_qSVs.R#L28</a>. Made public the file <code>/dcl01/ajaffe/data/lab/qsva_brain/brainseq_phase2_qsv/rdas/degradation_rse_phase2_usingJoint_justFirst.rda</code> and other ones. See <a href="https://github.com/LieberInstitute/qsva_brain/commit/cba8fa5e886be9242dcbaae7854d1eed0f69cef5" class="uri">https://github.com/LieberInstitute/qsva_brain/commit/cba8fa5e886be9242dcbaae7854d1eed0f69cef5</a> for details.</td>
 </tr>
 <tr class="odd">
 <td>2022-02-24</td>
@@ -499,18 +499,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tr>
 <tr class="odd">
 <td>2021-06-29</td>
-<td>How to choose and add a licence to a GitHub repo</td>
-<td>We talked about <a href="https://choosealicense.com/" class="uri">https://choosealicense.com/</a>, <a href="https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository" class="uri">https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository</a>, <a href="https://creativecommons.org/choose/" class="uri">https://creativecommons.org/choose/</a>.</td>
+<td>Planning session for getting up to speed with SpatialExperiment, spatialLIBD, here and ggplot2</td>
+<td>We talked about the set of videos and resources publicly available to get to learn about R, Bioconductor and these packages. It was a lot of information and I’m sure that we’ll have more sessions later on to clarify questions as they arise.</td>
 </tr>
 <tr class="even">
 <td>2021-06-29</td>
-<td>Designing an MS-level class</td>
-<td>We discussed the posibility of proposing a class that has a mix of biology lectures and some practical coding sessions. The coding sessions could be based after the CDSB 2021 mini courses series.</td>
+<td>How to choose and add a licence to a GitHub repo</td>
+<td>We talked about <a href="https://choosealicense.com/" class="uri">https://choosealicense.com/</a>, <a href="https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository" class="uri">https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository</a>, <a href="https://creativecommons.org/choose/" class="uri">https://creativecommons.org/choose/</a>.</td>
 </tr>
 <tr class="odd">
 <td>2021-06-29</td>
-<td>Planning session for getting up to speed with SpatialExperiment, spatialLIBD, here and ggplot2</td>
-<td>We talked about the set of videos and resources publicly available to get to learn about R, Bioconductor and these packages. It was a lot of information and I’m sure that we’ll have more sessions later on to clarify questions as they arise.</td>
+<td>Designing an MS-level class</td>
+<td>We discussed the posibility of proposing a class that has a mix of biology lectures and some practical coding sessions. The coding sessions could be based after the CDSB 2021 mini courses series.</td>
 </tr>
 <tr class="even">
 <td>2021-06-21</td>
@@ -519,18 +519,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tr>
 <tr class="odd">
 <td>2021-06-17</td>
-<td>Brainstorming session on collaboration</td>
-<td>I showed the initial version of the BrainSeq Phase II developmental expression explorer developed by Bill Ulrich and Aaron Goldman. We discussed other possibilities for the collaboration including helping set up SPEAQeasy in their servers.</td>
-</tr>
-<tr class="even">
-<td>2021-06-17</td>
 <td>How to transfer recount3 data</td>
 <td>We met to figure out how to transfer the data for this collaboration, which ended up being quite tricky and involved using an SSH tunnel for rsync. Basically, a command like this one: <code>rsync -avzh -e 'ssh -o ProxyJump=user@server_somewhere_for_the_tunnel' *_files_of_interest user@final_server:/final_path/</code></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>2021-06-17</td>
 <td>How to get started with R</td>
 <td>We discussed the different possible goals and ways to get to them and determined a path forward that relies on the rest of the DSgs system as well as existing LIBD rstats club videos to get started. It’ll be supported by a meeting with Leo and others involved in the spatial transcriptomics projects from the R side.</td>
+</tr>
+<tr class="odd">
+<td>2021-06-17</td>
+<td>Brainstorming session on collaboration</td>
+<td>I showed the initial version of the BrainSeq Phase II developmental expression explorer developed by Bill Ulrich and Aaron Goldman. We discussed other possibilities for the collaboration including helping set up SPEAQeasy in their servers.</td>
 </tr>
 <tr class="even">
 <td>2021-06-02</td>
@@ -554,13 +554,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tr>
 <tr class="even">
 <td>2021-05-20</td>
-<td>How to prepare for a LIBD seminar part 2</td>
-<td>Now that a first major draft of the presentation was complete, we revised it and proposed some changes to it. Some of them involved remaking the figures using base_size = 20 or even 30 with ggplot2. For future work, it might be best to save the images with that font size from the beginning instead of having to update them later.</td>
+<td>Help preparing a figure for a grant application</td>
+<td>Discussed with Josh what figures we needed to prepare and how to generate them. This also involved base_size = 30 with ggplot2. Otherwise the font was too small to read it on the grant.</td>
 </tr>
 <tr class="odd">
 <td>2021-05-20</td>
-<td>Help preparing a figure for a grant application</td>
-<td>Discussed with Josh what figures we needed to prepare and how to generate them. This also involved base_size = 30 with ggplot2. Otherwise the font was too small to read it on the grant.</td>
+<td>How to prepare for a LIBD seminar part 2</td>
+<td>Now that a first major draft of the presentation was complete, we revised it and proposed some changes to it. Some of them involved remaking the figures using base_size = 20 or even 30 with ggplot2. For future work, it might be best to save the images with that font size from the beginning instead of having to update them later.</td>
 </tr>
 <tr class="even">
 <td>2021-05-10</td>
@@ -579,13 +579,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tr>
 <tr class="odd">
 <td>2021-05-06</td>
-<td>How to prepare for a LIBD seminar</td>
-<td>Initial planning session for the LIBD seminar. We talked about the different slides we planned to show and the flow of the presentation. We also scheduled 3 practice talks with different groups of people.</td>
+<td>PredictDB weights</td>
+<td>General advice on how to ask for help from open source projects</td>
 </tr>
 <tr class="even">
 <td>2021-05-06</td>
-<td>PredictDB weights</td>
-<td>General advice on how to ask for help from open source projects</td>
+<td>How to prepare for a LIBD seminar</td>
+<td>Initial planning session for the LIBD seminar. We talked about the different slides we planned to show and the flow of the presentation. We also scheduled 3 practice talks with different groups of people.</td>
 </tr>
 <tr class="odd">
 <td>2021-05-03</td>
@@ -669,18 +669,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tr>
 <tr class="odd">
 <td>2020-11-11</td>
-<td>GitHub actions workflow issue with macOS on R-devel</td>
-<td><a href="https://github.com/lcolladotor/biocthis/issues/15">GitHub issue at biocthis</a></td>
-</tr>
-<tr class="even">
-<td>2020-11-11</td>
 <td>Differences between recount2’s “bp_length” and SPEAQeasy’s “Length”</td>
 <td><a href="https://jhu-genomics.slack.com/archives/CUYHWV7AA/p1605123296024100">Check Slack helpdesk channel</a></td>
 </tr>
+<tr class="even">
+<td>2020-11-11</td>
+<td>GitHub actions workflow issue with macOS on R-devel</td>
+<td><a href="https://github.com/lcolladotor/biocthis/issues/15">GitHub issue at biocthis</a></td>
+</tr>
 <tr class="odd">
 <td>2020-11-03</td>
-<td>Issue with knitcitations</td>
-<td><a href="https://github.com/lcolladotor/biocthis/issues/14">GitHub issue at biocthis</a></td>
+<td>Fixed two bugs on recount3 related to locate_url() for the BigWig files.</td>
+<td>Resulted in recount3 versions 1.1.1 and 1.1.2 on bioc-devel (and 1.0.2 on bioc-release)</td>
 </tr>
 <tr class="even">
 <td>2020-11-03</td>
@@ -689,18 +689,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tr>
 <tr class="odd">
 <td>2020-11-03</td>
-<td>Fixed two bugs on recount3 related to locate_url() for the BigWig files.</td>
-<td>Resulted in recount3 versions 1.1.1 and 1.1.2 on bioc-devel (and 1.0.2 on bioc-release)</td>
+<td>Issue with knitcitations</td>
+<td><a href="https://github.com/lcolladotor/biocthis/issues/14">GitHub issue at biocthis</a></td>
 </tr>
 <tr class="even">
 <td>2020-10-30</td>
-<td>recount3 GTEx data access</td>
-<td><a href="https://support.bioconductor.org/p/p132487/#p132521">BioC Support website answer</a></td>
+<td>Issue with JHPCE file permissions</td>
+<td>Explained the <code>chgrp</code> and <code>umask</code> commands plus <code>~/.bashrc</code> file configuration. I also mentioned why we don’t use <code>chmod 777</code> at JHPCE. Details on <a href="https://jhu-genomics.slack.com/archives/CR9NYA0BF/p1604086263148400?thread_ts=1603826219.094600&amp;cid=CR9NYA0BF">Slack</a> (private channel).</td>
 </tr>
 <tr class="odd">
 <td>2020-10-30</td>
-<td>Issue with JHPCE file permissions</td>
-<td>Explained the <code>chgrp</code> and <code>umask</code> commands plus <code>~/.bashrc</code> file configuration. I also mentioned why we don’t use <code>chmod 777</code> at JHPCE. Details on <a href="https://jhu-genomics.slack.com/archives/CR9NYA0BF/p1604086263148400?thread_ts=1603826219.094600&amp;cid=CR9NYA0BF">Slack</a> (private channel).</td>
+<td>recount3 GTEx data access</td>
+<td><a href="https://support.bioconductor.org/p/p132487/#p132521">BioC Support website answer</a></td>
 </tr>
 <tr class="even">
 <td>2020-10-28</td>

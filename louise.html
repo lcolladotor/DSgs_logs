@@ -319,13 +319,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tr>
 <tr class="odd">
 <td>2022-09-30</td>
-<td>Question on the feasibility of some approach with HALO (for the AD project)</td>
-<td>Sang Ho walked me through an analysis they want to do for the AD project, it involves annotating HALO data. We talked thought a strategy, this may be a bit computationally tricky to implement but it seems doable.</td>
+<td>Working on making a violin plot for just one gene. So by brain region rather than gene type</td>
+<td>We adapted my_plotExpression() (a function I wrote) to work for Bukola’s data. This required some debugging as subsetting to just the one gene in question altered how some internal dataframes looked. I also gave Bukola some pointers about saving plots using ggplot.</td>
 </tr>
 <tr class="even">
 <td>2022-09-30</td>
-<td>Working on making a violin plot for just one gene. So by brain region rather than gene type</td>
-<td>We adapted my_plotExpression() (a function I wrote) to work for Bukola’s data. This required some debugging as subsetting to just the one gene in question altered how some internal dataframes looked. I also gave Bukola some pointers about saving plots using ggplot.</td>
+<td>Question on the feasibility of some approach with HALO (for the AD project)</td>
+<td>Sang Ho walked me through an analysis they want to do for the AD project, it involves annotating HALO data. We talked thought a strategy, this may be a bit computationally tricky to implement but it seems doable.</td>
 </tr>
 <tr class="odd">
 <td>2022-08-22</td>
@@ -359,13 +359,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tr>
 <tr class="odd">
 <td>2022-07-07</td>
-<td>Subsetting eQTL results with in risk loci</td>
-<td>We discussed a strategy to subset the 102 loci in question, and adapted code to subset the FDR signif pairs to work with the location info.</td>
+<td>help row annotation colors of a pheatmap</td>
+<td>I explained how to get pheatmap to use the same color scheme for column and row annotations by making the annotaion tables have the same colname, and suppying a color pallet</td>
 </tr>
 <tr class="even">
 <td>2022-07-07</td>
-<td>help row annotation colors of a pheatmap</td>
-<td>I explained how to get pheatmap to use the same color scheme for column and row annotations by making the annotaion tables have the same colname, and suppying a color pallet</td>
+<td>Subsetting eQTL results with in risk loci</td>
+<td>We discussed a strategy to subset the 102 loci in question, and adapted code to subset the FDR signif pairs to work with the location info.</td>
 </tr>
 <tr class="odd">
 <td>2022-07-05</td>
@@ -384,13 +384,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tr>
 <tr class="even">
 <td>2022-06-15</td>
-<td>Revisited the sc analysis and could use some help</td>
-<td>We checked Sreya’s code against the OSCA DE example run. She was worried that there weren’t may significant genes, but her results seemed to be in the same range (10s of genes) as the example. We discussed how maybe there were QC or demographic variables that could have been added to the model, but the data she has doesn’t have much to work with. We will revisit when I have maybe done more work with sn DE analysis.</td>
+<td>Github setup</td>
+<td>We went over github basics and motivation behind version control. Quickly discovered that Sanjana’s qrsh command is not working, requiring a password. Ended up using the session to troubleshoot that, with no success :( planning on circling back/re-setting up ssh for her. Will meet later about git setup</td>
 </tr>
 <tr class="odd">
 <td>2022-06-15</td>
-<td>Github setup</td>
-<td>We went over github basics and motivation behind version control. Quickly discovered that Sanjana’s qrsh command is not working, requiring a password. Ended up using the session to troubleshoot that, with no success :( planning on circling back/re-setting up ssh for her. Will meet later about git setup</td>
+<td>Revisited the sc analysis and could use some help</td>
+<td>We checked Sreya’s code against the OSCA DE example run. She was worried that there weren’t may significant genes, but her results seemed to be in the same range (10s of genes) as the example. We discussed how maybe there were QC or demographic variables that could have been added to the model, but the data she has doesn’t have much to work with. We will revisit when I have maybe done more work with sn DE analysis.</td>
 </tr>
 <tr class="even">
 <td>2022-06-03</td>
@@ -454,13 +454,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tr>
 <tr class="even">
 <td>2022-02-24</td>
-<td>I would like to learn how you ran tensorQTL on the MDD data, maybe with using the GPU nodes for it.</td>
-<td>Geo was interested int eh workflow I developed for tensorQTL. I went over the requirements and input formats that tensorqtl requirers, and how I had previously made them from our dataset. Also discussed the differnces between the functions and their outputs.</td>
+<td>Help building for loops to analyze WGCNA ouput data</td>
+<td>We discussed how to build and save data with a for loop and with purrr::map. Went over how to define a function in map to do nested loops</td>
 </tr>
 <tr class="odd">
 <td>2022-02-24</td>
-<td>Help building for loops to analyze WGCNA ouput data</td>
-<td>We discussed how to build and save data with a for loop and with purrr::map. Went over how to define a function in map to do nested loops</td>
+<td>I would like to learn how you ran tensorQTL on the MDD data, maybe with using the GPU nodes for it.</td>
+<td>Geo was interested int eh workflow I developed for tensorQTL. I went over the requirements and input formats that tensorqtl requirers, and how I had previously made them from our dataset. Also discussed the differnces between the functions and their outputs.</td>
 </tr>
 <tr class="even">
 <td>2022-02-15</td>
@@ -564,13 +564,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tr>
 <tr class="even">
 <td>2021-02-04</td>
-<td>Work on habenula deconvolution and debug the deconvolution package</td>
-<td>We went over applying DeconvoBuddies functions to hebenula data</td>
+<td>Github ssh key set up</td>
+<td>We got the ssh keys working for Brenda’s github</td>
 </tr>
 <tr class="odd">
 <td>2021-02-04</td>
-<td>Github ssh key set up</td>
-<td>We got the ssh keys working for Brenda’s github</td>
+<td>Work on habenula deconvolution and debug the deconvolution package</td>
+<td>We went over applying DeconvoBuddies functions to hebenula data</td>
 </tr>
 <tr class="even">
 <td>2021-01-27</td>

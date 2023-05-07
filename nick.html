@@ -188,6 +188,46 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </thead>
 <tbody>
 <tr class="odd">
+<td>2023-05-02</td>
+<td>Interpreting SPEAQeasy metrics</td>
+<td>I described typical expected alignment rates, the difference between concordant and overall map rate, and details about other SPEAQeasy output metrics</td>
+</tr>
+<tr class="even">
+<td>2023-04-25</td>
+<td>Creating a blog post on the rstats website</td>
+<td>I explained that at the time, I just created the RMD file and added any referenced images to the rstatsclubsource repo, following naming conventions that include the post date and hyphens between words in the blog title. I believe Leo did some manual work to get it fully published, so I referred to the full guide in case my method was incomplete: <a href="http://research.libd.org/rstatsclub/2018/03/09/contributing-to-the-libd-rstats-club/" class="uri">http://research.libd.org/rstatsclub/2018/03/09/contributing-to-the-libd-rstats-club/</a></td>
+</tr>
+<tr class="odd">
+<td>2023-04-21</td>
+<td>Ensembl IDs vs. gene symbols with cell2location</td>
+<td>I explained how cell2location is agnostic to what gene identifiers are used, but that gene indentifier type must match between spatial and reference single-cell data. I mentioned the org.Hs.eg.db package.</td>
+</tr>
+<tr class="even">
+<td>2023-04-19</td>
+<td>Modules and reproducible software set-up for python</td>
+<td>I described when I make a module for python-based tools, the benefits of conda vs. python virtual environments, and related topics</td>
+</tr>
+<tr class="odd">
+<td>2023-04-17</td>
+<td>Properly tracking git contributions</td>
+<td>I suspected improper configuration of email associated with her git commits, which was indeed the problem. Her commits moving forward are associated with her GitHub account, but we couldn’t figure out how to retroactively regain credit for commits done with the wrong email</td>
+</tr>
+<tr class="even">
+<td>2023-04-14</td>
+<td>When and how to merge git branches</td>
+<td>I described ‘git pull’ to merge in remote changes, and using the ‘vi’ editor to write a merge message</td>
+</tr>
+<tr class="odd">
+<td>2023-04-10</td>
+<td>Information needed for Samui</td>
+<td>I explained which paths I’d need to get Samui running on our data, and we discussed which features might be useful to show</td>
+</tr>
+<tr class="even">
+<td>2023-04-07</td>
+<td>Properly transferring from dcl01 to dcs05,dcs04</td>
+<td>I described how ACLs are properly set up at dcs05 to inherit downward automatically, so just an ‘rsync’/ move to trash is necessary in those transfers</td>
+</tr>
+<tr class="odd">
 <td>2023-04-06</td>
 <td>Git-LFS error messages</td>
 <td>I explained the purpose of Git-LFS, that it’s configured for certain repositories, and that we can load a module to use it</td>
@@ -224,13 +264,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tr>
 <tr class="even">
 <td>2023-03-01</td>
-<td>Miscellaneous R questions</td>
-<td>I recommended code for matching two data frames up by common genes, and explained that matrices don’t support multiple data types (instead a ‘data.frame’ might be used)</td>
+<td>Version controlling renamed directories</td>
+<td>I described the need to ‘git add’ both the old filenames and new filenames, and the use of ‘git add –all’ to reference deleted files.</td>
 </tr>
 <tr class="odd">
 <td>2023-03-01</td>
-<td>Version controlling renamed directories</td>
-<td>I described the need to ‘git add’ both the old filenames and new filenames, and the use of ‘git add –all’ to reference deleted files.</td>
+<td>Miscellaneous R questions</td>
+<td>I recommended code for matching two data frames up by common genes, and explained that matrices don’t support multiple data types (instead a ‘data.frame’ might be used)</td>
 </tr>
 <tr class="even">
 <td>2023-02-15</td>
@@ -254,13 +294,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tr>
 <tr class="even">
 <td>2023-01-25</td>
-<td>Managing software dependencies with Nextflow</td>
-<td>We focused mostly on the options Nextflow provides for managing software dependencies: Lmod modules, conda environments, and docker + singularity containers and the benefits of each potential approach</td>
+<td>Setting up GitHub SSH keys</td>
+<td>She was unable to clone private repositories due to a problem with her SSH key with GitHub. We solved the problem by setting up a new key pair using the recommended Ed25519 algorithm instead of the deprecated RSA algorithm.</td>
 </tr>
 <tr class="odd">
 <td>2023-01-25</td>
-<td>Setting up GitHub SSH keys</td>
-<td>She was unable to clone private repositories due to a problem with her SSH key with GitHub. We solved the problem by setting up a new key pair using the recommended Ed25519 algorithm instead of the deprecated RSA algorithm.</td>
+<td>Managing software dependencies with Nextflow</td>
+<td>We focused mostly on the options Nextflow provides for managing software dependencies: Lmod modules, conda environments, and docker + singularity containers and the benefits of each potential approach</td>
 </tr>
 <tr class="even">
 <td>2023-01-20</td>
@@ -519,13 +559,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tr>
 <tr class="odd">
 <td>2021-07-14</td>
-<td>getting SPEAQeasy running</td>
-<td>In a series of email exchanges we diagnosed subtle errors resulting from bad FASTQ files and unintended options in the main script. Her feedback helped me improve some existing documentation.</td>
+<td>debugging SPEAQeasy errors</td>
+<td>I described correct use of the “–input” argument, and we also found that many of the input FASTQs were empty, leading to a somewhat vague error message.</td>
 </tr>
 <tr class="even">
 <td>2021-07-14</td>
-<td>debugging SPEAQeasy errors</td>
-<td>I described correct use of the “–input” argument, and we also found that many of the input FASTQs were empty, leading to a somewhat vague error message.</td>
+<td>getting SPEAQeasy running</td>
+<td>In a series of email exchanges we diagnosed subtle errors resulting from bad FASTQ files and unintended options in the main script. Her feedback helped me improve some existing documentation.</td>
 </tr>
 <tr class="odd">
 <td>2021-07-13</td>
