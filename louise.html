@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>7 Louise | Data Science guidance session logs</title>
   <meta name="description" content="7 Louise | Data Science guidance session logs" />
-  <meta name="generator" content="bookdown 0.33 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
 
   <meta property="og:title" content="7 Louise | Data Science guidance session logs" />
   <meta property="og:type" content="book" />
@@ -52,7 +52,7 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <script src="libs/htmlwidgets-1.6.2/htmlwidgets.js"></script>
-<script src="libs/plotly-binding-4.10.1/plotly.js"></script>
+<script src="libs/plotly-binding-4.10.2/plotly.js"></script>
 <script src="libs/typedarray-0.1/typedarray.min.js"></script>
 <link href="libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet" />
 <script src="libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
@@ -125,6 +125,10 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 </head>
 
@@ -188,442 +192,112 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </thead>
 <tbody>
 <tr class="odd">
-<td>2023-03-24</td>
-<td>tensorQTL code overview</td>
-<td>Trish and I went over the code I previoulsy wrote for tensorQTL, and some of the custom functions for preparing the input data. How to input the different datatypes in to python, and run the function, and strategies for running the different cell types in parralell on the GPU queue</td>
+<td>2023-06-28</td>
+<td>About empty drops run with GEX cellranger-arc data</td>
+<td>Cynthia has run DropletUtils::emptyDrops on the two LIBD + two example samples. We first clarified some terms and outputs she had recorded. For the most part DropletUtils returns similar number of non-empty cells as CellRanger arc, but Cynthia didn’t confirm that the two methods flag the same cells. I asked her to creat a confision matrix between the two methods for each sample to check this. The main concern Cynthia has was the LIBD sample with only 3k cells input, has 9k non-empty droplets returned by emptyDrops. This is quite odd as the CellRanger Arc metrics look quite bad for this sample, but the DropletUtils metrics look fine (there are high UMI values for many droplets). We will want to dig in to this more to understand the differnces between the two methods.</td>
 </tr>
 <tr class="even">
-<td>2023-03-23</td>
-<td>Check some issues with GitHub Actions</td>
-<td>I helped Daianna decipher an error message she got in the BioC check in the GitHub Actions involving a local path harcoded in to one of her tests. We also debugged for similar issues by searching her code for other local paths that would cause her code to break when run remotely</td>
-</tr>
-<tr class="odd">
-<td>2023-03-20</td>
-<td>tensorQTL pipeline overview</td>
-<td>I shared the tensorQTL example I presented at rstats club. We also went over the different in-puts and formats, including some we can re-use from bulk MDDseq. WE also discusses the differnt setting for tensorQTL and how to adapt sh files to submit to the GPU queue</td>
-</tr>
-<tr class="even">
-<td>2023-03-01</td>
-<td>Deconvolu code where the bisque doesnt show any differences</td>
-<td>Sreya was having some issues with functions from DeconvoBuddies, namley plot_marker_express. I am going to check that on my end as it seems like her computer wasn’t finding the support functions for the main function. She was also having trouble matching the gene names between the sce and bulk rse objects, the ensembl names seemd to have differnt versions, I advided she maybe switch to using the gene symbols to keep things simple.</td>
-</tr>
-<tr class="odd">
-<td>2023-02-21</td>
-<td>Creating marker heatmaps with pseudobulk data</td>
-<td>We went over the ratioinal behind psuedobulking and how we can use heatmaps to show marker experssion. Created psuedobulk data for three different clustering methods, and went over the basic process of making heatmaps. Bukola will work on the aestetics of the heatmaps, and cerate one for all thee clustering methods.</td>
-</tr>
-<tr class="even">
-<td>2023-02-17</td>
-<td>Setting up .bashrc file for folder access permission for DLPFC-SCZ project</td>
-<td>related to my meeting with Uma on 2/10. We fixed Boyi’s bashrc to allow group write by deafult, fixing the ,git issue and eliminating the need to re-run the permission update script often</td>
-</tr>
-<tr class="odd">
-<td>2023-02-10</td>
-<td>I have questions on GitHub and submitting SGE jobs.</td>
-<td>Uma was having file permission issues, the group permissions for several files in a shared project were set to read only. This was causing issues with the team using scripts but also in making git commits as some of the idex files in .git were read-only. We updated her bashrc files to contain “umask u=rwx,g=rwx,o= ## equivalent to umask 007” to prevent this in the future and ran the premissoin update script.</td>
-</tr>
-<tr class="even">
-<td>2023-02-09</td>
-<td>Moving forward with multiple cluster methods</td>
-<td>Bukola hads run muliple clustering methods on the habenula data, I advised she pick the two that were the most simmlar to ERiks previous annotations (we were happy with) via rand index, and start examining marker gene expression.</td>
-</tr>
-<tr class="odd">
-<td>2023-01-19</td>
-<td>GitHub for a beginner</td>
-<td>Hope created a github account and I talked her thuogth the basics of git, But we hit a snag with the instalation of git on her laptop, git is built in to xcode in the ventura OS (which her machine is running) but she had some trouble with that instalation too. Shes going to try and fix that independtly, and reasch out if she needs more help gettign off hte ground with git + github</td>
-</tr>
-<tr class="even">
-<td>2023-01-18</td>
-<td>snRNA-seq GLM PCA</td>
-<td>We adapted code from the DLPFC work and <a href="https://www.stephaniehicks.com/biocdemo/articles/Demo.html" class="uri">https://www.stephaniehicks.com/biocdemo/articles/Demo.html</a> to run GLM-PCA to prep for batch correction</td>
-</tr>
-<tr class="odd">
-<td>2023-01-13</td>
-<td>snRNA-seq QC</td>
-<td>Bukola and I adapted QC code for the habenula data</td>
-</tr>
-<tr class="even">
-<td>2023-01-11</td>
-<td>Plotting Gene Expression with SCE</td>
-<td>Continuing Sreyas work with the single cell mouse data, I pointed her towards scater::plotExpression to plot some of the genes her group is intested in observing by cell type. However we ran in to some bugs with running logNormCounts which we think is from an old version of R. I advised that she update R and re-install the packages, hopefull that will fix the issue.</td>
-</tr>
-<tr class="odd">
-<td>2023-01-04</td>
-<td>Help building SCE with downloaded data</td>
-<td>I helped Sreya build a single cell experiment object with expression and metadata csvs she had from an publication. Hopefully she can use this to independently explore the gene expression her group is interested in.</td>
-</tr>
-<tr class="even">
-<td>2022-12-14</td>
-<td>Discuss Mean Ratio marker gene finding</td>
-<td>Hedia wanted some background information about the deconvolution process we applied to the degradation data. I explained the mean ratio marker finding, the resulting stats, and how we ued them to build our set of marker genes. Then the script for how we ran bisque + the output of bisque .</td>
-</tr>
-<tr class="odd">
-<td>2022-12-14</td>
-<td>Deconvolution study with rnaseq bulk data</td>
-<td>Sreya wants to test if a gene of intrest to her group is associaited with a ceratain cell type. They are working with bulk mouse data. I suggested that deconvolution may not be able to answer theire innital question but can provide depth to their bulk analysis. I suggested that they find a mouse single cell dataset that is relevant to their current data set, then first observe their gene of interest their, see if that answers any questions. Then they could use that data to run deconvioltion with bisuqe (I suggested a follow up meeting if she needs guidance with this)</td>
-</tr>
-<tr class="even">
-<td>2022-11-30</td>
-<td>Understanding PCA for Habenula project</td>
-<td>We discussed how PCA reduces the dimesions of our data and helps show the variance between samples. I helped Bukola strategize how to make PCA plots for the habenula data. Start plotting the first 5 PCs pairwise, color by Dx. Then explore key QC or demographic variables, see if we can indentify any patterns. I was unsure if she should repeat this for exon, jx, tx, as we didnt for MDDseq. But figured gene was a good place to start and if the other features should be explored too, the code should be easily adapatabe.</td>
-</tr>
-<tr class="odd">
-<td>2022-11-30</td>
-<td>Review deconvolition script for qSVA</td>
-<td>I gave Hedia a breif overview of the goals and process of deconvolution, including mean ratio marker finding. I linked my deconvolution slides. We then went over the code for running bisque on the qSVA dataset, including details of the input, refrence, and output data.</td>
-</tr>
-<tr class="even">
-<td>2022-11-03</td>
-<td>help submitting jobs with R parallelization in jhpce. For instance, I would like to use scater::runPCA with the BPPARAM=BiocParallel::MulticoreParam(8)) parameter</td>
-<td>Tricia is trying to run glmPCA on the very large MDD snRNA-seq dataset. She has a run submitted without parallelization that has been runing for 3 days. To try and speed things up she has been trying to use BioCparrallel, via MulticoreParam. But the scheduler keeps killing her job. We checked that -pe local X and MulticoreParam(X) match , so it wasn’t that. I recomended she try to run a subset of the data to get a sense of how glmPCA uses memory. But couldn’t come up with a fix to make the parallelization work. As its PCA it also can’t be run as subsets, so there aren’t other workarounds :( I think BioCparallel + sge scheduling would be a good topic for Rstats club as this seems to be a common headache</td>
-</tr>
-<tr class="odd">
-<td>2022-10-27</td>
-<td>I have this single nucleus RNA sequencing experiment with the mouse LS that Matt analyzed and we have a final single cell experiment, but I don’t know how to do anything with this data set and want to learn how to plot heatmaps and possibly other things for this data set. Can we maybe schedule an hour to start this learning process and then I can schedule future time as needed?</td>
-<td>Lionel walked me through some plots they need for the LS paper: marker genes heatmap and expression violin plots. I pointed him to some code from DLPFC sn that should be helpful (he needs access to this repo). He also needs to get setup with JHPCE on his new laptop, I pointed him to the team laptop setup docs. He also is new to ggplot, so I pointed him to the visulization chapeter of R for data scientist. This will probaly require some follow up meetings</td>
-</tr>
-<tr class="even">
-<td>2022-10-26</td>
-<td>Check the DEG heatmaps</td>
-<td>Daianna has added a new color scheme to the heatmaps that makes the differnces between positive and negative more clear, how ever I think the darkest red being close to 0 is misleading, so shes going to fix that. I also recomended she simplify the annotaions on the combined heatmap so its easier to find and interpret patterns.</td>
-</tr>
-<tr class="odd">
-<td>2022-10-17</td>
-<td>Review TMM paper</td>
-<td>We reviewed the reasons or correcting counts and why thats important for DE analysis. We went over the math behind TMM, and then how thoes ideas are used in edgeR. I pointed Bukola to a stats quest video with a more detatiled explination of how the edgeR correction works.</td>
-</tr>
-<tr class="even">
-<td>2022-10-14</td>
-<td>csvs that I want to merge together</td>
-<td>Sang Ho showed me the csv files that he exported from different moduled on HALO. They seem to have the same rows, so copying the needed column in to a differnt csv is easy in excel (where Sang Ho is working) but I showed him how to check that things are really aligned with some excel functions. We also looked at the data in prism, which I had to quickly learned about. I advised that he should show the data in boxplots not as a barplot to better display that data, and went over the checks for running an anova.</td>
-</tr>
-<tr class="odd">
-<td>2022-10-11</td>
-<td>GO and KEGG boxplots with the modifications you suggested</td>
-<td>Daianna showed me her dot plots with the correct 0.05 q val filter, they looked good, ready for discussion. One tweak , is hshe had a combined up + down expresion col for some plots which was redundant and should be removed. She had also made some heatmaps that didn;t show very much difference between case control, htey probaly need to be normalized by the genes overall expression, but I need to check prevous work to remeber how to best do that</td>
-</tr>
-<tr class="even">
-<td>2022-10-10</td>
-<td>QC approach for hebenula</td>
-<td>We went throught boxplots Bukola had made for the data, I suggested she add geom_jitter and how to make that work with geom_repel to help show more details about the data. We also discussed direct vs. standard evaluation of variable and how that makes writing funcitons with tidyverse tricky, but how she can use aes_() to do stadard eval with ggplot</td>
-</tr>
-<tr class="odd">
-<td>2022-10-05</td>
-<td>How to check technical effects for RNAseq data</td>
-<td>I walked Bukola through our process for buld data QC, which involves making many exploratory plots of QC metrics and know groups (like batch, or case/control) to understand patterns and identify problematics samples. Then later implementing cutoff values either based on stats (like a 3 MAD cut off) or knowlege of ressonable values. Bukola will spend some time plotting QC values, adapting code from smoking mouse, then we will meet again to interpret these plots.</td>
-</tr>
-<tr class="even">
-<td>2022-10-05</td>
-<td>Reviewing GO results and dotplots</td>
-<td>Daianna and I went over the dot plots she made for GO analysis from the multiple DE test she ran. Her plots look good, but we identified that she needed to use the default q cutoff to get useful results. She will rerun the GO analysis and replot the results.</td>
-</tr>
-<tr class="odd">
-<td>2022-09-30</td>
-<td>Working on making a violin plot for just one gene. So by brain region rather than gene type</td>
-<td>We adapted my_plotExpression() (a function I wrote) to work for Bukola’s data. This required some debugging as subsetting to just the one gene in question altered how some internal dataframes looked. I also gave Bukola some pointers about saving plots using ggplot.</td>
-</tr>
-<tr class="even">
-<td>2022-09-30</td>
-<td>Question on the feasibility of some approach with HALO (for the AD project)</td>
-<td>Sang Ho walked me through an analysis they want to do for the AD project, it involves annotating HALO data. We talked thought a strategy, this may be a bit computationally tricky to implement but it seems doable.</td>
-</tr>
-<tr class="odd">
-<td>2022-08-22</td>
-<td>DE analysis introduction</td>
-<td>I went over the DE pipeline we use, noting that the model development is the most demanding and non-static part. We talked specifics for their dataset which has some experimental design to consider as its organids and is diffrent from patient case control. I posinted Geo to scripts where we do QC, expression cutoff, and my run_DE script</td>
-</tr>
-<tr class="even">
-<td>2022-08-18</td>
-<td>Git push help</td>
-<td>Heena saw old commits pop up on slacks git notifications when she pushed commits she had locally on her laptop, but they didn’t reappear in the git history. I think she did everything right and there might be something strange with the behavior of the slack message (as thats the only place things seemd wrong). We did some detective work between the files and the commits, everything seems good. Heena was able to then pull to the cluster with out conflicts</td>
-</tr>
-<tr class="odd">
-<td>2022-08-17</td>
-<td>check the models and the results I have obtained so far from the DEA</td>
-<td>Had to work over slack again as Daianna was having trouble with zoom. Working with the feedback from the previous meetings, the experimetn has been narrowed down to 5 DE runs, and then comparing some pairs of the outputs. We were unsure if we should include mitoRate as a variable in the adult model as it correlates highly with totalAssignedGene, but decided to include it for now to match the model used in the pup DEA. I also sent her some code I have used to make scatter plots of t-stats to help compare DE results.</td>
-</tr>
-<tr class="even">
-<td>2022-08-10</td>
-<td>Check the model design of the smoking mouse project</td>
-<td>We intended to meet on zoom, but Daianna’s connection was bad so we used Slack to chat. Daianna has made many plots and visuals about the many DE analysis for smoking mouse. I gave her some feedback about orgaizing her slides so the figures can practically be used inform DE models, right now everything is a bit scattered as shes planning on running 7 analysis so there is a lot to consider. We will need to meet again to finish this.</td>
-</tr>
-<tr class="odd">
-<td>2022-08-03</td>
-<td>Review results of Varaince Parition for smoking mouse</td>
-<td>Daianna showed me her varianceParition plots, and we talked bout how to design the DE anlaysis based on what she’s oberved in the mouse data. I advised to keep things simpler (ie not create too many groups) but rather use models to control for vaiables adding variance. We will meet next to talk model design for this work.</td>
-</tr>
-<tr class="even">
-<td>2022-07-15</td>
-<td>QC update for smoking mouse</td>
-<td>Daianna shared her updated QC plots, adn the one sample she planned to drop based on fastCellQC. I advised that she dig deeper in to how that QC finstion works, and what the cutoff values are, as well as exmaming mito vs. ribo precentages, and a two samples that don’t seem to group with others of the same phenotype /</td>
-</tr>
-<tr class="odd">
-<td>2022-07-07</td>
-<td>help row annotation colors of a pheatmap</td>
-<td>I explained how to get pheatmap to use the same color scheme for column and row annotations by making the annotaion tables have the same colname, and suppying a color pallet</td>
-</tr>
-<tr class="even">
-<td>2022-07-07</td>
-<td>Subsetting eQTL results with in risk loci</td>
-<td>We discussed a strategy to subset the 102 loci in question, and adapted code to subset the FDR signif pairs to work with the location info.</td>
-</tr>
-<tr class="odd">
-<td>2022-07-05</td>
-<td>QC update for smoking mouse</td>
-<td>Daianna shared the updates she made to the QC plots based on our previous discussion, specifically separating brain and blood samples.</td>
-</tr>
-<tr class="even">
-<td>2022-06-28</td>
-<td>Review progress on smoking mouse DE project</td>
-<td>Daianna walked me through her progress in the DE analysis. We went over QC plots and discussed experimental design. She will check in with Kristen about how to organize the brain vs. blood samples. Currently she dropped the blood sampeles as they looked very different in several QC metrics. But I advised that they just be handled seperatly as it makes senese they look different as they are different tissue, and the signal is probaly biological rather than technical</td>
-</tr>
-<tr class="odd">
-<td>2022-06-17</td>
-<td>JHPCE Github setup</td>
-<td>We fixed Sanjana’s ssh set up and got the qrsh command working. We got git configurated for her locally and on JHPCE, as well as set up tokens. Created a test repo, and made commits from her laptop and JHPCE as an example</td>
-</tr>
-<tr class="even">
-<td>2022-06-15</td>
-<td>Github setup</td>
-<td>We went over github basics and motivation behind version control. Quickly discovered that Sanjana’s qrsh command is not working, requiring a password. Ended up using the session to troubleshoot that, with no success :( planning on circling back/re-setting up ssh for her. Will meet later about git setup</td>
-</tr>
-<tr class="odd">
-<td>2022-06-15</td>
-<td>Revisited the sc analysis and could use some help</td>
-<td>We checked Sreya’s code against the OSCA DE example run. She was worried that there weren’t may significant genes, but her results seemed to be in the same range (10s of genes) as the example. We discussed how maybe there were QC or demographic variables that could have been added to the model, but the data she has doesn’t have much to work with. We will revisit when I have maybe done more work with sn DE analysis.</td>
-</tr>
-<tr class="even">
-<td>2022-06-03</td>
-<td>I might need a review of how to go about selecting marker genes for the spatialDLPFC data. Also, I’m curious what code you have for making heatmaps showing marker gene expression across cell types.</td>
-<td>I pointed Nick to a few scripts used in marker finding for the Tran Maynard dataset, using a few functions from DeconvoBuddies. For marker heat maps we went over how I hace built annotation tables, and a few tricks for optimizing pheatmaps for maker plots.</td>
-</tr>
-<tr class="odd">
-<td>2022-06-02</td>
-<td>Single cell rna seq analysis</td>
-<td>We converted a downloaded dataset from tsv files to a sce object. Went over a strategy for performing DE on single cell data, using OSCA as a reference</td>
-</tr>
-<tr class="even">
-<td>2022-06-01</td>
-<td>I have a mouse single-cell RNAseq data that I am aiming to identify cell types in different clusters.</td>
-<td>We spent the session getting Sanjana set up better to work on JHPCE, setting up ssh keys, cyberduck, RStudio, and config files. Plan to meet again to set up git + start single cell work</td>
-</tr>
-<tr class="odd">
-<td>2022-05-18</td>
-<td>Color bar for heatmap</td>
-<td>We both leaned how to use the image function to create a annotation bar for heatmaps based on a custom color pallet</td>
-</tr>
-<tr class="even">
-<td>2022-05-09</td>
-<td>Cross Reference help</td>
-<td>We went over how to create a new type of refrence (Supp Table/Supp Figure). Also walked though the full process of creating a label and then refrencing it in from the text + considreations for formatting</td>
-</tr>
-<tr class="odd">
-<td>2022-05-05</td>
-<td>Need some help to make a plot</td>
-<td>We went thourgh some plotting code Sreya had adapted to make a manhattan plot, and went over which aestetics to change to get the desired plot</td>
-</tr>
-<tr class="even">
-<td>2022-04-27</td>
-<td>Help with purrr loops for WGCNA funtions</td>
-<td>I helped come up with a stratagedy to loop over 100+ files for an analysis and exreact a portion of the results in to one R object</td>
-</tr>
-<tr class="odd">
-<td>2022-04-07</td>
-<td>writing papers in google docs and setting up links for figures</td>
-<td>We installed and configured Cross Refrence, then went over how to use the lable vs. refrence links + pro tips on how to avoid errors</td>
-</tr>
-<tr class="even">
-<td>2022-04-06</td>
-<td>I’d like to consult with Louise about how to make a spatial plot in R using a data set from the HALO FISH-IF module.</td>
-<td>We want over some plotting basics with ggplot2, and how to use geom_rect to recreate some spatial plots that a halo module produces in R.</td>
-</tr>
-<tr class="odd">
-<td>2022-03-24</td>
-<td>Advice on how to increase code coverate with testthat</td>
-<td>We applied some test I used for the TREG package to help test more parts of the functions, like checking for errors w/ bad input, warning messages, and qualities of outputs. We discussed possible ways to use testthat on a ggplot, but that might need more thought.</td>
-</tr>
-<tr class="even">
-<td>2022-03-15</td>
-<td>TODO</td>
-<td>TODO</td>
-</tr>
-<tr class="odd">
-<td>2022-03-04</td>
-<td>Understand the covariates used in scRNA-seq cell type analysis for a project we are doing with striatal organoids</td>
-<td>We went over the files (data and script) for the deconvolution analysis done for the habenula in BSPIII. We also discussed the theroy/methodology for deconvolution.</td>
-</tr>
-<tr class="even">
-<td>2022-02-24</td>
-<td>Help building for loops to analyze WGCNA ouput data</td>
-<td>We discussed how to build and save data with a for loop and with purrr::map. Went over how to define a function in map to do nested loops</td>
-</tr>
-<tr class="odd">
-<td>2022-02-24</td>
-<td>I would like to learn how you ran tensorQTL on the MDD data, maybe with using the GPU nodes for it.</td>
-<td>Geo was interested int eh workflow I developed for tensorQTL. I went over the requirements and input formats that tensorqtl requirers, and how I had previously made them from our dataset. Also discussed the differnces between the functions and their outputs.</td>
-</tr>
-<tr class="even">
-<td>2022-02-15</td>
-<td>Access to the gene info in the rowData of the Summarized Experiment objects to annotate eqtl results</td>
-<td>We went over how to acess the rowData, and what the rowData inthe MDD project contains. Ended up adding columns to the eqtl risk snp subsets to help with analysis</td>
-</tr>
-<tr class="odd">
-<td>2022-01-20</td>
-<td>Troubleshooting ExprssionSet conversion</td>
-<td>Fixed row names to both be ensembl IDs, discussed simplifing cell types in sce, converting sce arrarys to matrix</td>
-</tr>
-<tr class="even">
-<td>2022-01-19</td>
-<td>Help using BisqueRNA, getting snRNA-seq into correct input format, chosing refrence vs. marker based deconvolution</td>
-<td>I shared some detials of our deconvolution approach, we walked through the SCE to Expression set converson, and discussed some issues that may come up</td>
-</tr>
-<tr class="odd">
-<td>2021-11-03</td>
-<td>Debugging help with rse_tx object</td>
-<td>We discussed how to check for duplicate rownames, and stratedgies for variable naming + working with rse objects</td>
-</tr>
-<tr class="even">
-<td>2021-10-29</td>
-<td>qc general scripts, rnaseq scripts general, ggplot histogram with breaks</td>
-<td>We found a R function that helped produce the plot she was looking for</td>
-</tr>
-<tr class="odd">
-<td>2021-08-26</td>
-<td>using map to cbind a list of six to its corresponding list of lists. The second is a list of 6, each a list of 3.</td>
-<td>Did some troubleshooting on nested map functions, when to use ~.x and when to use function() syntax</td>
-</tr>
-<tr class="even">
-<td>2021-08-23</td>
-<td>Using purrr and map to loop over datasets and apply qsva</td>
-<td>Went over basic, complex, and nested map() usage and how to apply it to Josh’s current work</td>
-</tr>
-<tr class="odd">
-<td>2021-08-20</td>
-<td>Help with JHPCE login issues</td>
-<td>We were able to update the keys for the cluster, but the ssh key login was still broken</td>
-</tr>
-<tr class="even">
-<td>2021-06-30</td>
-<td>Debugging ggplot code</td>
-<td>We reviewed her code and I gave some pointer on what bugs to look out for with certain errors in ggplot</td>
-</tr>
-<tr class="odd">
-<td>2021-06-17</td>
-<td>Manhattan plot making and tstatistic</td>
-<td>Pointed her to some oacjages for creating TWAS plots whe was interested in and we walked through some code I used to compare T-stats from different DE models</td>
-</tr>
-<tr class="even">
-<td>2021-06-03</td>
-<td>questions about expression_cut and pca plots</td>
-<td>We walked tought script from getRPKM to expression cut to filter rse objects, I also pointed Brenda towards some reasources to get started with ggplot</td>
-</tr>
-<tr class="odd">
-<td>2021-05-28</td>
-<td>Differential Expression help (continuation of 5/20)</td>
-<td>NA</td>
-</tr>
-<tr class="even">
-<td>2021-05-20</td>
-<td>Making plots for DE studies</td>
-<td>We reviewed the model that Sreya was evaluating for DE. As we as troublshooting the plot functions from the SPEAQeasy bootcamp code. I also advised taht she could create a volcano plot for her results.</td>
-</tr>
-<tr class="odd">
-<td>2021-05-12</td>
-<td>Making plots for DE studies</td>
-<td>We went over some plots we have made for DE previously, (quality control &amp; PC scatter plots, t-stat scatter between models, venn diagrams, and boxplots). Talked about some things to watch out for in her data (small samples size). We are planning to meet again when her data is ready.</td>
-</tr>
-<tr class="even">
-<td>2021-04-19</td>
-<td>JHPCE set up on mac</td>
-<td>We got ssh key login working, added config files to JHPCE, went though a “hello world” example of using files on JHPCE on RStudio</td>
-</tr>
-<tr class="odd">
-<td>2021-04-15</td>
-<td>JHPCE set up on mac</td>
-<td>Henry needed to reset his JHPCE password as he had forgotten it, but we went through RStudio set up and got cyberduck installed, we will set up a meeting next week for ssh keys and configuration</td>
-</tr>
-<tr class="even">
-<td>2021-03-26</td>
-<td>Need help understanding the sce - single cell object</td>
-<td>Went over basic functions of SummarizedExperiment and SingleCellExperiment, what a Sparse matrix is - how to convert to non-sparse. Steps to take to use getRPKM on SingeCellExperient.</td>
-</tr>
-<tr class="odd">
-<td>2021-03-19</td>
-<td>Change point size in vis_clust_grid</td>
-<td>We walked througth the SpatialLIBD code to find where the argument has to be changed</td>
-</tr>
-<tr class="even">
-<td>2021-03-05</td>
-<td>Maker finding for cell types in single cell data</td>
-<td>I showed them the tools I developed in DeconvoBuddies pacakge, and provided links to example code where I had applied these funcitons in previous work</td>
-</tr>
-<tr class="odd">
-<td>2021-02-09</td>
-<td>Visualizing RPKM valus for genes in Humna and Primarte data</td>
-<td>We spent time doing basic Rstudio setup and troubleshooting, and got the data downloaded</td>
-</tr>
-<tr class="even">
-<td>2021-02-04</td>
-<td>Github ssh key set up</td>
-<td>We got the ssh keys working for Brenda’s github</td>
-</tr>
-<tr class="odd">
-<td>2021-02-04</td>
-<td>Work on habenula deconvolution and debug the deconvolution package</td>
-<td>We went over applying DeconvoBuddies functions to hebenula data</td>
-</tr>
-<tr class="even">
-<td>2021-01-27</td>
-<td>group_by bug for get_mean_ratio</td>
-<td>We are going to try an iterative strategy to keep tables smaller</td>
-</tr>
-<tr class="odd">
-<td>2020-12-08</td>
-<td>Resolving issues in phenotype data between genotype, expression, and LIBDpheno</td>
-<td>Need to resolve swap bugs. Plan to create a table of phenotype data (Dx, age, sex, race) for each BrNum to mach genotype data</td>
-</tr>
-<tr class="even">
-<td>2020-12-07</td>
-<td>jhpce set up on mac</td>
-<td>Went through the setting up passwordless login for jhpce using ssh keys, and coppied the configuration files from <a href="https://gist.github.com/lcolladotor/3b1063db30a206835ee7e086c8f037ee" class="uri">https://gist.github.com/lcolladotor/3b1063db30a206835ee7e086c8f037ee</a></td>
-</tr>
-<tr class="odd">
-<td>2020-11-18</td>
-<td>Help clustering sce data</td>
-<td>We debugged some code and ultimetly decided that it might be best for Abby to write new code and use the tsne function to cluster and plot the data</td>
-</tr>
-<tr class="even">
-<td>2020-11-13</td>
-<td>Using reshape package to transform table for plotting</td>
-<td>I recomended using dcast to do a “long” to “wide” data transformation</td>
-</tr>
-<tr class="odd">
-<td>2020-11-12</td>
-<td>Help adapting ggplot script for TWAS Z-score</td>
-<td>We talked about how the data should be structured before using ggplot (transforming some data and adding catagorical columns)</td>
-</tr>
-<tr class="even">
-<td>2020-11-05</td>
-<td>LC repo organization</td>
-<td>We discussed organizing by analysis (a directory for each one, then prehaps sub- directory for data &amp; plots). Create a readMe for each sub-folder. Use gitignore to keep repo from getting too big.</td>
-</tr>
-<tr class="odd">
-<td>2020-10-27</td>
-<td>Plotly help if possible? I’m trying to export an html file that allows the user to look at each snp/gene on the plot, and I am almost successful. Leo recommended that I talk to you on this matter.</td>
-<td>Needed to use highlight_key and highlight functions to select points between plots. Used rstats example as guide <a href="https://gist.github.com/lcolladotor/350ac8843e153d135f64880a1d029b14" class="uri">https://gist.github.com/lcolladotor/350ac8843e153d135f64880a1d029b14</a></td>
-</tr>
-<tr class="even">
-<td>2020-10-21</td>
-<td>Question: Subset center regions of a set of different length sequences</td>
-<td><a href="https://support.bioconductor.org/p/134532/#134925">BioC Support website answer</a></td>
-</tr>
-<tr class="odd">
-<td>2020-10-20</td>
-<td>Help with spatstat</td>
-<td>spatstat package <a href="https://spatstat.org/releasenotes/spatstat-1.39-0.html" class="uri">https://spatstat.org/releasenotes/spatstat-1.39-0.html</a>, L function <a href="https://www.rdocumentation.org/packages/spatstat/versions/1.64-1/topics/Lest" class="uri">https://www.rdocumentation.org/packages/spatstat/versions/1.64-1/topics/Lest</a>, Kmark <a href="https://www.rdocumentation.org/packages/spatstat/versions/1.64-1/topics/Kmark" class="uri">https://www.rdocumentation.org/packages/spatstat/versions/1.64-1/topics/Kmark</a></td>
+<td>2023-06-15</td>
+<td>1/Learn about the roxygen2 syntax for examples</td>
+<td></td>
 </tr>
 </tbody>
 </table>
+<p>2/Run devtools::document() like in dev/04_update.R (maybe also auto-style code)
+3/Edit the news.md file + bump version on the DESCRIPTION (and change the date)
+4/Learn about how to sync her local repo with steps like <a href="http://contributions.bioconductor.org/git-version-control.html#new-package-workflow" class="uri">http://contributions.bioconductor.org/git-version-control.html#new-package-workflow</a> (aka register to <a href="https://git.bioconductor.org/BiocCredentials/login/?next=/BiocCredentials/" class="uri">https://git.bioconductor.org/BiocCredentials/login/?next=/BiocCredentials/</a> like
+<span class="citation">@Daianna</span> González
++ add the upstream remote + git push to both upstream and origin) | We started with getting github token access for Hedia’s laptop working. Then started a pull request using usethis for qSVA, for Hedia to add seed capabilities to several functions. We will need to meet several more times to complete the whole help request |
+| 2023-06-14 | I created this github repo: <a href="https://github.com/LieberInstitute/neurovasculature-pilot/tree/main" class="uri">https://github.com/LieberInstitute/neurovasculature-pilot/tree/main</a>. Also, integrated it with slack, but instead of integrating the main branch, I linked the devel branch, and I am unable to see the commits that I make on slack. They are updated on github, though. So, I need help with the integration. | Uma mentioned that she had to login everytime she pushed a commit from the directory in question (but not other repos). I thought we should start by using a github access token to update her login to github from JHPCE. The best way I know how to do this is to use gitcreds::gitcreds_set() in R. At first it gave us an error, which was solved by adding the git modules loaded in the team bashrc to Uma’s basrc file as well as her .gitconfig file. After that we were able to save the token to her JHPCe setup and the github push issue seemed to be solved |
+| 2023-06-08 | Options for cell type specific eQTLs | Reviewed input for tensorqtl (it is counts, not logcounts), and revised what how we filter lowly expressed exon-exon junctions using <a href="http://research.libd.org/jaffelab/reference/expression_cutoff.html" class="uri">http://research.libd.org/jaffelab/reference/expression_cutoff.html</a>. |
+| 2023-05-09 | Overfitting in qSVA | Hedia was concerned about the large number of variables in the reproducibility DE experiment, specifically the PC. I pointed out that the point of the anlaysis was to test the effectiveness of the models (with and without qSVs) so while this might be a valid concern in a sperate DE analysis, we are testing model quality here. I also noticed that the reproducibility anlaysis was not using functions from the qsvaR package, and that as qsvaR is the “product” of this whole project its important we use the functions in this anlysis . |
+| 2023-03-24 | tensorQTL code overview | Trish and I went over the code I previoulsy wrote for tensorQTL, and some of the custom functions for preparing the input data. How to input the different datatypes in to python, and run the function, and strategies for running the different cell types in parralell on the GPU queue |
+| 2023-03-23 | Check some issues with GitHub Actions | I helped Daianna decipher an error message she got in the BioC check in the GitHub Actions involving a local path harcoded in to one of her tests. We also debugged for similar issues by searching her code for other local paths that would cause her code to break when run remotely |
+| 2023-03-20 | tensorQTL pipeline overview | I shared the tensorQTL example I presented at rstats club. We also went over the different in-puts and formats, including some we can re-use from bulk MDDseq. WE also discusses the differnt setting for tensorQTL and how to adapt sh files to submit to the GPU queue |
+| 2023-03-01 | Deconvolu code where the bisque doesnt show any differences | Sreya was having some issues with functions from DeconvoBuddies, namley plot_marker_express. I am going to check that on my end as it seems like her computer wasn’t finding the support functions for the main function. She was also having trouble matching the gene names between the sce and bulk rse objects, the ensembl names seemd to have differnt versions, I advided she maybe switch to using the gene symbols to keep things simple. |
+| 2023-02-21 | Creating marker heatmaps with pseudobulk data | We went over the ratioinal behind psuedobulking and how we can use heatmaps to show marker experssion. Created psuedobulk data for three different clustering methods, and went over the basic process of making heatmaps. Bukola will work on the aestetics of the heatmaps, and cerate one for all thee clustering methods. |
+| 2023-02-17 | Setting up .bashrc file for folder access permission for DLPFC-SCZ project | related to my meeting with Uma on 2/10. We fixed Boyi’s bashrc to allow group write by deafult, fixing the ,git issue and eliminating the need to re-run the permission update script often |
+| 2023-02-10 | I have questions on GitHub and submitting SGE jobs. | Uma was having file permission issues, the group permissions for several files in a shared project were set to read only. This was causing issues with the team using scripts but also in making git commits as some of the idex files in .git were read-only. We updated her bashrc files to contain “umask u=rwx,g=rwx,o= ## equivalent to umask 007” to prevent this in the future and ran the premissoin update script. |
+| 2023-02-09 | Moving forward with multiple cluster methods | Bukola hads run muliple clustering methods on the habenula data, I advised she pick the two that were the most simmlar to ERiks previous annotations (we were happy with) via rand index, and start examining marker gene expression. |
+| 2023-01-19 | GitHub for a beginner | Hope created a github account and I talked her thuogth the basics of git, But we hit a snag with the instalation of git on her laptop, git is built in to xcode in the ventura OS (which her machine is running) but she had some trouble with that instalation too. Shes going to try and fix that independtly, and reasch out if she needs more help gettign off hte ground with git + github |
+| 2023-01-18 | snRNA-seq GLM PCA | We adapted code from the DLPFC work and <a href="https://www.stephaniehicks.com/biocdemo/articles/Demo.html" class="uri">https://www.stephaniehicks.com/biocdemo/articles/Demo.html</a> to run GLM-PCA to prep for batch correction |
+| 2023-01-13 | snRNA-seq QC | Bukola and I adapted QC code for the habenula data |
+| 2023-01-11 | Plotting Gene Expression with SCE | Continuing Sreyas work with the single cell mouse data, I pointed her towards scater::plotExpression to plot some of the genes her group is intested in observing by cell type. However we ran in to some bugs with running logNormCounts which we think is from an old version of R. I advised that she update R and re-install the packages, hopefull that will fix the issue. |
+| 2023-01-04 | Help building SCE with downloaded data | I helped Sreya build a single cell experiment object with expression and metadata csvs she had from an publication. Hopefully she can use this to independently explore the gene expression her group is interested in. |
+| 2022-12-14 | Discuss Mean Ratio marker gene finding | Hedia wanted some background information about the deconvolution process we applied to the degradation data. I explained the mean ratio marker finding, the resulting stats, and how we ued them to build our set of marker genes. Then the script for how we ran bisque + the output of bisque . |
+| 2022-12-14 | Deconvolution study with rnaseq bulk data | Sreya wants to test if a gene of intrest to her group is associaited with a ceratain cell type. They are working with bulk mouse data. I suggested that deconvolution may not be able to answer theire innital question but can provide depth to their bulk analysis. I suggested that they find a mouse single cell dataset that is relevant to their current data set, then first observe their gene of interest their, see if that answers any questions. Then they could use that data to run deconvioltion with bisuqe (I suggested a follow up meeting if she needs guidance with this) |
+| 2022-11-30 | Understanding PCA for Habenula project | We discussed how PCA reduces the dimesions of our data and helps show the variance between samples. I helped Bukola strategize how to make PCA plots for the habenula data. Start plotting the first 5 PCs pairwise, color by Dx. Then explore key QC or demographic variables, see if we can indentify any patterns. I was unsure if she should repeat this for exon, jx, tx, as we didnt for MDDseq. But figured gene was a good place to start and if the other features should be explored too, the code should be easily adapatabe. |
+| 2022-11-30 | Review deconvolition script for qSVA | I gave Hedia a breif overview of the goals and process of deconvolution, including mean ratio marker finding. I linked my deconvolution slides. We then went over the code for running bisque on the qSVA dataset, including details of the input, refrence, and output data. |
+| 2022-11-03 | help submitting jobs with R parallelization in jhpce. For instance, I would like to use scater::runPCA with the BPPARAM=BiocParallel::MulticoreParam(8)) parameter | Tricia is trying to run glmPCA on the very large MDD snRNA-seq dataset. She has a run submitted without parallelization that has been runing for 3 days. To try and speed things up she has been trying to use BioCparrallel, via MulticoreParam. But the scheduler keeps killing her job. We checked that -pe local X and MulticoreParam(X) match , so it wasn’t that. I recomended she try to run a subset of the data to get a sense of how glmPCA uses memory. But couldn’t come up with a fix to make the parallelization work. As its PCA it also can’t be run as subsets, so there aren’t other workarounds :( I think BioCparallel + sge scheduling would be a good topic for Rstats club as this seems to be a common headache |
+| 2022-10-27 | I have this single nucleus RNA sequencing experiment with the mouse LS that Matt analyzed and we have a final single cell experiment, but I don’t know how to do anything with this data set and want to learn how to plot heatmaps and possibly other things for this data set. Can we maybe schedule an hour to start this learning process and then I can schedule future time as needed? | Lionel walked me through some plots they need for the LS paper: marker genes heatmap and expression violin plots. I pointed him to some code from DLPFC sn that should be helpful (he needs access to this repo). He also needs to get setup with JHPCE on his new laptop, I pointed him to the team laptop setup docs. He also is new to ggplot, so I pointed him to the visulization chapeter of R for data scientist. This will probaly require some follow up meetings |
+| 2022-10-26 | Check the DEG heatmaps | Daianna has added a new color scheme to the heatmaps that makes the differnces between positive and negative more clear, how ever I think the darkest red being close to 0 is misleading, so shes going to fix that. I also recomended she simplify the annotaions on the combined heatmap so its easier to find and interpret patterns. |
+| 2022-10-17 | Review TMM paper | We reviewed the reasons or correcting counts and why thats important for DE analysis. We went over the math behind TMM, and then how thoes ideas are used in edgeR. I pointed Bukola to a stats quest video with a more detatiled explination of how the edgeR correction works. |
+| 2022-10-14 | csvs that I want to merge together | Sang Ho showed me the csv files that he exported from different moduled on HALO. They seem to have the same rows, so copying the needed column in to a differnt csv is easy in excel (where Sang Ho is working) but I showed him how to check that things are really aligned with some excel functions. We also looked at the data in prism, which I had to quickly learned about. I advised that he should show the data in boxplots not as a barplot to better display that data, and went over the checks for running an anova. |
+| 2022-10-11 | GO and KEGG boxplots with the modifications you suggested | Daianna showed me her dot plots with the correct 0.05 q val filter, they looked good, ready for discussion. One tweak , is hshe had a combined up + down expresion col for some plots which was redundant and should be removed. She had also made some heatmaps that didn;t show very much difference between case control, htey probaly need to be normalized by the genes overall expression, but I need to check prevous work to remeber how to best do that |
+| 2022-10-10 | QC approach for hebenula | We went throught boxplots Bukola had made for the data, I suggested she add geom_jitter and how to make that work with geom_repel to help show more details about the data. We also discussed direct vs. standard evaluation of variable and how that makes writing funcitons with tidyverse tricky, but how she can use aes_() to do stadard eval with ggplot |
+| 2022-10-05 | How to check technical effects for RNAseq data | I walked Bukola through our process for buld data QC, which involves making many exploratory plots of QC metrics and know groups (like batch, or case/control) to understand patterns and identify problematics samples. Then later implementing cutoff values either based on stats (like a 3 MAD cut off) or knowlege of ressonable values. Bukola will spend some time plotting QC values, adapting code from smoking mouse, then we will meet again to interpret these plots. |
+| 2022-10-05 | Reviewing GO results and dotplots | Daianna and I went over the dot plots she made for GO analysis from the multiple DE test she ran. Her plots look good, but we identified that she needed to use the default q cutoff to get useful results. She will rerun the GO analysis and replot the results. |
+| 2022-09-30 | Working on making a violin plot for just one gene. So by brain region rather than gene type | We adapted my_plotExpression() (a function I wrote) to work for Bukola’s data. This required some debugging as subsetting to just the one gene in question altered how some internal dataframes looked. I also gave Bukola some pointers about saving plots using ggplot. |
+| 2022-09-30 | Question on the feasibility of some approach with HALO (for the AD project) | Sang Ho walked me through an analysis they want to do for the AD project, it involves annotating HALO data. We talked thought a strategy, this may be a bit computationally tricky to implement but it seems doable. |
+| 2022-08-22 | DE analysis introduction | I went over the DE pipeline we use, noting that the model development is the most demanding and non-static part. We talked specifics for their dataset which has some experimental design to consider as its organids and is diffrent from patient case control. I posinted Geo to scripts where we do QC, expression cutoff, and my run_DE script |
+| 2022-08-18 | Git push help | Heena saw old commits pop up on slacks git notifications when she pushed commits she had locally on her laptop, but they didn’t reappear in the git history. I think she did everything right and there might be something strange with the behavior of the slack message (as thats the only place things seemd wrong). We did some detective work between the files and the commits, everything seems good. Heena was able to then pull to the cluster with out conflicts |
+| 2022-08-17 | check the models and the results I have obtained so far from the DEA | Had to work over slack again as Daianna was having trouble with zoom. Working with the feedback from the previous meetings, the experimetn has been narrowed down to 5 DE runs, and then comparing some pairs of the outputs. We were unsure if we should include mitoRate as a variable in the adult model as it correlates highly with totalAssignedGene, but decided to include it for now to match the model used in the pup DEA. I also sent her some code I have used to make scatter plots of t-stats to help compare DE results. |
+| 2022-08-10 | Check the model design of the smoking mouse project | We intended to meet on zoom, but Daianna’s connection was bad so we used Slack to chat. Daianna has made many plots and visuals about the many DE analysis for smoking mouse. I gave her some feedback about orgaizing her slides so the figures can practically be used inform DE models, right now everything is a bit scattered as shes planning on running 7 analysis so there is a lot to consider. We will need to meet again to finish this. |
+| 2022-08-03 | Review results of Varaince Parition for smoking mouse | Daianna showed me her varianceParition plots, and we talked bout how to design the DE anlaysis based on what she’s oberved in the mouse data. I advised to keep things simpler (ie not create too many groups) but rather use models to control for vaiables adding variance. We will meet next to talk model design for this work. |
+| 2022-07-15 | QC update for smoking mouse | Daianna shared her updated QC plots, adn the one sample she planned to drop based on fastCellQC. I advised that she dig deeper in to how that QC finstion works, and what the cutoff values are, as well as exmaming mito vs. ribo precentages, and a two samples that don’t seem to group with others of the same phenotype / |
+| 2022-07-07 | help row annotation colors of a pheatmap | I explained how to get pheatmap to use the same color scheme for column and row annotations by making the annotaion tables have the same colname, and suppying a color pallet |
+| 2022-07-07 | Subsetting eQTL results with in risk loci | We discussed a strategy to subset the 102 loci in question, and adapted code to subset the FDR signif pairs to work with the location info. |
+| 2022-07-05 | QC update for smoking mouse | Daianna shared the updates she made to the QC plots based on our previous discussion, specifically separating brain and blood samples. |
+| 2022-06-28 | Review progress on smoking mouse DE project | Daianna walked me through her progress in the DE analysis. We went over QC plots and discussed experimental design. She will check in with Kristen about how to organize the brain vs. blood samples. Currently she dropped the blood sampeles as they looked very different in several QC metrics. But I advised that they just be handled seperatly as it makes senese they look different as they are different tissue, and the signal is probaly biological rather than technical |
+| 2022-06-17 | JHPCE Github setup | We fixed Sanjana’s ssh set up and got the qrsh command working. We got git configurated for her locally and on JHPCE, as well as set up tokens. Created a test repo, and made commits from her laptop and JHPCE as an example |
+| 2022-06-15 | Github setup | We went over github basics and motivation behind version control. Quickly discovered that Sanjana’s qrsh command is not working, requiring a password. Ended up using the session to troubleshoot that, with no success :( planning on circling back/re-setting up ssh for her. Will meet later about git setup |
+| 2022-06-15 | Revisited the sc analysis and could use some help | We checked Sreya’s code against the OSCA DE example run. She was worried that there weren’t may significant genes, but her results seemed to be in the same range (10s of genes) as the example. We discussed how maybe there were QC or demographic variables that could have been added to the model, but the data she has doesn’t have much to work with. We will revisit when I have maybe done more work with sn DE analysis. |
+| 2022-06-03 | I might need a review of how to go about selecting marker genes for the spatialDLPFC data. Also, I’m curious what code you have for making heatmaps showing marker gene expression across cell types. | I pointed Nick to a few scripts used in marker finding for the Tran Maynard dataset, using a few functions from DeconvoBuddies. For marker heat maps we went over how I hace built annotation tables, and a few tricks for optimizing pheatmaps for maker plots. |
+| 2022-06-02 | Single cell rna seq analysis | We converted a downloaded dataset from tsv files to a sce object. Went over a strategy for performing DE on single cell data, using OSCA as a reference |
+| 2022-06-01 | I have a mouse single-cell RNAseq data that I am aiming to identify cell types in different clusters. | We spent the session getting Sanjana set up better to work on JHPCE, setting up ssh keys, cyberduck, RStudio, and config files. Plan to meet again to set up git + start single cell work |
+| 2022-05-18 | Color bar for heatmap | We both leaned how to use the image function to create a annotation bar for heatmaps based on a custom color pallet |
+| 2022-05-09 | Cross Reference help | We went over how to create a new type of refrence (Supp Table/Supp Figure). Also walked though the full process of creating a label and then refrencing it in from the text + considreations for formatting |
+| 2022-05-05 | Need some help to make a plot | We went thourgh some plotting code Sreya had adapted to make a manhattan plot, and went over which aestetics to change to get the desired plot |
+| 2022-04-27 | Help with purrr loops for WGCNA funtions | I helped come up with a stratagedy to loop over 100+ files for an analysis and exreact a portion of the results in to one R object |
+| 2022-04-07 | writing papers in google docs and setting up links for figures | We installed and configured Cross Refrence, then went over how to use the lable vs. refrence links + pro tips on how to avoid errors |
+| 2022-04-06 | I’d like to consult with Louise about how to make a spatial plot in R using a data set from the HALO FISH-IF module. | We want over some plotting basics with ggplot2, and how to use geom_rect to recreate some spatial plots that a halo module produces in R. |
+| 2022-03-24 | Advice on how to increase code coverate with testthat | We applied some test I used for the TREG package to help test more parts of the functions, like checking for errors w/ bad input, warning messages, and qualities of outputs. We discussed possible ways to use testthat on a ggplot, but that might need more thought. |
+| 2022-03-15 | TODO | TODO |
+| 2022-03-04 | Understand the covariates used in scRNA-seq cell type analysis for a project we are doing with striatal organoids | We went over the files (data and script) for the deconvolution analysis done for the habenula in BSPIII. We also discussed the theroy/methodology for deconvolution. |
+| 2022-02-24 | Help building for loops to analyze WGCNA ouput data | We discussed how to build and save data with a for loop and with purrr::map. Went over how to define a function in map to do nested loops |
+| 2022-02-24 | I would like to learn how you ran tensorQTL on the MDD data, maybe with using the GPU nodes for it. | Geo was interested int eh workflow I developed for tensorQTL. I went over the requirements and input formats that tensorqtl requirers, and how I had previously made them from our dataset. Also discussed the differnces between the functions and their outputs. |
+| 2022-02-15 | Access to the gene info in the rowData of the Summarized Experiment objects to annotate eqtl results | We went over how to acess the rowData, and what the rowData inthe MDD project contains. Ended up adding columns to the eqtl risk snp subsets to help with analysis |
+| 2022-01-20 | Troubleshooting ExprssionSet conversion | Fixed row names to both be ensembl IDs, discussed simplifing cell types in sce, converting sce arrarys to matrix |
+| 2022-01-19 | Help using BisqueRNA, getting snRNA-seq into correct input format, chosing refrence vs. marker based deconvolution | I shared some detials of our deconvolution approach, we walked through the SCE to Expression set converson, and discussed some issues that may come up |
+| 2021-11-03 | Debugging help with rse_tx object | We discussed how to check for duplicate rownames, and stratedgies for variable naming + working with rse objects |
+| 2021-10-29 | qc general scripts, rnaseq scripts general, ggplot histogram with breaks | We found a R function that helped produce the plot she was looking for |
+| 2021-08-26 | using map to cbind a list of six to its corresponding list of lists. The second is a list of 6, each a list of 3. | Did some troubleshooting on nested map functions, when to use ~.x and when to use function() syntax |
+| 2021-08-23 | Using purrr and map to loop over datasets and apply qsva | Went over basic, complex, and nested map() usage and how to apply it to Josh’s current work |
+| 2021-08-20 | Help with JHPCE login issues | We were able to update the keys for the cluster, but the ssh key login was still broken |
+| 2021-06-30 | Debugging ggplot code | We reviewed her code and I gave some pointer on what bugs to look out for with certain errors in ggplot |
+| 2021-06-17 | Manhattan plot making and tstatistic | Pointed her to some oacjages for creating TWAS plots whe was interested in and we walked through some code I used to compare T-stats from different DE models |
+| 2021-06-03 | questions about expression_cut and pca plots | We walked tought script from getRPKM to expression cut to filter rse objects, I also pointed Brenda towards some reasources to get started with ggplot |
+| 2021-05-28 | Differential Expression help (continuation of 5/20) | NA |
+| 2021-05-20 | Making plots for DE studies | We reviewed the model that Sreya was evaluating for DE. As we as troublshooting the plot functions from the SPEAQeasy bootcamp code. I also advised taht she could create a volcano plot for her results. |
+| 2021-05-12 | Making plots for DE studies | We went over some plots we have made for DE previously, (quality control &amp; PC scatter plots, t-stat scatter between models, venn diagrams, and boxplots). Talked about some things to watch out for in her data (small samples size). We are planning to meet again when her data is ready. |
+| 2021-04-19 | JHPCE set up on mac | We got ssh key login working, added config files to JHPCE, went though a “hello world” example of using files on JHPCE on RStudio |
+| 2021-04-15 | JHPCE set up on mac | Henry needed to reset his JHPCE password as he had forgotten it, but we went through RStudio set up and got cyberduck installed, we will set up a meeting next week for ssh keys and configuration |
+| 2021-03-26 | Need help understanding the sce - single cell object | Went over basic functions of SummarizedExperiment and SingleCellExperiment, what a Sparse matrix is - how to convert to non-sparse. Steps to take to use getRPKM on SingeCellExperient. |
+| 2021-03-19 | Change point size in vis_clust_grid | We walked througth the SpatialLIBD code to find where the argument has to be changed |
+| 2021-03-05 | Maker finding for cell types in single cell data | I showed them the tools I developed in DeconvoBuddies pacakge, and provided links to example code where I had applied these funcitons in previous work |
+| 2021-02-09 | Visualizing RPKM valus for genes in Humna and Primarte data | We spent time doing basic Rstudio setup and troubleshooting, and got the data downloaded |
+| 2021-02-04 | Github ssh key set up | We got the ssh keys working for Brenda’s github |
+| 2021-02-04 | Work on habenula deconvolution and debug the deconvolution package | We went over applying DeconvoBuddies functions to hebenula data |
+| 2021-01-27 | group_by bug for get_mean_ratio | We are going to try an iterative strategy to keep tables smaller |
+| 2020-12-08 | Resolving issues in phenotype data between genotype, expression, and LIBDpheno | Need to resolve swap bugs. Plan to create a table of phenotype data (Dx, age, sex, race) for each BrNum to mach genotype data |
+| 2020-12-07 | jhpce set up on mac | Went through the setting up passwordless login for jhpce using ssh keys, and coppied the configuration files from <a href="https://gist.github.com/lcolladotor/3b1063db30a206835ee7e086c8f037ee" class="uri">https://gist.github.com/lcolladotor/3b1063db30a206835ee7e086c8f037ee</a> |
+| 2020-11-18 | Help clustering sce data | We debugged some code and ultimetly decided that it might be best for Abby to write new code and use the tsne function to cluster and plot the data |
+| 2020-11-13 | Using reshape package to transform table for plotting | I recomended using dcast to do a “long” to “wide” data transformation |
+| 2020-11-12 | Help adapting ggplot script for TWAS Z-score | We talked about how the data should be structured before using ggplot (transforming some data and adding catagorical columns) |
+| 2020-11-05 | LC repo organization | We discussed organizing by analysis (a directory for each one, then prehaps sub- directory for data &amp; plots). Create a readMe for each sub-folder. Use gitignore to keep repo from getting too big. |
+| 2020-10-27 | Plotly help if possible? I’m trying to export an html file that allows the user to look at each snp/gene on the plot, and I am almost successful. Leo recommended that I talk to you on this matter. | Needed to use highlight_key and highlight functions to select points between plots. Used rstats example as guide <a href="https://gist.github.com/lcolladotor/350ac8843e153d135f64880a1d029b14" class="uri">https://gist.github.com/lcolladotor/350ac8843e153d135f64880a1d029b14</a> |
+| 2020-10-21 | Question: Subset center regions of a set of different length sequences | <a href="https://support.bioconductor.org/p/134532/#134925">BioC Support website answer</a> |
+| 2020-10-20 | Help with spatstat | spatstat package <a href="https://spatstat.org/releasenotes/spatstat-1.39-0.html" class="uri">https://spatstat.org/releasenotes/spatstat-1.39-0.html</a>, L function <a href="https://www.rdocumentation.org/packages/spatstat/versions/1.64-1/topics/Lest" class="uri">https://www.rdocumentation.org/packages/spatstat/versions/1.64-1/topics/Lest</a>, Kmark <a href="https://www.rdocumentation.org/packages/spatstat/versions/1.64-1/topics/Kmark" class="uri">https://www.rdocumentation.org/packages/spatstat/versions/1.64-1/topics/Kmark</a> |</p>
 
 </div>
             </section>

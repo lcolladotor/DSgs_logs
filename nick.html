@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>9 Nick | Data Science guidance session logs</title>
   <meta name="description" content="9 Nick | Data Science guidance session logs" />
-  <meta name="generator" content="bookdown 0.33 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
 
   <meta property="og:title" content="9 Nick | Data Science guidance session logs" />
   <meta property="og:type" content="book" />
@@ -52,7 +52,7 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <script src="libs/htmlwidgets-1.6.2/htmlwidgets.js"></script>
-<script src="libs/plotly-binding-4.10.1/plotly.js"></script>
+<script src="libs/plotly-binding-4.10.2/plotly.js"></script>
 <script src="libs/typedarray-0.1/typedarray.min.js"></script>
 <link href="libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet" />
 <script src="libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
@@ -125,6 +125,10 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 </head>
 
@@ -187,6 +191,76 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tr>
 </thead>
 <tbody>
+<tr class="odd">
+<td>2023-06-09</td>
+<td>Displaying spot coordinates in Samui</td>
+<td>I described the ‘add_coords’ function, how features link to existing coordinates, and that coords must have at least one associated feature to display</td>
+</tr>
+<tr class="even">
+<td>2023-06-08</td>
+<td>Using the Samui API to display data locally</td>
+<td>I referred her to recent versions of my code (spatialDLPFC and SPG_AD projects) and walked through the high-level steps of each</td>
+</tr>
+<tr class="odd">
+<td>2023-06-07</td>
+<td>Troubleshooting SPEAQeasy error</td>
+<td>I showed that the error was essentially a failure to allocate memory and recommended doubling required memory for the failing SPEAQeasy process until success</td>
+</tr>
+<tr class="even">
+<td>2023-06-02</td>
+<td>Ignoring a directory with gitignore</td>
+<td>I described that an entire directory (rather than all of its contents) can be ignored, and should be specified relative to the directory containing the .gitignore</td>
+</tr>
+<tr class="odd">
+<td>2023-06-02</td>
+<td>Debugging rewritten code</td>
+<td>We looked at some old code vs. an adapted version, which was not producing the same output. I recommended splitting the code into ordered sections, and executing the old and new version of each to identify exactly where the error was occurring</td>
+</tr>
+<tr class="even">
+<td>2023-06-01</td>
+<td>Troubleshooting unexpected SPEAQeasy output</td>
+<td>I discovered she was using the –small_test argument and not –input, so only the small 3-sample test set was running instead of her actual data</td>
+</tr>
+<tr class="odd">
+<td>2023-05-26</td>
+<td>Interpreting spot-deconvolution plots</td>
+<td>I walked through the meaning of certain information-dense plots I made to show spot-deconvolution results</td>
+</tr>
+<tr class="even">
+<td>2023-05-25</td>
+<td>Subsetting RSE by chromosome</td>
+<td>I recommended filtering rows of the RSE via ‘seqnames’, which would return genes (or features in general) of the particular chromosomes needed</td>
+</tr>
+<tr class="odd">
+<td>2023-05-25</td>
+<td>SPEAQeasy defaults</td>
+<td>She asked about any quality-check-related options SPEAQeasy had (I pointed her to ‘–ercc’ for applicable data) and whether trimming defaults were reasonable for her data</td>
+</tr>
+<tr class="even">
+<td>2023-05-24</td>
+<td>Using Samui’s API to visualize spatial data</td>
+<td>I described the general workflow needed to start from raw images and spaceranger outputs, and end up with a Samui-compatible directory that can be dragged into the browser (locally) to view Visium data (including segmented fluorescence channels)</td>
+</tr>
+<tr class="odd">
+<td>2023-05-18</td>
+<td>Creating many configuration files differing by one variable</td>
+<td>I suggested creating a template configuration file, then looping through her data, using the sed command to write configuration files with the relevant variable replaced from the template</td>
+</tr>
+<tr class="even">
+<td>2023-05-18</td>
+<td>Merging two dataframes</td>
+<td>She wanted to add the columns associated with unique rows in one data frame to the other, so I suggested combining the ‘unique()’ command with ‘left_join()’</td>
+</tr>
+<tr class="odd">
+<td>2023-05-17</td>
+<td>Renaming many files by a pattern</td>
+<td>I suggested using regular expressions in R to get the new filename from a given old filename, then file.copy to perform a safe test, and finally deleting the old files</td>
+</tr>
+<tr class="even">
+<td>2023-05-16</td>
+<td>Help with SSH keys with GitHub</td>
+<td>She was unable to push to GitHub on her laptop. It appeared she didn’t have an SSH keypair set up with GitHub, so we set that up to fix the issue</td>
+</tr>
 <tr class="odd">
 <td>2023-05-02</td>
 <td>Interpreting SPEAQeasy metrics</td>
