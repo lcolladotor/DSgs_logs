@@ -2,6 +2,20 @@
 
 | Date | Help request | Notes |
 | ---- | ------------ | ----- |
+| 2023-06-09 | Displaying spot coordinates in Samui | I described the 'add_coords' function, how features link to existing coordinates, and that coords must have at least one associated feature to display |
+| 2023-06-08 | Using the Samui API to display data locally | I referred her to recent versions of my code (spatialDLPFC and SPG_AD projects) and walked through the high-level steps of each |
+| 2023-06-07 | Troubleshooting SPEAQeasy error | I showed that the error was essentially a failure to allocate memory and recommended doubling required memory for the failing SPEAQeasy process until success |
+| 2023-06-02 | Ignoring a directory with gitignore | I described that an entire directory (rather than all of its contents) can be ignored, and should be specified relative to the directory containing the .gitignore |
+| 2023-06-02 | Debugging rewritten code | We looked at some old code vs. an adapted version, which was not producing the same output. I recommended splitting the code into ordered sections, and executing the old and new version of each to identify exactly where the error was occurring |
+| 2023-06-01 | Troubleshooting unexpected SPEAQeasy output | I discovered she was using the --small_test argument and not --input, so only the small 3-sample test set was running instead of her actual data |
+| 2023-05-26 | Interpreting spot-deconvolution plots | I walked through the meaning of certain information-dense plots I made to show spot-deconvolution results |
+| 2023-05-25 | Subsetting RSE by chromosome | I recommended filtering rows of the RSE via 'seqnames', which would return genes (or features in general) of the particular chromosomes needed |
+| 2023-05-25 | SPEAQeasy defaults | She asked about any quality-check-related options SPEAQeasy had (I pointed her to '--ercc' for applicable data) and whether trimming defaults were reasonable for her data |
+| 2023-05-24 | Using Samui's API to visualize spatial data | I described the general workflow needed to start from raw images and spaceranger outputs, and end up with a Samui-compatible directory that can be dragged into the browser (locally) to view Visium data (including segmented fluorescence channels) |
+| 2023-05-18 | Creating many configuration files differing by one variable | I suggested creating a template configuration file, then looping through her data, using the sed command to write configuration files with the relevant variable replaced from the template |
+| 2023-05-18 | Merging two dataframes | She wanted to add the columns associated with unique rows in one data frame to the other, so I suggested combining the 'unique()' command with 'left_join()' |
+| 2023-05-17 | Renaming many files by a pattern | I suggested using regular expressions in R to get the new filename from a given old filename, then file.copy to perform a safe test, and finally deleting the old files |
+| 2023-05-16 | Help with SSH keys with GitHub | She was unable to push to GitHub on her laptop. It appeared she didn't have an SSH keypair set up with GitHub, so we set that up to fix the issue |
 | 2023-05-02 | Interpreting SPEAQeasy metrics | I described typical expected alignment rates, the difference between concordant and overall map rate, and details about other SPEAQeasy output metrics |
 | 2023-04-25 | Creating a blog post on the rstats website | I explained that at the time, I just created the RMD file and added any referenced images to the rstatsclubsource repo, following naming conventions that include the post date and hyphens between words in the blog title. I believe Leo did some manual work to get it fully published, so I referred to the full guide in case my method was incomplete: http://research.libd.org/rstatsclub/2018/03/09/contributing-to-the-libd-rstats-club/ |
 | 2023-04-21 | Ensembl IDs vs. gene symbols with cell2location | I explained how cell2location is agnostic to what gene identifiers are used, but that gene indentifier type must match between spatial and reference single-cell data. I mentioned the org.Hs.eg.db package. |
