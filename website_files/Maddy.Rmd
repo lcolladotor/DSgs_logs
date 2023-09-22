@@ -2,6 +2,17 @@
 
 | Date | Help request | Notes |
 | ---- | ------------ | ----- |
+| 2023-08-09 | Adding ceil function to splitSlide to split arrays covering fiducials | https://github.com/LieberInstitute/spatialDLPFC_SCZ/commit/5e84f5ce32e6723b1a1eea20dc47ee320d55ca10 |
+| 2023-08-09 | Explain the SPE organization and subsetting an SPE | NA |
+| 2023-08-03 | memory error with VistoSeg::InFormStitch function | Suggested deleting all old files as the code might be appending data instead of creating new files and also increasing the h_fsize, as the error relates disk space |
+| 2023-08-02 | How to check if a visium slide data is already entered into REDCap | guided him to the search engine on REDCap |
+| 2023-07-27 | insert offset in VistoSeg::splitSlide_IF | removing the top 2500 pixels before splitting the image corrects the offset |
+| 2023-07-24 | REDCap build table error | NA |
+| 2023-07-21 | NM pigement segmentation overview for LC samples | reffered to this script /dcs04/lieber/marmaypag/Image_Processing/NM_LC_segmentation/test.m |
+| 2023-07-20 | Overview of image processing Visium and VSPG | NA |
+| 2023-07-17 | tif2mat conversion | https://github.com/LieberInstitute/spatialDLPFC_SCZ/blob/main/code/vistoseg/lib_updated/tif2mat.m |
+| 2023-07-07 | mat2tif conversion | https://github.com/LieberInstitute/spatialDLPFC_SCZ/blob/main/code/vistoseg/lib_updated/mat2tif.m |
+| 2023-07-01 | 0% Vs 5% overlap and repeated signal issues in VSPG images | referred here for clarification https://docs.google.com/presentation/d/1HJgkvlHtiIA5nucuNdHdYhRGAtpPPvASGFoAocqi1-U/edit#slide=id.g1163185b778_1_6 |
 | 2022-09-09 | Code to threshold small sized nuclei from the NaCC visium images | NA |
 | 2022-08-09 | VNS error | wrong input was given to the function |
 | 2022-08-09 | Strategies to pick threshold for cell size in segmentations | NA |
