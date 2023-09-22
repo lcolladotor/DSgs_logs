@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>9 Nick | Data Science guidance session logs</title>
   <meta name="description" content="9 Nick | Data Science guidance session logs" />
-  <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
 
   <meta property="og:title" content="9 Nick | Data Science guidance session logs" />
   <meta property="og:type" content="book" />
@@ -191,6 +191,106 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tr>
 </thead>
 <tbody>
+<tr class="odd">
+<td>2023-09-19</td>
+<td>Customizing the home page for spatialLIBD apps</td>
+<td>I noted the ‘www’ directory (or the directory passed to the ‘docs_path’ parameter) controls the home page, and we typically use a relative soft link to the main repository README for the bulk of the content.</td>
+</tr>
+<tr class="even">
+<td>2023-09-19</td>
+<td>Overview of the stitching process for split Visium samples</td>
+<td>I described the general workflow, involving ImageJ, Samui, VisiumStitcher, and custom R + python code needed to eventually produce SpatialExperiment objetcs with one donor per sample. I focused on the high level of what the Samui piece looked like/ how much work is involved</td>
+</tr>
+<tr class="odd">
+<td>2023-09-12</td>
+<td>SLURM array jobs and X11</td>
+<td>I showed code examples of writing array jobs with SLURM (and how it compares to SGE), then diagnosed an X11 forwarding issue where the ‘-x11’ srun option was insufficient. Adding X11-related configuration in the SSH config fixed the issue (i.e. ForwardX11 and ForwardX11Trusted lines)</td>
+</tr>
+<tr class="even">
+<td>2023-08-28</td>
+<td>Creating documentation sites with bookdown</td>
+<td>I described the pieces that go into a bookdown-powered documentation site, showing RMD code examples and the GHA workflow that deploys the site</td>
+</tr>
+<tr class="odd">
+<td>2023-08-23</td>
+<td>Displaying info about cells, not spots in Samui</td>
+<td>I noted that Samui supports many types of features, and the spatial coordinates of cells can be supplied instead of spot coordinates to display features related to cells</td>
+</tr>
+<tr class="even">
+<td>2023-08-22</td>
+<td>Interpreting spot deconvolution results</td>
+<td>I described the meaning of cell2location outputs and how to compare outputs between software tools. I also described where plots came from in R</td>
+</tr>
+<tr class="odd">
+<td>2023-08-17</td>
+<td>Missing genes in Samui</td>
+<td>He noted that not all measured genes were displayed in the Visium_SPG_AD project. I found in the code why I subsetted and made a GH issue to fix it</td>
+</tr>
+<tr class="even">
+<td>2023-08-16</td>
+<td>My coding set up</td>
+<td>I shared my favored set up for getting computational work done: working directly on JHPCE via the SSH extension for VSCode, using system-wide JHPCE modules for consistent software versioning, and X11 for interactive plotting (with a note I tend to just create and view PDFs for complex plots)</td>
+</tr>
+<tr class="odd">
+<td>2023-08-16</td>
+<td>Recommendations for learning more data science skills</td>
+<td>My major recommendation was learning version control with git, though I also mentioned learning SGE/SLURM also is a valuable skill for larger-scale coding projects. I helped him create a git repository for his current project (including account set up) and described the basics of git add, commit, and push</td>
+</tr>
+<tr class="even">
+<td>2023-08-14</td>
+<td>Misc spot deconvolution questions</td>
+<td>I described how the various scripts connect in spatialDLPFC for my work with deconvolution, to help share and re-use them for her project</td>
+</tr>
+<tr class="odd">
+<td>2023-08-11</td>
+<td>recount 3 permissions</td>
+<td>I explained the status of the recount-pump transfer, where files were, and noted that chris or JHPCE admins would have to change permissions to allow her access to some files</td>
+</tr>
+<tr class="even">
+<td>2023-08-11</td>
+<td>Using modules at SLURM and configuring bashrc</td>
+<td>I noted that modules at SGE vs. SLURM are totally disjoint, and that the HOSTNAME trick originally used in the team recommended bashrc didn’t (at the time, though this has recently changed) work anymore, and the SLURMD_NODENAME variable can instead be used to infer where the user is</td>
+</tr>
+<tr class="odd">
+<td>2023-08-09</td>
+<td>Using Samui from start to finish</td>
+<td>I did a complete tutorial of using the Samui API to create Samui-importable directories, including how to preprocess image files and how to host results publicly</td>
+</tr>
+<tr class="even">
+<td>2023-08-07</td>
+<td>Normalizing spot deconvolution results to answer biological questions of interest</td>
+<td>He noted that just taking the most plentiful cell type in any cluster was leading to too many clusters with excitatory layer-5 cells. I mentioned that the raw outputs of spot deconvolution tools are fairly unreliable, but they still carry useful information when normalized. For his example, I mentioned dividing by the total number of cells for each cell type when making comparisons between cell types</td>
+</tr>
+<tr class="odd">
+<td>2023-07-27</td>
+<td>Quantifying spatial promiscuity of genes across clusters</td>
+<td>I mentioned (information) entropy as a metric that would determine how well a gene is confined to a particular cluster (using average counts of a gene across all spots in each cluster, then normalizing the sum to add to 1), but cautioned that I wasn’t familiar with favored metrics within the field</td>
+</tr>
+<tr class="even">
+<td>2023-07-25</td>
+<td>Troubleshooting GHA workflow errors when building workshop</td>
+<td>I helped discover the source and solutions to errors and warnings (mostly from BiocCheck and R CMD check), and found how to specify a single author in in-text citations</td>
+</tr>
+<tr class="odd">
+<td>2023-07-19</td>
+<td>Spot deconvolution workflow overview</td>
+<td>I pointed her to spot deconvolution scripts used in spatialDLPFC and the high-level overview of the workflow, as well as how we trained the decision tree classifier</td>
+</tr>
+<tr class="even">
+<td>2023-07-18</td>
+<td>Loading large files in R</td>
+<td>I noted that he ran out of memory in his JHPCE job, which crashed R, so I suggested increasing ‘mem_free’ and ‘h_vmem’</td>
+</tr>
+<tr class="odd">
+<td>2023-07-17</td>
+<td>Sharing conda environment</td>
+<td>I referred to examples of JHPCE modules I’ve created that activate shared conda environments, and explained the key commands used to get a similar module working</td>
+</tr>
+<tr class="even">
+<td>2023-07-12</td>
+<td>Performing QSVA with genes or with different annotation</td>
+<td>I recommended finding and trying to generalize the process Josh followed to produce the list of degradation-associated transcripts, to limit relying on exact transcripts with an exact GENCODE version. I noted that you can convert transcript data to genes (albeit with lost information), but not vice-versa, so in theory either transcript or gene-level data could be supported by converting to genes</td>
+</tr>
 <tr class="odd">
 <td>2023-06-09</td>
 <td>Displaying spot coordinates in Samui</td>
