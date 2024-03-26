@@ -138,20 +138,29 @@ gh_waffle(by_total, pal = "A")
 
 These graphs are partially based on [`lcolladotor/mphtasessions`](https://github.com/lcolladotor/mphtasessions/blob/gh-pages/index.Rmd) and [_GitHub-style waffle plots in R_](https://vuorre.netlify.app/post/2016/03/24/github-style-waffle-plots-in-r/).
 
-## Full logs
+## Full logs {-}
 
 Here you an explore the full logs. The name of the person asking the question(s) is not displayed for privacy.
 
 The idea is that this information could be useful for people who have similar questions, as well as for DSgs guides who want to re-use material from previous answers when helping someone.
 
 ```{r "logs_table"}
-gt::tab_options(
-    gt::fmt_markdown(gt::gt(logs_data[, c("date", "guide_name", "help_request", "public_notes")]), columns = c("help_request", "public_notes")),
-    ihtml.active = TRUE,
-    ihtml.use_search = TRUE,
-    ihtml.use_filters = TRUE,
-    ihtml.use_resizers = TRUE
-)
+logs_data$guide <- logs_data$guide_name
+gt::gt(logs_data[, c("date", "guide", "help_request", "public_notes")]) |>
+    gt::cols_width(
+        date ~ gt::px(120),
+        guide ~ gt::px(100),
+        help_request ~ gt::px(200),
+        public_notes ~ gt::px(680)
+    ) |>
+    gt::fmt_markdown(columns = c("help_request", "public_notes")) |>
+    gt::tab_options(
+        ihtml.active = TRUE,
+        ihtml.use_search = TRUE,
+        ihtml.use_filters = TRUE,
+        ihtml.use_resizers = TRUE,
+        table.width = gt::px(1200)
+    )
 ```
 
 
