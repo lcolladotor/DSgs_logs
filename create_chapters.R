@@ -19,7 +19,7 @@ logs_data$person <- paste0("Person_", sample(as.numeric(as.factor(logs_data$pers
 ## Remove the private info
 logs_data$private_team_notes <- NULL
 
-dir.create("website_files", showWarnings = FALSE)
+dir.create("old_format_website_files", showWarnings = FALSE)
 
 by_guide <- split(logs_data, logs_data$guide_name)
 
@@ -45,11 +45,9 @@ xx <- lapply(seq_along(by_guide), function(i) {
 {content_rmd}
 
 ")
-    writeLines(chapter_rmd, here::here("website_files", paste0(guide, ".Rmd")))
+    writeLines(chapter_rmd, here::here("old_format_website_files", paste0(guide, ".Rmd")))
 })
 
 
 ## Save for later use
-logs_data$help_request <- NULL
-logs_data$public_notes <- NULL
 save(logs_data, file = "logs_data.Rdata")
