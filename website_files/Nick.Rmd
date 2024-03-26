@@ -2,11 +2,41 @@
 
 | Date | Help request | Notes |
 | ---- | ------------ | ----- |
+| 2024-03-19 | Troubleshooting misaligned image in Samui | I pointed to suspicious areas of code where dataset-specific regexs were originally used, though the regexs looked good for his data as well. We decided to interactively walk line by line at a later date |
+| 2024-03-15 | Plotting to a multi-page PDF with 3 plots per page | I suggested building a list() where each element was a 3-piece plot (combined with a function like cowplot::plot_grid), then using print(plot_list) |
+| 2024-03-13 | Installing cellprofiler at JHPCE | I suggested using conda after pip failed (missing system dependencies). Ultimately, my troubleshooting was enough to just build a module for everyone |
+| 2024-03-07 | Adding notes to Samui | I described how a markdown of notes could be added using the Samui python API, though this is not how I had done it in a previous project ( I was unable to trace the original method I used) |
+| 2024-03-05 | Better algorithm for dealing with overlapping images in Samui | I helped him implement an algorithm taking the minimum pixel intensity in case of overlapping images to display an H&E image in Samui |
+| 2024-03-04 | Setting up SSH keypair for passwordless login to JHPCE | I diagnosed several potential issues, ultimately missing one detail that was the culprit: permissions were too open on some .ssh files on her laptop |
+| 2024-02-16 | Adding phenotype data to coldata | I described my typical strategy of using left_join by sample ID, as well as ensuring rownames don't get lost from conversion to a tibble (thus dropping colnames from the SummarizedExperiment unintentionally) |
+| 2024-02-12 | Adding packages to a custom R module | I noted that the r_nac module was built similarly to conda_R, where the user doesn't have to do anything special to install more packages. We ultimately traced the issue to permissions problems on files created as part of the proper use of the module by other users, likely due to problematic 'umask' settings |
+| 2024-02-05 | Follow-up: removing large files from version control | I ultimately recommended 'git reset --soft' to the commit ID before the recent mistaken addition of the large files |
+| 2024-02-02 | Troubleshooting GitHub authentication issues | I advised using the SSH address (not HTTPS) for the 'git remote', ensuring the 'git config' email matches the primary GitHub email, and using the up-to-date SSH key (not RSA, which is no longer supported/ recommended) |
+| 2024-02-01 | Removing large files from version control | We explored options: BFG cleaner, git rebase and git reset --soft and discussed which was best for her situation |
+| 2024-01-30 | Working with SLURM | I described the use of 'srun' (including with X11) vs. 'sbatch', and generally recommended 'sbatch' where possible to document how analyses were run/ ensure reproducibility |
+| 2024-01-26 | Running python on cluster | I mostly focused on my setup using VS code with its remote SSH extension, and custom keyboard shortcuts for running python code interactively |
+| 2024-01-26 | Creating a module | I mostly confirmed the general process he had started for a particular module made from software packages as a precompiled binary |
+| 2024-01-24 | Follow up on stitching for Samui | I described how code might change when using IF images rather than H&E, for which the code was originally developed |
+| 2024-01-08 | Creating stitched image in Samui from ImageJ estimates | I described how to adapt a script I wrote for NAc to her dataset, where the goal was simply to display a stitched-together image in Samui |
+| 2024-01-05 | Investigating visual problems in Samui image | I traced the issue to the use of 8-bit integers, where an overflow occured during normal addition of pixel values (the solution was to use floats while computing the mean, and then convert back to uint8) |
+| 2023-12-12 | Help adding phenotype info to colData | I described how I typically use dplyr::left_join, as well as how to add back missing rownames to the colData (or colnames of the SummarizedExperiment) |
+| 2023-12-11 | Investigating R package installation conflicts | I described the conflict between SGE and SLURM R packages, as well as identified lock files preventing re-installation of problematic packages |
+| 2023-12-08 | Investigating error in qSVA funtion call | We traced the offending line of R code in the qsvar package and I described how unit testing could identify problematic function arguments and give more informative error messages |
+| 2023-12-08 | Performing 'jaffelab::s' on large tibble efficiently | I noted that the function could be applied before the data was converted to long format, where it was impractically large to work with |
+| 2023-12-08 | Follow up on stitching for Samui | We identified issues causing incorrect coloring in the Samui outputs |
+| 2023-12-05 | Creating stitched image in Samui from ImageJ estimates | I described how to adapt a script I wrote for NAc to his dataset, where the goal was simply to display a stitched-together image in Samui |
+| 2023-11-21 | Overview of image stitching process | I described the workflow for stitching Visium capture areas with Samui, and various Samui API functions like 'add_chunked_feature' that are helpful |
+| 2023-11-08 | Modifying a global-scope variable inside a function | I showed a workaround for making sure a variable has global scope before editing it inside a function, though I noted it's better not to use a function in her particular case |
+| 2023-11-01 | Issues linking repo to github | I identified two separate issues: the repository name and using HTTPS remote instead of SSH |
+| 2023-10-30 | Interpreting decision tree and spot-deconvo plots | I walked through how a decision tree works and can be interpreted, then described how correlation and RMSE are computed in a couple spatialDLPFC spot deconvo plots |
+| 2023-10-30 | Issues with tensorqtl module | He noted that the wrong version of python was being used, and we eventually traced this to user-specific conda settings interfering with the module |
 | 2023-10-25 | Interpretation of "replication" plots and performance of QSVA models | We interpreted the intuitive meaning of a formula from some old code, which attempted to quantify the similarity of a set of significant genes between datasets. I also helped interpret the meaning of a plot based on this metric |
 | 2023-10-24 | Example datasets and getting started with data science | I recommended 'spatialLIBD::fetch_data' for easy retrieval of public data to get started with spatial computational analysis. I also recommended pushing for an account at JHPCE, where computational resources are more plentiful, and getting used to submitting jobs, accessing software, etc is valuable to learn |
 | 2023-10-17 | Nextflow issue when running SPEAQeasy | I noted that conda_R seemed to be changing the version of java loaded, which affected how the nextflow module worked. I recommended unloading conda_R and avoiding the loading of conda_R via the .bashrc |
 | 2023-10-16 | Setting up and running SPEAQeasy on a new cluster | I described the general process of setting up SPEAQeasy and gave recommendations for his cluster: using singularity and SLURM-based installation/ set-up |
+| 2023-10-13 | Installing SPEAQeasy and setting up main script | I mostly covered documentation but also the appropriate options for his particular data |
 | 2023-10-13 | Troubleshooting a SPEAQeasy error | I investigated a "failure to submit process to scheduler" error using 'sacct' and similar commands, ultimately discovering the issue was related to SLURM configuration. There was an email chain with bithelp to follow up |
+| 2023-10-11 | sbatch issue with SPEAQeasy | I followed up with bitsupport, as the issue seemed to involve some failed DNS query internal to SLURM, rather than SPEAQeasy |
 | 2023-10-11 | Interpreting and refactoring "concordance" formulas in QSVA results | We walked through old code which aimed to quantify the similarity between significant DE results, interpreting formulas from the code and constructing more intuitive formulas |
 | 2023-10-04 | Refactoring QSVA code | I gave general advice on re-writing code-- keeping separate scripts, chunking code into segments and testing equality of outputs between old and new code after each chunk, and other strategies |
 | 2023-09-28 | Dropping extra factor levels | I described the 'droplevels()' function, designed to remove unused factor levels |
@@ -73,6 +103,7 @@
 | 2023-01-20 | SPEAQeasy error | We identifed that SPEAQeasy cannot handle runs with only one sample, but that the intention was to use multiple samples (the manifest did not use unique sample names) |
 | 2023-01-18 | Integrating R scripts with Nextflow | We went over several concepts in Nextflow (e.g. processes and channels) and discussed how to invoke R scripts inside processes. |
 | 2023-01-10 | Help identify the source of unexpected NA values | We uncovered the source of some unwanted NA values in some genotyping data and eliminated it by removing some code |
+| 2023-01-03 | Adapting spot-deconvolution code to new data | We talked about how to compute KL divergence between 2 groups of cell-type proportions on her data using a variation of my code |
 | 2022-12-06 | resolving a merge conflict | I described the manual process for resolving a merge conflict with git when git cannot automatically merge two branches |
 | 2022-12-05 | Identifying the source of an error | We pinpointed an error message as being due to trying to find the 'colData' of a list containing Summarized Experiments rather than calling 'colData' on the SummarizedExperiment itself |
 | 2022-12-01 | coloring plots by a continuous variable | I described how to color ggplot2 plots by a continuous variable, adjust the palette, and other ggplot-related syntax/tricks |

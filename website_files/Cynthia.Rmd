@@ -2,8 +2,10 @@
 
 | Date | Help request | Notes |
 | ---- | ------------ | ----- |
+| 2024-03-25 | Cell Ranger-ARC html report | I explained in detail the metrics reported by cellranger arc and helped you download a multiome public sample to run the pipeline. |
+| 2024-03-22 | GEX and ATAC clustering | I explained the previous steps to perform clustering with GEX and ATAC 10x multiome data using Seurat and Signac. |
+| 2024-02-07 | Discuss Seurat, cell type markers, DE | I showed him to the 2 approaches available in Seurat to perform DGE, including the FindMarkers() function to find the genes that are different between control and treatments. I also show him code to perform quality controls in the main covariates related with these data-type. I shared with him consulted resources and links with public-code for his reference. |
 | 2023-04-10 | Feedback the SmokingMouse Project websites | Project links reviewed: http://research.libd.org/smokingMouse/ y  http://research.libd.org/smokingMouse/articles/smokingMouse.html |
-| 2023-04-06 | Alternatives for RNA-seq analysis without replicates | Website tools to look for public rna-seq samples & packages to make synthetic replicates: 
-https://support.bioconductor.org/p/9150681/#9150698 |
+| 2023-04-06 | Alternatives for RNA-seq analysis without replicates | Website tools to look for public rna-seq samples & packages to make synthetic replicates [as shown here](https://support.bioconductor.org/p/9150681/#9150698). |
 | 2023-03-22 | Introduction to CellRanger RNAseq ATAC analysis | We reviewed the overflow to analyse RNA-Seq and ATAC data with the Seurat and Signac tools. I provided learning resources, such as data file organization, funtions and methos available in the tools. I also provided a complete explanation about QC for preprocessing data integrated. |
 
