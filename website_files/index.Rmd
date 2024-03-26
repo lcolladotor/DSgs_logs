@@ -144,7 +144,7 @@ Here you an explore the full logs. The name of the person asking the question(s)
 
 The idea is that this information could be useful for people who have similar questions, as well as for DSgs guides who want to re-use material from previous answers when helping someone.
 
-```{r "logs_table"}
+```{r "logs_table", echo = FALSE}
 logs_data$guide <- logs_data$guide_name
 gt::gt(logs_data[, c("date", "guide", "help_request", "public_notes")]) |>
     gt::cols_width(
