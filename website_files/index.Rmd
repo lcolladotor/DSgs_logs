@@ -45,6 +45,10 @@ logs_data$date <- as.Date(logs_data$date)
 logs_data$week <- isoweek(logs_data$date)
 logs_data$year <- year(logs_data$date)
 
+
+## Drop NAs if any on the date
+logs_data <- logs_data[!is.na(logs_data$date), ]
+
 top_types <- sort(table(logs_data$type), decreasing = TRUE)
 
 ## Summarise the data to get the number of sessions per week on a given year
