@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>7 Louise | Data Science guidance session logs</title>
   <meta name="description" content="7 Louise | Data Science guidance session logs" />
-  <meta name="generator" content="bookdown 0.36 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.38 and GitBook 2.6.7" />
 
   <meta property="og:title" content="7 Louise | Data Science guidance session logs" />
   <meta property="og:type" content="book" />
@@ -51,11 +51,11 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
-<script src="libs/htmlwidgets-1.6.2/htmlwidgets.js"></script>
-<script src="libs/plotly-binding-4.10.3/plotly.js"></script>
+<script src="libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<script src="libs/plotly-binding-4.10.4/plotly.js"></script>
 <script src="libs/typedarray-0.1/typedarray.min.js"></script>
-<link href="libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet" />
-<script src="libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
+<link href="libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.2.1/js/crosstalk.min.js"></script>
 <link href="libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet" />
 <script src="libs/plotly-main-2.11.1/plotly-latest.min.js"></script>
 
@@ -191,6 +191,46 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tr>
 </thead>
 <tbody>
+<tr class="odd">
+<td>2024-03-14</td>
+<td>I tried to apply “qSV_model_DE_analysis.R” in lithium-exposed samples ( from Dpseq data), but I was confused by some of the code, especially “run_DE.R.”</td>
+<td>I walked throught the run_DE function I wrote for MDDseq (a wrapper for the limma-voom) pipline. I pointed out what parts of the MDDseq code he could adapt and simplify for his use case (its less complicated than the many DE runs we completed for MDDseq)</td>
+</tr>
+<tr class="even">
+<td>2024-03-11</td>
+<td>quick big fix. Its the same eQTL code – just one header in a file that’s always missing</td>
+<td>Fernando was having some conectivity issues with JHPCE, so we didn’t get a full bug fix in I suggested some de-buggin strategies [Update 3/15] We met again breifly to confirm the functions were working as intended. Initial issue was caused by un-intentinally overwriting the function</td>
+</tr>
+<tr class="odd">
+<td>2024-01-25</td>
+<td>making a corrplot with a lot of data points .</td>
+<td>Sreya wants to compare the correlation of 5 transcipts with 2k degradation transcripts. She had the data in the right format but needed help appllying the cor function to the table using group_by. Corrrplot was not the correct function for what she wanted to achive here.</td>
+</tr>
+<tr class="even">
+<td>2024-01-22</td>
+<td>Maybe divinding them by sample name may help.</td>
+<td>Michael and Peter are working on a BPD vs. MDD DE analysis. They were getting more DEGs than were reported in an early version of the MDDseq project. I could not find the code for the data they were refrencing, with out the code it will be impossible to diagnosis what is differnt in the two analysis. I recomended they use the more up to date data from MDDseq, and pointed them to the correct data &amp; scripts.</td>
+</tr>
+<tr class="odd">
+<td>2024-01-22</td>
+<td>when I try to rerun R dreamlet pseudobulk on the new JHPCE, I keep getting errors… (provided code example)</td>
+<td>Tricia and Fernando are re-running serval analysis they previously had working on the sge cluster, with the update to slurm they are now having issues. They are also having differnt errors in the same scrips + data. This could be a multi-facet issue, but firstly sounds like a R package version issue. I advisded the first step should be to have the same set-up, work in the same version of R and the same version (most updated) packages. See what errors persist and go from there. I also recomended Frenando start using git repos and version control with his team to help keep projects organized and consistent.</td>
+</tr>
+<tr class="even">
+<td>2023-11-30</td>
+<td>Regarding the transcriptome assay from the multiome approach, I have selected canonical gene markers from the different samples; Moving further, I would like to integrate to the analysis external gene-markers shared by S.Page. I am looking the best way to do this.</td>
+<td>Cynthia and Hedia are starting the annotation/cluster integration of the multiome data. The data is currently clusted indiviudally by sample, sn, ATAC only, and combined sn+ATAC. findMarker has be used to calc marker stats for each cluster in each sample (there is a ton of data to digest). I am unfamilar with the sample independendt cluster, consered marker gene integration from seurat. But I gave advice to check the current clusters for hihg expression of any of the known marker genes to see if we’re picking up the expected biological signal, and do some prelimary annotations as a sanity check. Also to keep following the workflow and see if the conserved marker genes match with any of the know markers. Also to start recoring annotations for the clusters in a csv file for easy editing by hand as well as easy reading in to R</td>
+</tr>
+<tr class="odd">
+<td>2023-11-29</td>
+<td>Help with qSVA overview schematic</td>
+<td>I advised Hedia on how to adress some issues with the qSVA overview plot, both minor issues like aliginig and resising objects with biorender tools, and major rearngment of the table and DE application part.</td>
+</tr>
+<tr class="even">
+<td>2023-11-15</td>
+<td>I would like to discuss with you the correlation issue related to the cellular_component model of the qsvaR package and get your feedback.</td>
+<td>Hedia has gotten some feedback on some unexpected behavior from qSVAR package. The qSV values show no significant correlation with other phenotype metrics (they have in the past), while this is not impossible it is strange. There are many factors that could have lead to this issue. Hedia and I talked about some debugging strategies, starting with re-running the workflow on familar data to see if we can re-create the issue or detirmine if it is unique to KJ’s dataset.</td>
+</tr>
 <tr class="odd">
 <td>2023-10-19</td>
 <td>Help migrating to SLURM setup</td>
@@ -369,7 +409,7 @@ The levels must by syntactically valid names in R | The error came from the name
 | 2020-10-27 | Plotly help if possible? I’m trying to export an html file that allows the user to look at each snp/gene on the plot, and I am almost successful. Leo recommended that I talk to you on this matter. | Needed to use highlight_key and highlight functions to select points between plots. Used rstats example as guide <a href="https://gist.github.com/lcolladotor/350ac8843e153d135f64880a1d029b14" class="uri">https://gist.github.com/lcolladotor/350ac8843e153d135f64880a1d029b14</a> |
 | 2020-10-21 | Question: Subset center regions of a set of different length sequences | <a href="https://support.bioconductor.org/p/134532/#134925">BioC Support website answer</a> |
 | 2020-10-20 | Help with spatstat | spatstat package <a href="https://spatstat.org/releasenotes/spatstat-1.39-0.html" class="uri">https://spatstat.org/releasenotes/spatstat-1.39-0.html</a>, L function <a href="https://www.rdocumentation.org/packages/spatstat/versions/1.64-1/topics/Lest" class="uri">https://www.rdocumentation.org/packages/spatstat/versions/1.64-1/topics/Lest</a>, Kmark <a href="https://www.rdocumentation.org/packages/spatstat/versions/1.64-1/topics/Kmark" class="uri">https://www.rdocumentation.org/packages/spatstat/versions/1.64-1/topics/Kmark</a> |
-| NA | Prepare expression bed files for tensoeQTL | Adapted mode code for tensorQTL prep, had to add genomics ranges to the sce object, and deal with bugs around rse_to_bed function |</p>
+| NA | Prepare expression bed files for tensorQTL | Adapted mode code for tensorQTL prep, had to add genomics ranges to the sce object, and deal with bugs around rse_to_bed function |</p>
 
 </div>
             </section>
