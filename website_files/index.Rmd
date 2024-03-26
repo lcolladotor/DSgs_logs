@@ -9,15 +9,16 @@ output:
 
 # Overview {-}
 
-This website contains the public logs for the Data Science guidance sessiones carried out by the [**R/Bioconductor-powered Team Data Science**](https://lcolladotor.github.io/bioc_team_ds) at [LIBD](https://www.libd.org/).
+This website contains the public logs for the [Data Science guidance sessions (**DSgs**)](https://lcolladotor.github.io/bioc_team_ds/data-science-guidance-sessions.html).
 
-## DSgs-guide team members {-}
+## DSgs-guides {-}
 
+* [Cynthia S. Cardinault](https://github.com/cyntsc)
 * [Louise A. Huuki-Myers](https://github.com/lahuuki)
-* [Nicholas J. Eagles](https://github.com/Nick-Eagles)
 * [Madhavi Tippani](https://github.com/madhavitippani)
+* [Nicholas J. Eagles](https://github.com/Nick-Eagles)
 
-_Former members:_
+_Former guides:_
 
 * [Abby Spangler](https://github.com/abspangler13)
 * [Arta Seyedian](https://github.com/aseyedia)
