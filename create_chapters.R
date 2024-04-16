@@ -9,6 +9,9 @@ logs_data <-
         sheet = "logs"
     )
 
+## Avoid accents
+logs_data$guide_name[logs_data$guide_name == "Hédia"] <- "Hedia"
+
 ## Sort by date
 logs_data <- logs_data[order(logs_data$date, decreasing = TRUE), ]
 
