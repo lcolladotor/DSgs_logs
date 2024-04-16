@@ -2,6 +2,9 @@
 
 | Date | Help request | Notes |
 | ---- | ------------ | ----- |
+| 2024-02-09 | Rownames not well formatted | Sreya went through an error issue in qsvaR due to rownames not well formatted. The error message was misleading. This problem has been fixed in the latest updates of the package. I advised Sreya to get the latest version of the package. |
+| 2024-01-18 | Reviewing analysis using qsvaR package | During the meeting Sreya showed me her progress on the analysis she's doing taking the 2976 txs from the cell-component model and she wanted to compute the correlation between those and selected transcripts she's interested in. She thinks those transcripts are involved in the degradation process. We couldn't find those transcripts as part of the 2976 txs from the cell-component model. |
+| 2023-12-08 | Fix misleading getDegTx error message | I met with Sreya because she's having an issue with the getDegTx function from the qsvaR package. I tried to solve the issue but I wasn't successful so I asked Sreya to give me more time and access to the rse object to have a more deeper look to understand the issue. After using her data I realized that the error message was misleading  and improved the function and unit tests. |
 | 2023-04-12 | code review | I discussed with Renee the way I code and showed her some examples and gave her a few coding advices. |
 | 2023-03-31 | Using the qsvaR with the new annotation | We discussed the use of qsvaR. For now the qsvaR only use the Gencode25 annotation. We also commented on the steps needed in case we want to implement the package for the more updated annotation versions in the future. |
 | 2023-03-23 | seurat + signac | We discussed each step of the pipeline and the outputs. We also had a look at the QC metrics and the code that Cynthia added to the script. |
