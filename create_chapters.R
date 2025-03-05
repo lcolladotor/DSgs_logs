@@ -1,7 +1,12 @@
 library("googlesheets4")
 library("glue")
+library("gargle")
+library("here")
 
-googlesheets4::gs4_auth()
+googlesheets4::gs4_auth(token = gargle::secret_read_rds(
+    here::here(".secrets/gs4-token.rds"),
+    key = "GOOGLESHEETS4_KEY"
+))
 
 logs_data <-
     read_sheet(
@@ -28,6 +33,7 @@ by_guide <- split(logs_data, logs_data$guide_name)
 
 xx <- lapply(seq_along(by_guide), function(i) {
     guide <- names(by_guide)[i]
+    message("Processing guide: ", guide)
 
     by_entry <- split(by_guide[[i]], seq_len(nrow(by_guide[[i]])))
     entries <- do.call(rbind, lapply(by_entry, function(x) {
@@ -53,4 +59,4 @@ xx <- lapply(seq_along(by_guide), function(i) {
 
 
 ## Save for later use
-save(logs_data, file = "logs_data.Rdata")
+save(logs_data, file = here::here("logs_data.Rdata"))

@@ -181,7 +181,7 @@ jobs:
         run: |
           ## For building the website & getting the R session info
           ## Edit as necessary with other packages in the future
-          BiocManager::install(c("bookdown", "sessioninfo", "ggplot2", "lubridate", "here", "dplyr", "plotly", "gt", "katex"))
+          BiocManager::install(c("bookdown", "sessioninfo", "ggplot2", "lubridate", "here", "dplyr", "plotly", "gt", "katex", "gargle", "googlesheets4", "glue"))
         shell: Rscript {0}
 
       - name: Session info
@@ -192,7 +192,10 @@ jobs:
         shell: Rscript {0}
 
       - name: Build website
+        env:
+          GOOGLESHEETS4_KEY: ${{ secrets.GOOGLESHEETS4_KEY }}
         run: |
+          source("create_chapters.R", echo = TRUE)
           setwd("website_files")
           bookdown::render_book("index.Rmd")
           system("touch _book/.nojekyll")
