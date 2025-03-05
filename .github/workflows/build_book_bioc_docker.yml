@@ -38,6 +38,8 @@ on:
     branches:
       - master
       - 'RELEASE_*'
+  schedule:
+    - cron: "0 8 * * 1,2,3,4,5"   # https://pubs.opengroup.org/onlinepubs/9699919799/utilities/crontab.html#tag_20_25_07
 
 name: R-CMD-check-bioc
 
