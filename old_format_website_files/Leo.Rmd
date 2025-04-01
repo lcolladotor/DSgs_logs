@@ -2,6 +2,12 @@
 
 | Date | Help request | Notes |
 | ---- | ------------ | ----- |
+| 2025-03-27 | Team culture overview | We talked about LIBD, the team history, team culture, how we are organized, how we train people, and other related topics. |
+| 2025-03-26 | PhD vs masters career paths | We discussed some career options and what math background classes would be useful to take before applying to a PhD in biostatistics. |
+| 2025-03-21 | PCA plots with a batch effect | We talked about results from `multiBatchPCA()`, and ultimately preferredd the results from computing PCs in each batch separately, then we interpreted the plots to evaluate whether biological or technical signal dominated PC1 and PC2 within each batch. |
+| 2025-03-20 | Updates on projector datasets | We talked about new data being generated, the questions we have of interest, and the overall timeline. |
+| 2025-03-13 | Cloud computing trial | We discussed ideas for how to proceed with a trial. |
+| 2025-03-13 | Donor-level pseudobulk analysis | We went over how to use `pseudoBulkDGE()` for performing a DGE analysis at the donor level, and what covariates we would need to compute. |
 | 2025-02-28 | Project goals discussion | We refreshed our memory on where the project stands and what would be some of the next steps that need to be performed. |
 | 2025-02-27 | How to build a RSE combining megadepth counts and recount3 colData | I showed how you can obtain the sample information (colData) from an RSE gene-level `recount3` object, then by sample ID, match with the colData you have on a small RSE made manually, and replace the colData info. The small RSE has counts computed with `megadepth`. This could end up being a `recount3` or `megadepth` helper function. In any case, having the full `recount3` colData enables then the use of functions such as `transform_counts()` to convert the `recount3` / `megadepth` base-pair level raw counts into read counts for downstream analyses. |
 | 2025-02-27 | How to speed up SPEAQeasy runs | I mentioned that one option involves contacting your HPC admins (JHPCE BitSupport for us) and asking for an increased allocation of computing cores. That way you can run more jobs in parallel. Though ultimately it's best to meet with Nick Eagles for a DSgs as Nick is the author and maintainer of SPEAQeasy. |

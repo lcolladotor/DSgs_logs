@@ -1,0 +1,6 @@
+# Manisha
+
+| Date | Help request | Notes |
+| ---- | ------------ | ----- |
+| 2025-03-25 | DE strategies, pseudobulk process and using pseudoBulkDGE() | We discussed the DE analysis steps, focusing on pseudobulking. I explained the overall workflow I am using, including the use of pseudoBulkDGE(), the covariates to consider, and how to set coefficient in the design matrix for analysis. |
+
