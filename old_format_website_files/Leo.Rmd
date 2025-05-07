@@ -2,6 +2,11 @@
 
 | Date | Help request | Notes |
 | ---- | ------------ | ----- |
+| 2025-04-21 | log2 CPM vs log2 normalized counts | We worked on <https://github.com/LieberInstitute/spatialLIBD/issues/106> and eventually resolved it thanks to answers from Gordon Smyth and James W. MacDonald at <https://support.bioconductor.org/p/9161754>. See the GitHub issue thread for more details about the differences between `edgeR::cpm(log = TRUE)` and `scuttle::logNormCounts()`. The documentation at `spatialLIBD::registration_pseudobulk()` has been expanded to further explain this difference. |
+| 2025-04-09 | NIH K08 grant | We discussed how I can help on a K08 grant application, the support structure my team provides via the DSgs system, and I shared a draft support letter from another grant application. |
+| 2025-04-04 | How to write an NIH R01 | We talked about the process of writing an NIH R01 grant, how to organize some grant related files, options for how to collaborate and the related budget implications. |
+| 2025-04-03 | Learning how to work with a PhD student | We talked about how to train a JHU PhD student, how to organize learning tasks, and updates on a mouse snRNA-seq project. |
+| 2025-04-03 | JHU PhD info | We talked about applying to JHU PhD programs at BSPH, how to best communicate via email with busy faculty (short emails asking specific questions), and other aspects of studying in Baltimore. |
 | 2025-03-27 | Team culture overview | We talked about LIBD, the team history, team culture, how we are organized, how we train people, and other related topics. |
 | 2025-03-26 | PhD vs masters career paths | We discussed some career options and what math background classes would be useful to take before applying to a PhD in biostatistics. |
 | 2025-03-21 | PCA plots with a batch effect | We talked about results from `multiBatchPCA()`, and ultimately preferredd the results from computing PCs in each batch separately, then we interpreted the plots to evaluate whether biological or technical signal dominated PC1 and PC2 within each batch. |
