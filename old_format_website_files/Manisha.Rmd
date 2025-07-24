@@ -2,5 +2,6 @@
 
 | Date | Help request | Notes |
 | ---- | ------------ | ----- |
+| 2025-05-22 | steps to consider when selecting variables to build an interaction model for DEG analysis. | We discussed pseudobulk analysis steps, focusing on covariate selection strategies for DEG modeling. Helped her identify an issue in her custom pseudobulk analysis function where the covariates argument was incorrectly handled, leading to unexpected results. |
 | 2025-03-25 | DE strategies, pseudobulk process and using pseudoBulkDGE() | We discussed the DE analysis steps, focusing on pseudobulking. I explained the overall workflow I am using, including the use of pseudoBulkDGE(), the covariates to consider, and how to set coefficient in the design matrix for analysis. |
 
