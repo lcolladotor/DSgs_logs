@@ -2,6 +2,20 @@
 
 | Date | Help request | Notes |
 | ---- | ------------ | ----- |
+| 2026-02-17 | domain RGB images for xenium HYP project to upload into samui | NA |
+| 2026-02-17 | making domain RGB images for xenium HYP project | NA |
+| 2026-02-09 | IF tiles batch stitching groovy script to run in QuPath | NA |
+| 2026-02-09 | Qpath in-built stitching pipeline for IF tiles from inform | NA |
+| 2026-02-06 | HD QC plots for LS HD data | NA |
+| 2026-01-30 | test run NM segmentation on VTA samples | NA |
+| 2026-01-13 | Running iLastik software | https://www.ilastik.org/ |
+| 2026-01-05 | LIBD_REDcap login issue | NA |
+| 2025-11-03 | quick segmentation test on NIA LC HD images using stardist HE model and a custom NM model | NA |
+| 2025-11-03 | quick segmentation test on Nac xenium images using stardist HE model | NA |
+| 2025-10-30 | spots not aligning with He on samui | fullres HE image was not rotated/transformed like the spots in SPE were, so the mismatch between image and spots happened |
+| 2025-10-20 | samui spots not showing up | spot barcodes/keys mitmatch between coords matrix and genes matrix so the spots would show up |
+| 2025-09-12 | samui HE image not popping up issue | used unstable version 0.49, should be using 0.45 for proper rendering of the image on website |
+| 2025-05-16 | cluster selection from VistoSeg::VNS results | NA |
 | 2024-03-27 | debugging samui script for HPC HE data | Updated script by commenting out unwanted lines and providing correct paths to the input files |
 | 2024-03-25 | debugging samui script for HPC HE data | Cross checked the script and rectified filename/samplename processing |
 | 2024-03-11 | JHPCE login questions | Explained how to access authorized keys and exit JHPCE |
@@ -56,7 +70,7 @@
 | 2021-11-18 | countSpots from VistoSeg throwing errors for one DLPFC sample from round4 | While debugging, its seen that VistoSeg when splitting the raw image missed a part of fiducial frame for capture area D1 of that sample. This happens when the center of the visium slide does not align with the center of the image, which has ti be adjusted while imaging. This image when run through spaceranger provided negative coordinates for the missing fiducial frame part of the image, but MATLAB will not accept negative indices for a image, which was throwing errors when recontructing spot grind in countSpots function. |
 | 2021-11-18 | Resolve issues with comments | Showed how to close issues on git with detailed comments of the final results |
 | 2021-11-16 | batch processing - dotdotdot, on local machine | made custom Matlab script to batch process her 30 RNAscope images on her local machine |
-| 2021-11-15 | error in transferring Visuim HPC data to JHPCE | The user directories were cleared during the software updates for LIBD server, emailed bill to create one for me and Heena to use rsync on Neural_Plasiticity. The filenames Heena used for 'source' in rync did not exist at the source directory which was throwing errors. |
+| 2021-11-15 | error in transferring Visuim HPC data to JHPCE | The user directories were cleared during the software updates for LIBD server, emailed Bill to create one for me and this person to use rsync on Neural_Plasiticity. The filenames this person used for 'source' in rync did not exist at the source directory which was throwing errors. |
 | 2021-11-04 | using awk | to pick filename from textfile for a array job |
 | 2021-10-14 | running spotspotcheck for SFN | NA |
 | 2021-10-07 | doubts on VistoSeg | Explaination of why an index label M=3 was chosen for refineVNS in section 2.2. |
@@ -110,7 +124,7 @@
 | 2021-02-26 | Submitting/debugging bash job for dotdotdot on cluster | Debugging through the input/output file in logs |
 | 2021-02-19 | explaination of Owner/Group/Other permissions for files on JHPCe | running chmod |
 | 2021-02-12 | download repository from github to cluster and run dotdotdot on cluster | Used Amy's rstats blogpost on git |
-| 2021-02-05 | JHPCE ssh keypair set up | We got Heena's MAC registered for passwordless login to JHPCE |
+| 2021-02-05 | JHPCE ssh keypair set up | We got this person's macOS laptop registered for passwordless login to JHPCE |
 | 2021-02-05 | dotdotdot parameter tuning for Ema's rat RNAscope data | NA |
 | 2020-12-03 | run dotdotdot pipeline local computer and cluster | got through the Github vignettes thoroughly |
 | 2020-12-03 | how to open matlab (GUI and command line) on JHPCE | NA |

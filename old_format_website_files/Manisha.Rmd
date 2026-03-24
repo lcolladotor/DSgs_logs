@@ -2,6 +2,14 @@
 
 | Date | Help request | Notes |
 | ---- | ------------ | ----- |
+| 2026-02-26 | using Rstudio for JHPCE job submission | I demonstrated using RStudio terminal to run scripts interactively, submit and monitor jobs efficiently. |
+| 2026-02-23 | navigating the shiny apps for single cell data | Explained the visualization options and helped her in interpretation of violin and PCA plots and layer- and cell type - specific gene expressions. |
+| 2026-02-12 | work on RStudio terminal, Github to sync laptop and JHPCE | I mostly walked through the steps to get statrted with working on RStudio terminal. I shared the code and explained the steps to set up his Github to sync laptop and JHPCE. |
+| 2026-02-09 | post clustering steps for sn-RNAseq analysis | I explained the process of analysing the clustering results and described the strategy for dropping the doublets based on median droplet scores and spatial registration heatmaps. |
+| 2026-02-06 | Laptop config: Cyberduck and git | We covered setting bookmarks for different project paths on Cyberduck and setup git for laptop |
+| 2026-02-02 | Jonathan Training steps | I described how to sign up for DSgs, explore documentation book website |
+| 2025-12-19 | troubleshooting voomLmFit implementation | I identified inconsistencies in the data objects used for writing DEA model formula using voomLmFit() and we discussed the implementation of various model formula cases they were trying run. |
+| 2025-12-15 | using voomLmFit() | I explained the usage of voomLmFit(), setting contrasts and discussed the interpretation of the model formulas |
 | 2025-12-05 | variance partition by cell-type | Explained how to use fitExtractVarPartModel() per cell type and set up a shell script for batch execution and later generate summary heatmaps from the model outputs. |
 | 2025-12-04 | troubleshoot error implementing dreamlet vignettte | I explained aggregateToPseudoBulk() object formats and where voom belongs in the workflow. clarified that voom is applied after pseudobulking, not re-pseudobulking.
 Helped resolve their variance-partition error caused by skipped preprocessing steps. |
